@@ -347,4 +347,5 @@ Released under the [MIT License](LICENSE).
 
 ## 🗓️ Updates
 
+- **2026-07**: Literature-update pass: +27 papers (agentic RL, protocols, deep research, frontier evaluation and safety), 184 to 211.
 - **2026-07**: Initial release. 184 annotated papers, organized by the survey's taxonomy.
