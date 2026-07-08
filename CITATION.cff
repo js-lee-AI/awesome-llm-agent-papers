@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this list, please cite the accompanying survey."
+title: "Awesome LLM Agent Papers"
+abstract: "A curated, annotated reading list of 184 papers on LLM agents, organized by a function-first taxonomy. Companion to the survey 'LLM Agents: A Survey'."
+authors:
+  - family-names: "Lee"
+    given-names: "Jungseob"
+    affiliation: "Korea University"
+license: MIT
+preferred-citation:
+  type: article
+  title: "LLM Agents: A Survey"
+  authors:
+    - family-names: "Lee"
+      given-names: "Jungseob"
+      affiliation: "Korea University"
+  year: 2026
+  notes: "Manuscript. arXiv link to appear."
