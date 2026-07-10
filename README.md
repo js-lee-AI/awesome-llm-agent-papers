@@ -10,7 +10,7 @@ Companion repository to the survey <i>“LLM Agents: A Survey”</i></p>
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
 </p>
 
-<!-- Uncomment when the survey is on arXiv: [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX) -->
+<!-- Uncomment when the Preprints.org DOI is issued: [![DOI](https://img.shields.io/badge/DOI-preprints.org-blue.svg)](https://doi.org/PREPRINTS_DOI) -->
 <!-- When this repo is made public, add dynamic badges (stars, last-commit, star-history). They render as "not found" on a private repo, so they are omitted for now. -->
 
 <p align="center"><img src="assets/taxonomy.png" width="820" alt="Taxonomy of LLM-agent research"></p>
@@ -402,11 +402,12 @@ If this list or the survey is useful to you, please cite:
 
 ```bibtex
 @article{lee2026llmagents,
-  title  = {LLM Agents: A Survey},
-  author = {Lee, Jungseob},
-  year   = {2026},
-  month  = jul,
-  note   = {Manuscript. arXiv link to appear.}
+  title   = {LLM Agents: A Survey},
+  author  = {Lee, Jungseob},
+  year    = {2026},
+  month   = jul,
+  journal = {Preprints.org},
+  note    = {Preprint. DOI to be added upon posting.}
 }
 ```
 
