@@ -1,19 +1,52 @@
 <h1 align="center">🤖 Awesome LLM Agent Papers</h1>
 
-<p align="center"><b>A curated, annotated reading list of 211 papers on LLM agents</b><br>
-Companion repository to the survey <i>“LLM Agents: A Survey”</i></p>
-
 <p align="center">
-<a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-<img src="https://img.shields.io/badge/papers-211-blue" alt="Papers">
-<img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
-<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome">
+<b>228 references, distilled into 211 must-read papers</b> — the annotated reading list for building<br>
+LLM agents that plan, remember, use tools, and cooperate. Companion to the survey <i>“LLM Agents: A Survey.”</i>
 </p>
 
-<!-- Uncomment when the Preprints.org DOI is issued: [![DOI](https://img.shields.io/badge/DOI-preprints.org-blue.svg)](https://doi.org/PREPRINTS_DOI) -->
-<!-- When this repo is made public, add dynamic badges (stars, last-commit, star-history). They render as "not found" on a private repo, so they are omitted for now. -->
+<!-- Identity & credibility -->
+<p align="center">
+<a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+<img src="https://img.shields.io/badge/papers-211-8B2635?style=flat-square&labelColor=2b2b2b" alt="211 curated papers">
+<!-- Swap DOI_pending for the real Preprints.org DOI once issued, e.g. https://img.shields.io/badge/DOI-10.20944%2Fpreprints...-8B2635 linked to https://doi.org/<DOI> -->
+<img src="https://img.shields.io/badge/Preprints.org-DOI_pending-8B2635?style=flat-square&labelColor=2b2b2b" alt="Companion survey — Preprints.org (DOI pending)">
+<a href="LICENSE"><img src="https://img.shields.io/github/license/js-lee-AI/awesome-llm-agent-papers?style=flat-square&labelColor=2b2b2b&color=8B2635" alt="License: MIT"></a>
+<a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-8B2635?style=flat-square&labelColor=2b2b2b" alt="PRs welcome"></a>
+</p>
+
+<!-- Dynamic social proof & liveness (public repo) -->
+<p align="center">
+<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/stargazers"><img src="https://img.shields.io/github/stars/js-lee-AI/awesome-llm-agent-papers?style=flat-square&labelColor=2b2b2b&color=8B2635" alt="GitHub stars"></a>
+<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/network/members"><img src="https://img.shields.io/github/forks/js-lee-AI/awesome-llm-agent-papers?style=flat-square&labelColor=2b2b2b&color=8B2635" alt="GitHub forks"></a>
+<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/commits"><img src="https://img.shields.io/github/last-commit/js-lee-AI/awesome-llm-agent-papers?style=flat-square&labelColor=2b2b2b&color=8B2635" alt="Last commit"></a>
+<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/graphs/contributors"><img src="https://img.shields.io/github/contributors/js-lee-AI/awesome-llm-agent-papers?style=flat-square&labelColor=2b2b2b&color=8B2635" alt="Contributors"></a>
+</p>
+
+<p align="center">
+📄 <b><a href="#-citation">Cite the companion survey → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">Start with the 10-paper Starter Kit</a></b>
+</p>
+
+<p align="center"><sub><i>Keywords: LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
 
 <p align="center"><img src="assets/taxonomy.png" width="820" alt="Taxonomy of LLM-agent research"></p>
+
+## Why this list
+
+> A survey-grade reading list, not a link dump — every paper is read, placed in a function-first taxonomy, and explained.
+
+| | What you get |
+|---|---|
+| 📚 **Survey-backed** | Companion to **“LLM Agents: A Survey”** — **211 curated papers** distilled from the survey's **228 cited references**, so the list inherits the survey's scope and rigor. |
+| 🧭 **Function-first taxonomy** | **10 sections** mirror the survey's structure — Surveys, Architectures, Planning, Memory, Tool Use, Multi-Agent, Environments, Applications, Evaluation, Safety — and each subsection cites its survey section (e.g. *§4 Planning &amp; Reasoning*). |
+| ✍️ **Annotated, not listed** | Every entry carries a one-line scholarly gloss on **why it matters**, plus venue + year and a `[code]` link to the official implementation where one exists. |
+| ⭐ **Starter Kit** | A hand-picked **[10-paper onboarding table](#starter-kit)** with a *“Why start here”* column — the fastest path into the field. |
+| 🔎 **Built to navigate** | A grouped **[Contents](#contents)** index with per-section counts, collapsible *Show N papers* blocks, and *↑ Back to Contents* backlinks keep 211 entries skimmable. |
+| 🎓 **Citable** | `CITATION.cff` + copy-paste **[BibTeX](#-citation)** for the survey — cite it cleanly in your related-work, and a DOI badge lands the moment the Preprints.org DOI issues. |
+
+**Topics covered:** cognitive architectures · ReAct &amp; reasoning-and-acting · long-horizon planning · agent memory · tool-augmented LLMs · multi-agent collaboration · web / code / embodied agents · agent benchmarks &amp; evaluation · safety, alignment &amp; indirect prompt injection.
+
+> 🔜 **Coming next** — a companion deep-dive: *The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents* (317 papers + 28 open-source artifacts), going below the components to the loop itself. ⭐ Star to be notified.
 
 This repository collects must-read papers on **LLM-based agents**: language models equipped with planning, memory, tool use, and multi-agent coordination to pursue goals over long horizons. Papers follow the taxonomy of the accompanying survey, covering the core components of an agent, the environments and applications they are deployed in, and the cross-cutting concerns of evaluation and safety. Each entry links to the paper and, where an official implementation exists, to its code.
 
@@ -396,6 +429,21 @@ New to the area? These ten papers give you the backbone of the field.
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
+## 🔗 Related Awesome Lists
+
+Part of the broader LLM &amp; agents reading ecosystem — explore these sibling lists:
+
+- [Hannibal046/Awesome-LLM](https://github.com/Hannibal046/Awesome-LLM) — the canonical hub of large language model papers, tools, and resources.
+- [ysymyth/awesome-language-agents](https://github.com/ysymyth/awesome-language-agents) — language-agent reading list organized around the CoALA framework.
+- [WooooDyy/LLM-Agent-Paper-List](https://github.com/WooooDyy/LLM-Agent-Paper-List) — survey-backed agent paper list from *The Rise and Potential of LLM-Based Agents* (Fudan NLP).
+- [luo-junyu/Awesome-Agent-Papers](https://github.com/luo-junyu/Awesome-Agent-Papers) — taxonomy-driven survey companion on agent construction, collaboration, and evolution.
+- [e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) — a large, media-rich directory of open- and closed-source **agent products &amp; frameworks** (the build side).
+- [kyrolabs/awesome-agents](https://github.com/kyrolabs/awesome-agents) — curated agent frameworks and libraries, each with a live star badge.
+
+> Maintain a related list? [Open a PR](CONTRIBUTING.md) to add it here — we're happy to cross-link.
+
+<sub><a href="#contents">↑ Back to Contents</a></sub>
+
 ## 📄 Citation
 
 If this list or the survey is useful to you, please cite:
@@ -411,9 +459,24 @@ If this list or the survey is useful to you, please cite:
 }
 ```
 
-## 🤝 Contributing
+## 🤝 Contributing — let's build the definitive map, together
 
-Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). In short: add your paper to the right section of this README with a verifiable link, a one-line gloss, and a `[code]` link if an implementation exists, then open a pull request.
+The agent literature is arriving faster than any one person can track — on the order of a thousand new papers a month. I read hard for this list, but I have **certainly missed strong papers and methods**. If one belongs here — **including your own** — please help:
+
+- **Open a PR** adding it to the right section with a verifiable link and a one-line *why it matters* (and a `[code]` link if an implementation exists), or
+- **Open an [issue](https://github.com/js-lee-AI/awesome-llm-agent-papers/issues)** with the link and I'll triage quickly.
+
+Corrections, sharper annotations, and whole new sections are just as welcome. The goal is a **living, community-owned reference** — not a one-time snapshot. See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the entry format.
+
+## 👥 Contributors
+
+This list is community-maintained. Thanks to everyone who has suggested, verified, or annotated a paper:
+
+<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=js-lee-AI/awesome-llm-agent-papers" alt="Contributors">
+</a>
+
+Want your avatar here? See **[CONTRIBUTING.md](CONTRIBUTING.md)** — a single well-formatted PR is all it takes.
 
 ## 📜 License
 

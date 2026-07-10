@@ -10,10 +10,11 @@ license: MIT
 preferred-citation:
   type: article
   title: "LLM Agents: A Survey"
+  journal: "Preprints.org"
   authors:
     - family-names: "Lee"
       given-names: "Jungseob"
       affiliation: "Korea University, South Korea"
   year: 2026
   month: 7
-  notes: "Manuscript. arXiv link to appear."
+  notes: "Preprint hosted on Preprints.org; DOI pending (to be added upon posting)."
