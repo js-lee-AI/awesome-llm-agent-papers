@@ -7,7 +7,7 @@ Contributions that add a relevant, verifiable paper are welcome.
 Add an entry to the correct section of [`README.md`](README.md), matching the existing format:
 
 ```markdown
-- **[Full Paper Title](https://arxiv.org/abs/XXXX.XXXXX)** (First-Author Surname et al., Venue Year) — *One-line reason it matters.* [[code](https://github.com/org/repo)]
+- **[Full Paper Title](https://arxiv.org/abs/XXXX.XXXXX)** (First-Author Surname et al., Venue Year) - *One-line reason it matters.* [[code](https://github.com/org/repo)]
 ```
 
 Then open a pull request.
