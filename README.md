@@ -1,14 +1,14 @@
 <h1 align="center">🤖 Awesome LLM Agent Papers</h1>
 
 <p align="center">
-<b>228 references, distilled into 211 must-read papers</b> — the annotated reading list for building<br>
+<b>200+ must-read papers, continuously growing</b> — the annotated reading list for building<br>
 LLM agents that plan, remember, use tools, and cooperate. Companion to the survey <i>“LLM Agents: A Survey.”</i>
 </p>
 
 <!-- Identity & credibility -->
 <p align="center">
 <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-<img src="https://img.shields.io/badge/papers-211-8B2635?style=flat-square&labelColor=2b2b2b" alt="211 curated papers">
+<img src="https://img.shields.io/badge/papers-200%2B-8B2635?style=flat-square&labelColor=2b2b2b" alt="200+ curated papers">
 <!-- Swap DOI_pending for the real Preprints.org DOI once issued, e.g. https://img.shields.io/badge/DOI-10.20944%2Fpreprints...-8B2635 linked to https://doi.org/<DOI> -->
 <img src="https://img.shields.io/badge/Preprints.org-DOI_pending-8B2635?style=flat-square&labelColor=2b2b2b" alt="Companion survey — Preprints.org (DOI pending)">
 <a href="LICENSE"><img src="https://img.shields.io/github/license/js-lee-AI/awesome-llm-agent-papers?style=flat-square&labelColor=2b2b2b&color=8B2635" alt="License: MIT"></a>
@@ -37,11 +37,11 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 
 | | What you get |
 |---|---|
-| 📚 **Survey-backed** | Companion to **“LLM Agents: A Survey”** — **211 curated papers** distilled from the survey's **228 cited references**, so the list inherits the survey's scope and rigor. |
+| 📚 **Survey-backed** | Companion to **“LLM Agents: A Survey”** — a curated, continuously growing selection of the papers behind the survey, so the list inherits the survey's scope and rigor. |
 | 🧭 **Function-first taxonomy** | **10 sections** mirror the survey's structure — Surveys, Architectures, Planning, Memory, Tool Use, Multi-Agent, Environments, Applications, Evaluation, Safety — and each subsection cites its survey section (e.g. *§4 Planning &amp; Reasoning*). |
 | ✍️ **Annotated, not listed** | Every entry carries a one-line scholarly gloss on **why it matters**, plus venue + year and a `[code]` link to the official implementation where one exists. |
 | ⭐ **Starter Kit** | A hand-picked **[10-paper onboarding table](#starter-kit)** with a *“Why start here”* column — the fastest path into the field. |
-| 🔎 **Built to navigate** | A grouped **[Contents](#contents)** index with per-section counts, collapsible *Show N papers* blocks, and *↑ Back to Contents* backlinks keep 211 entries skimmable. |
+| 🔎 **Built to navigate** | A grouped **[Contents](#contents)** index with per-section counts, collapsible *Show N papers* blocks, and *↑ Back to Contents* backlinks keep the full list skimmable. |
 | 🎓 **Citable** | `CITATION.cff` + copy-paste **[BibTeX](#-citation)** for the survey — cite it cleanly in your related-work, and a DOI badge lands the moment the Preprints.org DOI issues. |
 
 **Topics covered:** cognitive architectures · ReAct &amp; reasoning-and-acting · long-horizon planning · agent memory · tool-augmented LLMs · multi-agent collaboration · web / code / embodied agents · agent benchmarks &amp; evaluation · safety, alignment &amp; indirect prompt injection.
@@ -50,7 +50,7 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 
 This repository collects must-read papers on **LLM-based agents**: language models equipped with planning, memory, tool use, and multi-agent coordination to pursue goals over long horizons. Papers follow the taxonomy of the accompanying survey, covering the core components of an agent, the environments and applications they are deployed in, and the cross-cutting concerns of evaluation and safety. Each entry links to the paper and, where an official implementation exists, to its code.
 
-This is a **curated selection of 211 papers**; the survey itself cites 228 references. Sections are collapsed by default. Click **Show N papers** to expand.
+This is a **curated, continuously updated selection**; new work is added as the field moves. Sections are collapsed by default. Click **Show N papers** to expand.
 
 > **Legend:** ⭐ = [Starter Kit](#starter-kit) pick (read these first) · `[code]` = link to an official implementation.
 

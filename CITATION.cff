@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this list, please cite the accompanying survey."
 title: "Awesome LLM Agent Papers"
-abstract: "A curated, annotated reading list of 211 papers on LLM agents, organized by a function-first taxonomy. Companion to the survey 'LLM Agents: A Survey'."
+abstract: "A curated, annotated, continuously updated reading list of 200+ papers on LLM agents, organized by a function-first taxonomy. Companion to the survey 'LLM Agents: A Survey'."
 authors:
   - family-names: "Lee"
     given-names: "Jungseob"
