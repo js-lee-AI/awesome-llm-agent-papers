@@ -27,7 +27,7 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 📄 <b><a href="#-citation">Cite the companion survey → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">Start with the 10-paper Starter Kit</a></b>
 </p>
 
-<p align="center"><sub><i>Keywords: LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
+<p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
 
 <p align="center"><img src="assets/taxonomy.png" width="460" alt="Taxonomy of LLM-agent research"></p>
 
