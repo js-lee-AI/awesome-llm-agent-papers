@@ -75,7 +75,7 @@ New to the area? These ten papers give you the backbone of the field.
 <a id="to-watch"></a>
 ## 🔥 10 to Watch (2026)
 
-Fresh 2026 work that is already drawing attention. Star counts are live and update automatically.
+Fresh 2026 work that is already drawing attention.
 
 | Paper | Area | Stars |
 |-------|------|-------|
