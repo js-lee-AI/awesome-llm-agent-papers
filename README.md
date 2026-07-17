@@ -101,9 +101,9 @@ Fresh 2026 work that is already drawing attention.
   - [🤝 Multi-Agent Systems (31)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (31)](#environments)
-  - [🚀 Applications (33)](#applications)
+  - [🚀 Applications (36)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (25)](#evaluation)
+  - [📊 Evaluation & Benchmarks (26)](#evaluation)
   - [🛡️ Safety & Alignment (37)](#safety)
 
 ## 🧭 Background
@@ -405,7 +405,7 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="applications"></a>
-### 🚀 Applications (33)
+### 🚀 Applications (36)
 *Corresponds to §10 (Applications).*
 
 <details>
@@ -445,6 +445,9 @@ Fresh 2026 work that is already drawing attention.
 - **[HealthAgentBench: A Unified Benchmark Suite of Realistic Agentic Healthcare Environments for Challenging Frontier AI Agents](https://arxiv.org/abs/2606.31179)** (Liu et al., arXiv 2026) - *Benchmark suite of realistic agentic healthcare environments rather than static clinical question answering.* [[code](https://github.com/microsoft/HealthAgentBench)]
 - **[EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management](https://arxiv.org/abs/2606.03841)** (Yang et al., arXiv 2026) - *Self-evolving data science agent combining skill learning with context management.* [[code](https://github.com/usail-hkust/EvoDS)]
 - **[MetaResearcher: Scaling Deep Research via Self-Reflective Reinforcement Learning in Adversarial Virtual Environments](https://arxiv.org/abs/2606.19893)** (Yu et al., arXiv 2026) - *Trains the deep-research loop with self-reflective reinforcement learning against adversarial conditions.*
+- **[Agon: An Autonomous Large-Scale Omnidisciplinary Research System Built on Prompt Economy](https://arxiv.org/abs/2606.24177)** (Sun et al., arXiv 2026) - *Applies Prompt Economy to autonomous research across more than ten domains.* [[code](https://github.com/AutoResearch-Factory/Agon)]
+- **[AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing](https://arxiv.org/abs/2602.17607)** (Du et al., arXiv 2026) - *Builds and verifies numerical PDE solvers from natural-language problem descriptions.* [[code](https://github.com/Daviddjddu/Autonumerics)]
+- **[OptimAI: Optimization from Natural Language Using LLM-Powered AI Agents](https://arxiv.org/abs/2504.16918)** (Thind et al., arXiv 2025) - *Turns natural-language optimization problems into executable solver code with a multi-agent pipeline.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -452,7 +455,7 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (25)
+### 📊 Evaluation & Benchmarks (26)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
@@ -484,6 +487,7 @@ Fresh 2026 work that is already drawing attention.
 - **[AgentGym2: Benchmarking Large Language Model Agents in De-Idealized Real-World Environments](https://arxiv.org/abs/2607.05174)** (Xi et al., arXiv 2026) - *Benchmarks agents in de-idealized environments, closing the gap between clean benchmark worlds and real ones.* [[code](https://github.com/hotdog-zz/Agentgym2)]
 - **[Measuring Harness-Induced Belief Divergence in Multi-Step LLM Agents](https://arxiv.org/abs/2607.04528)** (Yi et al., arXiv 2026) - *Measures how much the harness alone shifts an agent's beliefs across steps, isolating a confound in agent evaluation.* [[code](https://github.com/Hik289/Harness-induce-bias)]
 - **[Rethinking the Evaluation of Harness Evolution for Agents](https://arxiv.org/abs/2607.12227)** (Wang et al., arXiv 2026) - *Rethinks how harness evolution should be evaluated, given that the harness moves the number as much as the model.* [[code](https://github.com/rethinking-harness-evolution/code)]
+- **[PerspectiveGap: A Benchmark for Multi-Agent Orchestration Prompting](https://arxiv.org/abs/2606.08878)** (Sun et al., arXiv 2026) - *The first benchmark for multi-agent orchestration prompt writing, with 110 scenarios and 10 topologies.* [[code](https://github.com/WhymustIhaveaname/PerspectiveGap)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
