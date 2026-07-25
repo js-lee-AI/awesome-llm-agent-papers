@@ -94,7 +94,7 @@ Fresh 2026 work that is already drawing attention.
   - [🏗️ Agent Architectures & Frameworks (37)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (40)](#planning)
-  - [💾 Memory (37)](#memory)
+  - [💾 Memory (43)](#memory)
   - [🔧 Tool Use (36)](#tools)
   - [🤝 Multi-Agent Systems (40)](#multi-agent)
 - **🌍 Part II: Agents in Context**
@@ -270,11 +270,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="memory"></a>
-### 💾 Memory (37)
+### 💾 Memory (43)
 *Corresponds to §5 (Memory).*
 
 <details>
-<summary><b>Show 37 papers</b></summary>
+<summary><b>Show 43 papers</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Early and influential structured/triplet-based read-write memory design, a precursor to graph- and KG-based agent memory systems.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *One of the first systems to bring a psychologically grounded (human-memory-inspired) forgetting/consolidation mechanism into LLM agent memory.* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -294,6 +294,12 @@ Fresh 2026 work that is already drawing attention.
 - **[MIRIX: Multi-Agent Memory System for LLM-Based Agents](https://arxiv.org/abs/2507.07957)** (Wang et al., arXiv 2025) - *Illustrates the current frontier trend of multi-agent, multi-type (multimodal) memory architectures for LLM-based agents.* [[code](https://github.com/Mirix-AI/MIRIX)]
 - **[LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory](https://arxiv.org/abs/2410.10813)** (Wu et al., ICLR 2025) - *Decomposes long-term interactive memory into five separately testable abilities.* [[code](https://github.com/xiaowu0162/LongMemEval)]
 - **[ReasoningBank: Scaling Agent Self-Evolving with Reasoning Memory](https://arxiv.org/abs/2509.25140)** (Ouyang et al., arXiv 2025) - *Distills strategy-level memory from both successful and failed trajectories so an agent self-evolves over a task stream.*
+- **[Memory OS of AI Agent](https://arxiv.org/abs/2506.06326)** (Kang et al., EMNLP 2025) - *Applies operating-system memory management—STM/MTM/LPM tiers with heat-based promotion and segmented paging—to agent memory, with strong LoCoMo gains.* [[code](https://github.com/BAI-LAB/MemoryOS)]
+- **[Zep: A Temporal Knowledge Graph Architecture for Agent Memory](https://arxiv.org/abs/2501.13956)** (Rasmussen et al., arXiv 2025) - *A bi-temporal knowledge-graph memory engine (Graphiti) that dynamically fuses chat and business data, surpassing MemGPT on DMR and LongMemEval; a standard production-memory reference.* [[code](https://github.com/getzep/graphiti)]
+- **[What Deserves Memory: Adaptive Memory Distillation for LLM Agents](https://arxiv.org/abs/2508.03341)** (Ma et al., ACL 2026) - *Self-organizing episodic memory (Nemori) that segments dialogue by event boundaries and distills semantics via a predict-then-calibrate loop, cutting build cost while improving temporal reasoning.* [[code](https://github.com/nemori-ai/nemori)]
+- **[MemOS: A Memory OS for AI System](https://arxiv.org/abs/2507.03724)** (Li et al., arXiv 2025) - *Promotes memory to a first-class resource (MemCube), unifying parametric, activation, and plaintext memory under one scheduling-and-governance operating system.* [[code](https://github.com/MemTensor/MemOS)]
+- **[G-Memory: Tracing Hierarchical Memory for Multi-Agent Systems](https://arxiv.org/abs/2506.07398)** (Zhang et al., NeurIPS 2025) - *Organization-theory-inspired three-tier graph (insight/query/interaction) that stores collaboration trajectories, a memory design tailored to multi-agent systems.* [[code](https://github.com/bingreeky/GMemory)]
+- **[Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://arxiv.org/abs/2510.04618)** (Zhang et al., ICLR 2026) - *Evolves the context itself as a playbook via generate–reflect–curate delta operations, countering brevity bias and context collapse for self-improving agents.* [[code](https://github.com/ace-agent/ace)]
 
 - **[SimpleMem: Efficient Lifelong Memory for LLM Agents](https://arxiv.org/abs/2601.02553)** (Liu et al., arXiv 2026) - *Semantic-compression lifelong memory (structured compression, online synthesis, intent-aware retrieval) cutting inference tokens up to 30x.* [[code](https://github.com/aiming-lab/SimpleMem)]
 - **[PlugMem: A Task-Agnostic Plugin Memory Module for LLM Agents](https://arxiv.org/abs/2603.03296)** (Yang et al., arXiv 2026) - *Cognitive-science-inspired knowledge-graph memory pluggable across tasks without redesign.* [[code](https://github.com/TIMAN-group/PlugMem)]
