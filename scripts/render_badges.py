@@ -112,19 +112,33 @@ def main() -> int:
     }
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    # Re-render on a change of *value*, not of bytes. Pillow's PNG output is not
+    # byte-stable across versions, so comparing bytes would commit a new "badge"
+    # every time the runner image bumps Pillow, with the numbers identical.
+    manifest_path = OUT_DIR / "manifest.json"
+    previous = {}
+    if manifest_path.exists():
+        try:
+            previous = json.loads(manifest_path.read_text())
+        except json.JSONDecodeError:
+            pass
+    current = {name: value for name, (_, value) in badges.items()}
+
     changed = []
     for name, (label, value) in badges.items():
-        data = png_bytes(render(label, value, font))
         path = OUT_DIR / f"{name}.png"
-        if path.exists() and path.read_bytes() == data:
+        if path.exists() and previous.get(name) == value:
             print(f"unchanged     {name}.png  ({label} {value})")
             continue
         changed.append(name)
         if args.check:
-            print(f"WOULD CHANGE  {name}.png  ({label} {value})")
+            print(f"WOULD CHANGE  {name}.png  ({label} {previous.get(name)} -> {value})")
         else:
-            path.write_bytes(data)
+            path.write_bytes(png_bytes(render(label, value, font)))
             print(f"wrote         {name}.png  ({label} {value})")
+
+    if changed and not args.check:
+        manifest_path.write_text(json.dumps(current, indent=2, sort_keys=True) + "\n")
 
     return 1 if (args.check and changed) else 0
 
