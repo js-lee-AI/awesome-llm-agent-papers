@@ -9,14 +9,14 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 <p align="center">
 <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
 <img src="https://img.shields.io/badge/papers-200%2B-8B2635?style=flat-square&labelColor=2b2b2b" alt="200+ curated papers">
-<a href="LICENSE"><img src="https://raw.githubusercontent.com/js-lee-AI/awesome-llm-agent-papers/badges/license.png" height="20" alt="License: MIT"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-8B2635?style=flat-square&labelColor=2b2b2b" alt="License: MIT"></a>
 <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-8B2635?style=flat-square&labelColor=2b2b2b" alt="PRs welcome"></a>
 </p>
 
-<!-- Self-hosted badges: GitHub proxies img.shields.io through Camo, which keeps failing for this repo, but serves raw.githubusercontent.com directly. Rendered from the live GitHub API every 6h onto the orphan `badges` branch by .github/workflows/badges.yml, so they stay current without automation commits landing on main. -->
+<!-- Live star / fork counts. -->
 <p align="center">
-<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/stargazers"><img src="https://raw.githubusercontent.com/js-lee-AI/awesome-llm-agent-papers/badges/stars.png" height="20" alt="GitHub stars"></a>
-<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/network/members"><img src="https://raw.githubusercontent.com/js-lee-AI/awesome-llm-agent-papers/badges/forks.png" height="20" alt="GitHub forks"></a>
+<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/stargazers"><img src="https://img.shields.io/github/stars/js-lee-AI/awesome-llm-agent-papers?style=flat-square&labelColor=2b2b2b&color=8B2635" alt="GitHub stars"></a>
+<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/network/members"><img src="https://img.shields.io/github/forks/js-lee-AI/awesome-llm-agent-papers?style=flat-square&labelColor=2b2b2b&color=8B2635" alt="GitHub forks"></a>
 </p>
 
 <p align="center">
