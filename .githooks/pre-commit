@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Keep README.md section counts in sync with the actual number of entries.
+#
+# Enable once per clone:
+#   git config core.hooksPath .githooks
+#
+# Skip for one commit with:  git commit --no-verify
+set -euo pipefail
+
+# Only run when README.md is part of this commit.
+if ! git diff --cached --name-only | grep -qx "README.md"; then
+    exit 0
+fi
+
+repo_root="$(git rev-parse --show-toplevel)"
+
+if ! command -v python3 >/dev/null 2>&1; then
+    echo "pre-commit: python3 not found, skipping count sync" >&2
+    exit 0
+fi
+
+before="$(git hash-object "$repo_root/README.md")"
+python3 "$repo_root/scripts/sync_counts.py"
+after="$(git hash-object "$repo_root/README.md")"
+
+if [ "$before" != "$after" ]; then
+    git add "$repo_root/README.md"
+    echo "pre-commit: README.md counts were stale and have been synced and re-staged."
+fi

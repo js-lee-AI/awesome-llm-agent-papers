@@ -1,0 +1,31 @@
+name: Check paper counts
+
+# Each section states its count in three places (Contents, heading, "Show N
+# papers"). A PR that adds a paper without touching all three leaves the list
+# lying about its own size, which has happened. This fails the PR instead.
+
+on:
+  pull_request:
+    paths:
+      - README.md
+      - scripts/sync_counts.py
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - scripts/sync_counts.py
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  counts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify section counts match the number of entries
+        run: python3 scripts/sync_counts.py --check

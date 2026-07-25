@@ -19,3 +19,19 @@ Then open a pull request.
 - Add a **`[code]`** link only if an official implementation exists (verify it resolves).
 - Put the paper in the section that matches its **role**, following the survey's taxonomy.
 - The ⭐ marks the [Starter Kit](README.md#starter-kit); leave it for the maintainer to assign.
+
+## Section counts
+
+Each section states its count in three places: the Contents list, the section heading, and the **Show N papers** toggle. Do not edit them by hand. Run:
+
+```bash
+python3 scripts/sync_counts.py
+```
+
+It recounts every section and updates all three. CI runs `sync_counts.py --check` on pull requests touching `README.md` and fails if the numbers disagree with the actual entries.
+
+To have it run automatically before each commit, enable the repo's hooks once per clone:
+
+```bash
+git config core.hooksPath .githooks
+```

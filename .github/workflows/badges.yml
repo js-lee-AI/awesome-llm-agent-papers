@@ -1,0 +1,54 @@
+name: Refresh badges
+
+# The star/fork badges are self-hosted PNGs because GitHub's Camo proxy has
+# repeatedly failed to fetch img.shields.io for this repo (see eccfb52). This
+# job re-renders them from the live GitHub API so self-hosting does not mean
+# stale numbers.
+
+on:
+  schedule:
+    - cron: "17 */6 * * *" # every 6 hours, off the hour to avoid peak scheduling
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/render_badges.py
+      - assets/fonts/Lato-Regular.ttf
+      - .github/workflows/badges.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-badges
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet pillow
+
+      - name: Render badges
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/render_badges.py
+
+      - name: Commit if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- assets/badges; then
+            echo "Badges already current, nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/badges
+          git commit -m "Refresh star/fork badges [skip ci]"
+          git push
