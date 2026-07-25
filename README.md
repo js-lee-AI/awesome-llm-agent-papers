@@ -9,14 +9,14 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 <p align="center">
 <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
 <img src="https://img.shields.io/badge/papers-200%2B-8B2635?style=flat-square&labelColor=2b2b2b" alt="200+ curated papers">
-<a href="LICENSE"><img src="assets/badges/license.png" height="20" alt="License: MIT"></a>
+<a href="LICENSE"><img src="https://raw.githubusercontent.com/js-lee-AI/awesome-llm-agent-papers/badges/license.png" height="20" alt="License: MIT"></a>
 <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-8B2635?style=flat-square&labelColor=2b2b2b" alt="PRs welcome"></a>
 </p>
 
-<!-- Star / fork snapshots (self-hosted so they render even when shields.io fails to load through GitHub's image proxy); the links go to the live counts. -->
+<!-- Self-hosted badges: GitHub proxies img.shields.io through Camo, which keeps failing for this repo, but serves raw.githubusercontent.com directly. Rendered from the live GitHub API every 6h onto the orphan `badges` branch by .github/workflows/badges.yml, so they stay current without automation commits landing on main. -->
 <p align="center">
-<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/stargazers"><img src="assets/badges/stars.png" height="20" alt="GitHub stars"></a>
-<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/network/members"><img src="assets/badges/forks.png" height="20" alt="GitHub forks"></a>
+<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/stargazers"><img src="https://raw.githubusercontent.com/js-lee-AI/awesome-llm-agent-papers/badges/stars.png" height="20" alt="GitHub stars"></a>
+<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/network/members"><img src="https://raw.githubusercontent.com/js-lee-AI/awesome-llm-agent-papers/badges/forks.png" height="20" alt="GitHub forks"></a>
 </p>
 
 <p align="center">
@@ -701,7 +701,7 @@ This list is community-maintained. Thanks to everyone who has suggested, verifie
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | 3 research-agent and orchestration papers: AutoNumerics, OptimAI, PerspectiveGap ([#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)) |
 | <a href="https://github.com/js-lee-AI"><img src="https://github.com/js-lee-AI.png?size=48" width="48" height="48" alt="@js-lee-AI"></a> | **[@js-lee-AI](https://github.com/js-lee-AI)** | Maintainer |
 
-<sub>Listed by hand rather than generated: a contributor graph only counts merged commits, so it silently drops anyone whose papers were applied on their behalf. See the <a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/graphs/contributors">contributor graph</a> for commit-level history.</sub>
+<sub>Listed by hand rather than generated, so that credit follows the contribution rather than who happened to run <code>git commit</code>. See the <a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/graphs/contributors">contributor graph</a> for commit-level history.</sub>
 
 Want your avatar here? See **[CONTRIBUTING.md](CONTRIBUTING.md)**: a single well-formatted PR is all it takes.
 

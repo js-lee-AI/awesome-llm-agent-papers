@@ -1,22 +1,26 @@
 #!/usr/bin/env python3
-"""Render the header badges as self-hosted PNGs under assets/badges/.
+"""Render the header badges as self-hosted PNGs.
 
-Why self-host at all: GitHub's Camo image proxy has repeatedly failed to fetch
-from img.shields.io for this repo, so badges hotlinked to shields.io render as
-broken images while relative-path assets/*.png always render (see eccfb52).
-The cost of self-hosting is staleness, and that is what this script removes:
-run on a schedule by .github/workflows/badges.yml, it re-reads the counts from
-the GitHub API and re-renders the PNGs, so "stars" tracks reality without
-depending on Camo at render time.
+Why self-host: GitHub's Camo image proxy has repeatedly failed to fetch
+img.shields.io for this repo, so hotlinked shields badges render broken
+(see eccfb52). GitHub's markdown pipeline proxies img.shields.io through Camo
+but serves raw.githubusercontent.com directly, so a self-hosted PNG bypasses
+the failure entirely. The cost of self-hosting is staleness, which is what this
+script removes: .github/workflows/badges.yml runs it on a schedule, re-reading
+the counts from the GitHub API.
 
-Style matches the existing badges: flat-square geometry, near-black label
-block, burgundy value block from the survey palette, Lato, rendered at 2x and
-displayed at height="20".
+Output goes to the orphan `badges` branch, not to main, so that the automation's
+commits never land on the default branch: they would otherwise put
+github-actions[bot] in the repo's contributor list alongside the people who
+actually contributed papers.
+
+Style: flat-square geometry, near-black label block, burgundy value block from
+the survey palette, Lato, rendered at 2x and displayed at height="20".
 
 Usage:
-    python3 scripts/render_badges.py [--repo owner/name] [--check]
+    python3 scripts/render_badges.py [--repo owner/name] [--out DIR] [--check]
 
---check exits 1 if any PNG would change, without writing.
+--check exits 1 if any badge value has changed, without writing.
 """
 
 from __future__ import annotations
@@ -31,7 +35,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT_DIR = ROOT / "assets" / "badges"
+DEFAULT_OUT = ROOT / "badges-out"
 FONT_PATH = ROOT / "assets" / "fonts" / "Lato-Regular.ttf"
 FONT_FALLBACKS = [
     "/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
@@ -101,7 +105,14 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo", default=os.environ.get("GITHUB_REPOSITORY", REPO_DEFAULT))
     ap.add_argument("--check", action="store_true", help="exit 1 if a PNG would change")
+    ap.add_argument(
+        "--out",
+        type=Path,
+        default=DEFAULT_OUT,
+        help="directory to write the PNGs into (a checkout of the badges branch)",
+    )
     args = ap.parse_args()
+    out_dir = args.out
 
     facts = repo_facts(args.repo, os.environ.get("GITHUB_TOKEN"))
     font = load_font()
@@ -111,11 +122,11 @@ def main() -> int:
         "license": ("License", facts["license"]),
     }
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
     # Re-render on a change of *value*, not of bytes. Pillow's PNG output is not
     # byte-stable across versions, so comparing bytes would commit a new "badge"
     # every time the runner image bumps Pillow, with the numbers identical.
-    manifest_path = OUT_DIR / "manifest.json"
+    manifest_path = out_dir / "manifest.json"
     previous = {}
     if manifest_path.exists():
         try:
@@ -126,7 +137,7 @@ def main() -> int:
 
     changed = []
     for name, (label, value) in badges.items():
-        path = OUT_DIR / f"{name}.png"
+        path = out_dir / f"{name}.png"
         if path.exists() and previous.get(name) == value:
             print(f"unchanged     {name}.png  ({label} {value})")
             continue
