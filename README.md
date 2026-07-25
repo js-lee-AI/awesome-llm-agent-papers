@@ -99,9 +99,9 @@ Fresh 2026 work that is already drawing attention.
   - [🤝 Multi-Agent Systems (40)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (46)](#environments)
-  - [🚀 Applications (43)](#applications)
+  - [🚀 Applications (45)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (36)](#evaluation)
+  - [📊 Evaluation & Benchmarks (37)](#evaluation)
   - [🛡️ Safety & Alignment (48)](#safety)
 
 ## 🧭 Background
@@ -485,11 +485,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="applications"></a>
-### 🚀 Applications (43)
+### 🚀 Applications (45)
 *Corresponds to §10 (Applications).*
 
 <details>
-<summary><b>Show 43 papers</b></summary>
+<summary><b>Show 45 papers</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *One of the first cost-efficient autonomous program-repair agents grounded in structured code search.* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *Influential counter-narrative showing simpler non-agentic pipelines can rival complex agents.* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -514,6 +514,7 @@ Fresh 2026 work that is already drawing attention.
 - **[FinGPT: Open-Source Financial Large Language Models](https://arxiv.org/abs/2306.06031)** (Yang et al., IJCAI 2023) - *One of the most cited open-source financial LLM/agent efforts, providing base-model infrastructure underlying many downstream financial agent systems.* [[code](https://github.com/AI4Finance-Foundation/FinGPT)]
 - **[SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?](https://arxiv.org/abs/2502.12115)** (Miserendino et al., arXiv 2025) - *Prices coding-agent competence in real freelance dollars; frontier models leave most of the posted value unearned.* [[code](https://github.com/openai/SWELancer-Benchmark)]
 - **[AgentClinic: A Multimodal Agent Benchmark to Evaluate AI in Simulated Clinical Environments](https://arxiv.org/abs/2405.07960)** (Schmidgall et al., arXiv 2024) - *Multimodal benchmark of simulated clinical settings for doctor-patient agent interaction.*
+- **[OptimAI: Optimization from Natural Language Using LLM-Powered AI Agents](https://arxiv.org/abs/2504.16918)** (Thind et al., arXiv 2025) - *Turns natural-language optimization problems into executable solver code through a formulator-planner-coder-critic pipeline, with UCB-based plan selection.*
 
 - **[AutoSci: A Memory-Centric Agentic System for the Full Scientific Research Lifecycle](https://arxiv.org/abs/2605.31468)** (Qian et al., arXiv 2026) - *Memory-centric agentic system automating the full scientific research loop.* [[code](https://github.com/skyllwt/AutoSci)]
 - **[SWE-Pruner: Self-Adaptive Context Pruning for Coding Agents](https://arxiv.org/abs/2601.16746)** (Wang et al., arXiv 2026) - *Self-adaptive context pruning that keeps coding agents effective under long repository contexts.* [[code](https://github.com/Ayanami1314/swe-pruner)]
@@ -535,6 +536,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Toward Expert Investment Teams: A Multi-Agent LLM System with Fine-Grained Trading Tasks](https://arxiv.org/abs/2602.23330)** (Miyazaki et al., arXiv 2026) - *Proposes a multi-agent LLM framework that decomposes investment analysis into fine-grained trading subtasks, evaluated on Japanese stock data to improve risk-adjusted returns over abstract-instruction baselines.*
 - **[MiroEval: Benchmarking Multimodal Deep Research Agents in Process and Outcome](https://arxiv.org/abs/2603.28407)** (Ye et al., arXiv 2026) - *MiroEval is a benchmark of 100 tasks (70 text-only, 30 multimodal) that evaluates deep research agents along synthesis quality, factuality, and research-process dimensions.* [[code](https://github.com/MiroMindAI/MiroEval)]
 - **[HeartAgent: An Autonomous Agent System for Explainable Differential Diagnosis in Cardiology](https://arxiv.org/abs/2603.10764)** (Zhou et al., arXiv 2026) - *HeartAgent is an autonomous multi-agent system that integrates customized tools and curated data resources and orchestrates specialized sub-agents to perform explainable differential diagnosis in cardiology.*
+- **[AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing](https://arxiv.org/abs/2602.17607)** (Du et al., arXiv 2026) - *Builds and residual-verifies classical numerical PDE solvers straight from natural-language problem statements, keeping the solver transparent rather than neural.* [[code](https://github.com/Daviddjddu/Autonumerics)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -542,11 +544,11 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (36)
+### 📊 Evaluation & Benchmarks (37)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
-<summary><b>Show 36 papers</b></summary>
+<summary><b>Show 37 papers</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Reference benchmark for generalist, tool-using agent assistants; underlies popular public leaderboards tracking frontier agent progress.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *De facto standard benchmark for coding/software-engineering agents; spawned the SWE-bench Verified/Lite/Live/Multimodal family.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -585,6 +587,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Benchmark Test-Time Scaling of General LLM Agents](https://arxiv.org/abs/2602.18998)** (Li et al., arXiv 2026) - *Introduces General AgentBench, a unified benchmark for evaluating general-purpose LLM agents across search, coding, reasoning, and tool-use, and finds that sequential and parallel test-time scaling fail to improve performance due.* [[code](https://github.com/cxcscmu/General-AgentBench)]
 - **[BenchGuard: Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks](https://arxiv.org/abs/2604.24955)** (Tu et al., arXiv 2026) - *Proposes BenchGuard, a framework that uses frontier LLMs as auditors to cross-verify LLM agent benchmark components, finding 12 confirmed issues in one scientific benchmark and matching 83.3% of expert-identified problems in.*
 - **[Automated Benchmark Auditing for AI Agents and Large Language Models](https://arxiv.org/abs/2605.26079)** (Wang et al., arXiv 2026) - *Introduces Auto Benchmark Audit (ABA), an agentic framework that audited 168 benchmarks across nine domains, found over 25.7% of tasks had critical issues (ambiguous design, execution conflicts, incorrect ground truths).*
+- **[PerspectiveGap: A Benchmark for Multi-Agent Orchestration Prompting](https://arxiv.org/abs/2606.08878)** (Sun et al., arXiv 2026) - *Isolates orchestration prompt writing as its own capability: 110 scenarios over 10 topologies on which 33 models average a 17.2% pass rate.* [[code](https://github.com/WhymustIhaveaname/PerspectiveGap)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -704,6 +707,7 @@ Released under the [MIT License](LICENSE).
 
 ## 🗓️ Updates
 
+- **July 2026**: First community contributions: +6 agent-memory systems (MemoryOS, Zep, Nemori, MemOS, G-Memory, ACE) from [@jinmang2](https://github.com/jinmang2), and +3 research-agent and orchestration papers (AutoNumerics, OptimAI, PerspectiveGap) from [@WhymustIhaveaname](https://github.com/WhymustIhaveaname). All titles, authors, venues, arXiv IDs and code links re-verified before merge.
 - **July 2026**: Comprehensive 2026 backfill: +78 more verified papers (Jan to July 2026) across all ten sections, every arXiv ID and title checked against arxiv.org and official repos linked where confirmed.
 - **July 2026**: January to May 2026 backfill: +30 papers (three per section), every arXiv ID and title verified against arxiv.org, official repos linked where they exist.
 - **July 2026**: Recency pass: +50 papers from June and July 2026 across all ten sections, every arXiv ID and title verified against arxiv.org, with official repos linked where they exist.
