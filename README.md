@@ -695,9 +695,13 @@ Corrections, sharper annotations, and whole new sections are just as welcome. Se
 
 This list is community-maintained. Thanks to everyone who has suggested, verified, or annotated a paper:
 
-<a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=js-lee-AI/awesome-llm-agent-papers" alt="Contributors">
-</a>
+| | Contributor | Contributed |
+|---|---|---|
+| <a href="https://github.com/jinmang2"><img src="https://github.com/jinmang2.png?size=48" width="48" height="48" alt="@jinmang2"></a> | **[@jinmang2](https://github.com/jinmang2)** | 6 agent-memory systems: MemoryOS, Zep, Nemori, MemOS, G-Memory, ACE ([#2](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/2)) |
+| <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | 3 research-agent and orchestration papers: AutoNumerics, OptimAI, PerspectiveGap ([#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)) |
+| <a href="https://github.com/js-lee-AI"><img src="https://github.com/js-lee-AI.png?size=48" width="48" height="48" alt="@js-lee-AI"></a> | **[@js-lee-AI](https://github.com/js-lee-AI)** | Maintainer |
+
+<sub>Listed by hand rather than generated: a contributor graph only counts merged commits, so it silently drops anyone whose papers were applied on their behalf. See the <a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/graphs/contributors">contributor graph</a> for commit-level history.</sub>
 
 Want your avatar here? See **[CONTRIBUTING.md](CONTRIBUTING.md)**: a single well-formatted PR is all it takes.
 
@@ -707,10 +711,10 @@ Released under the [MIT License](LICENSE).
 
 ## 🗓️ Updates
 
-- **July 2026**: First community contributions: +6 agent-memory systems (MemoryOS, Zep, Nemori, MemOS, G-Memory, ACE) from [@jinmang2](https://github.com/jinmang2), and +3 research-agent and orchestration papers (AutoNumerics, OptimAI, PerspectiveGap) from [@WhymustIhaveaname](https://github.com/WhymustIhaveaname). All titles, authors, venues, arXiv IDs and code links re-verified before merge.
-- **July 2026**: Comprehensive 2026 backfill: +78 more verified papers (Jan to July 2026) across all ten sections, every arXiv ID and title checked against arxiv.org and official repos linked where confirmed.
-- **July 2026**: January to May 2026 backfill: +30 papers (three per section), every arXiv ID and title verified against arxiv.org, official repos linked where they exist.
-- **July 2026**: Recency pass: +50 papers from June and July 2026 across all ten sections, every arXiv ID and title verified against arxiv.org, with official repos linked where they exist.
-- **July 2026**: 2026 cohort pass: +42 papers across all ten sections, plus a new **10 to Watch (2026)** section with live star counts and live star badges on the related lists. 211 to 253.
-- **July 2026**: Literature-update pass: +27 papers (agentic RL, protocols, deep research, frontier evaluation and safety), 184 to 211.
-- **July 2026**: Initial release. 184 annotated papers, organized by the survey's taxonomy.
+- **2026-07-25**: First community contributions: +6 agent-memory systems (MemoryOS, Zep, Nemori, MemOS, G-Memory, ACE) from [@jinmang2](https://github.com/jinmang2), and +3 research-agent and orchestration papers (AutoNumerics, OptimAI, PerspectiveGap) from [@WhymustIhaveaname](https://github.com/WhymustIhaveaname). All titles, authors, venues, arXiv IDs and code links re-verified before merge.
+- **2026-07-19**: Comprehensive 2026 backfill: +78 more verified papers (Jan to July 2026) across all ten sections, every arXiv ID and title checked against arxiv.org and official repos linked where confirmed.
+- **2026-07-19**: January to May 2026 backfill: +30 papers (three per section), every arXiv ID and title verified against arxiv.org, official repos linked where they exist.
+- **2026-07-16**: Recency pass: +50 papers from June and July 2026 across all ten sections, every arXiv ID and title verified against arxiv.org, with official repos linked where they exist.
+- **2026-07-12**: 2026 cohort pass: +42 papers across all ten sections, plus a new **10 to Watch (2026)** section with live star counts and live star badges on the related lists. 211 to 253.
+- **2026-07-09**: Literature-update pass: +27 papers (agentic RL, protocols, deep research, frontier evaluation and safety), 184 to 211.
+- **2026-07-08**: Initial release. 184 annotated papers, organized by the survey's taxonomy.
