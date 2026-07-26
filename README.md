@@ -588,7 +588,7 @@ Fresh 2026 work that is already drawing attention.
 - **[BenchGuard: Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks](https://arxiv.org/abs/2604.24955)** (Tu et al., arXiv 2026) - *Proposes BenchGuard, a framework that uses frontier LLMs as auditors to cross-verify LLM agent benchmark components, finding 12 confirmed issues in one scientific benchmark and matching 83.3% of expert-identified problems in.*
 - **[Automated Benchmark Auditing for AI Agents and Large Language Models](https://arxiv.org/abs/2605.26079)** (Wang et al., arXiv 2026) - *Introduces Auto Benchmark Audit (ABA), an agentic framework that audited 168 benchmarks across nine domains, found over 25.7% of tasks had critical issues (ambiguous design, execution conflicts, incorrect ground truths).*
 - **[PerspectiveGap: A Benchmark for Multi-Agent Orchestration Prompting](https://arxiv.org/abs/2606.08878)** (Sun et al., arXiv 2026) - *Isolates orchestration prompt writing as its own capability: 110 scenarios over 10 topologies on which 33 models average a 17.2% pass rate.* [[code](https://github.com/WhymustIhaveaname/PerspectiveGap)]
-- **[ClawBench: Can AI Agents Complete Everyday Online Tasks?](https://arxiv.org/abs/2604.08523)** (Zhang et al., arXiv 2026) - *Evaluates browser agents on everyday tasks across live production websites using isolated containers, task-scoped final-request interception, and five-layer execution traces.* [[code](https://github.com/TIGER-AI-Lab/ClawBench)]
+- **[ClawBench: Can AI Agents Complete Everyday Online Tasks?](https://arxiv.org/abs/2604.08523)** (Zhang et al., arXiv 2026) - *Puts browser agents on 153 everyday tasks across 144 live production sites, intercepting the final request so nothing is actually bought or booked; the strongest model tested clears a third of them.* [[code](https://github.com/TIGER-AI-Lab/ClawBench)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -699,6 +699,7 @@ This list is community-maintained. Thanks to everyone who has suggested, verifie
 
 | | Contributor | Contributed |
 |---|---|---|
+| <a href="https://github.com/reacher-z"><img src="https://github.com/reacher-z.png?size=48" width="48" height="48" alt="@reacher-z"></a> | **[@reacher-z](https://github.com/reacher-z)** | ClawBench, a live-web browser-agent benchmark, in Evaluation & Benchmarks ([#3](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/3)) |
 | <a href="https://github.com/jinmang2"><img src="https://github.com/jinmang2.png?size=48" width="48" height="48" alt="@jinmang2"></a> | **[@jinmang2](https://github.com/jinmang2)** | 6 agent-memory systems: MemoryOS, Zep, Nemori, MemOS, G-Memory, ACE ([#2](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/2)) |
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | 3 research-agent and orchestration papers: AutoNumerics, OptimAI, PerspectiveGap ([#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)) |
 | <a href="https://github.com/js-lee-AI"><img src="https://github.com/js-lee-AI.png?size=48" width="48" height="48" alt="@js-lee-AI"></a> | **[@js-lee-AI](https://github.com/js-lee-AI)** | Maintainer |
@@ -713,6 +714,7 @@ Released under the [MIT License](LICENSE).
 
 ## 🗓️ Updates
 
+- **2026-07-26**: ClawBench added to Evaluation & Benchmarks by [@reacher-z](https://github.com/reacher-z), who helps maintain it. 420 to 421.
 - **2026-07-25**: First community contributions: +6 agent-memory systems (MemoryOS, Zep, Nemori, MemOS, G-Memory, ACE) from [@jinmang2](https://github.com/jinmang2), and +3 research-agent and orchestration papers (AutoNumerics, OptimAI, PerspectiveGap) from [@WhymustIhaveaname](https://github.com/WhymustIhaveaname). All titles, authors, venues, arXiv IDs and code links re-verified before merge.
 - **2026-07-19**: Comprehensive 2026 backfill: +78 more verified papers (Jan to July 2026) across all ten sections, every arXiv ID and title checked against arxiv.org and official repos linked where confirmed.
 - **2026-07-19**: January to May 2026 backfill: +30 papers (three per section), every arXiv ID and title verified against arxiv.org, official repos linked where they exist.
