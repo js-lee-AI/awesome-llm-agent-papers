@@ -101,7 +101,7 @@ Fresh 2026 work that is already drawing attention.
   - [🌐 Interactive Environments (46)](#environments)
   - [🚀 Applications (45)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (37)](#evaluation)
+  - [📊 Evaluation & Benchmarks (38)](#evaluation)
   - [🛡️ Safety & Alignment (48)](#safety)
 
 ## 🧭 Background
@@ -544,11 +544,11 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (37)
+### 📊 Evaluation & Benchmarks (38)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
-<summary><b>Show 37 papers</b></summary>
+<summary><b>Show 38 papers</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Reference benchmark for generalist, tool-using agent assistants; underlies popular public leaderboards tracking frontier agent progress.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *De facto standard benchmark for coding/software-engineering agents; spawned the SWE-bench Verified/Lite/Live/Multimodal family.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -588,6 +588,7 @@ Fresh 2026 work that is already drawing attention.
 - **[BenchGuard: Who Guards the Benchmarks? Automated Auditing of LLM Agent Benchmarks](https://arxiv.org/abs/2604.24955)** (Tu et al., arXiv 2026) - *Proposes BenchGuard, a framework that uses frontier LLMs as auditors to cross-verify LLM agent benchmark components, finding 12 confirmed issues in one scientific benchmark and matching 83.3% of expert-identified problems in.*
 - **[Automated Benchmark Auditing for AI Agents and Large Language Models](https://arxiv.org/abs/2605.26079)** (Wang et al., arXiv 2026) - *Introduces Auto Benchmark Audit (ABA), an agentic framework that audited 168 benchmarks across nine domains, found over 25.7% of tasks had critical issues (ambiguous design, execution conflicts, incorrect ground truths).*
 - **[PerspectiveGap: A Benchmark for Multi-Agent Orchestration Prompting](https://arxiv.org/abs/2606.08878)** (Sun et al., arXiv 2026) - *Isolates orchestration prompt writing as its own capability: 110 scenarios over 10 topologies on which 33 models average a 17.2% pass rate.* [[code](https://github.com/WhymustIhaveaname/PerspectiveGap)]
+- **[ClawBench: Can AI Agents Complete Everyday Online Tasks?](https://arxiv.org/abs/2604.08523)** (Zhang et al., arXiv 2026) - *Evaluates browser agents on everyday tasks across live production websites using isolated containers, task-scoped final-request interception, and five-layer execution traces.* [[code](https://github.com/TIGER-AI-Lab/ClawBench)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
