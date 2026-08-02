@@ -91,7 +91,7 @@ Fresh 2026 work that is already drawing attention.
 - [🔥 10 to Watch (2026)](#to-watch)
 - **🧭 Background**
   - [📚 Surveys & Position Papers (51)](#surveys)
-  - [🏗️ Agent Architectures & Frameworks (40)](#architectures)
+  - [🏗️ Agent Architectures & Frameworks (41)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (43)](#planning)
   - [💾 Memory (46)](#memory)
@@ -170,11 +170,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ Agent Architectures & Frameworks (40)
+### 🏗️ Agent Architectures & Frameworks (41)
 *Corresponds to §2 (Background) and the running examples throughout.*
 
 <details>
-<summary><b>Show 40 papers</b></summary>
+<summary><b>Show 41 papers</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *Only peer-reviewed-adjacent empirical study of the widely-influential (but paper-less) AutoGPT autonomous-agent design pattern.* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *The standard reference benchmark for measuring general single-agent capability across heterogeneous environments.* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -217,6 +217,7 @@ Fresh 2026 work that is already drawing attention.
 - **[LLM-as-a-Verifier: A General-Purpose Verification Framework](https://arxiv.org/abs/2607.05391)** (Kwok et al., arXiv 2026) - *Treats verification as its own scaling axis: continuous scores from scoring-token logits, scaled by granularity, repeated evaluation and criteria decomposition, reach 86.5% on Terminal-Bench V2 without extra training.* [[code](https://github.com/llm-as-a-verifier/llm-as-a-verifier)]
 - **[Molt: A Scalable PyTorch-Native Training Framework for Agentic Reinforcement Learning](https://arxiv.org/abs/2607.21653)** (Hu et al., arXiv 2026) - *Shows a compact PyTorch-native agentic RL trainer, small enough for a researcher or coding assistant to read end to end, stays statistically comparable to a Megatron-based stack.* [[code](https://github.com/NVIDIA-NeMo/labs-molt)]
 - **[Baselines Before Architecture: Evaluating Coding Agents for Autonomous Penetration Testing](https://arxiv.org/abs/2607.13085)** (Dhakal et al., arXiv 2026) - *Default coding CLI agents already solve a large share of the 104-task XBOW benchmark, and repeated plain-agent runs can match published harness architectures under matched models.*
+- **[Agon: An Autonomous Large-Scale Omnidisciplinary Research System Built on Prompt Economy](https://arxiv.org/abs/2606.24177)** (Sun et al., arXiv 2026) - *A research orchestrator framework organizing autonomous scientific discovery around reusable scientist/coder/auditor loops, governed by Prompt Economy across 10+ disciplines.* [[code](https://github.com/AutoResearch-Factory/Agon)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
