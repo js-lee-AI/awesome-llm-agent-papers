@@ -9,7 +9,7 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 <p align="center">
 <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
 <img src="https://img.shields.io/badge/papers-200%2B-8B2635?style=flat-square&labelColor=2b2b2b" alt="200+ curated papers">
-<a href="https://www.preprints.org/manuscript/202608.0265/v1"><img src="https://img.shields.io/badge/DOI-10.20944%2Fpreprints202608.0265.v1-8B2635?style=flat-square&labelColor=2b2b2b" alt="DOI: 10.20944/preprints202608.0265.v1"></a>
+<a href="https://www.preprints.org/manuscript/202608.0265"><img src="https://img.shields.io/badge/DOI-10.20944%2Fpreprints202608.0265.v1-8B2635?style=flat-square&labelColor=2b2b2b" alt="DOI: 10.20944/preprints202608.0265.v1"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-8B2635?style=flat-square&labelColor=2b2b2b" alt="License: MIT"></a>
 <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-8B2635?style=flat-square&labelColor=2b2b2b" alt="PRs welcome"></a>
 </p>
@@ -21,7 +21,7 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 </p>
 
 <p align="center">
-📄 <b><a href="https://www.preprints.org/manuscript/202608.0265/v1">Read the survey → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">PDF in this repo</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">Start with the 10-paper Starter Kit</a></b>
+📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">Read the survey → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">PDF in this repo</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">Start with the 10-paper Starter Kit</a></b>
 </p>
 
 <p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
@@ -32,7 +32,7 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 
 | | What's here |
 |---|---|
-| 📚 **Companion to the survey** | The papers behind *“LLM Agents: A Survey,”* kept current as new work appears. |
+| 📚 **A superset of the survey** | The 228 references behind *“LLM Agents: A Survey,”* plus the work verified and added since the paper was fixed. The paper is a snapshot; this list keeps moving. |
 | 🧭 **Organized by function** | 10 sections following the survey's structure: Surveys, Architectures, Planning, Memory, Tool Use, Multi-Agent, Environments, Applications, Evaluation, Safety. |
 | ✍️ **Annotated** | Each entry has a one-line note on what it contributes, its venue and year, and a `[code]` link where an official implementation exists. |
 | ⭐ **Starter Kit** | A [10-paper list](#starter-kit) for getting oriented, with a note on why each one is worth reading first. |
@@ -44,7 +44,7 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 
 This repository collects must-read papers on **LLM-based agents**: language models equipped with planning, memory, tool use, and multi-agent coordination to pursue goals over long horizons. Papers follow the taxonomy of the accompanying survey, covering the core components of an agent, the environments and applications they are deployed in, and the cross-cutting concerns of evaluation and safety. Each entry links to the paper and, where an official implementation exists, to its code.
 
-This is a **curated, continuously updated selection**; new work is added as the field moves. Sections are collapsed by default. Click **Show N papers** to expand.
+This is a **curated, continuously updated selection**, and a strict superset of the survey rather than a copy of its bibliography. The paper cites 228 references, each verified against its primary source; this list has grown well past that with work published since the paper was fixed, verified under the same rule. Sections are collapsed by default. Click **Show N papers** to expand.
 
 > **Legend:** ⭐ = [Starter Kit](#starter-kit) pick (read these first) · `[code]` = link to an official implementation.
 
@@ -702,7 +702,7 @@ Other useful reading lists in the same space:
 
 ## 📄 Citation
 
-The survey is posted on Preprints.org as **[LLM Agents: A Survey](https://www.preprints.org/manuscript/202608.0265/v1)**, DOI `10.20944/preprints202608.0265.v1`. That versioned record is the one to cite. The same 47-page paper is also in this repository at [`paper/llm-agents-a-survey.pdf`](paper/llm-agents-a-survey.pdf) so you can read it without leaving GitHub.
+The survey is posted on Preprints.org as **[LLM Agents: A Survey](https://www.preprints.org/manuscript/202608.0265)**, DOI `10.20944/preprints202608.0265.v1`. That versioned record is the one to cite. The same 47-page paper is also in this repository at [`paper/llm-agents-a-survey.pdf`](paper/llm-agents-a-survey.pdf) so you can read it without leaving GitHub.
 
 If this list or the survey is useful to you, please cite:
 
@@ -715,7 +715,7 @@ If this list or the survey is useful to you, please cite:
   journal   = {Preprints},
   publisher = {Preprints},
   doi       = {10.20944/preprints202608.0265.v1},
-  url       = {https://www.preprints.org/manuscript/202608.0265/v1}
+  url       = {https://www.preprints.org/manuscript/202608.0265}
 }
 ```
 

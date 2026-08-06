@@ -5,7 +5,7 @@
 **LLM Agents: A Survey**
 Jungseob Lee, Korea University, 2026. 47 pages.
 
-The paper is published on Preprints.org at [10.20944/preprints202608.0265.v1](https://www.preprints.org/manuscript/202608.0265/v1). That record is the citable one; this copy is kept so the work stays readable without leaving the repository. The two are the same 47-page paper, built from the same source with different TeX engines, so line breaks can differ by a hair. Quote page numbers from the published record.
+The paper is published on Preprints.org at [10.20944/preprints202608.0265.v1](https://www.preprints.org/manuscript/202608.0265). That record is the citable one; this copy is kept so the work stays readable without leaving the repository. The two are the same 47-page paper, built from the same source with different TeX engines, so line breaks can differ by a hair. Quote page numbers from the published record.
 
 ## Terms
 
