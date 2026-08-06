@@ -6,15 +6,21 @@ authors:
   - family-names: "Lee"
     given-names: "Jungseob"
     affiliation: "Korea University, South Korea"
+    orcid: "https://orcid.org/0000-0002-9431-6342"
 license: MIT
+repository-code: "https://github.com/js-lee-AI/awesome-llm-agent-papers"
 preferred-citation:
   type: article
   title: "LLM Agents: A Survey"
-  journal: "Preprints.org"
   authors:
     - family-names: "Lee"
       given-names: "Jungseob"
       affiliation: "Korea University, South Korea"
+      orcid: "https://orcid.org/0000-0002-9431-6342"
+  journal: "Preprints"
+  publisher:
+    name: "Preprints.org"
   year: 2026
-  month: 7
-  notes: "Preprint hosted on Preprints.org; DOI pending (to be added upon posting)."
+  month: 8
+  doi: "10.20944/preprints202608.0265.v1"
+  url: "https://www.preprints.org/manuscript/202608.0265/v1"

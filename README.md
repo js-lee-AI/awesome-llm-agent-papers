@@ -9,6 +9,7 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 <p align="center">
 <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
 <img src="https://img.shields.io/badge/papers-200%2B-8B2635?style=flat-square&labelColor=2b2b2b" alt="200+ curated papers">
+<a href="https://www.preprints.org/manuscript/202608.0265/v1"><img src="https://img.shields.io/badge/DOI-10.20944%2Fpreprints202608.0265.v1-8B2635?style=flat-square&labelColor=2b2b2b" alt="DOI: 10.20944/preprints202608.0265.v1"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-8B2635?style=flat-square&labelColor=2b2b2b" alt="License: MIT"></a>
 <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-8B2635?style=flat-square&labelColor=2b2b2b" alt="PRs welcome"></a>
 </p>
@@ -20,7 +21,7 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 </p>
 
 <p align="center">
-📄 <b><a href="paper/llm-agents-a-survey.pdf">Read the survey → “LLM Agents: A Survey” (PDF)</a></b> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">Start with the 10-paper Starter Kit</a></b>
+📄 <b><a href="https://www.preprints.org/manuscript/202608.0265/v1">Read the survey → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">PDF in this repo</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">Start with the 10-paper Starter Kit</a></b>
 </p>
 
 <p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
@@ -701,20 +702,26 @@ Other useful reading lists in the same space:
 
 ## 📄 Citation
 
-The full text is in this repository at [`paper/llm-agents-a-survey.pdf`](paper/llm-agents-a-survey.pdf) (47 pages), posted while the preprint record is being set up.
+The survey is posted on Preprints.org as **[LLM Agents: A Survey](https://www.preprints.org/manuscript/202608.0265/v1)**, DOI `10.20944/preprints202608.0265.v1`. That versioned record is the one to cite. The same 47-page paper is also in this repository at [`paper/llm-agents-a-survey.pdf`](paper/llm-agents-a-survey.pdf) so you can read it without leaving GitHub.
 
 If this list or the survey is useful to you, please cite:
 
 ```bibtex
 @article{lee2026llmagents,
-  title   = {LLM Agents: A Survey},
-  author  = {Lee, Jungseob},
-  year    = {2026},
-  month   = jul,
-  journal = {Preprints.org},
-  note    = {Preprint}
+  title     = {LLM Agents: A Survey},
+  author    = {Lee, Jungseob},
+  year      = {2026},
+  month     = {August},
+  journal   = {Preprints},
+  publisher = {Preprints},
+  doi       = {10.20944/preprints202608.0265.v1},
+  url       = {https://www.preprints.org/manuscript/202608.0265/v1}
 }
 ```
+
+GitHub's **Cite this repository** button reads [`CITATION.cff`](CITATION.cff) and returns the same record in APA or BibTeX.
+
+The companion deep-dive, *The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents*, is a separate record: DOI [`10.2139/ssrn.7186738`](https://ssrn.com/abstract=7186738). Cite whichever one you actually drew on.
 
 ## 🤝 Contributing
 
@@ -746,6 +753,7 @@ Released under the [MIT License](LICENSE).
 
 ## 🗓️ Updates
 
+- **2026-08-06**: The survey is posted on Preprints.org with DOI `10.20944/preprints202608.0265.v1`. The citation block, `CITATION.cff` and the header link now point at the versioned record instead of the PDF in this repository.
 - **2026-07-31**: Recency pass: +30 papers from July 2026, three per section, every arXiv ID, title and author line re-checked against arxiv.org and official repos linked where they exist. 421 to 451.
 - **2026-07-26**: ClawBench added to Evaluation & Benchmarks by [@reacher-z](https://github.com/reacher-z), who helps maintain it. 420 to 421.
 - **2026-07-25**: First community contributions: +6 agent-memory systems (MemoryOS, Zep, Nemori, MemOS, G-Memory, ACE) from [@jinmang2](https://github.com/jinmang2), and +3 research-agent and orchestration papers (AutoNumerics, OptimAI, PerspectiveGap) from [@WhymustIhaveaname](https://github.com/WhymustIhaveaname). All titles, authors, venues, arXiv IDs and code links re-verified before merge.
