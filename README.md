@@ -9,7 +9,7 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 <p align="center">
 <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
 <img src="https://img.shields.io/badge/papers-200%2B-8B2635?style=flat-square&labelColor=2b2b2b" alt="200+ curated papers">
-<a href="https://www.preprints.org/manuscript/202608.0265"><img src="https://img.shields.io/badge/DOI-10.20944%2Fpreprints202608.0265.v1-8B2635?style=flat-square&labelColor=2b2b2b" alt="DOI: 10.20944/preprints202608.0265.v1"></a>
+<a href="https://doi.org/10.20944/preprints202608.0265.v1"><img src="https://img.shields.io/badge/DOI-10.20944%2Fpreprints202608.0265.v1-8B2635?style=flat-square&labelColor=2b2b2b" alt="DOI: 10.20944/preprints202608.0265.v1"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-8B2635?style=flat-square&labelColor=2b2b2b" alt="License: MIT"></a>
 <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-8B2635?style=flat-square&labelColor=2b2b2b" alt="PRs welcome"></a>
 </p>
@@ -718,7 +718,7 @@ Other useful reading lists in the same space:
 
 ## 📄 Citation
 
-The survey is posted on Preprints.org as **[LLM Agents: A Survey](https://www.preprints.org/manuscript/202608.0265)**, DOI `10.20944/preprints202608.0265.v1`. That versioned record is the one to cite. The same 47-page paper is also in this repository at [`paper/llm-agents-a-survey.pdf`](paper/llm-agents-a-survey.pdf) so you can read it without leaving GitHub.
+The survey is posted on Preprints.org as **[LLM Agents: A Survey](https://www.preprints.org/manuscript/202608.0265)**, DOI [`10.20944/preprints202608.0265.v1`](https://doi.org/10.20944/preprints202608.0265.v1). That versioned record is the one to cite. The same 47-page paper is also in this repository at [`paper/llm-agents-a-survey.pdf`](paper/llm-agents-a-survey.pdf) so you can read it without leaving GitHub.
 
 If this list or the survey is useful to you, please cite:
 
@@ -731,7 +731,7 @@ If this list or the survey is useful to you, please cite:
   journal   = {Preprints},
   publisher = {Preprints},
   doi       = {10.20944/preprints202608.0265.v1},
-  url       = {https://www.preprints.org/manuscript/202608.0265}
+  url       = {https://doi.org/10.20944/preprints202608.0265.v1}
 }
 ```
 
