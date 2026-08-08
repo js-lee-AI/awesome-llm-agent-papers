@@ -27,3 +27,9 @@ if [ "$before" != "$after" ]; then
     git add "$repo_root/README.md"
     echo "pre-commit: README.md counts were stale and have been synced and re-staged."
 fi
+
+# Truncated glosses cannot be repaired automatically, so this one only reports.
+if ! python3 "$repo_root/scripts/check_glosses.py"; then
+    echo "pre-commit: rewrite the gloss above from the paper's own abstract, then commit again." >&2
+    exit 1
+fi

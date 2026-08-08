@@ -1,19 +1,25 @@
-name: Check paper counts
+name: Check the list
 
-# Each section states its count in three places (Contents, heading, "Show N
-# papers"). A PR that adds a paper without touching all three leaves the list
-# lying about its own size, which has happened. This fails the PR instead.
+# Two ways this list has quietly gone wrong, both invisible in a rendered diff:
+#
+#   counts   each section states its size in three places (Contents, heading,
+#            "Show N papers"), and a PR that touches one leaves the other two
+#            lying about the section.
+#   glosses  a backfill once cut nine annotations off mid-sentence, three of
+#            them leaving a parenthesis open.
+#
+# Both are cheap to check and neither is cheap to spot by eye.
 
 on:
   pull_request:
     paths:
       - README.md
-      - scripts/sync_counts.py
+      - scripts/*.py
   push:
     branches: [main]
     paths:
       - README.md
-      - scripts/sync_counts.py
+      - scripts/*.py
   workflow_dispatch:
 
 permissions:
@@ -29,3 +35,5 @@ jobs:
           python-version: "3.12"
       - name: Verify section counts match the number of entries
         run: python3 scripts/sync_counts.py --check
+      - name: Verify no gloss was cut off mid-sentence
+        run: python3 scripts/check_glosses.py
