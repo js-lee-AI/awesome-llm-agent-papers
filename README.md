@@ -92,7 +92,7 @@ Fresh 2026 work that is already drawing attention.
 - [🔥 10 to Watch (2026)](#to-watch)
 - **🧭 Background**
   - [📚 Surveys & Position Papers (52)](#surveys)
-  - [🏗️ Agent Architectures & Frameworks (42)](#architectures)
+  - [🏗️ Agent Architectures & Frameworks (43)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (44)](#planning)
   - [💾 Memory (48)](#memory)
@@ -172,11 +172,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ Agent Architectures & Frameworks (42)
+### 🏗️ Agent Architectures & Frameworks (43)
 *Corresponds to §2 (Background) and the running examples throughout.*
 
 <details>
-<summary><b>Show 42 papers</b></summary>
+<summary><b>Show 43 papers</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *Only peer-reviewed-adjacent empirical study of the widely-influential (but paper-less) AutoGPT autonomous-agent design pattern.* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *The standard reference benchmark for measuring general single-agent capability across heterogeneous environments.* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -221,6 +221,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Baselines Before Architecture: Evaluating Coding Agents for Autonomous Penetration Testing](https://arxiv.org/abs/2607.13085)** (Dhakal et al., arXiv 2026) - *Default coding CLI agents already solve a large share of the 104-task XBOW benchmark, and repeated plain-agent runs can match published harness architectures under matched models.*
 - **[Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning](https://arxiv.org/abs/2608.05144)** (Li et al., arXiv 2026) - *A persistent runtime in which Manager, Planner, Engineer and Reviewer run bounded missions over durable project state, admitting memories, skills and verifiers only after role-owned review; weights stay fixed, and 78% on SWE-Bench Pro against 59% for a direct baseline comes from runtime state alone.*
 - **[Architectural Implications of Agentic AI Workflows](https://arxiv.org/abs/2608.04458)** (Yang et al., arXiv 2026) - *Characterizes agentic workloads as a datacenter problem through a production study at Azure, finding that orchestration and tools put the CPU on the critical path and that fragmented execution strands both CPU and GPU capacity on conventional uniform servers.*
+- **[Ouroboros: A Self-Developing Frontier Coding Agent with Reviewed Core Evolution](https://arxiv.org/abs/2608.08311)** (Razzhigaev et al., arXiv 2026) - *Documents a coding-agent harness whose tools, prompts, context assembly, and core implementation improve through reviewed commits that become the runtime for later work.* [[code](https://github.com/razzant/ouroboros)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
