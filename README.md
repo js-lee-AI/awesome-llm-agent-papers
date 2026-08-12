@@ -99,7 +99,7 @@ Fresh 2026 work that is already drawing attention.
   - [🔧 Tool Use (41)](#tools)
   - [🤝 Multi-Agent Systems (45)](#multi-agent)
 - **🌍 Part II: Agents in Context**
-  - [🌐 Interactive Environments (50)](#environments)
+  - [🌐 Interactive Environments (52)](#environments)
   - [🚀 Applications (49)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
   - [📊 Evaluation & Benchmarks (43)](#evaluation)
@@ -458,11 +458,11 @@ Fresh 2026 work that is already drawing attention.
 ## 🌍 Part II: Agents in Context
 
 <a id="environments"></a>
-### 🌐 Interactive Environments (50)
+### 🌐 Interactive Environments (52)
 *Corresponds to §8 (Agents in Interactive Environments).*
 
 <details>
-<summary><b>Show 50 papers</b></summary>
+<summary><b>Show 52 papers</b></summary>
 
 - **[Do As I Can, Not As I Say: Grounding Language in Robotic Affordances](https://arxiv.org/abs/2204.01691)** (al., CoRL 2022) - *Foundational demonstration of LLM-as-planner grounded by real-world affordances for embodied robotic agents.* [[code](https://github.com/google-research/google-research/tree/master/saycan)]
 - **[Inner Monologue: Embodied Reasoning through Planning with Language Models](https://arxiv.org/abs/2207.05608)** (al., CoRL 2022) - *Established the closed-loop, feedback-grounded planning pattern underlying subsequent embodied/GUI agent architectures.*
@@ -473,8 +473,10 @@ Fresh 2026 work that is already drawing attention.
 - **[OpenVLA: An Open-Source Vision-Language-Action Model](https://arxiv.org/abs/2406.09246)** (al., CoRL 2024) - *Open-source counterpart to closed VLA models, democratizing research on LLM-driven robotic control.* [[code](https://github.com/openvla/openvla)]
 - **[WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents](https://arxiv.org/abs/2207.01206)** (Yao et al., NeurIPS 2022) - *Foundational, widely-used benchmark for grounded language web agents, predating and motivating later LLM-based web-navigation research.* [[code](https://github.com/princeton-nlp/WebShop)]
 - **[Mind2Web: Towards a Generalist Agent for the Web](https://arxiv.org/abs/2306.06070)** (Deng et al., NeurIPS 2023) - *First benchmark and LLM-based agent explicitly designed for generalist web navigation on real websites; standard reference cited by subsequent web/GUI agent papers.* [[code](https://github.com/OSU-NLP-Group/Mind2Web)]
+- **[A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis](https://arxiv.org/abs/2307.12856)** (Gur et al., ICLR 2024) - *Splits an instruction into canonical sub-instructions, summarizes long HTML into task-relevant snippets, and acts through generated Python, lifting success on real websites by over 50% and topping Mind2Web offline planning.*
 - **[GPT-4V(ision) is a Generalist Web Agent, if Grounded](https://arxiv.org/abs/2401.01614)** (Zheng et al., ICML 2024) - *First systematic demonstration that multimodal LLMs can act as generalist visual web agents, catalyzing the shift to vision-grounded web/GUI agents.* [[code](https://github.com/OSU-NLP-Group/SeeAct)]
 - **[WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models](https://arxiv.org/abs/2401.13919)** (He et al., ACL 2024) - *Key demonstration and benchmark for real-world, multimodal browser agents widely used to evaluate subsequent web-agent systems.* [[code](https://github.com/MinorJerry/WebVoyager)]
+- **[Web Agents with World Models: Learning and Leveraging Environment Dynamics in Web Navigation](https://arxiv.org/abs/2410.13232)** (Chae et al., ICLR 2025) - *Confirms current LLMs carry no world model, then trains one to describe in free-form text what each action would change, so the agent can simulate an outcome before committing to something irreversible like a non-refundable booking; improves policy selection on WebArena and Mind2Web more cheaply than tree search.* [[code](https://github.com/kyle8581/WMA-Agents)]
 - **[CogAgent: A Visual Language Model for GUI Agents](https://arxiv.org/abs/2312.08914)** (Hong et al., arXiv 2023) - *One of the first large VLMs purpose-built for screenshot-only GUI grounding, establishing the high-resolution visual GUI agent architecture line.* [[code](https://github.com/zai-org/CogAgent)]
 - **[SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents](https://arxiv.org/abs/2401.10935)** (Cheng et al., ACL 2024) - *Established GUI grounding as a core sub-problem for visual GUI agents and introduced ScreenSpot, a standard grounding benchmark.* [[code](https://github.com/njucckevin/SeeClick)]
 - **[Mobile-Agent: Autonomous Multi-Modal Mobile Device Agent with Visual Perception](https://arxiv.org/abs/2401.16158)** (Wang et al., arXiv 2024) - *Representative vision-centric mobile GUI agent design demonstrating cross-app, metadata-free operation.* [[code](https://github.com/X-PLUG/MobileAgent)]
