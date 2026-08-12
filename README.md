@@ -92,7 +92,7 @@ Fresh 2026 work that is already drawing attention.
 - [🔥 10 to Watch (2026)](#to-watch)
 - **🧭 Background**
   - [📚 Surveys & Position Papers (52)](#surveys)
-  - [🏗️ Agent Architectures & Frameworks (43)](#architectures)
+  - [🏗️ Agent Architectures & Frameworks (44)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (44)](#planning)
   - [💾 Memory (48)](#memory)
@@ -172,11 +172,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ Agent Architectures & Frameworks (43)
+### 🏗️ Agent Architectures & Frameworks (44)
 *Corresponds to §2 (Background) and the running examples throughout.*
 
 <details>
-<summary><b>Show 43 papers</b></summary>
+<summary><b>Show 44 papers</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *Only peer-reviewed-adjacent empirical study of the widely-influential (but paper-less) AutoGPT autonomous-agent design pattern.* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *The standard reference benchmark for measuring general single-agent capability across heterogeneous environments.* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -208,6 +208,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Inside the Scaffold: A Source-Code Taxonomy of Coding Agent Architectures](https://arxiv.org/abs/2604.03515)** (Rombaut et al., arXiv 2026) - *Derives a source-code taxonomy of 13 open coding-agent scaffolds, identifying five composable loop primitives that systems recombine.*
 - **[Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses](https://arxiv.org/abs/2604.25850)** (Lin et al., arXiv 2026) - *Automatically evolves a coding-agent harness from observability signals, raising Terminal-Bench 2 from 69.7 to 77.0.*
 - **[AgentFactory: A Self-Evolving Framework Through Executable Subagent Accumulation and Reuse](https://arxiv.org/abs/2603.18000)** (Zhang et al., arXiv 2026) - *Accumulates capability by saving successful solutions as reusable executable subagent code rather than textual prompts, refined by execution feedback.* [[code](https://github.com/zzatpku/AgentFactory)]
+- **[CORAL: Towards Autonomous Multi-Agent Evolution for Open-Ended Discovery](https://arxiv.org/abs/2604.01658)** (Qu et al., COLM 2026) - *Coordinates long-running coding agents through isolated workspaces, external evaluation, and shared persistent memory so scored experiments and reusable skills accumulate across open-ended search.* [[code](https://github.com/Human-Agent-Society/CORAL)]
 - **[LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle](https://arxiv.org/abs/2607.06195)** (Long et al., arXiv 2026) - *Proposes LogicHunter, a specification-driven fuzzing framework paired with a ReAct-based agentic oracle that retrieves documentation, navigates source code.*
 - **[AgentFlow: Building Agent Dependency Graphs for Static Analysis of Agent Programs](https://arxiv.org/abs/2607.01640)** (Wang et al., arXiv 2026) - *Introduces AgentFlow, a static analysis framework that recovers agent dependencies from LLM agent source code by constructing a framework-agnostic Agent Dependency Graph typing agents, prompts, models, capabilities.*
 - **[SEAGym: An Evaluation Environment for Self-Evolving LLM Agents](https://arxiv.org/abs/2606.17546)** (Zheng et al., arXiv 2026) - *Introduces SEAGym, an evaluation environment for self-evolving LLM agents that measures agent-harness modifications across training, validation, held-out test, replay, and cost dimensions rather than a single task score.*
