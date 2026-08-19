@@ -399,11 +399,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 Multi-Agent Systems (45)
+### 🤝 Multi-Agent Systems (46)
 *Corresponds to §7 (Multi-Agent Systems).*
 
 <details>
-<summary><b>Show 45 papers</b></summary>
+<summary><b>Show 46 papers</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *One of the earliest and most cited frameworks establishing autonomous agent-to-agent cooperation via role-play.* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *Seminal multi-agent debate paper popularizing 'society of minds'-style debate as a test-time technique.* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -451,6 +451,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Do Latent Channels Actually Communicate? A Causal Audit of Latent Multi-Agent LLM](https://arxiv.org/abs/2607.26773)** (Zhang et al., arXiv 2026) - *Replaces latent messages across examples to show aggregate accuracy hides the mechanism: a -1.00 point GSM8K effect splits into -6.17 from an unrelated message and +5.17 from example-specific content.*
 - **[When Does Latent Communication Pay? A Causal Audit of Relayed KV Caches in Multi-Agent LLMs](https://arxiv.org/abs/2608.04893)** (Cheng et al., arXiv 2026) - *Audits the claim that relaying KV caches between agents transfers latent thoughts, by swapping in deranged, zeroed and moment-matched caches: where the receiver needs the sender's private information the effect is real, and where it does not, the reported gain is statistically equivalent to nothing.*
 - **[Everyone Conforms, No One Believes: Pluralistic Ignorance in LLM Agent Populations](https://arxiv.org/abs/2608.02758)** (YS, arXiv 2026) - *Finds that agent populations reproduce pluralistic ignorance, conforming publicly 64 to 94% of the time while privately rejecting the norm, and that a single public dissenter breaks the false consensus less than 26% of the time for seven of eight models.*
+- **[CityReal: Human-Aligned Urban Behavior and City Dynamics Simulation with Large-Scale LLM Agents](https://arxiv.org/abs/2608.16897)** (Bougie et al., arXiv 2026) - *Large-scale human-aligned simulation of urban behavior and city dynamics; intention-driven agents learn habits and preferences via textual adapters to match real population statistics.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
