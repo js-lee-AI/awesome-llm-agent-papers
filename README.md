@@ -102,7 +102,7 @@ Fresh 2026 work that is already drawing attention.
   - [🌐 Interactive Environments (52)](#environments)
   - [🚀 Applications (49)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (43)](#evaluation)
+  - [📊 Evaluation & Benchmarks (44)](#evaluation)
   - [🛡️ Safety & Alignment (53)](#safety)
 
 ## 🧭 Background
@@ -585,11 +585,11 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (43)
+### 📊 Evaluation & Benchmarks (44)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
-<summary><b>Show 43 papers</b></summary>
+<summary><b>Show 44 papers</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Reference benchmark for generalist, tool-using agent assistants; underlies popular public leaderboards tracking frontier agent progress.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *De facto standard benchmark for coding/software-engineering agents; spawned the SWE-bench Verified/Lite/Live/Multimodal family.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -605,6 +605,7 @@ Fresh 2026 work that is already drawing attention.
 - **[τ²-Bench: Evaluating Conversational Agents in a Dual-Control Environment](https://arxiv.org/abs/2506.07982)** (Barres et al., arXiv 2025) - *Extends τ-bench to settings where user and agent both act on the environment.* [[code](https://github.com/sierra-research/tau2-bench)]
 - **[Agent-as-a-Judge: Evaluate Agents with Agents](https://arxiv.org/abs/2410.10934)** (Zhuge et al., arXiv 2024) - *Systematizes agentic evaluation of agents; the reference point for judge-circularity concerns.* [[code](https://github.com/metauto-ai/agent-as-a-judge)]
 - **[Holistic Agent Leaderboard: The Missing Infrastructure for AI Agent Evaluation](https://arxiv.org/abs/2510.11977)** (Kapoor et al., arXiv 2025) - *Standardized harness that re-evaluates agents at scale with cost reported alongside accuracy.*
+- **[Dr. Bench: A Multidimensional Evaluation for Deep Research Agents, from Answers to Reports](https://arxiv.org/abs/2510.02190)** (Yao et al., arXiv 2025) - *Evaluates deep-research agents from answers to reports across semantic quality, topical focus, and retrieval trustworthiness.* [[code](https://github.com/EVIGBYEN/DrBench)]
 - **[Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces](https://arxiv.org/abs/2601.11868)** (Merrill et al., arXiv 2026) - *Hard, realistic command-line tasks; a de facto standard for terminal agents.* [[code](https://github.com/laude-institute/terminal-bench)]
 
 - **[Can AI Agents Answer Your Data Questions? A Benchmark for Data Agents (DataAgentBench)](https://arxiv.org/abs/2603.20576)** (Ma et al., arXiv 2026) - *Benchmark across heterogeneous database systems; frontier models reach only 38% accuracy on complex data questions.* [[code](https://github.com/ucbepic/DataAgentBench)]
