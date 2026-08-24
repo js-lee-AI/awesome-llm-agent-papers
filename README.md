@@ -95,7 +95,7 @@ Fresh 2026 work that is already drawing attention.
   - [🏗️ Agent Architectures & Frameworks (46)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (46)](#planning)
-  - [💾 Memory (50)](#memory)
+  - [💾 Memory (51)](#memory)
   - [🔧 Tool Use (43)](#tools)
   - [🤝 Multi-Agent Systems (48)](#multi-agent)
 - **🌍 Part II: Agents in Context**
@@ -292,11 +292,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="memory"></a>
-### 💾 Memory (50)
+### 💾 Memory (51)
 *Corresponds to §5 (Memory).*
 
 <details>
-<summary><b>Show 50 papers</b></summary>
+<summary><b>Show 51 papers</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Early and influential structured/triplet-based read-write memory design, a precursor to graph- and KG-based agent memory systems.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *One of the first systems to bring a psychologically grounded (human-memory-inspired) forgetting/consolidation mechanism into LLM agent memory.* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -349,6 +349,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Caching for the Future: Scrub Jay Episodic Memory Principles for Agent Memory Systems](https://arxiv.org/abs/2608.04746)** (Bhandari et al., arXiv 2026) - *Borrows type-conditioned forgetting from scrub jay episodic memory, tagging each stored item with a perishability coefficient and a utility horizon so stale facts decay out of retrieval; ablating the decay term collapses generalization by 5.7 times.*
 - **[What Does Context Compression Cost an Agent? Interaction Costs Unrevealed by Task-Completion Metrics](https://arxiv.org/abs/2608.16370)** (Liu, arXiv 2026) - *Compression that leaves task completion statistically flat can still roughly triple an agent's retrieval calls as it reacquires dropped state (GPT-5.5 goes from 80% to 85% completion at p = 1.0 while retrieval rises from 21.0 to 63.9 calls at p = .002), and the same sliding compression produces no retrieval surge in ALFWorld, so the signature is environment-dependent.*
 - **[When Your Agent Opens the Chat App: Agent-Controlled Search over Raw Chat Logs Rivals Structured Memory](https://arxiv.org/abs/2608.12888)** (Li et al., arXiv 2026) - *An agent given an iterative keyword-search loop over the unmodified chat archive, indexed lexically at turn granularity with no summaries, embeddings, trees or graphs built in advance, reaches the highest mean accuracy of any system compared (58.2 against 53.2 for HippoRAG 2) across roughly 2,800 questions under MemoryAgentBench's incremental multi-turn setting on a matched GPT-4o-mini backbone.*
+- **[ForeDreamer: A Self-Evolving Dual-Agent Memory Architecture for Future Event Prediction](https://arxiv.org/abs/2608.20920)** (Zhong et al., EMNLP Findings 2026) - *Introduces a dual-agent memory framework that separates question-specific factual memory from persistent experiential memory and co-evolves textual forecasting experience with procedural MemGuide/MemTool components.* [[code](https://github.com/zhongzero/ForeDreamer)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
