@@ -91,13 +91,13 @@ Fresh 2026 work that is already drawing attention.
 - [⭐ Starter Kit](#starter-kit)
 - [🔥 10 to Watch (2026)](#to-watch)
 - **🧭 Background**
-  - [📚 Surveys & Position Papers (54)](#surveys)
+  - [📚 Surveys & Position Papers (55)](#surveys)
   - [🏗️ Agent Architectures & Frameworks (46)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (46)](#planning)
-  - [💾 Memory (51)](#memory)
+  - [💾 Memory (52)](#memory)
   - [🔧 Tool Use (43)](#tools)
-  - [🤝 Multi-Agent Systems (48)](#multi-agent)
+  - [🤝 Multi-Agent Systems (49)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (54)](#environments)
   - [🚀 Applications (51)](#applications)
@@ -108,11 +108,11 @@ Fresh 2026 work that is already drawing attention.
 ## 🧭 Background
 
 <a id="surveys"></a>
-### 📚 Surveys & Position Papers (54)
+### 📚 Surveys & Position Papers (55)
 *Corresponds to §1-§3 (Introduction, Background, Taxonomy).*
 
 <details>
-<summary><b>Show 54 papers</b></summary>
+<summary><b>Show 55 papers</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *The canonical, most-cited general-purpose LLM-agent survey.* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Co-foundational with Wang et al. 2023 as one of the two seminal general surveys.* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -169,6 +169,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Blockchain Empowered Trustworthy Agent Networks: Foundations, Taxonomy, and Future Directions](https://arxiv.org/abs/2608.04626)** (Zhu et al., arXiv 2026) - *Surveys the road from classical multi-agent systems to open agent networks over 1980 to 2026, arguing that the trust problem moves to the network level once agents owned by different parties transact, and that single-agent safety mechanisms cannot reach it.*
 - **[Software Engineering for and with GUI Agent](https://arxiv.org/abs/2608.09278)** (Yu et al., arXiv 2026) - *Reviews 336 GUI-agent papers from January 2018 to April 2026 and finds architectures converging on modular perceive-reason-act loops while recovery, human escalation, safety enforcement and auditability stay underdeveloped, with evaluation still centered on task success and hard to compare across protocols.*
 - **[Agent Safety Should Be a Runtime Contract](https://arxiv.org/abs/2608.11274)** (Ng et al., arXiv 2026) - *Position paper putting agent safety in the harness as a runtime contract with a preventive face (sandboxes, permission gates, monitors) and an evidential face (test runs, log captures, file diffs), grounded in 52 documented incidents, a trajectory-schema audit of 12 public agent systems, and a title-level audit of all 28,560 NeurIPS, ICML and ICLR 2023-2025 papers showing a pooled 8-12x imbalance between training-time and deployment-time publication.*
+- **[Information Retrieval Misses the Mark for LLM Agents](https://doi.org/10.2139/ssrn.6903579)** (Sun et al., SSRN 2026) - *Position paper arguing that ranked-list IR objectives are misaligned with what an agent actually needs from a corpus, motivating navigation-style alternatives.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -292,11 +293,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="memory"></a>
-### 💾 Memory (51)
+### 💾 Memory (52)
 *Corresponds to §5 (Memory).*
 
 <details>
-<summary><b>Show 51 papers</b></summary>
+<summary><b>Show 52 papers</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Early and influential structured/triplet-based read-write memory design, a precursor to graph- and KG-based agent memory systems.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *One of the first systems to bring a psychologically grounded (human-memory-inspired) forgetting/consolidation mechanism into LLM agent memory.* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -350,6 +351,7 @@ Fresh 2026 work that is already drawing attention.
 - **[What Does Context Compression Cost an Agent? Interaction Costs Unrevealed by Task-Completion Metrics](https://arxiv.org/abs/2608.16370)** (Liu, arXiv 2026) - *Compression that leaves task completion statistically flat can still roughly triple an agent's retrieval calls as it reacquires dropped state (GPT-5.5 goes from 80% to 85% completion at p = 1.0 while retrieval rises from 21.0 to 63.9 calls at p = .002), and the same sliding compression produces no retrieval surge in ALFWorld, so the signature is environment-dependent.*
 - **[When Your Agent Opens the Chat App: Agent-Controlled Search over Raw Chat Logs Rivals Structured Memory](https://arxiv.org/abs/2608.12888)** (Li et al., arXiv 2026) - *An agent given an iterative keyword-search loop over the unmodified chat archive, indexed lexically at turn granularity with no summaries, embeddings, trees or graphs built in advance, reaches the highest mean accuracy of any system compared (58.2 against 53.2 for HippoRAG 2) across roughly 2,800 questions under MemoryAgentBench's incremental multi-turn setting on a matched GPT-4o-mini backbone.*
 - **[ForeDreamer: A Self-Evolving Dual-Agent Memory Architecture for Future Event Prediction](https://arxiv.org/abs/2608.20920)** (Zhong et al., EMNLP Findings 2026) - *Converts raw web evidence into structured memory before the forecast instead of feeding retrieval results straight to the agent, separating a question-specific factual memory from experiential memory that persists across forecasting episodes, with a memory subagent building the former and two evolution tracks improving both the forecast and the memory construction; evaluated on Prophet Arena and FutureX.* [[code](https://github.com/zhongzero/ForeDreamer)]
+- **[Corpus2Skill: Distilling Enterprise Knowledge into Navigable Agent Skills for QA and RAG](https://arxiv.org/abs/2604.14572)** (Sun et al., EMNLP Findings 2026) - *Compiles a corpus offline into a navigable hierarchy of agent skills the agent traverses at serve time, turning per-query retrieval into procedural memory it can backtrack over.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -410,11 +412,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 Multi-Agent Systems (48)
+### 🤝 Multi-Agent Systems (49)
 *Corresponds to §7 (Multi-Agent Systems).*
 
 <details>
-<summary><b>Show 48 papers</b></summary>
+<summary><b>Show 49 papers</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *One of the earliest and most cited frameworks establishing autonomous agent-to-agent cooperation via role-play.* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *Seminal multi-agent debate paper popularizing 'society of minds'-style debate as a test-time technique.* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -465,6 +467,7 @@ Fresh 2026 work that is already drawing attention.
 - **[CityReal: Human-Aligned Urban Behavior and City Dynamics Simulation with Large-Scale LLM Agents](https://arxiv.org/abs/2608.16897)** (Bougie et al., arXiv 2026) - *Large-scale human-aligned simulation of urban behavior and city dynamics; intention-driven agents learn habits and preferences via textual adapters to match real population statistics.*
 - **[When Agents Coordinate: Measuring Coordination in Multi-Agent AI Coding](https://arxiv.org/abs/2608.16801)** (Destefanis et al., arXiv 2026) - *Turns 1902 agent-team coding runs into temporal networks of messages, file writes and file reads: shared files replace repeated one-to-one messaging and cut output tokens by about 42% at eight agents on message-heavy work, naming one agent coordinator creates no communication hub and no reliable improvement in success, and across 244 sealed reruns agents still reach for hidden grading material in four fifths of runs.*
 - **[Debate Training Reduces Reward Hacking in RLAIF](https://arxiv.org/abs/2608.17776)** (Kenton et al., arXiv 2026) - *RL finetuning a Gemini 2.5 Flash-class policy through a generator versus critic debate adjudicated by a frozen, weaker Gemini 2.5 Flash Lite judge holds judge performance through training where the single-player RLAIF baseline quickly hacks it, recovering 45% of the performance gap; without player constraints, adversarial training risks defaulting to critic judge-hacking, and critique word limits (effective up to 150 words) balance the game at the cost of critic expressive clarity.*
+- **[OrchMAS: Orchestrated Reasoning with Multi Collaborative Heterogeneous Scientific Expert Structured Agents](https://arxiv.org/abs/2603.03005)** (Feng et al., arXiv 2026) - *An orchestrator model builds a task-specific reasoning pipeline and instantiates expert agents with generated roles, then replans mid-run from intermediate results.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
