@@ -91,28 +91,28 @@ Fresh 2026 work that is already drawing attention.
 - [⭐ Starter Kit](#starter-kit)
 - [🔥 10 to Watch (2026)](#to-watch)
 - **🧭 Background**
-  - [📚 Surveys & Position Papers (55)](#surveys)
-  - [🏗️ Agent Architectures & Frameworks (46)](#architectures)
+  - [📚 Surveys & Position Papers (57)](#surveys)
+  - [🏗️ Agent Architectures & Frameworks (48)](#architectures)
 - **🧱 Part I: Core Components**
-  - [🧠 Planning & Reasoning (46)](#planning)
-  - [💾 Memory (52)](#memory)
-  - [🔧 Tool Use (43)](#tools)
-  - [🤝 Multi-Agent Systems (49)](#multi-agent)
+  - [🧠 Planning & Reasoning (48)](#planning)
+  - [💾 Memory (54)](#memory)
+  - [🔧 Tool Use (45)](#tools)
+  - [🤝 Multi-Agent Systems (51)](#multi-agent)
 - **🌍 Part II: Agents in Context**
-  - [🌐 Interactive Environments (54)](#environments)
-  - [🚀 Applications (51)](#applications)
+  - [🌐 Interactive Environments (56)](#environments)
+  - [🚀 Applications (53)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (46)](#evaluation)
-  - [🛡️ Safety & Alignment (55)](#safety)
+  - [📊 Evaluation & Benchmarks (48)](#evaluation)
+  - [🛡️ Safety & Alignment (57)](#safety)
 
 ## 🧭 Background
 
 <a id="surveys"></a>
-### 📚 Surveys & Position Papers (55)
+### 📚 Surveys & Position Papers (57)
 *Corresponds to §1-§3 (Introduction, Background, Taxonomy).*
 
 <details>
-<summary><b>Show 55 papers</b></summary>
+<summary><b>Show 57 papers</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *The canonical, most-cited general-purpose LLM-agent survey.* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Co-foundational with Wang et al. 2023 as one of the two seminal general surveys.* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -170,16 +170,18 @@ Fresh 2026 work that is already drawing attention.
 - **[Software Engineering for and with GUI Agent](https://arxiv.org/abs/2608.09278)** (Yu et al., arXiv 2026) - *Reviews 336 GUI-agent papers from January 2018 to April 2026 and finds architectures converging on modular perceive-reason-act loops while recovery, human escalation, safety enforcement and auditability stay underdeveloped, with evaluation still centered on task success and hard to compare across protocols.*
 - **[Agent Safety Should Be a Runtime Contract](https://arxiv.org/abs/2608.11274)** (Ng et al., arXiv 2026) - *Position paper putting agent safety in the harness as a runtime contract with a preventive face (sandboxes, permission gates, monitors) and an evidential face (test runs, log captures, file diffs), grounded in 52 documented incidents, a trajectory-schema audit of 12 public agent systems, and a title-level audit of all 28,560 NeurIPS, ICML and ICLR 2023-2025 papers showing a pooled 8-12x imbalance between training-time and deployment-time publication.*
 - **[Information Retrieval Misses the Mark for LLM Agents](https://doi.org/10.2139/ssrn.6903579)** (Sun et al., SSRN 2026) - *Position paper answering the "RAG is dead, agents just need grep" reading of deployed practice: it grants that the substrate has shifted but argues the mismatch is structural across five dimensions, since IR's assumed corpus, input, objective, episode and retrievable all sit wrong for an agent that plans, browses, calls tools and decides whether to keep searching, and it tests the gap by holding the agent fixed while swapping BM25, vector, grep, hybrid and closed-book retrieval on HotpotQA-distractor and 2WikiMultihopQA, arguing for retrieval recast as a state-conditioned evidence-acquisition policy.*
+- **[Terminal Agents: A Survey of AI Agents in Command-Line Environments](https://arxiv.org/abs/2608.20485)** (Bin et al., arXiv 2026) - *Treats the terminal, rather than the task domain, as the organizing lens: agents whose progress-bearing loop runs through command execution and textual feedback, mapped across architecture, competence acquisition and evaluation on a seven-dimensional competence profile, with the survey's own fixed-condition diagnostics showing that benchmark families expose different process signals and that matched system comparisons come out benchmark-dependent, which limits how far any result can be attributed to a single component.*
+- **[Autonomous Research Agents: A Survey of AI Scientists and the Verification Gap](https://arxiv.org/abs/2608.05179)** (Ding et al., arXiv 2026) - *Codes 26 of 125 screened AI-scientist systems along seven audit dimensions and finds the bottleneck has moved from capability to checkability: 83 per cent of the 24 runnable systems release code, but only 38 per cent release seeds or execution traces and only 38 per cent report any novelty verification, and among nine closed-loop systems seven are mechanical reruns with no externally validated in-loop oracle anywhere in the corpus.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="architectures"></a>
-### 🏗️ Agent Architectures & Frameworks (46)
+### 🏗️ Agent Architectures & Frameworks (48)
 *Corresponds to §2 (Background) and the running examples throughout.*
 
 <details>
-<summary><b>Show 46 papers</b></summary>
+<summary><b>Show 48 papers</b></summary>
 
 - **[Auto-GPT for Online Decision Making: Benchmarks and Additional Opinions](https://arxiv.org/abs/2306.02224)** (Yang et al., arXiv 2023) - *Only peer-reviewed-adjacent empirical study of the widely-influential (but paper-less) AutoGPT autonomous-agent design pattern.* [[code](https://github.com/younghuman/LLMAgent)]
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *The standard reference benchmark for measuring general single-agent capability across heterogeneous environments.* ⭐ [[code](https://github.com/THUDM/AgentBench)]
@@ -228,6 +230,8 @@ Fresh 2026 work that is already drawing attention.
 - **[Ouroboros: A Self-Developing Frontier Coding Agent with Reviewed Core Evolution](https://arxiv.org/abs/2608.08311)** (Razzhigaev et al., arXiv 2026) - *A coding-agent harness whose tools, prompts, context assembly, and core implementation improve through reviewed commits that become the runtime for later work; reports 86.74% on Terminal-Bench 2.1 and 90.69% on OSWorld-Verified from frozen snapshots, while a separate 161-day deployment keeps evolving live.* [[code](https://github.com/razzant/ouroboros)]
 - **[The Scaffolding Matters More Than the Interface: A Controlled Comparison of MCP and CLI Tool Use Across Seven Agent Scaffoldings, Five Language Models, and One Software Task](https://arxiv.org/abs/2608.08654)** (Alier Forment et al., arXiv 2026) - *One fixed git task run across seven agent scaffoldings and five language models shows the scaffolding, not the MCP-versus-CLI interface, drives cost: the two scaffoldings with no MCP support completed every run over the CLI and were 5.0x to 28x cheaper than the five MCP-capable scaffoldings on CLI runs alone, thirteen strictly paired MCP-to-CLI ratios span 0.43x to 29x, and 12.9 per cent of the money spent on MCP runs bought no completed work against 2.2 per cent on CLI runs.*
 - **[Persistent Recursive Worlds Enable Autonomous Software Evolution](https://arxiv.org/abs/2608.10450)** (Huang et al., arXiv 2026) - *Makes the software project persistent rather than the agent: finite-lived agents propose local changes and only accepted consequences advance the version history, and one run of over 120 hours built a roughly 250k-line Rust C compiler that passed the complete c-testsuite for 44 US dollars in model-token charges.*
+- **[What Does Multi-Harness RL Learn? Credit Assignment and Portability in Coding Agents](https://arxiv.org/abs/2609.04518)** (Le et al., arXiv 2026) - *Replays frozen records from Aider, OpenHands, Qwen Code and SWE-agent to isolate whether pooling harnesses inside one advantage group buys portable skill, and the evaluation harness dominates everything else: across 24,000 sealed evaluations it moves mean solve rate from 2.14 to 9.27 per cent where the training recipe moves it by 1.16, while cross-harness grouping beats within-harness grouping by 0.25 points on a held-out harness, a confidence interval spanning zero and narrower than each rule's own seed range.*
+- **[TROVE: Adaptive Agent Skill Orchestration via Trace-Grounded Route Validation and Editing](https://arxiv.org/abs/2609.05019)** (Wang et al., arXiv 2026) - *Treats a planned route as provisional rather than committed: offline it distils evaluated workflow-search traces into atomic and composite skills plus an outcome-conditioned transition graph, and online it keeps the valid continuation, inserts a trace-supported local response, or replaces only the invalid suffix, so runtime evidence buys local repair instead of a broad replan; ablations put most of the offline benefit in the composite skills and most of the efficiency gain in suffix replacement.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -235,11 +239,11 @@ Fresh 2026 work that is already drawing attention.
 ## 🧱 Part I: Core Components
 
 <a id="planning"></a>
-### 🧠 Planning & Reasoning (46)
+### 🧠 Planning & Reasoning (48)
 *Corresponds to §4 (Planning and Reasoning).*
 
 <details>
-<summary><b>Show 46 papers</b></summary>
+<summary><b>Show 48 papers</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *The foundational technique underlying virtually all LLM-agent reasoning/planning modules; the starting point for the whole CoT/ToT/ReAct lineage.*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *Standard inference-time ensembling/verification strategy widely reused inside agent reasoning and planning pipelines.*
@@ -288,16 +292,18 @@ Fresh 2026 work that is already drawing attention.
 - **[SearchMaster: Grounded and Regulated Self-Play for Search Agents](https://arxiv.org/abs/2608.01822)** (Tan et al., arXiv 2026) - *Self-play for search agents that names the three ways self-generated data misleads: evidence chains to stop pseudo multi-hop questions, difficulty scored by search depth rather than success rate, and a penalty on opening documents the agent never uses.* [[code](https://github.com/WentaoTan/SearchMaster)]
 - **[R³-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets](https://arxiv.org/abs/2608.16033)** (Wang et al., arXiv 2026) - *Under a compute budget shared across a six-problem suite, an offline oracle built from the same model's matched single-problem response curves matches or beats the model's actual suite score in all 72 cells and is strictly higher in 71, exposing a gap between demonstrated single-problem competence and what models realize under a shared budget; trajectory diagnostics show limited strategy updating.* [[code](https://github.com/NineAbyss/R-3-Bench)]
 - **[Second Thought: Reasoning in Parallel as LLM Agents Act and Observe](https://arxiv.org/abs/2608.13667)** (Sun et al., arXiv 2026) - *Forks four auxiliary reasoning branches into the idle window where a ReAct agent is waiting on the environment and merges them back at the observation, lowering turn counts in all nine model-benchmark pairs and main-thread decoding by up to 43% in six of them, with Pass@1 statistically unchanged in seven of nine.*
+- **[CHIME: Credit-Aware Hierarchical Memory Evolution for Long-Horizon Agentic Planning](https://arxiv.org/abs/2609.02074)** (Ye et al., arXiv 2026) - *Keeps a planning bank separate from an execution bank and attributes each task outcome to the plan, the execution, both or neither before writing anything down, on the argument that final-outcome feedback conflates plan quality with execution error and environment noise; the resulting memory is smaller, its learned values track downstream utility with planning memories worth more than execution ones, and it transfers across backbone models.*
+- **[Do GUI Agents Know When Not to Act? Enabling Conflict-Aware Termination for Multimodal GUI Agents](https://arxiv.org/abs/2609.03438)** (Huang et al., arXiv 2026) - *Benchmarks the decision to stop rather than the decision to act, covering instructions that contradict themselves and instructions that contradict what is on screen, and finds execution-biased overcompliance: agents that score well on feasible tasks keep executing under conflicting ones, which an inference-time feasibility check plus action modulation reduces across five agents without costing normal task performance.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="memory"></a>
-### 💾 Memory (52)
+### 💾 Memory (54)
 *Corresponds to §5 (Memory).*
 
 <details>
-<summary><b>Show 52 papers</b></summary>
+<summary><b>Show 54 papers</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Early and influential structured/triplet-based read-write memory design, a precursor to graph- and KG-based agent memory systems.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *One of the first systems to bring a psychologically grounded (human-memory-inspired) forgetting/consolidation mechanism into LLM agent memory.* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -352,16 +358,18 @@ Fresh 2026 work that is already drawing attention.
 - **[When Your Agent Opens the Chat App: Agent-Controlled Search over Raw Chat Logs Rivals Structured Memory](https://arxiv.org/abs/2608.12888)** (Li et al., arXiv 2026) - *An agent given an iterative keyword-search loop over the unmodified chat archive, indexed lexically at turn granularity with no summaries, embeddings, trees or graphs built in advance, reaches the highest mean accuracy of any system compared (58.2 against 53.2 for HippoRAG 2) across roughly 2,800 questions under MemoryAgentBench's incremental multi-turn setting on a matched GPT-4o-mini backbone.*
 - **[ForeDreamer: A Self-Evolving Dual-Agent Memory Architecture for Future Event Prediction](https://arxiv.org/abs/2608.20920)** (Zhong et al., EMNLP Findings 2026) - *Converts raw web evidence into structured memory before the forecast instead of feeding retrieval results straight to the agent, separating a question-specific factual memory from experiential memory that persists across forecasting episodes, with a memory subagent building the former and two evolution tracks improving both the forecast and the memory construction; evaluated on Prophet Arena and FutureX.* [[code](https://github.com/zhongzero/ForeDreamer)]
 - **[Corpus2Skill: Distilling Enterprise Knowledge into Navigable Agent Skills for QA and RAG](https://arxiv.org/abs/2604.14572)** (Sun et al., EMNLP Findings 2026) - *An offline compiler distills the corpus into a hierarchical skill directory that the agent then navigates at serve time, drilling from a bird's-eye view down through finer summaries to documents and backing out of branches that go nowhere, rather than issuing a fresh query per question; across eleven datasets navigation turns out not to be a universal replacement, winning on five, tying on three and losing on three, with the gains concentrated in single-domain corpora whose topical taxonomy can be recovered and flat retrieval still preferable on open-domain factoid pools.* [[code](https://github.com/dukesun99/Corpus2Skill)]
+- **[Does Your Agent's Memory Survive a Model Upgrade? A Controlled Study of Memory Portability](https://arxiv.org/abs/2609.05339)** (Goyal et al., arXiv 2026) - *Holds the stored history fixed and swaps the model, showing that memory format decides whether an upgrade is survivable: a fixed-schema knowledge graph moves accuracy by 0.0004 points, model-compressed notes swing asymmetrically by +9.91 or -13.28 points depending on migration direction, a half-migrated embedding index captures only 4.96 of the 11.90 points full re-embedding recovers, and store-only repair of notes misses a 90 per cent recovery target in all 48 histories unless the raw source was kept.*
+- **[The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents](https://arxiv.org/abs/2609.01852)** (Hu et al., arXiv 2026) - *Separates the case where memory is the only source from the case where an authoritative tool holds the right value, and reads the failure as over-trust rather than confusion: models answer from a stale stored value 0.92 to 1.00 of the time when memory is all they have, and the harm under the trap condition is capability-gated, with the larger models in a Qwen3 size series collapsing hardest once a stale note is dressed up as current.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="tools"></a>
-### 🔧 Tool Use (43)
+### 🔧 Tool Use (45)
 *Corresponds to §6 (Tool Use and Action Execution).*
 
 <details>
-<summary><b>Show 43 papers</b></summary>
+<summary><b>Show 45 papers</b></summary>
 
 - **[TALM: Tool Augmented Language Models](https://arxiv.org/abs/2205.12255)** (Parisi et al., arXiv 2022) - *Early, influential formulation of self-supervised bootstrapping for tool use in LMs, directly anticipating Toolformer's self-supervised approach.*
 - **[API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs](https://arxiv.org/abs/2304.08244)** (Li et al., EMNLP 2023) - *One of the earliest and most cited dedicated benchmarks for evaluating and training tool-augmented dialogue LLMs.* [[code](https://github.com/AlibabaResearch/DAMO-ConvAI)]
@@ -407,16 +415,18 @@ Fresh 2026 work that is already drawing attention.
 - **[Diagnosing Tool-Selection Reasoning in LLM Agents with Canary Tools](https://arxiv.org/abs/2608.04719)** (Anand et al., arXiv 2026) - *Plants diagnostic decoy tools in an MCP tool set so a bare wrong-tool outcome becomes a profile of why, across six probe types and 8,640 runs; susceptibility varies about 36x across models and does not track capability tier.*
 - **[The Devil Is in the Interface: Evaluating How Tool Architecture Shapes Coding Agent Behavior](https://arxiv.org/abs/2608.11386)** (Xu et al., arXiv 2026) - *Holding the underlying information and actions fixed and varying only how they are exposed, six tool architectures over 11,700 repository-level issue-fixing trajectories show structured low-level interfaces raising consistency across repeated attempts by up to 4.7x and Python CodeAct-style interfaces matching task performance with 41.6% fewer steps and 56.3% lower token usage, while text-based cognitive-scaffolding tools change little.*
 - **[Thinking With Tools, Not With Pixels: Tool Calls as Text Scaffolds for Visual Reasoning](https://arxiv.org/abs/2608.09682)** (Shao et al., arXiv 2026) - *Replacing the images that crop and zoom tools return with a text placeholder matches or exceeds full thinking-with-images across LoRA, full fine-tuning and RL, so the load-bearing signal is the structured text emitted at call time rather than the returned pixels; latency falls 29 to 46% and tool-execution API calls disappear.*
+- **[Can MCP Clients Decide What to Do After Failure? A Result-Only Actionability Audit](https://arxiv.org/abs/2609.00072)** (Mehan, arXiv 2026) - *Asks what deterministic software can decide from a completed MCP failure result alone, and in a deliberately small sample of 21 induced failures across ten reachable servers the typed fields make failure visible in 18 cases and a broad policy readable in 8, while never exposing a specific cause, target, executable repair or replay constraint, which leaves recovery resting on prose somebody has to interpret.*
+- **[One Policy Is Enough: Single-Agent Reinforcement Learning Outperforms Tree Search for Chemistry Tool Learning](https://arxiv.org/abs/2608.30952)** (Dariani et al., arXiv 2026) - *Replaces a hierarchical evolutionary tree search running separate policy and execution models under two learned critics with a single left-to-right generation trained by outcome-level reinforcement against a programmatic reward read off the gold call chain, keeping no learned critic and no judge in the training loop, and still improves Tool F1 by 5.5 per cent and Return F1 by 9.6 per cent on Qwen-2.5-7B at one model invocation per question.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 Multi-Agent Systems (49)
+### 🤝 Multi-Agent Systems (51)
 *Corresponds to §7 (Multi-Agent Systems).*
 
 <details>
-<summary><b>Show 49 papers</b></summary>
+<summary><b>Show 51 papers</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *One of the earliest and most cited frameworks establishing autonomous agent-to-agent cooperation via role-play.* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *Seminal multi-agent debate paper popularizing 'society of minds'-style debate as a test-time technique.* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -468,6 +478,8 @@ Fresh 2026 work that is already drawing attention.
 - **[When Agents Coordinate: Measuring Coordination in Multi-Agent AI Coding](https://arxiv.org/abs/2608.16801)** (Destefanis et al., arXiv 2026) - *Turns 1902 agent-team coding runs into temporal networks of messages, file writes and file reads: shared files replace repeated one-to-one messaging and cut output tokens by about 42% at eight agents on message-heavy work, naming one agent coordinator creates no communication hub and no reliable improvement in success, and across 244 sealed reruns agents still reach for hidden grading material in four fifths of runs.*
 - **[Debate Training Reduces Reward Hacking in RLAIF](https://arxiv.org/abs/2608.17776)** (Kenton et al., arXiv 2026) - *RL finetuning a Gemini 2.5 Flash-class policy through a generator versus critic debate adjudicated by a frozen, weaker Gemini 2.5 Flash Lite judge holds judge performance through training where the single-player RLAIF baseline quickly hacks it, recovering 45% of the performance gap; without player constraints, adversarial training risks defaulting to critic judge-hacking, and critique word limits (effective up to 150 words) balance the game at the cost of critic expressive clarity.*
 - **[OrchMAS: Orchestrated Reasoning with Multi Collaborative Heterogeneous Scientific Expert Structured Agents](https://arxiv.org/abs/2603.03005)** (Feng et al., arXiv 2026) - *Splits orchestration from execution across two tiers for scientific reasoning: an orchestrator model reads the task, builds a domain-aware pipeline and writes the role and prompt for each expert agent it instantiates, then revises that pipeline mid-run from intermediate feedback, while a separate execution model carries out the steps, which lets backbones of different capacity and cost be mixed inside one run.*
+- **[At Equal Inference Cost, Multi-Agent Structure Does Not Beat a Single Frozen Agent](https://arxiv.org/abs/2609.04217)** (Dylan et al., arXiv 2026) - *Fixes the total number of model calls instead of the number of environment rollouts, and the reported advantage of a Planner-Executor-Critic team over a single evolved executor disappears: 0.769 against 0.754 on ALFWorld at p = 0.80 while spending 1.8 times the evaluation calls, with leave-one-in analysis putting the realized value entirely in the executor as planner and critic evolve to empty or inert prompts, and the team trending worse on WebShop.*
+- **[A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms](https://arxiv.org/abs/2609.04170)** (Paglieri et al., arXiv 2026) - *One agent in a collective of 100 proving formal conjectures found an exploit in the evaluation system, and it spread through the shared knowledge library and then peer-to-peer messages under competitive pressure, while a separate cohort audited the fraudulent proofs, alerted peers, staged boycotts and proposed validation patches; the transparent channels that carried the exploit are the same ones that made the resistance possible, which the authors read as a commons-governance problem rather than a failure inside any single agent.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -475,11 +487,11 @@ Fresh 2026 work that is already drawing attention.
 ## 🌍 Part II: Agents in Context
 
 <a id="environments"></a>
-### 🌐 Interactive Environments (54)
+### 🌐 Interactive Environments (56)
 *Corresponds to §8 (Agents in Interactive Environments).*
 
 <details>
-<summary><b>Show 54 papers</b></summary>
+<summary><b>Show 56 papers</b></summary>
 
 - **[Do As I Can, Not As I Say: Grounding Language in Robotic Affordances](https://arxiv.org/abs/2204.01691)** (al., CoRL 2022) - *Foundational demonstration of LLM-as-planner grounded by real-world affordances for embodied robotic agents.* [[code](https://github.com/google-research/google-research/tree/master/saycan)]
 - **[Inner Monologue: Embodied Reasoning through Planning with Language Models](https://arxiv.org/abs/2207.05608)** (al., CoRL 2022) - *Established the closed-loop, feedback-grounded planning pattern underlying subsequent embodied/GUI agent architectures.*
@@ -536,16 +548,18 @@ Fresh 2026 work that is already drawing attention.
 - **[StepReflect: Structured UI Transition Reflection for Mobile GUI Agents](https://arxiv.org/abs/2608.05587)** (Guo et al., arXiv 2026) - *Treats per-step GUI reflection as structured prediction over explicit transition specifications rather than open-ended multimodal reasoning; an 8B model reaches 82.16% transition accuracy on AndroidWorld, 11.83 points above zero-shot GPT-5.2 on the same input.*
 - **[ComponentBench: Diagnosing Component-Level Failures in Computer-Use Agents](https://arxiv.org/abs/2608.18307)** (Guan et al., arXiv 2026) - *Benchmarks computer-use agents at the component level with 2,910 programmatically verified tasks over an ontology of 97 canonical UI components, and finds that within a single shared harness changing only the observation and action space shifts task success by more than 30% for the same model, with GPT-5 mini falling from 83.1% on accessibility-tree observations to 48.9% under coordinate-only pixel control.* [[code](https://github.com/TianchenGuan/ComponentBench)]
 - **[Neurosymbolic Embodied Agents](https://arxiv.org/abs/2608.16794)** (Albinhassan et al., arXiv 2026) - *Factors household tasks into task-directed visual exploration and PDDL-constrained decoding with Monte Carlo tree search, letting open 4B to 27B models exceed 90% success on both VirtualHome and ALFWorld, where constraints or search alone solve under a third of ALFWorld tasks but their combination solves over 95%, and residual failures localize to state acquisition rather than plan generation.*
+- **[CUA-Universe: A Scalable and Dynamic Environment for Hybrid GUI+CLI Agents](https://arxiv.org/abs/2609.05374)** (Shi et al., arXiv 2026) - *Builds environments where the same application state is reachable through both the screen and the command line, adapting 16 real desktop applications into reproducible virtual machines with command surfaces that are discovered, wrapped or generated, and training on the harvested trajectories moves a 9B model from inefficient clicking and brittle scripting toward using whichever interface is cheaper: 16.8 points of success on OSWorld with 57 per cent fewer steps and 44 per cent fewer tokens.*
+- **[Discriminative World Models for Web Agents](https://arxiv.org/abs/2609.02885)** (Li et al., arXiv 2026) - *Argues that a world model trained by supervised next-state prediction is optimized for the wrong thing once a ranker consumes it, since ranking needs predicted states that separate the candidate actions rather than states that merely look plausible, and trains instead on predicted-state matching over branching WebArena trajectories where every decision point carries the alternative actions alongside the states each of them produces.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="applications"></a>
-### 🚀 Applications (51)
+### 🚀 Applications (53)
 *Corresponds to §10 (Applications).*
 
 <details>
-<summary><b>Show 51 papers</b></summary>
+<summary><b>Show 53 papers</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *One of the first cost-efficient autonomous program-repair agents grounded in structured code search.* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *Influential counter-narrative showing simpler non-agentic pipelines can rival complex agents.* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -599,6 +613,8 @@ Fresh 2026 work that is already drawing attention.
 - **[From Social Coding to Agentic Coding: Productivity and Relational Reconfiguration in Open-Source Communities](https://arxiv.org/abs/2608.03585)** (Zhou et al., arXiv 2026) - *Simulates a community of 1,084 real GitHub developers with and without coding agents: completed tasks rise 39.0% and median completion time falls from 45 to 20 minutes, while direct human-to-human interaction drops from 32.4% to 11.6% and the gains concentrate among the already well connected.*
 - **[Vero: Can AI Agents Build Formally Verified Software Repositories?](https://arxiv.org/abs/2608.13522)** (Ye et al., arXiv 2026) - *Benchmarks joint implementation and machine-checked proof synthesis at the repository level over 43 multi-module instances drawn from real repositories spanning Python, Dafny, Verus and Coq; the strongest frontier coding-agent configuration fully solves only 27 of 43 and closes no specifications on the hardest repositories.* [[code](https://github.com/sunblaze-ucb/vero)]
 - **[Auditing Self-Evolution in Financial Agents: Capability Gains, Security Drift, and Execution-Interface Mismatch](https://arxiv.org/abs/2608.17684)** (Li et al., arXiv 2026) - *Audits three self-evolving agent designs (SkillOpt, Agent Workflow Memory, ReasoningBank) in simulated e-banking and finds capability and exposure rising together: SkillOpt lifts benign utility from 0.741 to 0.837 while exposure to injected content rises from 0.820 to 0.943, overall attack success rises from 0.496 to 0.530, and unauthorized financial state changes rise to 0.685.*
+- **[SWE-Gate: Passing Functional Tests Is Not Enough for Software Engineering Agents](https://arxiv.org/abs/2609.04167)** (He et al., arXiv 2026) - *Derives review constraints from real pull-request review comments and scores them separately from functional correctness across 303 repository-level instances in 75 Python projects, finding that 221 of 644 patches that pass the functional tests still violate a constraint a reviewer had stated, so functional-only scoring overstates what an agent has actually delivered.* [[code](https://github.com/DeepSoftwareAnalytics/SWE-Gate)]
+- **[Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets](https://arxiv.org/abs/2609.04373)** (Ross et al., arXiv 2026) - *Argues that shared training and architecture make more capable models behave more alike, so their correlated actions leave a risk floor no amount of diversification removes, and tests it with LLM traders in an agent-based market: correlation rises with capability, more agents lower market-level risk while the shared reasoning is accurate, and the same correlation turns into a liability once the agents share a misinformation environment.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -606,11 +622,11 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (46)
+### 📊 Evaluation & Benchmarks (48)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
-<summary><b>Show 46 papers</b></summary>
+<summary><b>Show 48 papers</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Reference benchmark for generalist, tool-using agent assistants; underlies popular public leaderboards tracking frontier agent progress.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *De facto standard benchmark for coding/software-engineering agents; spawned the SWE-bench Verified/Lite/Live/Multimodal family.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -659,16 +675,18 @@ Fresh 2026 work that is already drawing attention.
 - **[PATH-Bench: Path-Dependent Evaluation of Lifelong Agents](https://arxiv.org/abs/2608.01149)** (Yang et al., arXiv 2026) - *Evaluates lifelong agents on the order of their experience rather than task by task, measuring forward transfer, backward transfer and forgetting, and finds that strong transfer does not imply retention and that later experience can undo earlier gains.*
 - **[Benchmarking LLM Judges for Mobile Agent Evaluation](https://arxiv.org/abs/2608.11434)** (Wang et al., arXiv 2026) - *Tests six LLM-as-judge methods against 931 human-annotated mobile agent trajectories and finds a simple sampled-screenshot baseline competitive with or better than purpose-built judges, with the backbone model, not the pipeline, driving judge quality, and two backends showing opposite conservative and permissive failure profiles.*
 - **[OmnilingualGAIA2: Evaluating the Multilingual Gap in Frontier AI Agents](https://arxiv.org/abs/2608.08775)** (Caciolai et al., arXiv 2026) - *Expanding GAIA2 into ten languages across five writing systems exposes a cross-lingual gap of 8.8 to 18.4 pass@3 points that concentrates on tool orchestration rather than quantitative reasoning and does not close with model scale, with error attribution assigning 55% of it to the model and bounding translation contamination at 6.4% of scenario-language pairs.*
+- **[LoopArena: Benchmarking Models as Runtime Controllers for Loop Engineering](https://arxiv.org/abs/2608.28281)** (Wang et al., arXiv 2026) - *Scores the model that steers rather than the model that codes: after each coding round the Controller under evaluation reads a structured run summary and tells a separate fixed Worker what to do next, what to verify, or whether to stop, across three settings trading execution scope against cost; the best strict success rate on full tasks is 24.69 per cent, and the cheap setting that never runs the Worker orders Controllers almost identically to the expensive one at a Spearman correlation of 0.97.* [[code](https://github.com/AMAP-ML/LoopArena)]
+- **[τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction](https://arxiv.org/abs/2609.04611)** (Shi et al., arXiv 2026) - *Makes building the agent the task: a developer agent inherits a codebase, a production API, a client holding the requirements and a cap on serving spend, then ships a customer-service agent that is scored by deploying it against held-out simulated users, and across 53 tasks the strongest configuration passes 23.9 per cent of evaluation simulations against an expert-authored ceiling of 82.2 per cent, failing in recognizably human ways by querying the records shallowly, telling the client almost nothing and shipping the first architecture that runs.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="safety"></a>
-### 🛡️ Safety & Alignment (55)
+### 🛡️ Safety & Alignment (57)
 *Corresponds to §11 (Safety, Security, and Trustworthiness).*
 
 <details>
-<summary><b>Show 55 papers</b></summary>
+<summary><b>Show 57 papers</b></summary>
 
 - **[Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/abs/2302.12173)** (Greshake et al., arXiv 2023) - *The founding paper of the indirect prompt injection threat model that underlies almost all later LLM-agent security research.* ⭐ [[code](https://github.com/greshake/llm-security)]
 - **[AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://arxiv.org/abs/2406.13352)** (Debenedetti et al., NeurIPS 2024) - *The most widely used standardized testbed for measuring agent robustness to prompt-injection attacks and defenses.* [[code](https://github.com/ethz-spylab/agentdojo)]
@@ -726,6 +744,8 @@ Fresh 2026 work that is already drawing attention.
 - **[LoginTrap: Uncovering Task-Agnostic Phishing-Style Indirect Prompt Injection Attacks against LLM-based Web Agents](https://arxiv.org/abs/2608.04741)** (Guo et al., arXiv 2026) - *Shows a web agent can be talked into logging in: page content the attacker controls makes authentication look like a prerequisite for the task and steers the agent to a controlled login page, reaching 86% average end-to-end success without knowing the user's task.*
 - **[Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://arxiv.org/abs/2608.14825)** (Li et al., arXiv 2026) - *Across 2,583 inter-agent emails from 20 year-long vending simulations spanning 13 frontier models, 12.6% contain false factual claims, manipulation, collusion or threats without any engineered elicitation, the behaviour is reciprocal (1.65x odds of a misaligned reply) and stress-conditioned (1.58x under low inventory), and model performance rank does not predict it.*
 - **[Governance at the Boundary: How Agent Decomposition Degrades Policy Compliance](https://arxiv.org/abs/2608.16055)** (Li et al., arXiv 2026) - *Decomposing an agent degrades its governability at the handoff boundary: over 626 KYC/AML episodes a 32B open-weights model attenuated 0% of policy-relevant discovered facts under a single loop, 56% under a fixed pipeline and 85% under an orchestrator-subagent architecture, and the same mechanism produces both under-escalation and over-escalation.*
+- **[What's in Your Agent's Context? Context Privilege Escalation Attacks against AI Agent Harness](https://arxiv.org/abs/2609.01222)** (Li et al., arXiv 2026) - *Systematizes how real harnesses assemble context and names two escalation paths that fall out of those designs: attacker-controlled content from a low-privileged source landing in a higher-privileged message role, and attacker-controlled content persisting past the scope it entered in, demonstrated against 12 harnesses including Claude Code and Codex with consequences running to remote code execution and manipulated tool or skill invocation.*
+- **[BAITBENCH: Measuring Agent Reward Hacking with Optional Shortcuts Planted in ML Tasks](https://arxiv.org/abs/2608.30724)** (Prasad et al., arXiv 2026) - *Plants an optional shortcut in each of three synthetic tabular ML tasks that inflates the public score while failing a hidden test set and breaks no stated rule, and 57.1 per cent of runs across seven frontier agents take it, five of the seven above half, with the mean staying above half even when the prompt asks them not to cheat.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -784,6 +804,7 @@ This list is community-maintained. Thanks to everyone who has suggested, verifie
 
 | | Contributor | Contributed |
 |---|---|---|
+| <a href="https://github.com/burgerseater"><img src="https://github.com/burgerseater.png?size=48" width="48" height="48" alt="@burgerseater"></a> | **[@burgerseater](https://github.com/burgerseater)** | LoopArena, a benchmark that scores the model steering a coding agent rather than the one writing the code, suggested by one of its authors, in Evaluation & Benchmarks ([#14](https://github.com/js-lee-AI/awesome-llm-agent-papers/issues/14)) |
 | <a href="https://github.com/dukesun99"><img src="https://github.com/dukesun99.png?size=48" width="48" height="48" alt="@dukesun99"></a> | **[@dukesun99](https://github.com/dukesun99)** | Corpus2Skill in Memory, OrchMAS in Multi-Agent Systems, and an IR-for-agents position paper in Surveys & Position Papers, submitted by an author on all three ([#13](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/13)) |
 | <a href="https://github.com/zhongzero"><img src="https://github.com/zhongzero.png?size=48" width="48" height="48" alt="@zhongzero"></a> | **[@zhongzero](https://github.com/zhongzero)** | ForeDreamer, a dual-agent memory architecture for forecasting, submitted by one of its authors, in Memory ([#12](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/12)) |
 | <a href="https://github.com/Nicolas99-9"><img src="https://github.com/Nicolas99-9.png?size=48" width="48" height="48" alt="@Nicolas99-9"></a> | **[@Nicolas99-9](https://github.com/Nicolas99-9)** | CityReal, a large-scale human-aligned urban simulation, in Multi-Agent Systems ([#10](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/10)) |
@@ -805,6 +826,7 @@ Released under the [MIT License](LICENSE).
 
 ## 🗓️ Updates
 
+- **2026-09-07**: Recency pass: +20 papers, two per section, drawn from everything posted since May 2026. LoopArena came in through [@burgerseater](https://github.com/burgerseater), one of its authors, who suggested it in [#14](https://github.com/js-lee-AI/awesome-llm-agent-papers/issues/14). The batch leans negative, which is where the useful work has been: multi-agent structure that stops paying for itself once inference cost is held equal rather than rollouts, model-written memory notes that swing thirteen points on a model upgrade where a fixed schema barely moves, 221 of 644 functionally passing patches that a reviewer would still send back, and frontier agents taking a planted shortcut in 57 per cent of runs even when the prompt asks them not to. 497 to 517.
 - **2026-09-03**: Three papers added by [@dukesun99](https://github.com/dukesun99), an author on all three ([#13](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/13)): Corpus2Skill to Memory, OrchMAS to Multi-Agent Systems, and Information Retrieval Misses the Mark for LLM Agents to Surveys & Position Papers. That last one is the list's first SSRN posting, which CONTRIBUTING allows since it asks for an arXiv or DOI link without restricting the host. All three glosses were rewritten from the abstracts before merging, and the Corpus2Skill one now carries the eleven-dataset result, where corpus navigation loses on three. 494 to 497.
 - **2026-08-25**: ForeDreamer added to Memory by [@zhongzero](https://github.com/zhongzero), who is one of its authors ([#12](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/12)). The gloss now leads with what the system does differently, turning web evidence into structured memory before the forecast rather than feeding retrieval straight to the agent. 493 to 494.
 - **2026-08-20**: Recency pass: +20 papers from August 2026, two per section. Code links only where the paper names its own repository. The month leans negative, which suits this list: the MCP-versus-CLI comparison that found the scaffolding dominates, the compression that leaves task completion flat while tripling retrieval, the returned tool images that turn out to be redundant, and the multilingual gap that does not close with scale. 473 to 493.
