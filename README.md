@@ -100,7 +100,7 @@ Fresh 2026 work that is already drawing attention.
   - [🤝 Multi-Agent Systems (51)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (56)](#environments)
-  - [🚀 Applications (53)](#applications)
+  - [🚀 Applications (54)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
   - [📊 Evaluation & Benchmarks (48)](#evaluation)
   - [🛡️ Safety & Alignment (57)](#safety)
@@ -555,11 +555,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="applications"></a>
-### 🚀 Applications (53)
+### 🚀 Applications (54)
 *Corresponds to §10 (Applications).*
 
 <details>
-<summary><b>Show 53 papers</b></summary>
+<summary><b>Show 54 papers</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *One of the first cost-efficient autonomous program-repair agents grounded in structured code search.* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *Influential counter-narrative showing simpler non-agentic pipelines can rival complex agents.* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -615,6 +615,8 @@ Fresh 2026 work that is already drawing attention.
 - **[Auditing Self-Evolution in Financial Agents: Capability Gains, Security Drift, and Execution-Interface Mismatch](https://arxiv.org/abs/2608.17684)** (Li et al., arXiv 2026) - *Audits three self-evolving agent designs (SkillOpt, Agent Workflow Memory, ReasoningBank) in simulated e-banking and finds capability and exposure rising together: SkillOpt lifts benign utility from 0.741 to 0.837 while exposure to injected content rises from 0.820 to 0.943, overall attack success rises from 0.496 to 0.530, and unauthorized financial state changes rise to 0.685.*
 - **[SWE-Gate: Passing Functional Tests Is Not Enough for Software Engineering Agents](https://arxiv.org/abs/2609.04167)** (He et al., arXiv 2026) - *Derives review constraints from real pull-request review comments and scores them separately from functional correctness across 303 repository-level instances in 75 Python projects, finding that 221 of 644 patches that pass the functional tests still violate a constraint a reviewer had stated, so functional-only scoring overstates what an agent has actually delivered.* [[code](https://github.com/DeepSoftwareAnalytics/SWE-Gate)]
 - **[Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets](https://arxiv.org/abs/2609.04373)** (Ross et al., arXiv 2026) - *Argues that shared training and architecture make more capable models behave more alike, so their correlated actions leave a risk floor no amount of diversification removes, and tests it with LLM traders in an agent-based market: correlation rises with capability, more agents lower market-level risk while the shared reasoning is accurate, and the same correlation turns into a liability once the agents share a misinformation environment.*
+- **[Training Agents to Evolve with Their Harness: TaoLive Digital Avatar Agent Technical Report](https://arxiv.org/abs/2608.15763)** (TaoLive AIGC LLM Team, arXiv 2026) - *Trains a live-commerce digital-avatar agent to use changing Skills, tools, prompts, and Hooks, with held-out runtime-edit tests and online deployment results.*
+
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
