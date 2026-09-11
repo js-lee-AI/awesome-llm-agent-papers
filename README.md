@@ -94,7 +94,7 @@ Fresh 2026 work that is already drawing attention.
   - [📚 Surveys & Position Papers (57)](#surveys)
   - [🏗️ Agent Architectures & Frameworks (48)](#architectures)
 - **🧱 Part I: Core Components**
-  - [🧠 Planning & Reasoning (48)](#planning)
+  - [🧠 Planning & Reasoning (49)](#planning)
   - [💾 Memory (54)](#memory)
   - [🔧 Tool Use (45)](#tools)
   - [🤝 Multi-Agent Systems (51)](#multi-agent)
@@ -239,11 +239,11 @@ Fresh 2026 work that is already drawing attention.
 ## 🧱 Part I: Core Components
 
 <a id="planning"></a>
-### 🧠 Planning & Reasoning (48)
+### 🧠 Planning & Reasoning (49)
 *Corresponds to §4 (Planning and Reasoning).*
 
 <details>
-<summary><b>Show 48 papers</b></summary>
+<summary><b>Show 49 papers</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *The foundational technique underlying virtually all LLM-agent reasoning/planning modules; the starting point for the whole CoT/ToT/ReAct lineage.*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *Standard inference-time ensembling/verification strategy widely reused inside agent reasoning and planning pipelines.*
@@ -294,6 +294,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Second Thought: Reasoning in Parallel as LLM Agents Act and Observe](https://arxiv.org/abs/2608.13667)** (Sun et al., arXiv 2026) - *Forks four auxiliary reasoning branches into the idle window where a ReAct agent is waiting on the environment and merges them back at the observation, lowering turn counts in all nine model-benchmark pairs and main-thread decoding by up to 43% in six of them, with Pass@1 statistically unchanged in seven of nine.*
 - **[CHIME: Credit-Aware Hierarchical Memory Evolution for Long-Horizon Agentic Planning](https://arxiv.org/abs/2609.02074)** (Ye et al., arXiv 2026) - *Keeps a planning bank separate from an execution bank and attributes each task outcome to the plan, the execution, both or neither before writing anything down, on the argument that final-outcome feedback conflates plan quality with execution error and environment noise; the resulting memory is smaller, its learned values track downstream utility with planning memories worth more than execution ones, and it transfers across backbone models.*
 - **[Do GUI Agents Know When Not to Act? Enabling Conflict-Aware Termination for Multimodal GUI Agents](https://arxiv.org/abs/2609.03438)** (Huang et al., arXiv 2026) - *Benchmarks the decision to stop rather than the decision to act, covering instructions that contradict themselves and instructions that contradict what is on screen, and finds execution-biased overcompliance: agents that score well on feasible tasks keep executing under conflicting ones, which an inference-time feasibility check plus action modulation reduces across five agents without costing normal task performance.*
+- **[Steer, Don't Solve: Training Small Critic Models for Large Code Agents](https://arxiv.org/abs/2606.21811)** (Gandhi et al., arXiv 2026) - *Trains 4B and 8B critic models with SFT and DPO to identify errors in a coding agent's trajectory and give high-level guidance every few steps at inference time, without generating actions; the critics improve SWE-bench Verified resolve rates of six larger agents by up to 16 points and lower inference cost for some agents by finishing tasks in fewer steps.* [[code](https://github.com/shubhamrgandhi/critic-training)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
