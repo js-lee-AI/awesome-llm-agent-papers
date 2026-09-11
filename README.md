@@ -96,7 +96,7 @@ Fresh 2026 work that is already drawing attention.
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (48)](#planning)
   - [💾 Memory (54)](#memory)
-  - [🔧 Tool Use (45)](#tools)
+  - [🔧 Tool Use (46)](#tools)
   - [🤝 Multi-Agent Systems (51)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (56)](#environments)
@@ -365,11 +365,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="tools"></a>
-### 🔧 Tool Use (45)
+### 🔧 Tool Use (46)
 *Corresponds to §6 (Tool Use and Action Execution).*
 
 <details>
-<summary><b>Show 45 papers</b></summary>
+<summary><b>Show 46 papers</b></summary>
 
 - **[TALM: Tool Augmented Language Models](https://arxiv.org/abs/2205.12255)** (Parisi et al., arXiv 2022) - *Early, influential formulation of self-supervised bootstrapping for tool use in LMs, directly anticipating Toolformer's self-supervised approach.*
 - **[API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs](https://arxiv.org/abs/2304.08244)** (Li et al., EMNLP 2023) - *One of the earliest and most cited dedicated benchmarks for evaluating and training tool-augmented dialogue LLMs.* [[code](https://github.com/AlibabaResearch/DAMO-ConvAI)]
@@ -417,6 +417,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Thinking With Tools, Not With Pixels: Tool Calls as Text Scaffolds for Visual Reasoning](https://arxiv.org/abs/2608.09682)** (Shao et al., arXiv 2026) - *Replacing the images that crop and zoom tools return with a text placeholder matches or exceeds full thinking-with-images across LoRA, full fine-tuning and RL, so the load-bearing signal is the structured text emitted at call time rather than the returned pixels; latency falls 29 to 46% and tool-execution API calls disappear.*
 - **[Can MCP Clients Decide What to Do After Failure? A Result-Only Actionability Audit](https://arxiv.org/abs/2609.00072)** (Mehan, arXiv 2026) - *Asks what deterministic software can decide from a completed MCP failure result alone, and in a deliberately small sample of 21 induced failures across ten reachable servers the typed fields make failure visible in 18 cases and a broad policy readable in 8, while never exposing a specific cause, target, executable repair or replay constraint, which leaves recovery resting on prose somebody has to interpret.*
 - **[One Policy Is Enough: Single-Agent Reinforcement Learning Outperforms Tree Search for Chemistry Tool Learning](https://arxiv.org/abs/2608.30952)** (Dariani et al., arXiv 2026) - *Replaces a hierarchical evolutionary tree search running separate policy and execution models under two learned critics with a single left-to-right generation trained by outcome-level reinforcement against a programmatic reward read off the gold call chain, keeping no learned critic and no judge in the training loop, and still improves Tool F1 by 5.5 per cent and Return F1 by 9.6 per cent on Qwen-2.5-7B at one model invocation per question.*
+- **[DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training](https://arxiv.org/abs/2609.04094)** (Gandhi et al., arXiv 2026) - *Trains long-horizon tool-using agents with GRPO when no ground-truth success signal exists, by generating task-specific rubrics during training, scoring each trajectory once with an LLM judge, and redistributing the advantage over steps from the judge's per-criterion attributions; on AppWorld it beats GRPO trained on the ground-truth unit-test reward by 5.3 points.* [[code](https://github.com/IBM/draco)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
