@@ -10,6 +10,9 @@ An entry is a top-level list item of the form:
 
     - **[Title](link)** (Author et al., Venue Year) - *why it matters.*
 
+The contributors table has a toggle of its own with a fourth count in it, and
+that is recomputed here as well, from the number of rows in the table.
+
 Usage:
     python3 scripts/sync_counts.py            # rewrite README.md in place
     python3 scripts/sync_counts.py --check    # report drift, exit 1, write nothing
@@ -31,6 +34,11 @@ HEADING_RE = re.compile(r"^(### .*?)\((\d+)\)\s*$")
 SUMMARY_RE = re.compile(r"^(<summary><b>Show )(\d+)( papers</b></summary>)\s*$")
 ENTRY_RE = re.compile(r"^- \*\*\[")
 TOC_RE = re.compile(r"^(\s*- \[.*?)\((\d+)\)(\]\(#([\w-]+)\))\s*$")
+
+# The contributors table got its own toggle once the list outgrew a screenful.
+# Its count is a fourth number that can drift, so it is recomputed here too.
+CONTRIB_SUMMARY_RE = re.compile(r"^(<summary><b>Show )(\d+)( contributors</b></summary>)\s*$")
+CONTRIB_ROW_RE = re.compile(r'^\| <a href="https://github\.com/')
 
 
 def scan(lines: list[str]) -> dict[str, dict]:
@@ -79,6 +87,26 @@ def scan(lines: list[str]) -> dict[str, dict]:
     return sections
 
 
+def scan_contributors(lines: list[str]) -> dict | None:
+    """Locate the contributors toggle and count the rows it hides."""
+    idx = declared = None
+    rows = 0
+    for i, line in enumerate(lines):
+        summary = CONTRIB_SUMMARY_RE.match(line)
+        if summary:
+            idx, declared, rows = i, int(summary.group(2)), 0
+            continue
+        if idx is None:
+            continue
+        if CONTRIB_ROW_RE.match(line):
+            rows += 1
+        elif line.startswith("</details>"):
+            break
+    if idx is None:
+        return None
+    return {"summary_idx": idx, "declared": declared, "actual": rows}
+
+
 def apply(lines: list[str], sections: dict[str, dict]) -> tuple[list[str], list[str]]:
     out = list(lines)
     drift: list[str] = []
@@ -105,6 +133,13 @@ def apply(lines: list[str], sections: dict[str, dict]) -> tuple[list[str], list[
         if int(toc.group(2)) != n:
             drift.append(f"contents {slug}: {toc.group(2)} -> {n}")
             out[i] = f"{toc.group(1)}({n}){toc.group(3)}"
+
+    contrib = scan_contributors(lines)
+    if contrib and contrib["declared"] != contrib["actual"]:
+        drift.append(f'contributors: {contrib["declared"]} -> {contrib["actual"]}')
+        out[contrib["summary_idx"]] = (
+            f'<summary><b>Show {contrib["actual"]} contributors</b></summary>'
+        )
 
     return out, drift
 
