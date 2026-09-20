@@ -96,14 +96,14 @@ Fresh 2026 work that is already drawing attention.
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (49)](#planning)
   - [💾 Memory (54)](#memory)
-  - [🔧 Tool Use (46)](#tools)
+  - [🔧 Tool Use (47)](#tools)
   - [🤝 Multi-Agent Systems (51)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (56)](#environments)
   - [🚀 Applications (54)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
   - [📊 Evaluation & Benchmarks (48)](#evaluation)
-  - [🛡️ Safety & Alignment (57)](#safety)
+  - [🛡️ Safety & Alignment (58)](#safety)
 
 ## 🧭 Background
 
@@ -366,11 +366,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="tools"></a>
-### 🔧 Tool Use (46)
+### 🔧 Tool Use (47)
 *Corresponds to §6 (Tool Use and Action Execution).*
 
 <details>
-<summary><b>Show 46 papers</b></summary>
+<summary><b>Show 47 papers</b></summary>
 
 - **[TALM: Tool Augmented Language Models](https://arxiv.org/abs/2205.12255)** (Parisi et al., arXiv 2022) - *Early, influential formulation of self-supervised bootstrapping for tool use in LMs, directly anticipating Toolformer's self-supervised approach.*
 - **[API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs](https://arxiv.org/abs/2304.08244)** (Li et al., EMNLP 2023) - *One of the earliest and most cited dedicated benchmarks for evaluating and training tool-augmented dialogue LLMs.* [[code](https://github.com/AlibabaResearch/DAMO-ConvAI)]
@@ -419,6 +419,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Can MCP Clients Decide What to Do After Failure? A Result-Only Actionability Audit](https://arxiv.org/abs/2609.00072)** (Mehan, arXiv 2026) - *Asks what deterministic software can decide from a completed MCP failure result alone, and in a deliberately small sample of 21 induced failures across ten reachable servers the typed fields make failure visible in 18 cases and a broad policy readable in 8, while never exposing a specific cause, target, executable repair or replay constraint, which leaves recovery resting on prose somebody has to interpret.*
 - **[One Policy Is Enough: Single-Agent Reinforcement Learning Outperforms Tree Search for Chemistry Tool Learning](https://arxiv.org/abs/2608.30952)** (Dariani et al., arXiv 2026) - *Replaces a hierarchical evolutionary tree search running separate policy and execution models under two learned critics with a single left-to-right generation trained by outcome-level reinforcement against a programmatic reward read off the gold call chain, keeping no learned critic and no judge in the training loop, and still improves Tool F1 by 5.5 per cent and Return F1 by 9.6 per cent on Qwen-2.5-7B at one model invocation per question.*
 - **[DRACO: Fine-Grained Credit Assignment with Dynamic Rubrics for Long-Horizon Agent Training](https://arxiv.org/abs/2609.04094)** (Gandhi et al., arXiv 2026) - *Trains long-horizon tool-using agents with GRPO when no ground-truth success signal exists, by generating task-specific rubrics during training, scoring each trajectory once with an LLM judge, and redistributing the advantage over the steps responsible for each annotated criterion in closed form, with no trained attribution module; on AppWorld it gains 15.9 points over the base model and beats GRPO trained on the ground-truth reward by 5.3 despite using no verifier itself, and carries 5.3 points to Tau-Bench without a frontier judge.* [[code](https://github.com/IBM/draco)]
+- **[Tool Differentia: Relational Static Analysis for AI Agent Tool Descriptions](https://doi.org/10.5281/zenodo.21820025)** (Bosch, Zenodo 2026) - *Defines the distinguishing information neighboring tool descriptions need from one another and implements a bounded, deterministic check for mutual nondistinction or directional domination.* [[code](https://github.com/hermes-labs-ai/tool-differentia)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
@@ -685,11 +686,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="safety"></a>
-### 🛡️ Safety & Alignment (57)
+### 🛡️ Safety & Alignment (58)
 *Corresponds to §11 (Safety, Security, and Trustworthiness).*
 
 <details>
-<summary><b>Show 57 papers</b></summary>
+<summary><b>Show 58 papers</b></summary>
 
 - **[Not what you've signed up for: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/abs/2302.12173)** (Greshake et al., arXiv 2023) - *The founding paper of the indirect prompt injection threat model that underlies almost all later LLM-agent security research.* ⭐ [[code](https://github.com/greshake/llm-security)]
 - **[AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents](https://arxiv.org/abs/2406.13352)** (Debenedetti et al., NeurIPS 2024) - *The most widely used standardized testbed for measuring agent robustness to prompt-injection attacks and defenses.* [[code](https://github.com/ethz-spylab/agentdojo)]
@@ -729,6 +730,7 @@ Fresh 2026 work that is already drawing attention.
 - **[AgentAbstain: Do LLM Agents Know When Not to Act?](https://arxiv.org/abs/2607.10059)** (Liu et al., arXiv 2026) - *Asks whether agents know when not to act, treating abstention as a first-class safety behaviour.* [[code](https://github.com/AntiQuality/agentabstain)]
 - **[Prismata: Confining Cross-Site Prompt Injection in Web Agents](https://arxiv.org/abs/2607.08147)** (Villa et al., arXiv 2026) - *Confines cross-site prompt injection in web agents at the boundary rather than trusting the model to resist it.*
 - **[The Balkanization of Execution-Security Research for AI Coding Agents: Isolation, Access Control, and Time-of-Check-to-Time-of-Use Vulnerabilities](https://arxiv.org/abs/2607.05743)** (Rashidi et al., arXiv 2026) - *Surveys the fragmented execution-security work for coding agents across isolation, access control, and related defences.*
+- **[Behavioral Canarying for Prompt Injection: Powerless Model Probes with Explicit Coverage Semantics](https://doi.org/10.5281/zenodo.21820059)** (Bosch, Zenodo 2026) - *Describes a pre-execution prompt-injection sensing pattern that separates an input's routing disposition from evidence that a powerless inspection probe actually ran.* [[code](https://github.com/hermes-labs-ai/behavioral-canarying)]
 - **[Supply-Chain Poisoning Attacks Against LLM Coding Agent Skill Ecosystems](https://arxiv.org/abs/2604.03081)** (Qu et al., arXiv 2026) - *Demonstrates supply-chain poisoning attacks against the skill ecosystems that coding agents install from.*
 - **[Overcoming the Retrieval Barrier: Indirect Prompt Injection in the Wild for LLM Systems](https://arxiv.org/abs/2601.07072)** (Chang et al., arXiv 2026) - *Studies indirect prompt injection in the wild, showing the retrieval barrier is weaker than assumed for real LLM systems.*
 - **[PISmith: Reinforcement Learning-based Red Teaming for Prompt Injection Defenses](https://arxiv.org/abs/2603.13026)** (Yin et al., arXiv 2026) - *Reinforcement-learning red teaming that automatically stress-tests prompt-injection defenses.* [[code](https://github.com/albert-y1n/PISmith)]
