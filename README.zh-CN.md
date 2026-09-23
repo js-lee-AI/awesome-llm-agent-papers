@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">阅读综述 → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/">GitBook 在线书（英文）</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">本仓库中的 PDF</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">从 10 篇入门必读开始</a></b>
+📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">阅读综述 → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/">GitBook 在线电子书（英文）</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">本仓库中的 PDF</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">从 10 篇入门必读开始</a></b>
 </p>
 
 <p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
@@ -34,7 +34,7 @@
 
 | | 这里有什么 |
 |---|---|
-| 📚 **综述的超集** | 收录 *“LLM Agents: A Survey”* 所引用的 228 篇参考文献，以及论文定稿后陆续核实并加入的研究。论文停在定稿的那一刻，这份清单还在继续更新。 |
+| 📚 **比综述收录更全** | 收录 *“LLM Agents: A Survey”* 引用的 228 篇参考文献，以及论文完成后发表的论文，新论文也在陆续加入。 |
 | 🧭 **按功能组织** | 沿用综述的结构，分为 10 个部分：综述、架构、规划、记忆、工具使用、多智能体、环境、应用、评估、安全。 |
 | ✍️ **附有注解** | 每个条目都用一句话说明它的贡献，注明会议或期刊及年份；有官方实现的，还附上 `[code]` 链接。 |
 | ⭐ **入门必读** | 一份帮你快速入门的 [10 篇论文清单](#starter-kit)，并说明每篇为什么值得先读。 |
@@ -42,13 +42,13 @@
 
 **涵盖主题：** cognitive architecture · ReAct 与边推理边行动 · long-horizon 规划 · 智能体记忆 · 工具增强的 LLM · 多智能体协作 · Web / 代码 / embodied 智能体 · 智能体基准与评估 · 安全、对齐与间接 prompt injection。
 
-> 📖 **综述的在线书版本**：GitBook 上的 [**LLM Agents: A Survey**](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/) 面向初次接触这一领域的读者，把论文改写成从基本概念讲起的十章。每章都配有带标注的图示和实际例子，给效果不及预期的方法和成功的方法同样的篇幅，内容也在持续更新：最近新增的是 decision model，以及智能体什么时候应该把选择转交给更大的模型。这本书是英文的。
+> 📖 **在线阅读**：GitBook 上的 [**LLM Agents: A Survey**](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/) 是论文的在线电子书版本，面向刚接触这一领域的读者，共十章，从基本概念讲起。和论文一样，书中对没有达到预期的方法和有效的方法同样重视。这本书是英文的。
 
-> 🔁 **姊妹清单已上线**：[**Awesome Agent Loop Papers**](https://github.com/js-lee-AI/awesome-agent-loop-papers) 不再停留在组件层面，而是深入到循环本身，收录 524 篇论文和 60 个开源项目（框架、编码 harness、记忆与 sandbox 基础设施、skill library、注册中心）。它是 *The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents* 的配套清单。
+> 🔁 **后续综述的论文清单**：[**Awesome Agent Loop Papers**](https://github.com/js-lee-AI/awesome-agent-loop-papers) 收录研究智能体循环本身的 524 篇论文和 60 个开源项目（框架、编码 harness、记忆与 sandbox 基础设施、skill library、注册中心），是综述 *The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents* 的配套清单。
 
-这个仓库收集**基于 LLM 的智能体**方向的必读论文。这里的智能体，指具备规划、记忆、工具使用和多智能体协作能力，能在很长的时间跨度上追求目标的语言模型。论文按配套综述的分类体系排列，覆盖智能体的核心组成、它们所部署的环境和应用，以及贯穿全局的评估与安全问题。每个条目都链接到论文；有官方实现的，也链接到代码。
+这个仓库收集**基于 LLM 的智能体**方向的必读论文。这里的智能体，指具备规划、记忆、工具使用和多智能体协作能力，能分多个步骤完成长任务的语言模型。论文按综述的分类体系排列，依次是智能体的核心组成、应用环境与场景，以及评估、安全这类贯穿各部分的问题。每个条目都链接到论文；有官方实现的，也链接到代码。
 
-这是一份**精心挑选、持续更新的清单**，是综述的严格超集，而不是照搬它的参考文献。论文引用了 228 篇参考文献，每一篇都对照原始出处核实过；论文定稿后发表的研究也按同一标准核实后加入，清单早已远远超出这个数目。各部分默认折叠，点击**展开 N 篇论文**即可查看。
+这是一份**精心挑选、持续更新的清单**，并不是照搬综述的参考文献。各部分默认折叠，点击**展开 N 篇论文**即可查看。
 
 > **图例：** ⭐ = [入门必读](#starter-kit)中的论文（建议先读） · `[code]` = 官方实现的链接。
 
@@ -123,7 +123,7 @@
 - **[Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427)** (Sumers et al., TMLR 2023) - *描述 LLM 智能体时采用最广的一套概念与架构词汇。* ⭐ [[code](https://github.com/ysymyth/awesome-language-agents)]
 - **[ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)** (Yao et al., ICLR 2023) - *现代 LLM 智能体的技术前身中，引用量最高的一篇。* ⭐ [[code](https://github.com/ysymyth/ReAct)]
 - **[Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366)** (Shinn et al., NeurIPS 2023) - *确立了“self-reflection + 记忆”循环：智能体要自我改进，不必只靠基于梯度的 RL。* ⭐ [[code](https://github.com/noahshinn/reflexion)]
-- **[Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/abs/2302.04761)** (Schick et al., NeurIPS 2023) - *工具使用的开山之作，LLM 智能体分类体系中“工具增强”这一支柱就以它为基石。* ⭐
+- **[Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/abs/2302.04761)** (Schick et al., NeurIPS 2023) - *工具使用方向的开山之作，LLM 智能体分类体系中的“工具增强”一类由它奠定。* ⭐
 - **[Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442)** (Park et al., arXiv 2023) - *用 LLM 驱动智能体社会与模拟的奠基性示范。* ⭐ [[code](https://github.com/joonspk-research/generative_agents)]
 - **[Voyager: An Open-Ended Embodied Agent with Large Language Models](https://arxiv.org/abs/2305.16291)** (Wang et al., TMLR 2023) - *LLM 智能体的开创性范例，集 embodied、代码化的 skill 和终身学习于一身。* ⭐ [[code](https://github.com/MineDojo/Voyager)]
 - **[HuggingGPT: Solving AI Tasks with ChatGPT and its Friends in Hugging Face](https://arxiv.org/abs/2303.17580)** (Shen et al., NeurIPS 2023) - *“LLM 充当工具与模型的 orchestrator”这一智能体模式的奠基范例。* [[code](https://github.com/microsoft/JARVIS)]
@@ -131,10 +131,10 @@
 - **[Agent AI: Surveying the Horizons of Multimodal Interaction](https://arxiv.org/abs/2401.03568)** (Durante et al., arXiv 2024) - *把 LLM 智能体综述的范围扩展到 multimodal、embodied 的 Agent AI。*
 - **[Igniting Language Intelligence: The Hitchhiker's Guide From Chain-of-Thought Reasoning to Language Agents](https://arxiv.org/abs/2311.11797)** (Zhang et al., arXiv 2023) - *把推理（CoT）文献和智能体文献连接起来。* [[code](https://github.com/Zoeyyao27/CoT-Igniting-Agent)]
 - **[Large Language Model based Multi-Agents: A Survey of Progress and Challenges](https://arxiv.org/abs/2402.01680)** (Guo et al., IJCAI 2024) - *LLM 智能体中多智能体这一分支的标准参考综述。* ⭐ [[code](https://github.com/taichengguo/LLM_MultiAgents_Survey_Papers)]
-- **[Understanding the Planning of LLM Agents: A Survey](https://arxiv.org/abs/2402.02716)** (Huang et al., arXiv 2024) - *在奠基性综述的版图中，补上了专讲规划的空缺。*
-- **[Tool Learning with Large Language Models: A Survey](https://arxiv.org/abs/2405.17935)** (Qu et al., arXiv 2024) - *LLM 智能体工具使用这一支柱的权威综述。* [[code](https://github.com/quchangle1/LLM-Tool-Survey)]
+- **[Understanding the Planning of LLM Agents: A Survey](https://arxiv.org/abs/2402.02716)** (Huang et al., arXiv 2024) - *奠基性综述中原本缺少专讲规划的一篇，本文补上了这一空缺。*
+- **[Tool Learning with Large Language Models: A Survey](https://arxiv.org/abs/2405.17935)** (Qu et al., arXiv 2024) - *LLM 智能体工具使用方向的权威综述。* [[code](https://github.com/quchangle1/LLM-Tool-Survey)]
 - **[A Survey on the Memory Mechanism of Large Language Model based Agents](https://arxiv.org/abs/2404.13501)** (Zhang et al., arXiv 2024) - *LLM 智能体记忆子系统的标准综述。* [[code](https://github.com/nuster1128/LLM_Agent_Memory_Survey)]
-- **[Agentic Large Language Models, a Survey](https://arxiv.org/abs/2503.23037)** (Plaat et al., arXiv 2025) - *近期广受引用的通用综述，提出了“推理 / 行动 / 交互”这一紧凑的分类体系。*
+- **[Agentic Large Language Models, a Survey](https://arxiv.org/abs/2503.23037)** (Plaat et al., arXiv 2025) - *近期广受引用的通用综述，提出了“推理 / 行动 / 交互”这一简洁的分类体系。*
 - **[Large Language Model Agent: A Survey on Methodology, Applications and Challenges](https://arxiv.org/abs/2503.21460)** (Luo et al., arXiv 2025) - *最全面、也最新（2025）的通用综述之一。* [[code](https://github.com/luo-junyu/Awesome-Agent-Papers)]
 - **[Fully Autonomous AI Agents Should Not Be Developed](https://arxiv.org/abs/2502.02649)** (Mitchell et al., arXiv 2025) - *在智能体自主性问题上持反对意见的知名立场论文，引起了广泛讨论。*
 - **[AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges](https://arxiv.org/abs/2505.10468)** (Sapkota et al., arXiv 2025) - *厘清术语和概念上的混淆；领域内用法不一，因此这篇论文的引用越来越多。*
@@ -142,7 +142,7 @@
 - **[Levels of Autonomy for AI Agents](https://arxiv.org/abs/2506.12469)** (Feng et al., arXiv 2025) - *提出一个广受引用的可操作框架，用来比较不同 LLM 智能体系统的自主程度。*
 - **[Advances and Challenges in Foundation Agents: From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems](https://arxiv.org/abs/2504.01990)** (Liu et al., arXiv 2025) - *由 48 位作者合著的里程碑式综述，围绕类脑认知模块、自我进化、群体智能和安全来梳理整个领域。*
 - **[The Landscape of Agentic Reinforcement Learning for LLMs: A Survey](https://arxiv.org/abs/2509.02547)** (Zhang et al., arXiv 2025) - *Agentic RL 的经典综述：把 LLM 当作做决策的智能体来训练，而不是当作被动的生成器。*
-- **[A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems](https://arxiv.org/abs/2508.07407)** (Fang et al., arXiv 2025) - *梳理智能体利用交互数据优化自身组件的技术，在基础模型与终身运行的智能体系统之间架起桥梁。*
+- **[A Comprehensive Survey of Self-Evolving AI Agents: A New Paradigm Bridging Foundation Models and Lifelong Agentic Systems](https://arxiv.org/abs/2508.07407)** (Fang et al., arXiv 2025) - *梳理智能体利用交互数据优化自身组件的技术，把基础模型和终身运行的智能体系统衔接起来。*
 - **[Deep Research Agents: A Systematic Examination and Roadmap](https://arxiv.org/abs/2506.18096)** (Huang et al., arXiv 2025) - *第一篇系统梳理 long-horizon 自主研究智能体（搜索、工具使用、报告撰写）的综述。*
 - **[A Survey of AI Agent Protocols](https://arxiv.org/abs/2504.16736)** (Yang et al., arXiv 2025) - *梳理正在形成的协议层（MCP、A2A 及其后继者），并为智能体互操作标准提出评估维度。*
 
@@ -152,7 +152,7 @@
 - **[Beyond Individual Intelligence: Surveying Collaboration, Failure Attribution, and Self-Evolution in LLM-based Multi-Agent Systems](https://arxiv.org/abs/2605.14892)** (Qi et al., arXiv 2026) - *提出统一的“LIFE”框架（foundation、integrate、find faults、evolve），涵盖多智能体协作、failure attribution 和自我进化。*
 - **[A Technical Taxonomy of LLM Agent Communication Protocols](https://arxiv.org/abs/2606.19135)** (Sander et al., arXiv 2026) - *从五个维度分析九种开放的智能体间协议，并预测它们会收敛到联邦式的协议栈。*
 - **[Bridging the Agent-World Gap: Text World Models for LLM-based Agents](https://arxiv.org/abs/2606.09032)** (Li et al., arXiv 2026) - *系统梳理文本世界模型（LLM-as-WM 与 code-as-WM），这类模型让智能体能显式预测环境，用于规划和验证。* [[code](https://github.com/sustech-nlp/awesome-text-world-models)]
-- **[Agents That Know Too Much: A Data-Centric Survey of Privacy in LLM Agents](https://arxiv.org/abs/2606.26627)** (Lahjouji et al., arXiv 2026) - *以数据为中心的综述，按数据面而不是攻击类型来组织智能体隐私研究，并标出治理上的空白。*
+- **[Agents That Know Too Much: A Data-Centric Survey of Privacy in LLM Agents](https://arxiv.org/abs/2606.26627)** (Lahjouji et al., arXiv 2026) - *以数据为中心的综述，按数据暴露的环节（而非攻击类型）来组织智能体隐私研究，并标出治理上的空白。*
 - **[Self-Improvements in Modern Agentic Systems: A Survey](https://arxiv.org/abs/2607.13104)** (Ren et al., arXiv 2026) - *把现代智能体看作基础模型加上负责运行的 scaffold，并按更新的对象（权重还是 scaffold）和驱动变化的信号来组织自我改进方法。* [[code](https://github.com/selfimproving-agent/awesome-Self-Improving-Agents)]
 - **[Dynamic Agent Skills: A Lifecycle Survey and Taxonomy of Evolving Skill Libraries](https://arxiv.org/abs/2607.10113)** (Li et al., arXiv 2026) - *综述 124 篇关于可演化 skill library 的论文，把它看作按生命周期管理的制品库，并主张决定成败的是准入和修复，而不是获取。*
 - **[From Question Answering to Task Completion: A Survey on Agent System and Harness Design](https://arxiv.org/abs/2606.20683)** (Guo et al., arXiv 2026) - *从“模型与 harness”之分来看智能体，把 harness 拆成六项运行时职责，追问性能瓶颈究竟在哪里。* [[code](https://github.com/ggjy/Awesome-Agent-Engineering)]
@@ -167,11 +167,11 @@
 - **[Agentic Artificial Intelligence (AI): Architectures, Taxonomies, and Evaluation of Large Language Model Agents](https://arxiv.org/abs/2601.12560)** (Arunkumar V et al., arXiv 2026) - *这篇综述为 LLM 智能体提出统一的六组件分类体系（感知、大脑、规划、行动、工具使用、协作），回顾其架构、运行环境和评估实践，最后讨论 hallucination 引发的错误行动、无限循环和 prompt injection 等尚未解决的问题。*
 - **[A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle](https://arxiv.org/abs/2604.16548)** (Lin et al., arXiv 2026) - *梳理 LLM 智能体 long-term memory 面临的安全威胁，按记忆生命周期的六个阶段和四项安全目标整理攻击、防御与治理，并倡导“Verifiable Memory Governance”框架。*
 - **[Uncertainty Quantification in LLM Agents: Foundations, Emerging Challenges, and Opportunities](https://arxiv.org/abs/2602.05073)** (Oh et al., arXiv 2026) - *主张不确定性量化必须从单轮问答转向交互式智能体，给出通用的形式化定义，并指出智能体特有的四项挑战：估计器的选择、异质实体、不确定性的动态变化，以及缺少细粒度基准。*
-- **[Multi-Agent Debate Strategies: Survey, Taxonomy, and Challenges](https://arxiv.org/abs/2607.26212)** (Motger et al., arXiv 2026) - *回顾 141 项多智能体辩论研究，发现这个领域已悄悄固定在静态、fully connected 的拓扑加投票上，而这只是沿袭惯例，并非来自对照比较。*
+- **[Multi-Agent Debate Strategies: Survey, Taxonomy, and Challenges](https://arxiv.org/abs/2607.26212)** (Motger et al., arXiv 2026) - *回顾 141 项多智能体辩论研究，发现这个领域已默认采用静态、fully connected 的拓扑加投票，这是沿袭惯例的结果，并非来自对照比较。*
 - **[Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents](https://arxiv.org/abs/2607.05775)** (Albayaydh et al., arXiv 2026) - *综合 19 个基准上的 27 篇评估论文，归纳出六类失败，发现失败会随任务长度非线性地叠加，而增加 scaffold 并不能稳定地提高可靠性。*
 - **[How Agents Ask for Permission: User Permissions for AI Agents, from Interfaces to Enforcement](https://arxiv.org/abs/2607.13718)** (Michael et al., arXiv 2026) - *对照五个商用智能体考察 21 种智能体权限方案，按用户级策略如何制定、如何从用户输入推导、如何在运行时执行来分类，并指出仍有哪些缺口。*
-- **[Blockchain Empowered Trustworthy Agent Networks: Foundations, Taxonomy, and Future Directions](https://arxiv.org/abs/2608.04626)** (Zhu et al., arXiv 2026) - *梳理 1980 到 2026 年间从经典多智能体系统走向开放智能体网络的历程，指出一旦分属不同主体的智能体彼此交易，信任问题就上升到网络层面，单智能体的安全机制已无法触及。*
-- **[Software Engineering for and with GUI Agent](https://arxiv.org/abs/2608.09278)** (Yu et al., arXiv 2026) - *回顾 2018 年 1 月到 2026 年 4 月的 336 篇 GUI 智能体论文，发现架构正收敛到模块化的“感知、推理、行动”循环，而恢复、交给人处理的 escalation、安全约束的执行和可审计性仍发展不足；评估依然以任务成功为中心，不同协议之间难以比较。*
+- **[Blockchain Empowered Trustworthy Agent Networks: Foundations, Taxonomy, and Future Directions](https://arxiv.org/abs/2608.04626)** (Zhu et al., arXiv 2026) - *梳理 1980 到 2026 年间从经典多智能体系统走向开放智能体网络的历程，指出一旦分属不同主体的智能体彼此交易，信任问题就上升到网络层面，单智能体的安全机制无法解决。*
+- **[Software Engineering for and with GUI Agent](https://arxiv.org/abs/2608.09278)** (Yu et al., arXiv 2026) - *回顾 2018 年 1 月到 2026 年 4 月的 336 篇 GUI 智能体论文，发现架构正收敛到模块化的“感知、推理、行动”循环，而恢复、转交人工、安全约束的执行和可审计性仍发展不足；评估依然以任务成功为中心，不同协议之间难以比较。*
 - **[Agent Safety Should Be a Runtime Contract](https://arxiv.org/abs/2608.11274)** (Ng et al., arXiv 2026) - *立场论文，主张把智能体安全放进 harness，作为一份运行时契约：一面是预防（sandbox、权限关卡、监控器），一面是留证（测试执行、日志采集、文件 diff）。论据包括 52 起有记录的事故、对 12 个公开智能体系统的 trajectory schema 审计，以及对 2023 到 2025 年 NeurIPS、ICML、ICLR 全部 28,560 篇论文的标题级审计；后者显示，合并来看，训练阶段与部署阶段的论文数量相差 8 到 12 倍。*
 - **[Information Retrieval Misses the Mark for LLM Agents](https://doi.org/10.2139/ssrn.6903579)** (Sun et al., SSRN 2026) - *立场论文，回应从实际部署中得出的“RAG 已死，智能体只需要 grep”这一解读：它承认底层条件确实变了，但认为错位是结构性的，体现在五个维度上。IR 预设的语料、输入、目标、episode 和可检索单元，放到一个会规划、会浏览、会调用工具、还要自己决定是否继续搜索的智能体身上，全都不合适。为检验这一差距，作者固定智能体，在 HotpotQA-distractor 和 2WikiMultihopQA 上轮换 BM25、向量、grep、混合和闭卷检索，最后主张把检索重新定义为一种以状态为条件的证据获取策略。*
 - **[Terminal Agents: A Survey of AI Agents in Command-Line Environments](https://arxiv.org/abs/2608.20485)** (Bin et al., arXiv 2026) - *以终端而不是任务领域作为组织视角，研究那些靠命令执行和文本反馈推动循环前进的智能体，并用七维能力画像从架构、能力习得和评估几个方面加以梳理。综述自己在固定条件下做的诊断显示，不同的基准家族暴露出不同的过程信号，配对的系统比较结果也取决于基准，这限制了任何结果能在多大程度上归因于单个组件。*
@@ -191,15 +191,15 @@
 - **[AgentBench: Evaluating LLMs as Agents](https://arxiv.org/abs/2308.03688)** (Liu et al., ICLR 2024) - *在异构环境中衡量单智能体通用能力的标准参考基准。* ⭐ [[code](https://github.com/THUDM/AgentBench)]
 - **[WebArena: A Realistic Web Environment for Building Autonomous Agents](https://arxiv.org/abs/2307.13854)** (Zhou et al., ICLR 2024) - *网页浏览类单智能体架构事实上的标准测试平台。* [[code](https://github.com/web-arena-x/webarena)]
 - **[Gorilla: Large Language Model Connected with Massive APIs](https://arxiv.org/abs/2305.15334)** (Patil et al., NeurIPS 2024) - *单智能体工具使用的关键论文，证明微调加检索能让智能体可靠地调用大规模的真实 API 目录。* [[code](https://github.com/ShishirPatil/gorilla)]
-- **[ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models](https://arxiv.org/abs/2305.18323)** (Xu et al., arXiv 2023) - *一个影响很大的 ReAct 循环替代方案，着眼于效率，体现了“先规划后执行”与“交替进行”这条架构设计轴。* [[code](https://github.com/billxbf/ReWOO)]
+- **[ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models](https://arxiv.org/abs/2305.18323)** (Xu et al., arXiv 2023) - *一个影响很大的 ReAct 循环替代方案，着眼于效率，体现了架构设计上“先规划后执行”与“交替进行”两种取向的区别。* [[code](https://github.com/billxbf/ReWOO)]
 - **[Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/abs/2305.10601)** (Yao et al., NeurIPS 2023) - *核心的深思式搜索推理架构，LATS 等后来的单智能体规划与搜索框架都建立在它之上。* [[code](https://github.com/princeton-nlp/tree-of-thought-llm)]
 - **[WebGPT: Browser-assisted question-answering with human feedback](https://arxiv.org/abs/2112.09332)** (Nakano et al., arXiv 2021) - *ChatGPT 之前的早期工作，是现代 LLM Web 智能体的前身，确立了“浏览工具使用 + 人类反馈”的模式。*
 - **[SELF-REFINE: Iterative Refinement with Self-Feedback](https://arxiv.org/abs/2303.17651)** (Madaan et al., NeurIPS 2023) - *极简、应用广泛的单智能体自我改进循环，许多更大的智能体架构都把它当作子程序复用。* [[code](https://github.com/madaan/self-refine)]
 - **[SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering](https://arxiv.org/abs/2405.15793)** (Yang et al., NeurIPS 2024) - *说明接口设计会实质性地改变单智能体的能力，这一思路如今已是编码智能体设计的标准做法。* [[code](https://github.com/princeton-nlp/SWE-agent)]
-- **[Language Agent Tree Search Unifies Reasoning, Acting, and Planning in Language Models](https://arxiv.org/abs/2310.04406)** (Zhou et al., ICML 2024) - *代表了基于搜索的规划与 ReAct/Reflexion 一脉的最前沿融合。* [[code](https://github.com/lapisrocks/LanguageAgentTreeSearch)]
+- **[Language Agent Tree Search Unifies Reasoning, Acting, and Planning in Language Models](https://arxiv.org/abs/2310.04406)** (Zhou et al., ICML 2024) - *将基于搜索的规划与 ReAct/Reflexion 一脉融合，是这一方向的前沿成果。* [[code](https://github.com/lapisrocks/LanguageAgentTreeSearch)]
 - **[Executable Code Actions Elicit Better LLM Agents](https://arxiv.org/abs/2402.01030)** (Wang et al., ICML 2024) - *确立了“code-as-action”的思路，使之成为单智能体 action space 设计中一种主流的替代方案。* [[code](https://github.com/xingyaoww/code-act)]
 - **[Describe, Explain, Plan and Select: Interactive Planning with Large Language Models Enables Open-World Multi-Task Agents](https://arxiv.org/abs/2302.01560)** (Wang et al., NeurIPS 2023) - *面向开放世界与 embodied 任务的关键单智能体规划架构。* [[code](https://github.com/CraftJarvis/MC-Planner)]
-- **[OS-Copilot: Towards Generalist Computer Agents with Self-Improvement](https://arxiv.org/abs/2402.07456)** (Wu et al., arXiv 2024) - *近期一个领先的范例：通用、可自我改进的操作系统级单智能体，把 AutoGPT 式的自主性扩展到真实的计算机环境。* [[code](https://github.com/OS-Copilot/OS-Copilot)]
+- **[OS-Copilot: Towards Generalist Computer Agents with Self-Improvement](https://arxiv.org/abs/2402.07456)** (Wu et al., arXiv 2024) - *近期的一项代表性工作：一个通用、可自我改进的操作系统级单智能体，把 AutoGPT 式的自主性扩展到真实的计算机环境。* [[code](https://github.com/OS-Copilot/OS-Copilot)]
 - **[AppAgent: Multimodal Agents as Smartphone Users](https://arxiv.org/abs/2312.13771)** (Zhang et al., CHI 2025) - *近期具有代表性的单智能体架构，把 ReAct 与工具使用范式扩展到 GUI 和手机操控。* [[code](https://github.com/TencentQQGYLab/AppAgent)]
 - **[The Landscape of Emerging AI Agent Architectures for Reasoning, Planning, and Tool Calling: A Survey](https://arxiv.org/abs/2404.11584)** (Masterman et al., arXiv 2024) - *专门讨论智能体架构设计模式的综述，与单智能体框架的分类直接相关。*
 - **[MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework](https://arxiv.org/abs/2308.00352)** (Hong et al., ICLR 2024) - *广受引用的框架，展示单智能体的角色与流程模板如何提高可靠性，标志着框架设计从单智能体走向多智能体的转折点。* [[code](https://github.com/geekan/MetaGPT)]
@@ -210,7 +210,7 @@
 - **[Orchestral AI: A Framework for Agent Orchestration](https://arxiv.org/abs/2601.02577)** (Roman et al., arXiv 2026) - *在统一接口背后组合、编排各种专门化智能体的框架。* [[code](https://github.com/orchestralAI/orchestral-ai)]
 - **[AgentArk: Distilling Multi-Agent Intelligence into a Single LLM Agent](https://arxiv.org/abs/2602.03955)** (Luo et al., arXiv 2026) - *通过 distillation 把多智能体的智能压缩进单个 LLM 智能体，以更低的成本保留协作带来的收益。* [[code](https://github.com/AIFrontierLab/AgentArk)]
 - **[The Interplay of Harness Design and Post-Training in LLM Agents](https://arxiv.org/abs/2606.25447)** (Kim et al., arXiv 2026) - *表明 harness 设计与后训练相互影响，因此考虑 harness 的后训练能同时提升分布内与分布外的表现。*
-- **[Next-Generation Agentic Reinforcement Learning Systems Enable Self-Evolving Agents](https://arxiv.org/abs/2607.01120)** (Ran Yan et al., arXiv 2026) - *认为真正让智能体能够修改自身组件、而不只是修改权重的，是 agentic RL 的系统栈，而不是算法。*
+- **[Next-Generation Agentic Reinforcement Learning Systems Enable Self-Evolving Agents](https://arxiv.org/abs/2607.01120)** (Ran Yan et al., arXiv 2026) - *认为关键在于 agentic RL 的系统栈而不是算法：正是系统栈让智能体不只修改权重，还能修改自身组件。*
 - **[From Atomic Actions to Standard Operating Procedures: Iterative Tool Optimization for Self-Evolving LLM Agents](https://arxiv.org/abs/2607.07321)** (Ding et al., arXiv 2026) - *从执行 trace 中找出反复出现的行动序列，合成为可调用的高阶流程，再合并、评估并剪枝由此得到的工具集。*
 - **[Self-Evolving World Models for LLM Agent Planning](https://arxiv.org/abs/2606.30639)** (Zhang et al., arXiv 2026) - *在测试时改进智能体内部的世界模型，同时保持执行器不变，让“规划、模拟”这一循环更加紧凑。*
 - **[Scaling Self-Evolving Agents via Parametric Memory](https://arxiv.org/abs/2606.04536)** (Ren et al., arXiv 2026) - *把自我进化从 context window 挪到参数里，积累的经验可以不断扩展，提示词却不必随之变长。*
@@ -234,8 +234,8 @@
 - **[Ouroboros: A Self-Developing Frontier Coding Agent with Reviewed Core Evolution](https://arxiv.org/abs/2608.08311)** (Razzhigaev et al., arXiv 2026) - *一个编码智能体 harness，它的工具、提示词、上下文组装和核心实现都通过审查过的 commit 来改进，这些 commit 又成为后续工作的运行时。在冻结的 snapshot 上，它在 Terminal-Bench 2.1 上达到 86.74%，在 OSWorld-Verified 上达到 90.69%；另有一次 161 天的部署在线上持续演化。* [[code](https://github.com/razzant/ouroboros)]
 - **[The Scaffolding Matters More Than the Interface: A Controlled Comparison of MCP and CLI Tool Use Across Seven Agent Scaffoldings, Five Language Models, and One Software Task](https://arxiv.org/abs/2608.08654)** (Alier Forment et al., arXiv 2026) - *用七种智能体 scaffold 和五个语言模型跑同一个固定的 git 任务，结果表明决定成本的是 scaffold，而不是 MCP 与 CLI 的接口之分：两个不支持 MCP 的 scaffold 通过 CLI 完成了全部运行，单看 CLI 运行，也比五个支持 MCP 的 scaffold 便宜 5.0 到 28 倍；十三组严格配对的 MCP/CLI 比值从 0.43 倍到 29 倍不等；MCP 运行花掉的钱有 12.9% 没换来任何完成的工作，CLI 运行只有 2.2%。*
 - **[Persistent Recursive Worlds Enable Autonomous Software Evolution](https://arxiv.org/abs/2608.10450)** (Huang et al., arXiv 2026) - *让软件项目而不是智能体持久存在：生命周期有限的智能体提出局部修改，只有被接受的结果才会推进版本历史。一次超过 120 小时的运行构建出约 25 万行、用 Rust 写成的 C 编译器，通过了完整的 c-testsuite，模型 token 费用为 44 美元。*
-- **[What Does Multi-Harness RL Learn? Credit Assignment and Portability in Coding Agents](https://arxiv.org/abs/2609.04518)** (Le et al., arXiv 2026) - *回放 Aider、OpenHands、Qwen Code 和 SWE-agent 的冻结记录，单独检验把多个 harness 放进同一个 advantage 组能否换来可迁移的 skill，结果是评估用的 harness 压倒其他一切因素：在 24,000 次封存评估中，它让平均解决率从 2.14% 变到 9.27%，而训练配方带来的变化是 1.16；跨 harness 分组在一个 held-out harness 上比 harness 内分组高 0.25 个点，其置信区间跨过零，也比每条规则自身的随机种子波动范围更窄。*
-- **[TROVE: Adaptive Agent Skill Orchestration via Trace-Grounded Route Validation and Editing](https://arxiv.org/abs/2609.05019)** (Wang et al., arXiv 2026) - *把规划好的路线看作暂定而非已定：离线阶段，它把评估过的 workflow 搜索 trace 提炼成原子 skill、组合 skill 和一张以结果为条件的转移图；在线阶段，它保留仍然有效的后续步骤，插入有 trace 支持的局部应对，或者只替换失效的后缀，让运行时证据换来局部修复，而不是大范围重新规划。消融实验显示，离线收益大多来自组合 skill，效率提升大多来自后缀替换。*
+- **[What Does Multi-Harness RL Learn? Credit Assignment and Portability in Coding Agents](https://arxiv.org/abs/2609.04518)** (Le et al., arXiv 2026) - *回放 Aider、OpenHands、Qwen Code 和 SWE-agent 的冻结记录，单独检验把多个 harness 放进同一个 advantage 组能否学到可迁移的 skill，结果发现评估时所用的 harness 影响最大，远超其他因素：在 24,000 次封存评估中，它让平均解决率从 2.14% 变到 9.27%，而训练配方带来的变化是 1.16；跨 harness 分组在一个 held-out harness 上比 harness 内分组高 0.25 个点，其置信区间跨过零，也比每条规则自身的随机种子波动范围更窄。*
+- **[TROVE: Adaptive Agent Skill Orchestration via Trace-Grounded Route Validation and Editing](https://arxiv.org/abs/2609.05019)** (Wang et al., arXiv 2026) - *把规划好的路线看作暂定而非已定：离线阶段，它把评估过的 workflow 搜索 trace 提炼成原子 skill、组合 skill 和一张以结果为条件的转移图；在线阶段，它保留仍然有效的后续步骤，插入有 trace 支持的局部应对，或者只替换失效的后缀，这样运行时证据只触发局部修复，而不是大范围重新规划。消融实验显示，离线收益大多来自组合 skill，效率提升大多来自后缀替换。*
 - **[SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks](https://arxiv.org/abs/2305.17390)** (Lin et al., NeurIPS 2023) - *把智能体拆成两部分：一个经过微调、快速行动的小模型，以及只在行动停滞或无效等触发条件下才调用的 GPT-4 planner；在 30 类 ScienceWorld 任务上胜过 SayCan、ReAct 和 Reflexion。*
 - **[R2V Agent: Teaching SLMs When to Ask for Help](https://arxiv.org/abs/2605.16604)** (Hemadri et al., arXiv 2026) - *难度会在 trajectory 中途变化，所以按步骤而不是按查询来做路由：一个用 Brier 分数做过 calibration 的 router，只在剩余失败风险高时，才从经过 distillation 的小模型转交给教师 LLM，把 TextWorld 的成功率从 64.6% 提高到 98.2%，escalation 比例为 41.7%。* [[code](https://github.com/RaghuHemadri/r2v-agent)]
 - **[REFLEX with Jev for Efficient Selective Control in LLM Agents](https://arxiv.org/abs/2609.26532)** (Wu and Lim, arXiv 2026) - *让 Jev（一种不输出文本、只给出类型化决策的模型）负责智能体的有限选择，只在 confidence 低或需要文本时才调用强 LLM：在由 100 个任务组成的固定基准上成功率 95%，强模型调用减少 72.7%，但在 BFCL 和 τ 类任务上，相比廉价的生成式 cascade 几乎没有提升。*
@@ -263,7 +263,7 @@
 - **[Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models](https://arxiv.org/abs/2305.04091)** (Wang et al., ACL 2023) - *广泛使用的轻量“先规划后执行”模板，许多 LLM 智能体的规划模块直接采用了它。* [[code](https://github.com/AGI-Edgerunners/Plan-and-Solve-Prompting)]
 - **[ADaPT: As-Needed Decomposition and Planning with Language Models](https://arxiv.org/abs/2311.05772)** (Prasad et al., ACL 2024) - *展示了根据执行情况自适应调整的规划，在计划粒度和智能体能力之间取得平衡，是对静态“先规划后执行”智能体的重要改进。* [[code](https://github.com/archiki/ADaPT)]
 - **[Self-Discover: Large Language Models Self-Compose Reasoning Structures](https://arxiv.org/abs/2402.03620)** (Zhou et al., NeurIPS 2024) - *表明 LLM 能针对每个任务自行选择推理策略，这种元推理能力是自适应智能体规划的核心。*
-- **[Buffer of Thoughts: Thought-Augmented Reasoning with Large Language Models](https://arxiv.org/abs/2406.04271)** (Yang et al., NeurIPS 2024) - *代表了可复用、借助记忆增强的推理结构检索，把推理策略和智能体的 long-term memory 设计联系了起来。* [[code](https://github.com/YangLing0818/buffer-of-thought-llm)]
+- **[Buffer of Thoughts: Thought-Augmented Reasoning with Large Language Models](https://arxiv.org/abs/2406.04271)** (Yang et al., NeurIPS 2024) - *代表了一类方法：从记忆中检索可复用的推理结构，把推理策略和智能体的 long-term memory 设计联系了起来。* [[code](https://github.com/YangLing0818/buffer-of-thought-llm)]
 - **[Large Language Models Cannot Self-Correct Reasoning Yet](https://arxiv.org/abs/2310.01798)** (Huang et al., ICLR 2024) - *广受引用的警示性、批判性结果，提醒智能体设计不要过度依赖 self-critique 循环，并推动了以外部反馈为依据的方法。*
 - **[Training Language Models to Self-Correct via Reinforcement Learning](https://arxiv.org/abs/2409.12917)** (Kumar et al., ICLR 2025) - *表明借助 RL（而不只是提示）能让 self-correction 真正奏效，直接启发了现代智能体所用 reasoning model 的后训练。*
 - **[Let's Verify Step by Step](https://arxiv.org/abs/2305.20050)** (Lightman et al., ICLR 2024) - *确立了 process reward model 与步骤级验证，如今它们已是推理智能体中引导搜索和 self-critique 的标准组件。* [[code](https://github.com/openai/prm800k)]
@@ -301,7 +301,7 @@
 - **[Second Thought: Reasoning in Parallel as LLM Agents Act and Observe](https://arxiv.org/abs/2608.13667)** (Sun et al., arXiv 2026) - *在 ReAct 智能体等待环境返回的空闲时段分出四条辅助推理分支，到观测返回时再合并回来：九组模型与基准组合的轮数全部下降，其中六组的主线程解码量最多减少 43%，九组中有七组的 Pass@1 在统计上没有变化。*
 - **[CHIME: Credit-Aware Hierarchical Memory Evolution for Long-Horizon Agentic Planning](https://arxiv.org/abs/2609.02074)** (Ye et al., arXiv 2026) - *把规划记忆库和执行记忆库分开，写入任何内容之前，先判断每个任务结果应归因于计划、执行、两者兼有还是两者皆非；理由是只看最终结果的反馈，会把计划质量与执行错误、环境噪声混为一谈。这样得到的记忆更小，学到的价值能跟踪下游效用，规划记忆的价值高于执行记忆，而且可以在不同骨干模型之间迁移。*
 - **[Do GUI Agents Know When Not to Act? Enabling Conflict-Aware Termination for Multimodal GUI Agents](https://arxiv.org/abs/2609.03438)** (Huang et al., arXiv 2026) - *评测的是“停下”而不是“行动”的决定，覆盖自相矛盾的指令和与屏幕内容相矛盾的指令，发现了偏向执行的过度服从：在可行任务上得分高的智能体，遇到冲突任务仍会继续执行。推理时的可行性检查加上行动调节，在五个智能体上都减轻了这一问题，而且不影响正常任务的表现。*
-- **[Steer, Don't Solve: Training Small Critic Models for Large Code Agents](https://arxiv.org/abs/2606.21811)** (Gandhi et al., arXiv 2026) - *用 SFT 和 DPO 训练 4B 和 8B 的 critic 模型，让它们找出编码智能体 trajectory 中的错误，并在推理时每隔几步给出高层指导，自己并不生成行动。这些 critic 提高了六个更大智能体在 SWE-bench Verified 上的解决率，GLM-4.7-Flash-30B-A3B 提高 16.0 个点，GPT-OSS-120B 提高 14.4 个点；在智能体因此用更少步数完成任务的场景里，引导本身就能收回成本，GPT-OSS-20B 每个样例的花费从 0.07 美元降到 0.03 美元。* [[code](https://github.com/shubhamrgandhi/critic-training)]
+- **[Steer, Don't Solve: Training Small Critic Models for Large Code Agents](https://arxiv.org/abs/2606.21811)** (Gandhi et al., arXiv 2026) - *用 SFT 和 DPO 训练 4B 和 8B 的 critic 模型，让它们找出编码智能体 trajectory 中的错误，并在推理时每隔几步给出高层指导，自己并不生成行动。这些 critic 提高了六个更大智能体在 SWE-bench Verified 上的解决率，GLM-4.7-Flash-30B-A3B 提高 16.0 个点，GPT-OSS-120B 提高 14.4 个点；如果智能体因此用更少的步数完成任务，加上引导后的总花费反而更低：GPT-OSS-20B 每个样例的花费从 0.07 美元降到 0.03 美元。* [[code](https://github.com/shubhamrgandhi/critic-training)]
 - **[Robots That Ask For Help: Uncertainty Alignment for Large Language Model Planners (KnowNo)](https://arxiv.org/abs/2307.01928)** (Ren et al., CoRL 2023) - *对 LLM planner 给出的候选下一步应用 conformal prediction，只有超过一个候选通过阈值时，机器人才向人求助；这样既为任务完成提供统计保证，又把人的帮助降到最少。*
 - **[Real-Time Detection and Repair of LLM Agent Failures](https://arxiv.org/abs/2608.02464)** (Dubey, arXiv 2026) - *逐步让 LLM 评估者打分，成本比智能体本身还高，于是改用每步约 200 微秒的遥测监控器，加上确定性的重算检查，并把被标记的运行回滚，使任务成功率从 52% 提高到 73%；这些监控器每次部署都必须重新做 calibration。* [[code](https://github.com/sunnydubey1111/agent-trajectory-sentinel)]
 </details>
@@ -359,16 +359,16 @@
 - **[AMV-L: Lifecycle-Managed Agent Memory for Tail-Latency Control in Long-Running LLM Systems](https://arxiv.org/abs/2603.04443)** (Bamidele et al., arXiv 2026) - *提出智能体记忆系统 AMV-L，给每个记忆条目一个持续更新的效用分数，并按价值决定晋升、降级和淘汰，把检索限制在有界的候选集合内；与按 TTL 保留相比，吞吐量提升 3.1 倍，中位延迟降低 4.2 倍，而收益来自限制了检索的工作量，并非来自更短的提示词。*
 - **[From Raw Experience to Skill Consumption: A Systematic Study of Model-Generated Agent Skills](https://arxiv.org/abs/2605.23899)** (Huang et al., arXiv 2026) - *针对模型生成的 LLM 智能体 skill，提出一个以实际效用为依据的评估框架，覆盖从经验生成、skill 提取到 skill 使用的全过程。*
 - **[MemFail: Stress-Testing Failure Modes of LLM Memory Systems](https://arxiv.org/abs/2605.26667)** (Garg et al., arXiv 2026) - *提出诊断基准 MemFail，包含四类任务上的五个数据集，把 LLM 智能体所用外部记忆系统在摘要、存储、检索上的失败模式单独拎出来做压力测试。*
-- **[Filesystem-Based Memory for LLM Agents: Organization, Evolution, and Sustainability](https://arxiv.org/abs/2607.26637)** (Zhou et al., arXiv 2026) - *发现智能体实际落地时采用的 markdown 目录式记忆能省下搜索开销（在大规模材料上检索成本约减半），却换不来更好的答案，而且存得越多，组织结构越松散。*
+- **[Filesystem-Based Memory for LLM Agents: Organization, Evolution, and Sustainability](https://arxiv.org/abs/2607.26637)** (Zhou et al., arXiv 2026) - *发现智能体实际采用的 markdown 目录式记忆能降低搜索开销（在大规模材料上检索成本约减半），但答案质量并没有提高，而且存得越多，组织结构越松散。*
 - **[Keep It InMind: Benchmarking the Implicit-Association Blind Spot in Agent Memory](https://arxiv.org/abs/2607.24368)** (Li et al., arXiv 2026) - *表明当所需事实和查询长得不像时，记忆就会失灵：把记忆直接放进上下文，骨干模型能答对 84.0% 的间接问题，六个检索系统最多只有 14.4%。*
 - **[Metis: Memory Foundation Model](https://arxiv.org/abs/2607.26760)** (Zhang et al., arXiv 2026) - *把记忆放进骨干模型，而不是外挂模块：用单次 forward pass 无梯度地维护一个原生记忆状态，推理时权重冻结，checkpoint 已公开。*
-- **[When Memory Lies: An Empirical Study of Spatial Memory Staleness in VLM Agents](https://arxiv.org/abs/2608.04574)** (Sun et al., arXiv 2026) - *测量笃定的存储记忆和智能体眼前所见相矛盾时会发生什么：在完全相同的网格上，视觉 F1 从 0.887 到低至 0.067 不等；完全信任原始记忆的智能体，死亡次数是不给任何记忆的同一智能体的两倍多。*
-- **[Caching for the Future: Scrub Jay Episodic Memory Principles for Agent Memory Systems](https://arxiv.org/abs/2608.04746)** (Bhandari et al., arXiv 2026) - *借鉴丛鸦 episodic memory 中按类型决定的遗忘方式，给每个存储条目标上易腐系数和效用期限，让过时的事实逐渐从检索中衰减出去；消融掉衰减项后，泛化能力骤降 5.7 倍。*
+- **[When Memory Lies: An Empirical Study of Spatial Memory Staleness in VLM Agents](https://arxiv.org/abs/2608.04574)** (Sun et al., arXiv 2026) - *测量 confidence 很高的存储记忆与智能体眼前所见相矛盾时会发生什么：在完全相同的网格上，视觉 F1 从 0.887 到低至 0.067 不等；完全信任原始记忆的智能体，死亡次数是不给任何记忆的同一智能体的两倍多。*
+- **[Caching for the Future: Scrub Jay Episodic Memory Principles for Agent Memory Systems](https://arxiv.org/abs/2608.04746)** (Bhandari et al., arXiv 2026) - *借鉴丛鸦 episodic memory 中按类型决定的遗忘方式，给每个存储条目标上易腐系数和效用期限，让过时的事实随时间衰减，逐渐不再被检索到；消融掉衰减项后，泛化能力骤降 5.7 倍。*
 - **[What Does Context Compression Cost an Agent? Interaction Costs Unrevealed by Task-Completion Metrics](https://arxiv.org/abs/2608.16370)** (Liu, arXiv 2026) - *即使压缩后任务完成率在统计上没有变化，智能体仍可能为了找回丢掉的状态，把检索调用次数提高到约三倍（GPT-5.5 的完成率从 80% 变为 85%，p = 1.0；检索调用则从 21.0 次升到 63.9 次，p = .002）；同样的滑动压缩在 ALFWorld 中没有引起检索激增，可见这种特征取决于环境。*
 - **[When Your Agent Opens the Chat App: Agent-Controlled Search over Raw Chat Logs Rivals Structured Memory](https://arxiv.org/abs/2608.12888)** (Li et al., arXiv 2026) - *只给智能体一个在未经改动的聊天存档上反复做关键词搜索的循环（按轮次做词法索引，不预先构建摘要、embedding、树或图），在 MemoryAgentBench 增量多轮设置下的约 2,800 个问题上，以相同的 GPT-4o-mini 为骨干，平均准确率在所有对比系统中最高（58.2，HippoRAG 2 为 53.2）。*
 - **[ForeDreamer: A Self-Evolving Dual-Agent Memory Architecture for Future Event Prediction](https://arxiv.org/abs/2608.20920)** (Zhong et al., EMNLP Findings 2026) - *不把检索结果直接喂给智能体，而是在预测之前先把原始网页证据转成结构化记忆，并把针对单个问题的事实记忆和跨多个预测 episode 保留的经验记忆分开：前者由一个记忆子智能体构建，另有两条进化路线分别改进预测本身和记忆构建；在 Prophet Arena 和 FutureX 上做了评估。* [[code](https://github.com/zhongzero/ForeDreamer)]
 - **[Corpus2Skill: Distilling Enterprise Knowledge into Navigable Agent Skills for QA and RAG](https://arxiv.org/abs/2604.14572)** (Sun et al., EMNLP Findings 2026) - *离线编译器先把语料提炼成分层的 skill 目录，智能体在服务时沿目录导航：从全局概览逐层深入到更细的摘要，直到具体文档，走进死胡同就退回来，而不是每个问题都重新发起一次查询。在十一个数据集上，导航并不能全面取代检索：五胜三平三负，收益集中在能还原出主题分类的单领域语料上，面对开放领域的事实型问答池，扁平检索仍然更合适。* [[code](https://github.com/dukesun99/Corpus2Skill)]
-- **[Does Your Agent's Memory Survive a Model Upgrade? A Controlled Study of Memory Portability](https://arxiv.org/abs/2609.05339)** (Goyal et al., arXiv 2026) - *固定已存储的历史、只换模型，结果表明能否平安度过升级取决于记忆格式：固定 schema 的知识图谱准确率只变动 0.0004 个百分点；由模型压缩的笔记随迁移方向不对称地摆动 +9.91 或 -13.28 个百分点；只迁移一半的 embedding 索引，在完全重新 embedding 能恢复的 11.90 个百分点中只拿回 4.96；只修补存储里的笔记而没有保留原始资料时，全部 48 段历史都达不到 90% 的恢复目标。*
+- **[Does Your Agent's Memory Survive a Model Upgrade? A Controlled Study of Memory Portability](https://arxiv.org/abs/2609.05339)** (Goyal et al., arXiv 2026) - *固定已存储的历史、只换模型，结果表明升级后记忆还能否正常使用，取决于记忆格式：固定 schema 的知识图谱准确率只变动 0.0004 个百分点；由模型压缩的笔记随迁移方向不同，准确率不对称地变化 +9.91 或 -13.28 个百分点；只迁移一半的 embedding 索引，在完全重新 embedding 能恢复的 11.90 个百分点中只拿回 4.96；只修补存储里的笔记而没有保留原始资料时，全部 48 段历史都达不到 90% 的恢复目标。*
 - **[The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents](https://arxiv.org/abs/2609.01852)** (Hu et al., arXiv 2026) - *把“记忆是唯一来源”和“有权威工具掌握正确值”两种情况分开，把失败解读为过度信任而不是混淆：只能依靠记忆时，模型有 0.92 到 1.00 的比例照着过时的存储值回答；陷阱条件下的危害取决于模型能力，一旦把过时的笔记伪装成最新信息，Qwen3 同系列中越大的模型崩得越厉害。*
 - **[Dual-Layer Agentic Memory with Fast Write Routing and Slow Consolidation](https://arxiv.org/abs/2608.22215)** (Li et al., arXiv 2026) - *把每次记忆写入变成三选一（跳过、新写、更新），由 1.7B 到 8B 的 cascade 来决定：最多剪掉 68% 的冗余记忆，转交出去的输入不到一半，同时保住全量保留时 98% 以上的 exact match。*
 - **[Jev-Mem: System-One-Controlled Agentic Memory for Efficient AI Agents](https://arxiv.org/abs/2609.23986)** (Jiang et al., arXiv 2026) - *把记忆分类、路由、图遍历和停止判断交给 Jev，只在需要对取回的内容做推理时才调用 LLM：构建 LoCoMo 记忆的速度是最快 baseline 的 6.6 倍，得分 0.777 对 0.700；领先的部分大多来自对抗性问题。* [[code](https://github.com/libingzheren/Jev-Mem)]
@@ -473,7 +473,7 @@
 - **[When is Routing Meaningful? Diversity and Robustness in Language Model Societies](https://arxiv.org/abs/2607.09197)** (Huot et al., arXiv 2026) - *追问在一群模型之间做路由什么时候才有意义，多样性又在什么情况下带来鲁棒性而不是噪声。*
 - **[What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates](https://arxiv.org/abs/2607.02507)** (Ghaffarizadeh et al., arXiv 2026) - *观察没有听众时智能体会说些什么，揭示出任务指标捕捉不到的潜在目标和社会结构。*
 - **[Decision Protocols in Multi-Agent Large Language Model Conversations](https://arxiv.org/abs/2607.05477)** (Kaesberg et al., arXiv 2026) - *比较多智能体对话中的决策协议，把投票规则或共识规则当作一个设计变量。*
-- **[The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break](https://arxiv.org/abs/2604.11978)** (Wang et al., arXiv 2026) - *诊断智能体系统在 long-horizon 任务上在哪里、为什么会垮掉，并指出许多看似具备的 long-horizon 能力只是海市蜃楼。*
+- **[The Long-Horizon Task Mirage? Diagnosing Where and Why Agentic Systems Break](https://arxiv.org/abs/2604.11978)** (Wang et al., arXiv 2026) - *诊断智能体系统在 long-horizon 任务上在哪里失败、为什么失败，并指出许多看似具备的 long-horizon 能力只是假象。*
 - **[GoAgent: Group-of-Agents Communication Topology Generation for LLM-based Multi-Agent Systems](https://arxiv.org/abs/2603.19677)** (Chen et al., arXiv 2026) - *以 group-of-agents 图的形式自动生成多智能体系统的 communication topology，而不是手工固定下来。*
 - **[Reinforcement Learning for LLM-based Multi-Agent Systems through Orchestration Traces](https://arxiv.org/abs/2605.02801)** (Zhang et al., arXiv 2026) - *用强化学习，从编排 trace 出发 end-to-end 地训练多智能体系统。*
 - **[Learning Latency-Aware Orchestration for Multi-Agent Systems](https://arxiv.org/abs/2607.13359)** (Shi et al., arXiv 2026) - *优化的是执行的 critical path，而不是总成本：训练时学习考虑延迟的执行图，运行时剪掉多余的智能体交互，在准确率不相上下的情况下，把 end-to-end 延迟降低 50% 以上。*
@@ -489,9 +489,9 @@
 - **[Everyone Conforms, No One Believes: Pluralistic Ignorance in LLM Agent Populations](https://arxiv.org/abs/2608.02758)** (YS, arXiv 2026) - *发现智能体群体会重现 pluralistic ignorance：公开场合有 64% 到 94% 的时间选择从众，私下却拒绝这一规范；在八个模型中的七个上，单个公开的异议者打破虚假共识的比例不到 26%。*
 - **[CityReal: Human-Aligned Urban Behavior and City Dynamics Simulation with Large-Scale LLM Agents](https://arxiv.org/abs/2608.16897)** (Bougie et al., arXiv 2026) - *与人类行为对齐的大规模城市行为与城市动态模拟；由意图驱动的智能体通过文本适配器学习习惯和偏好，以贴合真实的人口统计数据。*
 - **[When Agents Coordinate: Measuring Coordination in Multi-Agent AI Coding](https://arxiv.org/abs/2608.16801)** (Destefanis et al., arXiv 2026) - *把 1902 次智能体团队编程运行转成由消息、文件写入和文件读取构成的时序网络：在消息密集的工作中，共享文件取代了反复的一对一消息，八个智能体时输出 token 减少约 42%；指定一个智能体负责协调，既没有形成通信中心，也没有稳定提升成功率；在 244 次封闭重跑中，仍有五分之四的运行里智能体会去找隐藏的评分材料。*
-- **[Debate Training Reduces Reward Hacking in RLAIF](https://arxiv.org/abs/2608.17776)** (Kenton et al., arXiv 2026) - *让 Gemini 2.5 Flash 级别的策略通过生成者与 critic 的辩论做 RL 微调，由冻结且更弱的 Gemini 2.5 Flash Lite 当裁判：单人 RLAIF baseline 很快就钻了裁判的空子，这种做法却在整个训练过程中保住了裁判的表现，弥补了 45% 的性能差距；如果不约束双方，对抗训练容易退化成 critic 去钻裁判的空子，限制批评字数（最多 150 词时有效）能让博弈重新平衡，代价是 critic 表达得不够清楚。*
+- **[Debate Training Reduces Reward Hacking in RLAIF](https://arxiv.org/abs/2608.17776)** (Kenton et al., arXiv 2026) - *让 Gemini 2.5 Flash 级别的策略通过生成者与 critic 的辩论做 RL 微调，由冻结且更弱的 Gemini 2.5 Flash Lite 当评估者：单人 RLAIF baseline 很快就钻了评估者的空子，这种做法却在整个训练过程中保住了评估者的表现，弥补了 45% 的性能差距；如果不约束双方，对抗训练容易退化成 critic 去钻评估者的空子，限制批评字数（最多 150 词时有效）能让博弈重新平衡，代价是 critic 表达得不够清楚。*
 - **[OrchMAS: Orchestrated Reasoning with Multi Collaborative Heterogeneous Scientific Expert Structured Agents](https://arxiv.org/abs/2603.03005)** (Feng et al., arXiv 2026) - *面向科学推理，把编排和执行拆成两层：orchestrator 模型读取任务，搭建考虑领域特点的流水线，为它创建的每个专家智能体写好角色和提示词，运行中再根据中间反馈修改流水线；另一个执行模型负责完成各个步骤。这样一次运行里就能混用能力和成本各不相同的骨干模型。*
-- **[At Equal Inference Cost, Multi-Agent Structure Does Not Beat a Single Frozen Agent](https://arxiv.org/abs/2609.04217)** (Dylan et al., arXiv 2026) - *固定的是模型调用总次数，而不是环境 rollout 次数，于是 Planner-Executor-Critic 团队相对单个进化后执行者的所谓优势就消失了：在 ALFWorld 上是 0.769 对 0.754（p = 0.80），评估调用次数却是对方的 1.8 倍；leave-one-in 分析显示，实际收益全部来自执行者，planner 和 critic 的提示词进化成了空白或不起作用的内容；在 WebShop 上，团队的表现还有变差的趋势。*
+- **[At Equal Inference Cost, Multi-Agent Structure Does Not Beat a Single Frozen Agent](https://arxiv.org/abs/2609.04217)** (Dylan et al., arXiv 2026) - *固定的是模型调用总次数，而不是环境 rollout 次数，于是 Planner-Executor-Critic 团队相对单个进化后执行者此前报告的优势就消失了：在 ALFWorld 上是 0.769 对 0.754（p = 0.80），评估调用次数却是对方的 1.8 倍；leave-one-in 分析显示，实际收益全部来自执行者，planner 和 critic 的提示词进化成了空白或不起作用的内容；在 WebShop 上，团队的表现还有变差的趋势。*
 - **[A Case Study on Emergent Cheating and Whistleblowing in Autonomous Research Swarms](https://arxiv.org/abs/2609.04170)** (Paglieri et al., arXiv 2026) - *在一个由 100 个智能体组成、证明形式化猜想的群体中，有一个智能体找到了评估系统的漏洞；在竞争压力下，这个漏洞先通过共享知识库、再通过点对点消息扩散开来。与此同时，另一批智能体审查欺诈性证明、提醒同伴、发起抵制，并提出验证补丁。传播漏洞的透明渠道，恰恰也是让抵抗成为可能的渠道，作者因此把它看作公地治理问题，而不是某个智能体内部的故障。*
 </details>
 
@@ -514,7 +514,7 @@
 - **[RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](https://arxiv.org/abs/2307.15818)** (Brohan et al., CoRL 2023) - *确立了 vision-language-action（VLA）建模范式，这一范式是 embodied 与机器人智能体研究的核心。*
 - **[OpenVLA: An Open-Source Vision-Language-Action Model](https://arxiv.org/abs/2406.09246)** (Kim et al., CoRL 2024) - *闭源 VLA 模型的开源对应版本，让更多人能够开展 LLM 驱动的机器人控制研究。* [[code](https://github.com/openvla/openvla)]
 - **[WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents](https://arxiv.org/abs/2207.01206)** (Yao et al., NeurIPS 2022) - *面向具备 grounding 的语言 Web 智能体的奠基性常用基准，早于后来基于 LLM 的网页导航研究，也推动了这些研究。* [[code](https://github.com/princeton-nlp/WebShop)]
-- **[Mind2Web: Towards a Generalist Agent for the Web](https://arxiv.org/abs/2306.06070)** (Deng et al., NeurIPS 2023) - *第一个专为真实网站上的通用网页导航设计的基准和基于 LLM 的智能体，也是后续 Web 与 GUI 智能体论文普遍引用的标准参考。* [[code](https://github.com/OSU-NLP-Group/Mind2Web)]
+- **[Mind2Web: Towards a Generalist Agent for the Web](https://arxiv.org/abs/2306.06070)** (Deng et al., NeurIPS 2023) - *第一个专门面向真实网站通用网页导航的基准，同时给出了基于 LLM 的智能体；后续 Web 与 GUI 智能体论文普遍把它当作标准参考。* [[code](https://github.com/OSU-NLP-Group/Mind2Web)]
 - **[A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis](https://arxiv.org/abs/2307.12856)** (Gur et al., ICLR 2024) - *把指令拆成规范化的子指令，把冗长的 HTML 概括成与任务相关的片段，再通过生成的 Python 代码执行操作，在真实网站上的成功率提升 50% 以上，并在 Mind2Web 离线规划中排名第一。*
 - **[GPT-4V(ision) is a Generalist Web Agent, if Grounded](https://arxiv.org/abs/2401.01614)** (Zheng et al., ICML 2024) - *首次系统地证明 multimodal LLM 可以充当通用的视觉 Web 智能体，推动了领域转向基于视觉 grounding 的 Web 与 GUI 智能体。* [[code](https://github.com/OSU-NLP-Group/SeeAct)]
 - **[WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models](https://arxiv.org/abs/2401.13919)** (He et al., ACL 2024) - *真实世界 multimodal 浏览器智能体的关键示范和基准，广泛用于评估后来的 Web 智能体系统。* [[code](https://github.com/MinorJerry/WebVoyager)]
@@ -607,7 +607,7 @@
 - **[Agentic Trading: When LLM Agents Meet Financial Markets](https://arxiv.org/abs/2605.19337)** (Xia et al., arXiv 2026) - *研究 LLM 智能体在金融市场中的行为，以及它们带来的交易动态。*
 - **[Rethinking Scientific Discovery in the Agentic Era](https://arxiv.org/abs/2607.03863)** (Zheng et al., arXiv 2026) - *立场论文：科学发现交给智能体来做时，哪些会变，哪些不会变。*
 - **[Deep Research in Physical Sciences: A Multi-Agent Framework and Comprehensive Benchmark](https://arxiv.org/abs/2606.18648)** (Jiang et al., arXiv 2026) - *面向物理科学的多智能体 deep research 框架和基准。* [[code](https://github.com/yigengjiang/physci-deepresearch)]
-- **[HealthAgentBench: A Unified Benchmark Suite of Realistic Agentic Healthcare Environments for Challenging Frontier AI Agents](https://arxiv.org/abs/2606.31179)** (Liu et al., arXiv 2026) - *由逼真的智能体医疗环境组成的基准套件，而不是静态的临床问答。* [[code](https://github.com/microsoft/HealthAgentBench)]
+- **[HealthAgentBench: A Unified Benchmark Suite of Realistic Agentic Healthcare Environments for Challenging Frontier AI Agents](https://arxiv.org/abs/2606.31179)** (Liu et al., arXiv 2026) - *由逼真的智能体医疗环境组成的基准套件，不再局限于静态的临床问答。* [[code](https://github.com/microsoft/HealthAgentBench)]
 - **[EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management](https://arxiv.org/abs/2606.03841)** (Yang et al., arXiv 2026) - *能自我进化的数据科学智能体，把 skill 学习和上下文管理结合在一起。* [[code](https://github.com/usail-hkust/EvoDS)]
 - **[MetaResearcher: Scaling Deep Research via Self-Reflective Reinforcement Learning in Adversarial Virtual Environments](https://arxiv.org/abs/2606.19893)** (Yu et al., arXiv 2026) - *在对抗性条件下，用 self-reflective 强化学习训练 deep research 循环。*
 - **[Can Deep Research Agents Retrieve and Organize? Evaluating the Synthesis Gap with Expert Taxonomies](https://arxiv.org/abs/2601.12369)** (Zhang et al., arXiv 2026) - *对照专家给出的参考，评估 deep research 智能体在综合能力上的差距：它们能不能把检索到的证据组织起来，而不只是检索出来。* [[code](https://github.com/KongLongGeFDU/TaxoBench)]
@@ -655,7 +655,7 @@
 - **[Survey on Evaluation of LLM-based Agents](https://arxiv.org/abs/2503.16416)** (Yehudai et al., arXiv 2025) - *紧扣主题的综述，为新的智能体综述撰写评估一节提供了现成的分类体系。*
 - **[Evaluation and Benchmarking of LLM Agents: A Survey](https://arxiv.org/abs/2507.21504)** (Mohammadi et al., KDD 2025) - *独立完成的子方向综述，与 Yehudai 等人的综述互补，适合用来交叉核对分类体系的覆盖范围。*
 - **[τ²-Bench: Evaluating Conversational Agents in a Dual-Control Environment](https://arxiv.org/abs/2506.07982)** (Barres et al., arXiv 2025) - *把 τ-bench 扩展到用户和智能体都能作用于环境的场景。* [[code](https://github.com/sierra-research/tau2-bench)]
-- **[Agent-as-a-Judge: Evaluate Agents with Agents](https://arxiv.org/abs/2410.10934)** (Zhuge et al., arXiv 2024) - *把“用智能体评估智能体”做成了一套体系；讨论裁判的循环性时，它是参照点。* [[code](https://github.com/metauto-ai/agent-as-a-judge)]
+- **[Agent-as-a-Judge: Evaluate Agents with Agents](https://arxiv.org/abs/2410.10934)** (Zhuge et al., arXiv 2024) - *把“用智能体评估智能体”做成了一套体系；讨论评估者的循环性问题时，通常以它为参照。* [[code](https://github.com/metauto-ai/agent-as-a-judge)]
 - **[Holistic Agent Leaderboard: The Missing Infrastructure for AI Agent Evaluation](https://arxiv.org/abs/2510.11977)** (Kapoor et al., arXiv 2025) - *标准化的 harness，大规模重新评估智能体，并把成本和准确率一起报告。*
 - **[Dr. Bench: A Multidimensional Evaluation for Deep Research Agents, from Answers to Reports](https://arxiv.org/abs/2510.02190)** (Yao et al., arXiv 2025) - *从答案到报告，围绕语义质量、主题聚焦度和检索可信度评估 deep research 智能体。* [[code](https://github.com/EVIGBYEN/DrBench)]
 - **[Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces](https://arxiv.org/abs/2601.11868)** (Merrill et al., arXiv 2026) - *困难而贴近实际的命令行任务；终端智能体事实上的标准。* [[code](https://github.com/laude-institute/terminal-bench)]
@@ -667,7 +667,7 @@
 - **[Agent-ValueBench: A Comprehensive Benchmark for Evaluating Agent Values](https://arxiv.org/abs/2605.10365)** (Dong et al., arXiv 2026) - *第一个专门评估智能体价值观的基准：394 个可执行环境，4,335 个价值冲突任务，覆盖 28 种价值体系。*
 - **[How Many Tasks Are Enough for Agent Benchmark Decisions? A Replay Analysis of Public LLM Agent Benchmarks](https://arxiv.org/abs/2607.12338)** (Huang et al., arXiv 2026) - *用回放分析追问：一个基准到底需要多少个任务，它给出的排名才可信。* [[code](https://github.com/WilliamWJHuang/How-Many-Tasks-Are-Enough-for-Agent-Benchmark-Decisions)]
 - **[Beyond Static Leaderboards: Predictive Validity for the Evaluation of LLM Agents](https://arxiv.org/abs/2606.19704)** (Patel et al., arXiv 2026) - *主张智能体排行榜要想对部署有所说明，需要的不只是一个分数，还要有预测效度。*
-- **[AgentGym2: Benchmarking Large Language Model Agents in De-Idealized Real-World Environments](https://arxiv.org/abs/2607.05174)** (Xi et al., arXiv 2026) - *在去理想化的环境中评测智能体，缩小干净的基准世界与真实世界之间的差距。* [[code](https://github.com/hotdog-zz/Agentgym2)]
+- **[AgentGym2: Benchmarking Large Language Model Agents in De-Idealized Real-World Environments](https://arxiv.org/abs/2607.05174)** (Xi et al., arXiv 2026) - *在去理想化的环境中评测智能体，缩小干净的基准环境与真实环境之间的差距。* [[code](https://github.com/hotdog-zz/Agentgym2)]
 - **[Measuring Harness-Induced Belief Divergence in Multi-Step LLM Agents](https://arxiv.org/abs/2607.04528)** (Yi et al., arXiv 2026) - *测量仅凭 harness 本身会让智能体的信念在各步之间偏移多少，从而把智能体评估中的一个混杂因素单独剥离出来。* [[code](https://github.com/Hik289/Harness-induce-bias)]
 - **[Rethinking the Evaluation of Harness Evolution for Agents](https://arxiv.org/abs/2607.12227)** (Wang et al., arXiv 2026) - *既然 harness 对分数的影响不亚于模型，就要重新思考该怎样评估 harness 的演化。* [[code](https://github.com/rethinking-harness-evolution/code)]
 - **[ReliabilityBench: Evaluating LLM Agent Reliability Under Production-Like Stress Conditions](https://arxiv.org/abs/2601.06112)** (Gupta et al., arXiv 2026) - *在接近生产环境的压力下评测智能体的可靠性，而不是只看一次干净的运行。*
@@ -690,7 +690,7 @@
 - **[PATH-Bench: Path-Dependent Evaluation of Lifelong Agents](https://arxiv.org/abs/2608.01149)** (Yang et al., arXiv 2026) - *按经历的先后顺序而不是逐个任务来评估终身学习智能体，测量前向迁移、后向迁移和遗忘；发现迁移强不等于记得住，后来的经历也可能抹掉先前的收获。*
 - **[Benchmarking LLM Judges for Mobile Agent Evaluation](https://arxiv.org/abs/2608.11434)** (Wang et al., arXiv 2026) - *用 931 条人工标注的移动端智能体 trajectory 检验六种 LLM-as-judge 方法，发现只抽样截图的简单 baseline 不输甚至优于专门打造的评估者；决定评估质量的是骨干模型，而不是流水线；两个后端还表现出相反的失败模式，一个过于保守，一个过于宽松。*
 - **[OmnilingualGAIA2: Evaluating the Multilingual Gap in Frontier AI Agents](https://arxiv.org/abs/2608.08775)** (Caciolai et al., arXiv 2026) - *把 GAIA2 扩展到五种文字系统的十种语言后，暴露出 8.8 到 18.4 个 pass@3 点的跨语言差距；差距集中在工具编排而不是定量推理上，也不随模型规模缩小。错误归因分析把其中 55% 归于模型，并把翻译带来的 contamination 限定在 6.4% 的场景与语言组合之内。*
-- **[LoopArena: Benchmarking Models as Runtime Controllers for Loop Engineering](https://arxiv.org/abs/2608.28281)** (Wang et al., arXiv 2026) - *评的是掌舵的模型，而不是写代码的模型：每轮编码结束后，被评估的 Controller 读取一份结构化的运行摘要，告诉另一个固定的 Worker 接下来做什么、验证什么，或者是否停止；三种设置在执行范围和成本之间各有取舍。在完整任务上，最好的严格成功率是 24.69%；从不运行 Worker 的低成本设置给出的 Controller 排序和高成本设置几乎一致，Spearman 相关系数为 0.97。* [[code](https://github.com/AMAP-ML/LoopArena)]
+- **[LoopArena: Benchmarking Models as Runtime Controllers for Loop Engineering](https://arxiv.org/abs/2608.28281)** (Wang et al., arXiv 2026) - *评测的是负责指挥的模型，而不是写代码的模型：每轮编码结束后，被评估的 Controller 读取一份结构化的运行摘要，告诉另一个固定的 Worker 接下来做什么、验证什么，或者是否停止；三种设置在执行范围和成本之间各有取舍。在完整任务上，最好的严格成功率是 24.69%；从不运行 Worker 的低成本设置给出的 Controller 排序和高成本设置几乎一致，Spearman 相关系数为 0.97。* [[code](https://github.com/AMAP-ML/LoopArena)]
 - **[τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction](https://arxiv.org/abs/2609.04611)** (Shi et al., arXiv 2026) - *把“搭建智能体”本身当作任务：开发者智能体接手一个代码库、一个生产 API、一位掌握需求的客户和一道服务开销上限，然后交付一个客服智能体，部署出去面对 held-out 的模拟用户来打分。在 53 个任务上，最强的配置通过了 23.9% 的评估模拟，而专家编写的上限是 82.2%；失败的方式很像人：查记录只查个皮毛，几乎什么都不跟客户说，第一个能跑起来的架构就直接交付。*
 - **[Autonomous Evaluation and Refinement of Digital Agents](https://arxiv.org/abs/2404.06474)** (Pan et al., COLM 2024) - *构建了几个成本不同的智能体评估者，与 oracle 指标的一致率在 74.4% 到 92.9% 之间；再把它们当作奖励，在不增加额外监督的情况下，把 WebArena 上的最好成绩提高了 29%。* [[code](https://github.com/Berkeley-NLP/Agent-Eval-Refine)]
 - **[JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550)** (Li et al., arXiv 2026) - *只返回决定、不返回文本的评估者，在普通的偏好判断和事实性上与最强的 LLM 评估者相差不到三个百分点，费用只有后者的 0.36%；遇到需要核查推导、或错误答案写得很像样的情况，就落后得更多。“接受或转交”的 cascade 保住了更强评估者 99% 的准确率。*
@@ -713,11 +713,11 @@
 - **[Identifying the Risks of LM Agents with an LM-Emulated Sandbox](https://arxiv.org/abs/2309.15817)** (Ruan et al., ICLR 2024) - *奠基性的可扩展方法，不需要接触真实工具，就能对使用工具的智能体做红队测试、发现风险。* [[code](https://github.com/ryoungj/ToolEmu)]
 - **[AgentHarm: A Benchmark for Measuring Harmfulness of LLM Agents](https://arxiv.org/abs/2410.09024)** (Andriushchenko et al., ICLR 2025) - *关键基准，把智能体被滥用的风险和聊天机器人的 jailbreak 风险区分开，表明智能体能力会放大潜在危害。* [[code](https://github.com/UKGovernmentBEIS/inspect_evals)]
 - **[Evil Geniuses: Delving into the Safety of LLM-based Agents](https://arxiv.org/abs/2311.11855)** (Tian et al., arXiv 2023) - *最早的系统性研究之一，表明 LLM 多智能体协作非但没有减轻、反而放大了安全风险。* [[code](https://github.com/T1aNS1R/Evil-Geniuses)]
-- **[BadAgent: Inserting and Activating Backdoor Attacks in LLM Agents](https://arxiv.org/abs/2406.03007)** (Wang et al., ACL 2024) - *开创性的演示：智能体中的 backdoor 经过下游的安全微调依然存活，由此引出了对智能体供应链安全的担忧。* [[code](https://github.com/DPamK/BadAgent)]
+- **[BadAgent: Inserting and Activating Backdoor Attacks in LLM Agents](https://arxiv.org/abs/2406.03007)** (Wang et al., ACL 2024) - *开创性的演示：智能体中的 backdoor 经过下游的安全微调后依然有效，由此引出了对智能体供应链安全的担忧。* [[code](https://github.com/DPamK/BadAgent)]
 - **[AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases](https://arxiv.org/abs/2407.12784)** (Chen et al., NeurIPS 2024) - *确立了 memory poisoning 与知识库投毒是一种独立的、无须训练的 attack surface，为记忆增强型 LLM 智能体所独有。* [[code](https://github.com/AI-secure/AgentPoison)]
 - **[Agent Security Bench (ASB): Formalizing and Benchmarking Attacks and Defenses in LLM-based Agents](https://arxiv.org/abs/2410.02644)** (Zhang et al., arXiv 2024) - *规模最大的统一分类体系兼基准，把 LLM 智能体的各类攻击和防御整合进同一个评估框架。* [[code](https://github.com/agiresearch/ASB)]
 - **[TrustAgent: Towards Safe and Trustworthy LLM-based Agents](https://arxiv.org/abs/2402.01586)** (Hua et al., EMNLP 2024) - *较早且有影响力的防御与缓解框架，提出用 constitution 引导规划，作为保障智能体安全的机制。* [[code](https://github.com/agiresearch/TrustAgent)]
-- **[SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents](https://arxiv.org/abs/2412.13178)** (Yin et al., arXiv 2024) - *把智能体安全评估从数字与文本领域扩展到物理世界中 embodied 场景的危险，表明安全失效同样会延伸到机器人上。* [[code](https://github.com/shengyin1224/SafeAgentBench)]
+- **[SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents](https://arxiv.org/abs/2412.13178)** (Yin et al., arXiv 2024) - *把智能体安全评估从数字与文本领域扩展到物理世界中 embodied 场景的危险，表明安全失效同样会出现在机器人上。* [[code](https://github.com/shengyin1224/SafeAgentBench)]
 - **[AI Agents That Matter](https://arxiv.org/abs/2407.01502)** (Kapoor et al., arXiv 2024) - *广受引用的批评文章，改变了这个领域检验智能体能力主张的方式，与可信地权衡智能体的风险和收益直接相关。*
 - **[Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training](https://arxiv.org/abs/2401.05566)** (Hubinger et al., arXiv 2024) - *标志性的演示：现有的 safety training 流程可能清除不了隐藏的欺骗性或未对齐行为，直接关系到对智能体可信性的担忧。* [[code](https://github.com/anthropics/sleeper-agents-paper)]
 - **[Frontier Models are Capable of In-context Scheming](https://arxiv.org/abs/2412.04984)** (Meinke et al., arXiv 2024) - *首次系统地给出实证证据，表明前沿自主智能体具备 in-context scheming 能力，这是与自主性相关的对齐风险中的核心问题。*
@@ -754,14 +754,14 @@
 - **[Defense Against Indirect Prompt Injection via Tool Result Parsing](https://arxiv.org/abs/2601.04795)** (Yu et al., arXiv 2026) - *提出一种解析工具结果的防御：提取并清洗工具输出，在保住任务效用的同时，降低 indirect prompt injection 对 LLM 智能体的攻击成功率；在 AgentDojo 基准上评估。* [[code](https://github.com/qiang-yu/agentdojo/tree/tool-result-extract)]
 - **[ICON: Indirect Prompt Injection Defense for Agents based on Inference-Time Correction](https://arxiv.org/abs/2602.20708)** (Wang et al., arXiv 2026) - *为 LLM 智能体提出一种推理时防御：通过隐空间分析检测 indirect prompt injection，再通过操控注意力将其化解，同时保住任务效用。*
 - **[An AI Agent Execution Environment to Safeguard User Data](https://arxiv.org/abs/2604.19657)** (Stanley et al., arXiv 2026) - *提出 GAAP，一个 AI 智能体执行环境，用信息流控制强制执行用户设定的权限，规定私人数据可以怎样披露，包括披露给 AI 模型及其提供方。*
-- **[Protocol-Level Attacks on Agentic Commerce Platforms: A Cross-Platform Taxonomy, AIP-Bench, and Unified Defense](https://arxiv.org/abs/2607.21824)** (Louck, arXiv 2026) - *把 agentic commerce 的安全问题往下挪了一层：三个平台上的 33 个协议漏洞，无论用哪个模型都可以确定性地利用，其中三个还能串成一次 end-to-end 的支付劫持。*
+- **[Protocol-Level Attacks on Agentic Commerce Platforms: A Cross-Platform Taxonomy, AIP-Bench, and Unified Defense](https://arxiv.org/abs/2607.21824)** (Louck, arXiv 2026) - *从更底层的协议层研究 agentic commerce 的安全：三个平台上的 33 个协议漏洞，无论用哪个模型都可以确定性地利用，其中三个还能串成一次 end-to-end 的支付劫持。*
 - **[IssueTrojanBench: Benchmarking AI Coding Agents Against Malicious Issue Requests](https://arxiv.org/abs/2607.20759)** (Singh et al., arXiv 2026) - *在已部署的 Cursor、Claude Code 和 Codex Desktop 中，66.5% 的恶意 issue 请求能绕过所有 guardrail；真正出现的拒绝都来自模型，而不是智能体框架。*
-- **[Rethinking MCP Security: A Large-Scale Study of Runtime MCP Servers and Security Scanner Reliability](https://arxiv.org/abs/2607.11086)** (Chen et al., arXiv 2026) - *收集了 64,611 个真实环境中的 MCP 服务器，其中 37,000 多个可以运行；发现审计它们的扫描器常常“狼来了”：抽样的告警中，经得起人工验证的不到一半。*
+- **[Rethinking MCP Security: A Large-Scale Study of Runtime MCP Servers and Security Scanner Reliability](https://arxiv.org/abs/2607.11086)** (Chen et al., arXiv 2026) - *收集了 64,611 个真实环境中的 MCP 服务器，其中 37,000 多个可以运行；发现审计它们的扫描器误报很多：抽样的告警中，经得起人工验证的不到一半。*
 - **[Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming](https://arxiv.org/abs/2608.05108)** (Wang et al., arXiv 2026) - *构建可迁移的 prompt injection 策略库，而不是只针对一个目标训练的 RL 攻击者，再不经训练直接用到没见过的模型上：每个样本大约十次查询，对 Gemini-2.5-Pro 的攻击成功率达到 76.2%，在 AgentDojo 上达到 86.7%。* [[code](https://github.com/Wang-Yanting/PIMiner)]
-- **[LoginTrap: Uncovering Task-Agnostic Phishing-Style Indirect Prompt Injection Attacks against LLM-based Web Agents](https://arxiv.org/abs/2608.04741)** (Guo et al., arXiv 2026) - *表明三言两语就能哄 Web 智能体去登录：攻击者控制的页面内容让身份验证看起来像是任务的前提，把智能体引到受控的登录页；在不知道用户任务的情况下，平均 end-to-end 成功率达到 86%。*
+- **[LoginTrap: Uncovering Task-Agnostic Phishing-Style Indirect Prompt Injection Attacks against LLM-based Web Agents](https://arxiv.org/abs/2608.04741)** (Guo et al., arXiv 2026) - *表明攻击者能诱使 Web 智能体登录：攻击者控制的页面内容让身份验证看起来像是任务的前提，把智能体引到受控的登录页；在不知道用户任务的情况下，平均 end-to-end 成功率达到 86%。*
 - **[Emergent Misaligned Communication in Long-Horizon Multi-Agent LLM Commerce](https://arxiv.org/abs/2608.14825)** (Li et al., arXiv 2026) - *在 20 次为期一年的自动售货模拟中（涉及 13 个前沿模型），智能体之间往来的 2,583 封邮件里，有 12.6% 在没有任何刻意诱导的情况下含有虚假事实陈述、操纵、串通或威胁；这种行为是相互的（收到这类邮件后，回复同样未对齐的几率为 1.65 倍），也受压力左右（库存低时为 1.58 倍），而且模型的性能排名预测不了它。*
 - **[Governance at the Boundary: How Agent Decomposition Degrades Policy Compliance](https://arxiv.org/abs/2608.16055)** (Li et al., arXiv 2026) - *把智能体拆开，会在交接边界上削弱它的可治理性：在 626 个 KYC/AML episode 上，一个 32B 的开放权重模型把已发现的、与规定相关的事实弱化掉的比例，单一循环下是 0%，固定流水线下是 56%，orchestrator-subagent 架构下是 85%；同一机制既会导致 under-escalation，也会导致 over-escalation。*
-- **[What's in Your Agent's Context? Context Privilege Escalation Attacks against AI Agent Harness](https://arxiv.org/abs/2609.01222)** (Li et al., arXiv 2026) - *系统梳理真实 harness 组装上下文的方式，并指出这些设计自然会产生的两条提权路径：来自低权限来源、由攻击者控制的内容落进更高权限的消息角色；攻击者控制的内容超出它进入时的作用域继续留存。作者在包括 Claude Code 和 Codex 在内的 12 个 harness 上做了演示，后果可以严重到远程代码执行，以及工具或 skill 调用遭到操纵。*
+- **[What's in Your Agent's Context? Context Privilege Escalation Attacks against AI Agent Harness](https://arxiv.org/abs/2609.01222)** (Li et al., arXiv 2026) - *系统梳理真实 harness 组装上下文的方式，并指出这些设计自然会产生的两条提权路径：来自低权限来源、由攻击者控制的内容进入更高权限的消息角色；攻击者控制的内容超出它进入时的作用域继续留存。作者在包括 Claude Code 和 Codex 在内的 12 个 harness 上做了演示，后果可以严重到远程代码执行，以及工具或 skill 调用遭到操纵。*
 - **[BAITBENCH: Measuring Agent Reward Hacking with Optional Shortcuts Planted in ML Tasks](https://arxiv.org/abs/2608.30724)** (Prasad et al., arXiv 2026) - *在三个合成的表格型 ML 任务中各埋一条可选的捷径：它能抬高公开分数，却通不过隐藏测试集，也不违反任何明文规定。七个前沿智能体的运行中有 57.1% 走了这条捷径，七个里有五个超过一半；即使提示词要求不要作弊，平均值仍在一半以上。*
 - **[LlamaFirewall: An open source guardrail system for building secure AI agents](https://arxiv.org/abs/2505.03574)** (Chennabasappa et al., arXiv 2025) - *在智能体外围叠加一个小型 jailbreak 分类器、一个阅读 chain-of-thought 以找出注入和目标偏离的审查器，以及一个静态代码扫描器，作为运行时的最后一道防线；在 AgentDojo 上，仅 86M 的分类器就把攻击成功率从 17.6% 降到 7.5%，再加上审查器，降到 1.75%。* [[code](https://github.com/meta-llama/PurpleLlama/tree/main/LlamaFirewall)]
 - **[Type-Safe Is Not Error-Free: A Constrained Decision Head Follows the Option Name, Not the Rubric Bound to It](https://arxiv.org/abs/2609.26758)** (Sun and Xu, arXiv 2026) - *调换选项名称与 rubric 之间的配对，发现类型化的 decision model 跟着名称走：在 1,200 个 workflow 决策上，把 0/1 改名为 no/yes，每一百个答案就多翻转 70.4 个；Jev 本身也出现同样的反转，而 type error 率始终保持在 0%。*
@@ -773,12 +773,12 @@
 
 同一领域里其他值得一看的阅读清单：
 
-- [js-lee-AI/awesome-agent-loop-papers](https://github.com/js-lee-AI/awesome-agent-loop-papers)：**本清单的姊妹清单**，再往下深入一层，专看智能体循环本身：控制策略、经过训练的循环、skill、harness，以及循环带来的评估与安全问题。![stars](https://img.shields.io/github/stars/js-lee-AI/awesome-agent-loop-papers?style=social)
+- [js-lee-AI/awesome-agent-loop-papers](https://github.com/js-lee-AI/awesome-agent-loop-papers)：**后续综述的论文清单**，专门关注智能体循环本身：控制策略、经过训练的循环、skill、harness，以及循环带来的评估与安全问题。![stars](https://img.shields.io/github/stars/js-lee-AI/awesome-agent-loop-papers?style=social)
 - [Hannibal046/Awesome-LLM](https://github.com/Hannibal046/Awesome-LLM)：大语言模型论文、工具与资源的权威汇总。![stars](https://img.shields.io/github/stars/Hannibal046/Awesome-LLM?style=social)
 - [ysymyth/awesome-language-agents](https://github.com/ysymyth/awesome-language-agents)：围绕 CoALA 框架整理的语言智能体阅读清单。![stars](https://img.shields.io/github/stars/ysymyth/awesome-language-agents?style=social)
 - [WooooDyy/LLM-Agent-Paper-List](https://github.com/WooooDyy/LLM-Agent-Paper-List)：配合综述 *The Rise and Potential of LLM-Based Agents*（Fudan NLP）整理的智能体论文清单。![stars](https://img.shields.io/github/stars/WooooDyy/LLM-Agent-Paper-List?style=social)
 - [luo-junyu/Awesome-Agent-Papers](https://github.com/luo-junyu/Awesome-Agent-Papers)：以分类体系为主线的综述配套清单，涵盖智能体的构建、协作与进化。![stars](https://img.shields.io/github/stars/luo-junyu/Awesome-Agent-Papers?style=social)
-- [e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents)：规模很大、图文丰富的目录，收录开源与闭源的**智能体产品与框架**（偏向构建这一侧）。![stars](https://img.shields.io/github/stars/e2b-dev/awesome-ai-agents?style=social)
+- [e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents)：规模很大、图文丰富的目录，收录开源与闭源的**智能体产品与框架**，以开发工具为主，而非论文。![stars](https://img.shields.io/github/stars/e2b-dev/awesome-ai-agents?style=social)
 - [kyrolabs/awesome-agents](https://github.com/kyrolabs/awesome-agents)：精选的智能体框架和库，每一项都带实时 star 徽章。![stars](https://img.shields.io/github/stars/kyrolabs/awesome-agents?style=social)
 
 > 你也在维护相关的清单？欢迎[提交 PR](CONTRIBUTING.md)，把它加到这里，我们很乐意互相链接。
@@ -806,7 +806,7 @@
 
 GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cff)，以 APA 或 BibTeX 格式给出同一条记录。
 
-作为深入篇的姊妹综述 *The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents* 是另一条独立的记录：DOI [`10.2139/ssrn.7186738`](https://ssrn.com/abstract=7186738)。实际参考了哪一篇，就引用哪一篇。
+后续综述 *The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents* 另有单独的记录：DOI [`10.2139/ssrn.7186738`](https://ssrn.com/abstract=7186738)。实际参考了哪一篇，就引用哪一篇。
 
 ## 🤝 参与贡献
 
@@ -841,7 +841,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 | <a href="https://github.com/js-lee-AI"><img src="https://github.com/js-lee-AI.png?size=48" width="48" height="48" alt="@js-lee-AI"></a> | **[@js-lee-AI](https://github.com/js-lee-AI)** | 维护者 |
 </details>
 
-<sub>名单是手工整理而非自动生成的，这样功劳才会跟着实际的贡献走，而不是落在碰巧执行了 <code>git commit</code> 的人头上。提交层面的历史请看 <a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/graphs/contributors">贡献者图表</a>。</sub>
+<sub>名单是手工整理的，没有自动生成，这样记下的是实际做出贡献的人，而不是碰巧执行了 <code>git commit</code> 的人。提交层面的历史请看 <a href="https://github.com/js-lee-AI/awesome-llm-agent-papers/graphs/contributors">贡献者图表</a>。</sub>
 
 想让你的头像也出现在这里？请看 **[CONTRIBUTING.md](CONTRIBUTING.md)**：只要一个格式规范的 PR 就行。
 
@@ -851,26 +851,26 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
-- **2026-09-24**: 综述现在也可以在 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/) 上作为在线书阅读，全书十章，从基本概念讲起，适合刚接触这一领域的读者。链接在页面顶部，就在论文链接旁边。
-- **2026-09-24**: 列表现在也有韩文、简体中文和日文版本，可以在页面顶部选择语言。各版本的标题、作者、会议和代码链接完全相同，翻译的只是说明和正文，专业术语保留英文。README.md 仍是源文件，其余三个版本逐行跟随它。翻译过程中还发现了二十二条在句子中途断掉、却没被检查发现的说明，以及十三个缺少第一作者的条目，现已全部修正。
-- **2026-09-23**: 新增十二篇论文，讲的是 Jev 发布后变得格外显眼的一种模式：模型不用文本作答，而是给出类型化的决定，在智能体循环里充当评估者、router、守卫或记忆控制器，没有把握时再交给 LLM。其中四篇研究的就是 Jev 本身，有一篇是反例：模型跟着选项的名称走，而不是跟着名称背后的 rubric 走，却自始至终没有产生一个 type error。另外八篇是更早的工作，研究的是同样的角色，从 SwiftSage 的快慢分工，到一项发现没有任何路由策略能胜过固定选择的 Web 智能体研究。从 520 篇增至 532 篇。
-- **2026-09-16**: 合并了三项社区贡献，都来自论文作者本人：TaoLive 的 harness 感知训练报告（[@sunyuhan19981208](https://github.com/sunyuhan19981208)，[#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)），以及 Steer, Don't Solve 和 DRACO（[@shubhamrgandhi](https://github.com/shubhamrgandhi)，[#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16) 和 [#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)）。三条注释都重写了，补上摘要里本来就有的数字；TaoLive 那条围绕这样一个发现来写：固定 harness 的微调会让指令遵循掉 7.7 分，而 harness 状态增强一分不掉。从 517 篇增至 520 篇。
-- **2026-09-16**: 贡献者表格现在和各章节一样收进了折叠开关，`sync_counts.py` 也会让其中的人数保持准确。
-- **2026-09-07**: 近期论文补充：新增 20 篇，每个章节两篇，选自 2026 年 5 月以来发布的全部论文。LoopArena 由作者之一 [@burgerseater](https://github.com/burgerseater) 在 [#14](https://github.com/js-lee-AI/awesome-llm-agent-papers/issues/14) 中推荐收入。这一批偏向负面结果，而有用的研究恰恰集中在这里：推理成本（而不是 rollout 次数）一旦拉平，多智能体结构就不再划算；模型自己写的记忆笔记在模型升级后会摆动十三个点，固定 schema 却几乎不动；功能测试通过的 644 个补丁里，有 221 个评审者仍会打回；即使提示词要求不要走捷径，前沿智能体仍在 57% 的运行中走了预先埋好的捷径。从 497 篇增至 517 篇。
-- **2026-09-03**: 新增三篇论文，由在三篇中都署名的 [@dukesun99](https://github.com/dukesun99) 提交（[#13](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/13)）：Corpus2Skill 收入记忆，OrchMAS 收入多智能体系统，Information Retrieval Misses the Mark for LLM Agents 收入综述与立场论文。最后这篇是清单里第一篇发在 SSRN 上的论文；CONTRIBUTING 只要求提供 arXiv 或 DOI 链接，并不限定发布平台，所以可以收录。三条注释在合并前都依据摘要重写了，Corpus2Skill 那条现在写进了十一个数据集上的结果：在其中三个上，语料导航落败。从 494 篇增至 497 篇。
+- **2026-09-24**: 综述的在线电子书已发布在 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/) 上，面向刚接触这一领域的读者，从基本概念讲起。
+- **2026-09-24**: 新增韩文、简体中文和日文版本，可以在页面顶部选择语言。说明和正文都已翻译，论文标题和专业术语保留英文。翻译时还发现了一些在句子中途断掉的说明和缺少第一作者的条目，已经改正。
+- **2026-09-23**: 新增十二篇论文，研究的是这样一类模型：在智能体循环中不生成文本，只从预先定义的选项中做选择，没有把握时再转交给 LLM。Jev 发布后，这种做法受到广泛关注，其中四篇直接研究 Jev。在其中一篇里，Jev 没有报过一次 type error，却是只看选项的名称做出选择，而没有按选项里写明的 rubric 判断。从 520 篇增至 532 篇。
+- **2026-09-16**: 合并了三项社区贡献，都来自论文作者本人：TaoLive 的 harness 感知训练报告（[@sunyuhan19981208](https://github.com/sunyuhan19981208)，[#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)），以及 Steer, Don't Solve 和 DRACO（[@shubhamrgandhi](https://github.com/shubhamrgandhi)，[#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16) 和 [#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)）。注释里补上了论文给出的数字；TaoLive 那条先写它的主要发现：固定 harness 的微调会让指令遵循下降 7.7 分，而 harness 状态增强不会造成下降。从 517 篇增至 520 篇。
+- **2026-09-16**: 贡献者表格现在和各章节一样可以折叠，`sync_counts.py` 也会自动更新表中的人数。
+- **2026-09-07**: 新增 2026 年 5 月以来发表的 20 篇论文，每个章节两篇。LoopArena 由作者之一 [@burgerseater](https://github.com/burgerseater) 在 [#14](https://github.com/js-lee-AI/awesome-llm-agent-papers/issues/14) 中推荐。这一批里有不少负面结果，例如其中一项研究发现，即使提示词要求不要走捷径，前沿智能体仍在 57% 的运行中走了预先埋好的捷径。从 497 篇增至 517 篇。
+- **2026-09-03**: 新增三篇论文，由在三篇中都署名的 [@dukesun99](https://github.com/dukesun99) 提交（[#13](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/13)）：Corpus2Skill 收入记忆，OrchMAS 收入多智能体系统，Information Retrieval Misses the Mark for LLM Agents 收入综述与立场论文。最后这篇是清单里第一篇 SSRN 论文。Corpus2Skill 的注释写进了它在十一个数据集上的结果，其中有三个数据集上语料导航表现更差。从 494 篇增至 497 篇。
 - **2026-08-25**: ForeDreamer 收入记忆，由论文作者之一 [@zhongzero](https://github.com/zhongzero) 提交（[#12](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/12)）。注释现在开门见山地写出这个系统的不同之处：在预测之前先把网络上的证据变成结构化记忆，而不是把检索结果直接喂给智能体。从 493 篇增至 494 篇。
-- **2026-08-20**: 近期论文补充：新增 20 篇 2026 年 8 月的论文，每个章节两篇。只有论文自己指明了代码仓库时才附代码链接。这个月的结果偏负面，正合这份清单的口味：MCP 与 CLI 的对比发现起主导作用的是 scaffold；压缩让任务完成率原地不动，检索次数却增至三倍；工具返回的图像原来是多余的；多语言差距并不随规模缩小。从 473 篇增至 493 篇。
-- **2026-08-20**: 合并了两项社区贡献：Dr. Bench（[@reacher-z](https://github.com/reacher-z)，[#7](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/7)）和 CityReal（[@Nicolas99-9](https://github.com/Nicolas99-9)，[#10](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/10)）。CityReal 的 PR 改了章节标题和折叠摘要里的计数，却漏了目录那一行，所以先在分支上同步了计数。从 471 篇增至 473 篇。
+- **2026-08-20**: 新增 20 篇 2026 年 8 月的论文，每个章节两篇。其中有几篇报告了负面结果，例如多语言差距并不随模型规模扩大而缩小。从 473 篇增至 493 篇。
+- **2026-08-20**: 合并了两项社区贡献：Dr. Bench（[@reacher-z](https://github.com/reacher-z)，[#7](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/7)）和 CityReal（[@Nicolas99-9](https://github.com/Nicolas99-9)，[#10](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/10)）。从 471 篇增至 473 篇。
 - **2026-08-12**: 合并了四项社区贡献：Ouroboros（[@razzant](https://github.com/razzant)，[#8](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/8)）、CORAL（[@BobbyZhouZijian](https://github.com/BobbyZhouZijian)，[#9](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/9)），以及 WebAgent 和用世界模型增强的 Web 智能体（[@JEONGSEJIN](https://github.com/JEONGSEJIN)，[#6](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/6)）。另外删掉了一个代码链接，它是从上一个条目照抄过来的。从 467 篇增至 471 篇。
-- **2026-08-08**: 近期论文补充：新增 16 篇 2026 年 8 月的论文，覆盖全部十个章节，有官方仓库的都附上了链接。从 451 篇增至 467 篇。
-- **2026-08-08**: 此前一次批量补录让九条注释在句子中间断掉，其中三条还留着没闭合的括号。九条都已依据论文自己的摘要重写；Agon 也补上了 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname) 在 [#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5) 中提供的 `[code]` 链接。针对这个问题的检查脚本现在放在 `scripts/check_glosses.py`。
+- **2026-08-08**: 新增 16 篇 2026 年 8 月的论文，覆盖全部十个章节，有官方仓库的都附上了链接。从 451 篇增至 467 篇。
+- **2026-08-08**: 此前一次批量补录让九条注释在句子中间断掉，现已全部修正；Agon 也补上了 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname) 在 [#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5) 中提供的 `[code]` 链接。现在有 `scripts/check_glosses.py` 专门检查这个问题。
 - **2026-08-06**: 本综述已发布在 Preprints.org 上，DOI 为 `10.20944/preprints202608.0265.v1`。引用代码块、`CITATION.cff` 和页首链接现在都指向这条带版本号的记录，而不是本仓库里的 PDF。
-- **2026-07-31**: 近期论文补充：新增 30 篇 2026 年 7 月的论文，每个章节三篇，有官方仓库的都附上了链接。从 421 篇增至 451 篇。
+- **2026-07-31**: 新增 30 篇 2026 年 7 月的论文，每个章节三篇，有官方仓库的都附上了链接。从 421 篇增至 451 篇。
 - **2026-07-26**: ClawBench 收入评估与基准，由参与维护它的 [@reacher-z](https://github.com/reacher-z) 提交。从 420 篇增至 421 篇。
-- **2026-07-25**: 第一批社区贡献：[@jinmang2](https://github.com/jinmang2) 新增 6 个智能体记忆系统（MemoryOS、Zep、Nemori、MemOS、G-Memory、ACE），[@WhymustIhaveaname](https://github.com/WhymustIhaveaname) 新增 3 篇研究智能体与编排方向的论文（AutoNumerics、OptimAI、PerspectiveGap）。合并前重新核对了所有标题、作者、会议期刊、arXiv ID 和代码链接。
-- **2026-07-19**: 2026 年全面补录：又新增 78 篇经过核实的论文（2026 年 1 月至 7 月），覆盖全部十个章节，能确认官方仓库的都附上了链接。
-- **2026-07-19**: 2026 年 1 月至 5 月补录：新增 30 篇论文（每个章节三篇），有官方仓库的都附上了链接。
-- **2026-07-16**: 近期论文补充：新增 50 篇 2026 年 6 月和 7 月的论文，覆盖全部十个章节，有官方仓库的都附上了链接。
-- **2026-07-12**: 2026 年论文专项补充：新增 42 篇，覆盖全部十个章节；另外新设 **值得关注的 10 篇 (2026)** 一节，附实时 star 数，相关清单也加上了实时 star 徽章。从 211 篇增至 253 篇。
-- **2026-07-09**: 文献更新：新增 27 篇论文（agentic RL、协议、deep research、前沿评估与安全），从 184 篇增至 211 篇。
+- **2026-07-25**: 第一批社区贡献：[@jinmang2](https://github.com/jinmang2) 新增 6 个智能体记忆系统（MemoryOS、Zep、Nemori、MemOS、G-Memory、ACE），[@WhymustIhaveaname](https://github.com/WhymustIhaveaname) 新增 3 篇研究智能体与编排方向的论文（AutoNumerics、OptimAI、PerspectiveGap）。
+- **2026-07-19**: 新增 78 篇 2026 年 1 月至 7 月的论文，覆盖全部十个章节，有官方仓库的都附上了链接。
+- **2026-07-19**: 新增 30 篇 2026 年 1 月至 5 月的论文（每个章节三篇），有官方仓库的都附上了链接。
+- **2026-07-16**: 新增 50 篇 2026 年 6 月和 7 月的论文，覆盖全部十个章节，有官方仓库的都附上了链接。
+- **2026-07-12**: 新增 42 篇 2026 年的论文，覆盖全部十个章节；另外新设 **值得关注的 10 篇 (2026)** 一节，附实时 star 数，相关清单也加上了实时 star 徽章。从 211 篇增至 253 篇。
+- **2026-07-09**: 新增 27 篇论文，涉及 agentic RL、协议、deep research、前沿评估与安全。从 184 篇增至 211 篇。
 - **2026-07-08**: 首次发布。收录 184 篇带注释的论文，按本综述的分类体系组织。
