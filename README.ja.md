@@ -23,7 +23,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 </p>
 
 <p align="center">
-📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">サーベイを読む →「LLM Agents: A Survey」</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/">GitBookのオンラインブック（英語）</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">このリポジトリにあるPDF</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">まずは 10 本のスターターキットから</a></b>
+📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">サーベイを読む →「LLM Agents: A Survey」</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/ja/">GitBookのオンラインブック</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">このリポジトリにあるPDF</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">まずは 10 本のスターターキットから</a></b>
 </p>
 
 <p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
@@ -42,7 +42,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 
 **扱うトピック**：cognitive architecture · ReActと推論・行動の統合 · long-horizonな計画 · エージェントのメモリ · ツールで拡張したLLM · マルチエージェントの協調 · Web／コード／embodiedのエージェント · エージェントのベンチマークと評価 · 安全性、アライメント、間接的なprompt injection。
 
-> 📖 **オンラインブックで読む**：GitBookの[**LLM Agents: A Survey**](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/)は、この分野に初めて触れる人に向けて論文の内容を書き直したオンラインブックで、基本的な概念から始まる十の章でできています。論文と同じく、うまくいった手法だけでなく、期待どおりにいかなかった手法も同じくらい詳しく扱っています。本は英語で書かれています。
+> 📖 **オンラインブックで読む**：GitBookの[**LLM Agents: A Survey**](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/ja/)は、この分野に初めて触れる人に向けて論文の内容を書き直したオンラインブックで、基本的な概念から始まる十の章でできています。論文と同じく、うまくいった手法だけでなく、期待どおりにいかなかった手法も同じくらい詳しく扱っています。
 
 > 🔁 **続編サーベイの論文リスト**：[**Awesome Agent Loop Papers**](https://github.com/js-lee-AI/awesome-agent-loop-papers)は、エージェントのループそのものを扱った論文 524 本と、オープンソースのプロジェクト 60 件（フレームワーク、コーディング用のharness、メモリやsandboxの基盤、skillライブラリ、レジストリ）を集めたリストで、サーベイ*The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents*をもとにしています。
 
@@ -851,7 +851,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
-- **2026-09-24**: サーベイを[GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/)にオンラインブックとして公開しました。この分野に初めて触れる人向けに、基本的な概念から説明しています。
+- **2026-09-24**: サーベイを[GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/ja/)にオンラインブックとして公開しました。この分野に初めて触れる人向けに、基本的な概念から説明しています。
 - **2026-09-24**: 韓国語、簡体字中国語、日本語版を追加しました。言語はページ上部で選べます。説明文と本文は翻訳し、論文のタイトルと専門用語は英語のままにしています。翻訳しながら、文が途中で切れていた説明文と、筆頭著者が抜けていた項目を見つけて直しました。
 - **2026-09-23**: 論文を十二本追加しました。エージェントのループの中で、文章を書かずに決められた選択肢から答えを選び、確信が持てないときはLLMに任せるモデルを扱った論文です。Jevの公開でこの考え方が広く知られるようになり、十二本のうち四本はJevそのものを扱っています。そのうち一本では、Jevはtype errorを一度も出しませんでしたが、選択肢に書かれたrubricではなく、選択肢の名前だけを見て答えを選んでいました。520 本から 532 本になりました。
 - **2026-09-16**: コミュニティからの追加を三件マージしました。いずれも論文の著者本人からの投稿で、harnessを意識した学習を扱うTaoLiveのレポート（[@sunyuhan19981208](https://github.com/sunyuhan19981208)、[#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)）と、Steer, Don't SolveおよびDRACO（[@shubhamrgandhi](https://github.com/shubhamrgandhi)、[#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)と[#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)）です。説明文には論文に載っている数値を入れました。TaoLiveの説明文では、harnessを固定したファインチューニングでは指示追従が 7.7 ポイント落ちる一方、harnessの状態を拡張しても落ちないという結果を最初に書いています。517 本から 520 本になりました。

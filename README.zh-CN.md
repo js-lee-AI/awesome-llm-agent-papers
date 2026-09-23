@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">阅读综述 → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/">GitBook 在线电子书（英文）</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">本仓库中的 PDF</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">从 10 篇入门必读开始</a></b>
+📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">阅读综述 → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/zh/">GitBook 在线电子书</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">本仓库中的 PDF</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">从 10 篇入门必读开始</a></b>
 </p>
 
 <p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
@@ -42,7 +42,7 @@
 
 **涵盖主题：** cognitive architecture · ReAct 与边推理边行动 · long-horizon 规划 · 智能体记忆 · 工具增强的 LLM · 多智能体协作 · Web / 代码 / embodied 智能体 · 智能体基准与评估 · 安全、对齐与间接 prompt injection。
 
-> 📖 **在线阅读**：GitBook 上的 [**LLM Agents: A Survey**](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/) 是论文的在线电子书版本，面向刚接触这一领域的读者，共十章，从基本概念讲起。和论文一样，书中对没有达到预期的方法和有效的方法同样重视。这本书是英文的。
+> 📖 **在线阅读**：GitBook 上的 [**LLM Agents: A Survey**](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/zh/) 是论文的在线电子书版本，面向刚接触这一领域的读者，共十章，从基本概念讲起。和论文一样，书中对没有达到预期的方法和有效的方法同样重视。
 
 > 🔁 **后续综述的论文清单**：[**Awesome Agent Loop Papers**](https://github.com/js-lee-AI/awesome-agent-loop-papers) 收录研究智能体循环本身的 524 篇论文和 60 个开源项目（框架、编码 harness、记忆与 sandbox 基础设施、skill library、注册中心），是综述 *The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents* 的配套清单。
 
@@ -851,7 +851,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
-- **2026-09-24**: 综述的在线电子书已发布在 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/) 上，面向刚接触这一领域的读者，从基本概念讲起。
+- **2026-09-24**: 综述的在线电子书已发布在 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/zh/) 上，面向刚接触这一领域的读者，从基本概念讲起。
 - **2026-09-24**: 新增韩文、简体中文和日文版本，可以在页面顶部选择语言。说明和正文都已翻译，论文标题和专业术语保留英文。翻译时还发现了一些在句子中途断掉的说明和缺少第一作者的条目，已经改正。
 - **2026-09-23**: 新增十二篇论文，研究的是这样一类模型：在智能体循环中不生成文本，只从预先定义的选项中做选择，没有把握时再转交给 LLM。Jev 发布后，这种做法受到广泛关注，其中四篇直接研究 Jev。在其中一篇里，Jev 没有报过一次 type error，却是只看选项的名称做出选择，而没有按选项里写明的 rubric 判断。从 520 篇增至 532 篇。
 - **2026-09-16**: 合并了三项社区贡献，都来自论文作者本人：TaoLive 的 harness 感知训练报告（[@sunyuhan19981208](https://github.com/sunyuhan19981208)，[#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)），以及 Steer, Don't Solve 和 DRACO（[@shubhamrgandhi](https://github.com/shubhamrgandhi)，[#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16) 和 [#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)）。注释里补上了论文给出的数字；TaoLive 那条先写它的主要发现：固定 harness 的微调会让指令遵循下降 7.7 分，而 harness 状态增强不会造成下降。从 517 篇增至 520 篇。
