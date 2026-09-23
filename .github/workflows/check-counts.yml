@@ -7,19 +7,22 @@ name: Check the list
 #            lying about the section.
 #   glosses  a backfill once cut nine annotations off mid-sentence, three of
 #            them leaving a parenthesis open.
+#   i18n     README.ko.md, README.zh-CN.md and README.ja.md follow README.md
+#            line for line, and an addition made in English only leaves them
+#            a paper behind.
 #
-# Both are cheap to check and neither is cheap to spot by eye.
+# All three are cheap to check and none is cheap to spot by eye.
 
 on:
   pull_request:
     paths:
-      - README.md
-      - scripts/*.py
+      - README*.md
+      - scripts/*
   push:
     branches: [main]
     paths:
-      - README.md
-      - scripts/*.py
+      - README*.md
+      - scripts/*
   workflow_dispatch:
 
 permissions:
@@ -37,3 +40,9 @@ jobs:
         run: python3 scripts/sync_counts.py --check
       - name: Verify no gloss was cut off mid-sentence
         run: python3 scripts/check_glosses.py
+      # Contributors edit README.md only and the maintainer brings the
+      # translations along when merging, so on a pull request this reports
+      # without failing the run.
+      - name: Verify the translations still match README.md line for line
+        run: python3 scripts/check_i18n.py
+        continue-on-error: ${{ github.event_name == 'pull_request' }}
