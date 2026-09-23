@@ -23,7 +23,7 @@ LLM 에이전트를 만들려는 분을 위해 한 줄 주석을 달아 둔 읽�
 </p>
 
 <p align="center">
-📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">서베이 읽기 → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">이 저장소의 PDF</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">10편짜리 스타터 키트부터 시작하기</a></b>
+📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">서베이 읽기 → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/">GitBook 온라인 책(영어)</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">이 저장소의 PDF</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">10편짜리 스타터 키트부터 시작하기</a></b>
 </p>
 
 <p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
@@ -41,6 +41,8 @@ LLM 에이전트를 만들려는 분을 위해 한 줄 주석을 달아 둔 읽�
 | 🔎 **쉬운 탐색** | 섹션별 논문 수가 붙은 [목차](#contents)가 있고, 섹션마다 접고 펼 수 있습니다. |
 
 **다루는 주제:** cognitive architecture · ReAct와 추론·행동 결합 · long-horizon 계획 · 에이전트 메모리 · 도구로 확장한 LLM · 다중 에이전트 협업 · 웹 / 코드 / embodied 에이전트 · 에이전트 벤치마크와 평가 · 안전, 정렬, 간접 prompt injection.
+
+> 📖 **서베이를 온라인 책으로**: GitBook의 [**LLM Agents: A Survey**](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/)는 이 분야를 처음 접하는 독자를 위해 논문을 기본 개념부터 시작하는 열 개의 장으로 다시 풀어 쓴 책입니다. 장마다 라벨을 붙인 그림과 실제 예시가 있고, 잘 된 방법만큼 기대에 못 미친 방법에도 같은 비중을 둡니다. 내용도 계속 갱신하며, 가장 최근에는 decision model과 에이전트가 언제 더 큰 모델에 선택을 넘겨야 하는지를 더했습니다. 책은 영어로 되어 있습니다.
 
 > 🔁 **자매 심화 목록 공개**: [**Awesome Agent Loop Papers**](https://github.com/js-lee-AI/awesome-agent-loop-papers)는 구성 요소보다 한 단계 아래로 내려가 루프 자체를 다룹니다. 논문 524편과 오픈소스 아티팩트 60개(프레임워크, 코딩 harness, 메모리와 sandbox 인프라, skill 라이브러리, 레지스트리)를 모았습니다. 서베이 *The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents*와 짝을 이루는 목록입니다.
 
@@ -849,6 +851,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-09-24**: 서베이를 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/)에서 온라인 책으로도 읽을 수 있습니다. 이 분야를 처음 접하는 독자를 위해 기본 개념부터 쌓아 올리는 열 개의 장으로 구성했습니다. 링크는 페이지 맨 위, 논문 링크 옆에 있습니다.
 - **2026-09-24**: 이제 한국어, 간체 중국어, 일본어로도 읽을 수 있습니다. 맨 위에서 언어를 고르면 됩니다. 제목, 저자, 학회, 코드 링크는 모든 판이 같고 옮긴 것은 설명과 본문뿐이며, 전문 용어는 영어로 두었습니다. 원본은 여전히 README.md이고, 나머지 세 판은 이 파일을 한 줄씩 따라갑니다. 번역하는 동안 문장 중간에서 끊겼는데도 검사에 걸리지 않던 설명 스물두 개와 1저자가 빠진 항목 열세 개가 드러나, 모두 바로잡았습니다.
 - **2026-09-23**: Jev가 공개된 뒤로 놓치기 어려워진 패턴을 다룬 논문 열두 편을 추가했습니다. 텍스트 대신 타입이 정해진 결정으로 답하는 모델이 에이전트 루프 안에서 심판, router, guard, 메모리 컨트롤러 역할을 맡다가 확신이 서지 않으면 LLM에 넘기는 패턴입니다. 이 중 네 편은 Jev 자체를 연구했고, 그 가운데 한 편은 모델이 type error를 한 번도 내지 않으면서도 선택지 뒤의 rubric이 아니라 선택지 이름을 따르는 반례를 보여 줍니다. 나머지 여덟 편은 같은 역할을 다룬 앞선 연구로, SwiftSage의 빠른 모델·느린 모델 분리부터 어떤 라우팅 정책도 고정된 선택을 이기지 못한 웹 에이전트 연구까지 아우릅니다. 520편에서 532편으로 늘었습니다.
 - **2026-09-16**: 커뮤니티 기여 세 건을 병합했으며, 모두 논문 저자가 직접 보내 주셨습니다. 들어온 것은 harness 변화를 고려한 TaoLive 학습 보고서([@sunyuhan19981208](https://github.com/sunyuhan19981208), [#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)), 그리고 Steer, Don't Solve와 DRACO([@shubhamrgandhi](https://github.com/shubhamrgandhi), [#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)와 [#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17))입니다. 세 설명 모두 초록에 이미 있던 수치가 들어가도록 다시 썼고, TaoLive 설명은 고정 harness로 fine-tuning하면 instruction following이 7.7점 떨어지지만 harness 상태 증강은 한 점도 잃지 않는다는 결과를 중심에 두었습니다. 517편에서 520편으로 늘었습니다.

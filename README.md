@@ -23,7 +23,7 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 </p>
 
 <p align="center">
-📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">Read the survey → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">PDF in this repo</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">Start with the 10-paper Starter Kit</a></b>
+📄 <b><a href="https://www.preprints.org/manuscript/202608.0265">Read the survey → “LLM Agents: A Survey”</a></b> &nbsp;·&nbsp; 📖 <b><a href="https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/">Online book on GitBook</a></b> &nbsp;·&nbsp; <a href="paper/llm-agents-a-survey.pdf">PDF in this repo</a> &nbsp;·&nbsp; ⭐ <b><a href="#starter-kit">Start with the 10-paper Starter Kit</a></b>
 </p>
 
 <p align="center"><sub><i> LLM agents · LLM agent papers · autonomous agents · agentic AI · multi-agent systems · tool use · ReAct · planning · memory · agent benchmarks · agent safety &amp; prompt injection</i></sub></p>
@@ -41,6 +41,8 @@ LLM agents that plan, remember, use tools, and cooperate. Companion to the surve
 | 🔎 **Navigable** | A [Contents](#contents) index with per-section counts and collapsible sections. |
 
 **Topics covered:** cognitive architectures · ReAct &amp; reasoning-and-acting · long-horizon planning · agent memory · tool-augmented LLMs · multi-agent collaboration · web / code / embodied agents · agent benchmarks &amp; evaluation · safety, alignment &amp; indirect prompt injection.
+
+> 📖 **The survey as an online book**: [**LLM Agents: A Survey**](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/) on GitBook retells the paper in ten chapters that start from the basic concepts, for readers new to the area. The chapters come with labeled diagrams and worked examples, give the approaches that fell short as much room as the ones that worked, and are kept current: the latest addition is on decision models and when an agent should hand a choice to a larger model.
 
 > 🔁 **Companion deep-dive, now live**: [**Awesome Agent Loop Papers**](https://github.com/js-lee-AI/awesome-agent-loop-papers) goes below the components to the loop itself, with 524 papers and 60 open-source artifacts (frameworks, coding harnesses, memory and sandbox infrastructure, skill libraries, registries). Companion to *The Agent Loop: A Survey of Control Strategies, Skills, and Harnesses for LLM Agents*.
 
@@ -849,6 +851,7 @@ Released under the [MIT License](LICENSE).
 
 ## 🗓️ Updates
 
+- **2026-09-24**: The survey now also reads as an online book on [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/), in ten chapters that build up from the basic concepts for readers coming to the area fresh. The link sits at the top of the page, next to the paper.
 - **2026-09-24**: The list now also reads in Korean, Simplified Chinese and Japanese; pick a language at the top. Titles, authors, venues and code links are the same in every edition, only the notes and prose are translated, and terms of art stay in English. README.md remains the source, and the other three follow it line for line. Translating it turned up twenty-two glosses that had stopped mid-sentence without tripping the gloss check, and thirteen entries whose first author had gone missing; all of them are whole again.
 - **2026-09-23**: Twelve papers on a pattern that Jev's release has made hard to miss: a model that answers with a typed decision rather than text, sitting inside the agent loop as a judge, a router, a guard or a memory controller and handing off to an LLM when it's unsure. Four of them study Jev itself, and one of those is a counterexample in which the model follows an option's name instead of the rubric behind it without ever producing a type error. The other eight are earlier work on the same roles, from SwiftSage's fast/slow split to a web-agent study where no routing policy beats a fixed choice. 520 to 532.
 - **2026-09-16**: Three community additions merged, all from authors of the papers: the TaoLive harness-aware training report ([@sunyuhan19981208](https://github.com/sunyuhan19981208), [#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)), Steer, Don't Solve and DRACO ([@shubhamrgandhi](https://github.com/shubhamrgandhi), [#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16) and [#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)). All three glosses were rewritten to carry the numbers their abstracts already had, the TaoLive one around the finding that fixed-harness finetuning costs 7.7 points of instruction following while harness-state augmentation costs none. 517 to 520.
