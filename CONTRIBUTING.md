@@ -38,6 +38,6 @@ git config core.hooksPath .githooks
 
 ## Translations
 
-The list is also published in Korean, Simplified Chinese and Japanese (`README.ko.md`, `README.zh-CN.md`, `README.ja.md`), each following `README.md` line for line. Edit `README.md` only. I bring the translations along when I merge, so the translation check on your pull request is expected to report a difference, and it won't fail the run.
+The list is also published in Korean, Simplified Chinese, Japanese, Brazilian Portuguese and Spanish (`README.ko.md`, `README.zh-CN.md`, `README.ja.md`, `README.pt-BR.md`, `README.es.md`), each following `README.md` line for line. Edit `README.md` only. I bring the translations along when I merge, so the translation check on your pull request is expected to report a difference, and it won't fail the run.
 
 If you'd like to improve a translation itself, a pull request against that file is welcome too. Keep it line for line with `README.md`; `python3 scripts/check_i18n.py` shows where they differ.

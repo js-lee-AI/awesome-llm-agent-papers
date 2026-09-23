@@ -7,9 +7,9 @@ name: Check the list
 #            lying about the section.
 #   glosses  a backfill once cut nine annotations off mid-sentence, three of
 #            them leaving a parenthesis open.
-#   i18n     README.ko.md, README.zh-CN.md and README.ja.md follow README.md
-#            line for line, and an addition made in English only leaves them
-#            a paper behind.
+#   i18n     the translated READMEs (ko, zh-CN, ja, pt-BR, es) follow
+#            README.md line for line, and an addition made in English only
+#            leaves them a paper behind.
 #
 # All three are cheap to check and none is cheap to spot by eye.
 

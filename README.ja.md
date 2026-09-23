@@ -1,6 +1,6 @@
 <h1 align="center">🤖 Awesome LLM Agent Papers</h1>
 
-<p align="center"><a href="README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.zh-CN.md">简体中文</a> · <b>日本語</b></p>
+<p align="center"><a href="README.md">English</a> · <a href="README.ko.md">한국어</a> · <a href="README.zh-CN.md">简体中文</a> · <b>日本語</b> · <a href="README.pt-BR.md">Português</a> · <a href="README.es.md">Español</a></p>
 
 <p align="center">
 <b>必読論文 200 本以上、随時追加中</b>：計画し、記憶し、ツールを使い、互いに協力する<br>
@@ -851,6 +851,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-09-24**: ブラジル・ポルトガル語版とスペイン語版を追加しました。GitBook のオンラインブックもこの 2 つの言語で読めます。
 - **2026-09-24**: サーベイを[GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/ja/)にオンラインブックとして公開しました。この分野に初めて触れる人向けに、基本的な概念から説明しています。
 - **2026-09-24**: 韓国語、簡体字中国語、日本語版を追加しました。言語はページ上部で選べます。説明文と本文は翻訳し、論文のタイトルと専門用語は英語のままにしています。翻訳しながら、文が途中で切れていた説明文と、筆頭著者が抜けていた項目を見つけて直しました。
 - **2026-09-23**: 論文を十二本追加しました。エージェントのループの中で、文章を書かずに決められた選択肢から答えを選び、確信が持てないときはLLMに任せるモデルを扱った論文です。Jevの公開でこの考え方が広く知られるようになり、十二本のうち四本はJevそのものを扱っています。そのうち一本では、Jevはtype errorを一度も出しませんでしたが、選択肢に書かれたrubricではなく、選択肢の名前だけを見て答えを選んでいました。520 本から 532 本になりました。

@@ -40,7 +40,7 @@ fi
 translations=("$repo_root"/README.*.md)
 sums_before="$(cat "${translations[@]}" | git hash-object --stdin)"
 if ! python3 "$repo_root/scripts/check_i18n.py" --fix; then
-    echo "pre-commit: bring README.ko.md, README.zh-CN.md and README.ja.md in line with README.md, then commit again." >&2
+    echo "pre-commit: bring the translated READMEs (README.*.md) in line with README.md, then commit again." >&2
     exit 1
 fi
 if [ "$sums_before" != "$(cat "${translations[@]}" | git hash-object --stdin)" ]; then

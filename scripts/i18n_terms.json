@@ -14,6 +14,14 @@
    "ja": [
     "思考の連鎖",
     "思考連鎖"
+   ],
+   "pt": [
+    "cadeia de pensamento",
+    "cadeia de raciocínio"
+   ],
+   "es": [
+    "cadena de pensamiento",
+    "cadena de razonamiento"
    ]
   },
   {
@@ -41,6 +49,12 @@
    "ja": [
     "自己整合性",
     "自己一貫性"
+   ],
+   "pt": [
+    "autoconsistência"
+   ],
+   "es": [
+    "autoconsistencia"
    ]
   },
   {
@@ -54,6 +68,12 @@
    ],
    "ja": [
     "最小から最大"
+   ],
+   "pt": [
+    "do menor para o maior"
+   ],
+   "es": [
+    "de menor a mayor"
    ]
   },
   {
@@ -67,6 +87,16 @@
    ],
    "ja": [
     "指示チューニング"
+   ],
+   "pt": [
+    "ajuste por instruções",
+    "ajuste de instruções",
+    "ajuste fino por instruções"
+   ],
+   "es": [
+    "ajuste por instrucciones",
+    "ajuste de instrucciones",
+    "ajuste fino con instrucciones"
    ]
   },
   {
@@ -80,6 +110,14 @@
    ],
    "ja": [
     "行動空間"
+   ],
+   "pt": [
+    "espaço de ações",
+    "espaço de ação"
+   ],
+   "es": [
+    "espacio de acciones",
+    "espacio de acción"
    ]
   },
   {
@@ -93,6 +131,12 @@
    "ja": [
     "作業メモリ",
     "ワーキングメモリ"
+   ],
+   "pt": [
+    "memória de trabalho"
+   ],
+   "es": [
+    "memoria de trabajo"
    ]
   },
   {
@@ -106,6 +150,13 @@
    "ja": [
     "長期メモリ",
     "長期記憶"
+   ],
+   "pt": [
+    "memória de longo prazo"
+   ],
+   "es": [
+    "memoria a largo plazo",
+    "memoria de largo plazo"
    ]
   },
   {
@@ -118,6 +169,12 @@
    ],
    "ja": [
     "エピソード記憶"
+   ],
+   "pt": [
+    "memória episódica"
+   ],
+   "es": [
+    "memoria episódica"
    ]
   },
   {
@@ -130,6 +187,12 @@
    ],
    "ja": [
     "意味記憶"
+   ],
+   "pt": [
+    "memória semântica"
+   ],
+   "es": [
+    "memoria semántica"
    ]
   },
   {
@@ -143,6 +206,13 @@
    ],
    "ja": [
     "手続き記憶"
+   ],
+   "pt": [
+    "memória procedural",
+    "memória procedimental"
+   ],
+   "es": [
+    "memoria procedimental"
    ]
   },
   {
@@ -156,6 +226,14 @@
    ],
    "ja": [
     "内部行動"
+   ],
+   "pt": [
+    "ação interna",
+    "ações internas"
+   ],
+   "es": [
+    "acción interna",
+    "acciones internas"
    ]
   },
   {
@@ -169,6 +247,14 @@
    ],
    "ja": [
     "外部行動"
+   ],
+   "pt": [
+    "ação externa",
+    "ações externas"
+   ],
+   "es": [
+    "acción externa",
+    "acciones externas"
    ]
   },
   {
@@ -181,6 +267,12 @@
    ],
    "ja": [
     "軌跡"
+   ],
+   "pt": [
+    "trajetória"
+   ],
+   "es": [
+    "trayectoria"
    ]
   },
   {
@@ -204,6 +296,13 @@
    ],
    "ja": [
     "スキャフォールド"
+   ],
+   "pt": [
+    "andaime"
+   ],
+   "es": [
+    "andamiaje",
+    "andamio"
    ]
   },
   {
@@ -218,6 +317,12 @@
    ],
    "ja": [
     "コンテキストウィンドウ"
+   ],
+   "pt": [
+    "janela de contexto"
+   ],
+   "es": [
+    "ventana de contexto"
    ]
   },
   {
@@ -230,6 +335,15 @@
    ],
    "ja": [
     "システムプロンプト"
+   ],
+   "pt": [
+    "prompt de sistema",
+    "prompt do sistema"
+   ],
+   "es": [
+    "prompt de sistema",
+    "prompt del sistema",
+    "indicación del sistema"
    ]
   },
   {
@@ -244,6 +358,13 @@
    "ja": [
     "プロンプトインジェクション",
     "プロンプト注入"
+   ],
+   "pt": [
+    "injeção de prompt"
+   ],
+   "es": [
+    "inyección de prompt",
+    "inyección de instrucciones"
    ]
   },
   {
@@ -270,6 +391,12 @@
    "ja": [
     "幻覚",
     "ハルシネーション"
+   ],
+   "pt": [
+    "alucinaç"
+   ],
+   "es": [
+    "alucinaci"
    ]
   },
   {
@@ -280,6 +407,12 @@
    "zh": [],
    "ja": [
     "グラウンディング"
+   ],
+   "pt": [
+    "ancoragem"
+   ],
+   "es": [
+    "anclaje"
    ]
   },
   {
@@ -293,6 +426,12 @@
    ],
    "ja": [
     "アクセシビリティツリー"
+   ],
+   "pt": [
+    "árvore de acessibilidade"
+   ],
+   "es": [
+    "árbol de accesibilidad"
    ]
   },
   {
@@ -310,6 +449,15 @@
     "コンピューター操作",
     "コンピュータ利用",
     "コンピューター利用"
+   ],
+   "pt": [
+    "uso do computador",
+    "uso de computador"
+   ],
+   "es": [
+    "uso del ordenador",
+    "uso de la computadora",
+    "uso de computadoras"
    ]
   },
   {
@@ -323,6 +471,12 @@
    ],
    "ja": [
     "ディープリサーチ"
+   ],
+   "pt": [
+    "pesquisa profunda"
+   ],
+   "es": [
+    "investigación profunda"
    ]
   },
   {
@@ -336,6 +490,17 @@
    "ja": [
     "身体性",
     "身体化"
+   ],
+   "pt": [
+    "corporificad",
+    "agente incorporado",
+    "agentes incorporados"
+   ],
+   "es": [
+    "corporeizad",
+    "agente encarnado",
+    "agentes encarnados",
+    "agentes corpóreos"
    ]
   },
   {
@@ -348,6 +513,12 @@
    ],
    "ja": [
     "部分観測"
+   ],
+   "pt": [
+    "observabilidade parcial"
+   ],
+   "es": [
+    "observabilidad parcial"
    ]
   },
   {
@@ -364,6 +535,12 @@
    "ja": [
     "自己修正",
     "自己訂正"
+   ],
+   "pt": [
+    "autocorreç"
+   ],
+   "es": [
+    "autocorrecci"
    ]
   },
   {
@@ -378,6 +555,12 @@
    ],
    "ja": [
     "自己批評"
+   ],
+   "pt": [
+    "autocrítica"
+   ],
+   "es": [
+    "autocrítica"
    ]
   },
   {
@@ -391,6 +574,14 @@
    "ja": [
     "内省",
     "リフレクション"
+   ],
+   "pt": [
+    "reflexão",
+    "reflexões"
+   ],
+   "es": [
+    "reflexión",
+    "reflexiones"
    ]
   },
   {
@@ -404,6 +595,14 @@
    "ja": [
     "プロセス監督",
     "過程監督"
+   ],
+   "pt": [
+    "supervisão de processo",
+    "supervisão do processo"
+   ],
+   "es": [
+    "supervisión de procesos",
+    "supervisión del proceso"
    ]
   },
   {
@@ -417,6 +616,14 @@
    ],
    "ja": [
     "推論モデル"
+   ],
+   "pt": [
+    "modelo de raciocínio",
+    "modelos de raciocínio"
+   ],
+   "es": [
+    "modelo de razonamiento",
+    "modelos de razonamiento"
    ]
   },
   {
@@ -430,6 +637,12 @@
    ],
    "ja": [
     "プランナー"
+   ],
+   "pt": [
+    "planejador"
+   ],
+   "es": [
+    "planificador"
    ]
   },
   {
@@ -443,6 +656,12 @@
    "ja": [
     "木探索",
     "ツリー探索"
+   ],
+   "pt": [
+    "busca em árvore"
+   ],
+   "es": [
+    "búsqueda en árbol"
    ]
   },
   {
@@ -456,6 +675,13 @@
    "ja": [
     "失敗帰属",
     "失敗の帰属"
+   ],
+   "pt": [
+    "atribuição de falha"
+   ],
+   "es": [
+    "atribución de fallos",
+    "atribución de errores"
    ]
   },
   {
@@ -469,6 +695,13 @@
    ],
    "ja": [
     "長期タスク"
+   ],
+   "pt": [
+    "longo horizonte"
+   ],
+   "es": [
+    "largo horizonte",
+    "horizonte largo"
    ]
   },
   {
@@ -482,6 +715,12 @@
    ],
    "ja": [
     "データ汚染"
+   ],
+   "pt": [
+    "contaminação"
+   ],
+   "es": [
+    "contaminación"
    ]
   },
   {
@@ -496,6 +735,14 @@
    "ja": [
     "メモリ汚染",
     "メモリポイズニング"
+   ],
+   "pt": [
+    "envenenamento de memória",
+    "envenenamento da memória"
+   ],
+   "es": [
+    "envenenamiento de memoria",
+    "envenenamiento de la memoria"
    ]
   },
   {
@@ -508,6 +755,14 @@
    ],
    "ja": [
     "信頼境界"
+   ],
+   "pt": [
+    "fronteira de confiança",
+    "limite de confiança"
+   ],
+   "es": [
+    "frontera de confianza",
+    "límite de confianza"
    ]
   },
   {
@@ -523,6 +778,12 @@
    "ja": [
     "攻撃面",
     "アタックサーフェス"
+   ],
+   "pt": [
+    "superfície de ataque"
+   ],
+   "es": [
+    "superficie de ataque"
    ]
   },
   {
@@ -535,6 +796,16 @@
    ],
    "ja": [
     "ガードレール"
+   ],
+   "pt": [
+    "barreira de proteção",
+    "barreiras de proteção",
+    "grade de proteção"
+   ],
+   "es": [
+    "barrera de seguridad",
+    "barreras de seguridad",
+    "barandilla"
    ]
   },
   {
@@ -547,6 +818,14 @@
    ],
    "ja": [
     "最小権限"
+   ],
+   "pt": [
+    "privilégio mínimo",
+    "menor privilégio"
+   ],
+   "es": [
+    "mínimo privilegio",
+    "privilegio mínimo"
    ]
   },
   {
@@ -562,6 +841,12 @@
    ],
    "ja": [
     "サンドボックス"
+   ],
+   "pt": [
+    "caixa de areia"
+   ],
+   "es": [
+    "caja de arena"
    ]
   },
   {
@@ -575,6 +860,13 @@
    ],
    "ja": [
     "監査ログ"
+   ],
+   "pt": [
+    "registro de auditoria",
+    "log de auditoria"
+   ],
+   "es": [
+    "registro de auditoría"
    ]
   },
   {
@@ -588,13 +880,27 @@
    ],
    "ja": [
     "承認ゲート"
+   ],
+   "pt": [
+    "etapa de aprovação",
+    "portão de aprovação"
+   ],
+   "es": [
+    "puerta de aprobación",
+    "paso de aprobación"
    ]
   },
   {
    "en": "provenance",
    "ko": [],
    "zh": [],
-   "ja": []
+   "ja": [],
+   "pt": [
+    "proveniência"
+   ],
+   "es": [
+    "procedencia"
+   ]
   },
   {
    "en": "refusal training",
@@ -606,6 +912,12 @@
    ],
    "ja": [
     "拒否学習"
+   ],
+   "pt": [
+    "treinamento de recusa"
+   ],
+   "es": [
+    "entrenamiento de rechazo"
    ]
   },
   {
@@ -619,6 +931,12 @@
    "ja": [
     "安全学習",
     "安全性学習"
+   ],
+   "pt": [
+    "treinamento de segurança"
+   ],
+   "es": [
+    "entrenamiento de seguridad"
    ]
   },
   {
@@ -631,6 +949,12 @@
    ],
    "ja": [
     "バックドア"
+   ],
+   "pt": [
+    "porta dos fundos"
+   ],
+   "es": [
+    "puerta trasera"
    ]
   },
   {
@@ -647,6 +971,12 @@
     "エージェント型 AI",
     "エージェント型AI",
     "エージェンティック"
+   ],
+   "pt": [
+    "IA agêntica"
+   ],
+   "es": [
+    "IA agéntica"
    ]
   },
   {
@@ -659,6 +989,14 @@
    ],
    "ja": [
     "認知アーキテクチャ"
+   ],
+   "pt": [
+    "arquitetura cognitiva",
+    "arquiteturas cognitivas"
+   ],
+   "es": [
+    "arquitectura cognitiva",
+    "arquitecturas cognitivas"
    ]
   },
   {
@@ -672,6 +1010,12 @@
    ],
    "ja": [
     "スキル"
+   ],
+   "pt": [
+    "biblioteca de habilidades"
+   ],
+   "es": [
+    "biblioteca de habilidades"
    ]
   },
   {
@@ -684,6 +1028,13 @@
    ],
    "ja": [
     "ベクトルストア"
+   ],
+   "pt": [
+    "armazenamento vetorial",
+    "repositório vetorial"
+   ],
+   "es": [
+    "almacén vectorial"
    ]
   },
   {
@@ -696,6 +1047,14 @@
    ],
    "ja": [
     "ベクトルデータベース"
+   ],
+   "pt": [
+    "banco de dados vetorial",
+    "bancos de dados vetoriais"
+   ],
+   "es": [
+    "base de datos vectorial",
+    "bases de datos vectoriales"
    ]
   },
   {
@@ -708,6 +1067,15 @@
    ],
    "ja": [
     "関数呼び出し"
+   ],
+   "pt": [
+    "chamada de função",
+    "chamadas de função"
+   ],
+   "es": [
+    "llamada a funciones",
+    "llamadas a funciones",
+    "llamada de funciones"
    ]
   },
   {
@@ -720,6 +1088,12 @@
    ],
    "ja": [
     "ツール検索"
+   ],
+   "pt": [
+    "recuperação de ferramentas"
+   ],
+   "es": [
+    "recuperación de herramientas"
    ]
   },
   {
@@ -732,6 +1106,13 @@
    ],
    "ja": [
     "テストスイート"
+   ],
+   "pt": [
+    "suíte de testes"
+   ],
+   "es": [
+    "batería de pruebas",
+    "suite de pruebas"
    ]
   },
   {
@@ -744,6 +1125,12 @@
    ],
    "ja": [
     "バックテスト"
+   ],
+   "pt": [
+    "teste retrospectivo"
+   ],
+   "es": [
+    "prueba retrospectiva"
    ]
   },
   {
@@ -768,6 +1155,16 @@
    ],
    "ja": [
     "視覚言語モデル"
+   ],
+   "pt": [
+    "modelo de visão e linguagem",
+    "modelos de visão e linguagem",
+    "modelo visão-linguagem"
+   ],
+   "es": [
+    "modelo de visión y lenguaje",
+    "modelos de visión y lenguaje",
+    "modelo visión-lenguaje"
    ]
   },
   {
@@ -781,6 +1178,12 @@
    ],
    "ja": [
     "視覚・言語・行動"
+   ],
+   "pt": [
+    "visão-linguagem-ação"
+   ],
+   "es": [
+    "visión-lenguaje-acción"
    ]
   },
   {
@@ -793,6 +1196,12 @@
    ],
    "ja": [
     "アフォーダンス"
+   ],
+   "pt": [
+    "afordância"
+   ],
+   "es": [
+    "afordancia"
    ]
   },
   {
@@ -806,6 +1215,14 @@
    "ja": [
     "順伝播",
     "フォワードパス"
+   ],
+   "pt": [
+    "passagem direta",
+    "passagem para frente"
+   ],
+   "es": [
+    "pasada hacia adelante",
+    "paso hacia adelante"
    ]
   },
   {
@@ -820,6 +1237,13 @@
    "ja": [
     "貪欲デコーディング",
     "グリーディデコーディング"
+   ],
+   "pt": [
+    "decodificação gulosa"
+   ],
+   "es": [
+    "decodificación voraz",
+    "decodificación codiciosa"
    ]
   },
   {
@@ -842,6 +1266,13 @@
    ],
    "ja": [
     "ベースライン"
+   ],
+   "pt": [
+    "linha de base"
+   ],
+   "es": [
+    "línea base",
+    "línea de base"
    ]
   },
   {
@@ -854,6 +1285,12 @@
    ],
    "ja": [
     "蒸留"
+   ],
+   "pt": [
+    "destilação"
+   ],
+   "es": [
+    "destilación"
    ]
   },
   {
@@ -866,6 +1303,13 @@
    ],
    "ja": [
     "多元的無知"
+   ],
+   "pt": [
+    "ignorância pluralística",
+    "ignorância pluralista"
+   ],
+   "es": [
+    "ignorancia pluralista"
    ]
   },
   {
@@ -878,6 +1322,12 @@
    ],
    "ja": [
     "通信トポロジー"
+   ],
+   "pt": [
+    "topologia de comunicação"
+   ],
+   "es": [
+    "topología de comunicación"
    ]
   },
   {
@@ -890,6 +1340,13 @@
    ],
    "ja": [
     "計算グラフ"
+   ],
+   "pt": [
+    "grafo de computação"
+   ],
+   "es": [
+    "grafo de cómputo",
+    "grafo computacional"
    ]
   },
   {
@@ -903,6 +1360,14 @@
    ],
    "ja": [
     "全結合"
+   ],
+   "pt": [
+    "totalmente conectad",
+    "completamente conectad"
+   ],
+   "es": [
+    "totalmente conectad",
+    "completamente conectad"
    ]
   },
   {
@@ -918,6 +1383,12 @@
    "ja": [
     "オーケストレーター",
     "調整役"
+   ],
+   "pt": [
+    "orquestrador"
+   ],
+   "es": [
+    "orquestador"
    ]
   },
   {
@@ -930,6 +1401,13 @@
    ],
    "ja": [
     "クリティカルパス"
+   ],
+   "pt": [
+    "caminho crítico"
+   ],
+   "es": [
+    "camino crítico",
+    "ruta crítica"
    ]
   },
   {
@@ -943,6 +1421,12 @@
    ],
    "ja": [
     "エンドツーエンド"
+   ],
+   "pt": [
+    "ponta a ponta"
+   ],
+   "es": [
+    "de extremo a extremo"
    ]
   },
   {
@@ -967,6 +1451,12 @@
    ],
    "ja": [
     "バックオフ"
+   ],
+   "pt": [
+    "recuo exponencial"
+   ],
+   "es": [
+    "retroceso exponencial"
    ]
   },
   {
@@ -980,6 +1470,12 @@
    ],
    "ja": [
     "モック"
+   ],
+   "pt": [
+    "objeto simulado"
+   ],
+   "es": [
+    "objeto simulado"
    ]
   },
   {
@@ -1005,6 +1501,12 @@
    ],
    "ja": [
     "スナップショット"
+   ],
+   "pt": [
+    "instantâneo"
+   ],
+   "es": [
+    "instantánea"
    ]
   },
   {
@@ -1017,6 +1519,14 @@
    ],
    "ja": [
     "ドライラン"
+   ],
+   "pt": [
+    "execução simulada",
+    "execução de teste"
+   ],
+   "es": [
+    "ejecución de prueba",
+    "ejecución en seco"
    ]
   },
   {
@@ -1030,6 +1540,14 @@
    ],
    "ja": [
     "許可リスト"
+   ],
+   "pt": [
+    "lista de permissões",
+    "lista branca"
+   ],
+   "es": [
+    "lista de permitidos",
+    "lista blanca"
    ]
   },
   {
@@ -1043,6 +1561,12 @@
    "ja": [
     "ウォールクロック",
     "壁時計"
+   ],
+   "pt": [
+    "tempo de relógio"
+   ],
+   "es": [
+    "tiempo de reloj"
    ]
   },
   {
@@ -1073,6 +1597,14 @@
    ],
    "ja": [
     "ワークフロー"
+   ],
+   "pt": [
+    "fluxo de trabalho",
+    "fluxos de trabalho"
+   ],
+   "es": [
+    "flujo de trabajo",
+    "flujos de trabajo"
    ]
   },
   {
@@ -1087,6 +1619,14 @@
    "ja": [
     "決定モデル",
     "意思決定モデル"
+   ],
+   "pt": [
+    "modelo de decisão",
+    "modelos de decisão"
+   ],
+   "es": [
+    "modelo de decisión",
+    "modelos de decisión"
    ]
   },
   {
@@ -1102,6 +1642,14 @@
    "ja": [
     "システム1",
     "システムワン"
+   ],
+   "pt": [
+    "Sistema 1",
+    "Sistema Um"
+   ],
+   "es": [
+    "Sistema 1",
+    "Sistema Uno"
    ]
   },
   {
@@ -1117,6 +1665,14 @@
    "ja": [
     "システム2",
     "システムツー"
+   ],
+   "pt": [
+    "Sistema 2",
+    "Sistema Dois"
+   ],
+   "es": [
+    "Sistema 2",
+    "Sistema Dos"
    ]
   },
   {
@@ -1127,6 +1683,12 @@
    "zh": [],
    "ja": [
     "エスカレーション"
+   ],
+   "pt": [
+    "escalonamento"
+   ],
+   "es": [
+    "escalamiento"
    ]
   },
   {
@@ -1139,6 +1701,12 @@
    ],
    "ja": [
     "カスケード"
+   ],
+   "pt": [
+    "cascata"
+   ],
+   "es": [
+    "cascada"
    ]
   },
   {
@@ -1152,6 +1720,12 @@
    "ja": [
     "キャリブレーション",
     "較正"
+   ],
+   "pt": [
+    "calibração"
+   ],
+   "es": [
+    "calibración"
    ]
   },
   {
@@ -1174,6 +1748,12 @@
    ],
    "ja": [
     "ルーター"
+   ],
+   "pt": [
+    "roteador"
+   ],
+   "es": [
+    "enrutador"
    ]
   },
   {
@@ -1186,6 +1766,12 @@
    ],
    "ja": [
     "ルーブリック"
+   ],
+   "pt": [
+    "rubrica"
+   ],
+   "es": [
+    "rúbrica"
    ]
   },
   {
@@ -1198,6 +1784,12 @@
    ],
    "ja": [
     "型エラー"
+   ],
+   "pt": [
+    "erro de tipo"
+   ],
+   "es": [
+    "error de tipo"
    ]
   },
   {
@@ -1210,6 +1802,14 @@
    ],
    "ja": [
     "構造化出力"
+   ],
+   "pt": [
+    "saída estruturada",
+    "saídas estruturadas"
+   ],
+   "es": [
+    "salida estructurada",
+    "salidas estructuradas"
    ]
   },
   {
@@ -1222,6 +1822,14 @@
    ],
    "ja": [
     "コンフォーマル予測"
+   ],
+   "pt": [
+    "predição conformal",
+    "previsão conformal"
+   ],
+   "es": [
+    "predicción conformal",
+    "predicción conforme"
    ]
   },
   {
@@ -1234,6 +1842,12 @@
    ],
    "ja": [
     "オラクル"
+   ],
+   "pt": [
+    "oráculo"
+   ],
+   "es": [
+    "oráculo"
    ]
   },
   {
@@ -1246,6 +1860,14 @@
    ],
    "ja": [
     "報酬モデル"
+   ],
+   "pt": [
+    "modelo de recompensa",
+    "modelos de recompensa"
+   ],
+   "es": [
+    "modelo de recompensa",
+    "modelos de recompensa"
    ]
   }
  ]

@@ -1,6 +1,6 @@
 <h1 align="center">🤖 Awesome LLM Agent Papers</h1>
 
-<p align="center"><b>English</b> · <a href="README.ko.md">한국어</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.ja.md">日本語</a></p>
+<p align="center"><b>English</b> · <a href="README.ko.md">한국어</a> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.pt-BR.md">Português</a> · <a href="README.es.md">Español</a></p>
 
 <p align="center">
 <b>200+ must-read papers, updated regularly</b>: the annotated reading list for building<br>
@@ -851,6 +851,7 @@ Released under the [MIT License](LICENSE).
 
 ## 🗓️ Updates
 
+- **2026-09-24**: The list and the online book on GitBook are now also available in Brazilian Portuguese and Spanish.
 - **2026-09-24**: The survey is now on [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/) as an online book, written for readers new to the area.
 - **2026-09-24**: The list is now available in Korean, Simplified Chinese and Japanese; choose a language at the top. The notes and prose are translated, and paper titles and terms of art are left in English. While translating I found notes that stopped mid-sentence and entries missing their first author, and fixed them.
 - **2026-09-23**: Twelve papers on models inside the agent loop that answer with a typed decision instead of text and hand off to an LLM when they aren't sure. Jev's release drew wide attention to the idea, and four of the papers study Jev itself; in one of them, Jev follows an option's name rather than the rubric attached to it and never raises a type error. 520 to 532.

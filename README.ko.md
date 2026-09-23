@@ -1,6 +1,6 @@
 <h1 align="center">🤖 Awesome LLM Agent Papers</h1>
 
-<p align="center"><a href="README.md">English</a> · <b>한국어</b> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.ja.md">日本語</a></p>
+<p align="center"><a href="README.md">English</a> · <b>한국어</b> · <a href="README.zh-CN.md">简体中文</a> · <a href="README.ja.md">日本語</a> · <a href="README.pt-BR.md">Português</a> · <a href="README.es.md">Español</a></p>
 
 <p align="center">
 <b>꼭 읽어야 할 논문 200편 이상, 지금도 계속 추가 중</b>: 계획하고, 기억하고, 도구를 쓰고, 서로 협력하는<br>
@@ -851,6 +851,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-09-24**: 브라질 포르투갈어판과 스페인어판을 추가했습니다. GitBook 온라인 책도 두 언어로 읽을 수 있습니다.
 - **2026-09-24**: 서베이를 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/ko/)에 온라인 책으로 올렸습니다. 이 분야를 처음 접하는 분을 위해 기본 개념부터 설명합니다.
 - **2026-09-24**: 한국어, 간체 중국어, 일본어판을 추가했습니다. 맨 위에서 언어를 고를 수 있습니다. 설명과 본문은 번역했고, 논문 제목과 전문 용어는 영어 그대로 두었습니다. 번역하면서 문장 중간에서 끊긴 설명과 1저자가 빠진 항목을 찾아 고쳤습니다.
 - **2026-09-23**: 논문 열두 편을 추가했습니다. 에이전트 루프 안에서 글을 쓰는 대신 정해진 선택지 중 하나를 고르고, 확신이 없으면 LLM에 넘기는 모델을 다룬 논문들입니다. Jev가 공개되면서 이런 방식이 널리 알려졌고, 열두 편 중 네 편은 Jev를 직접 다룹니다. 그중 한 편에서는 Jev가 type error를 한 번도 내지 않았지만, 선택지에 적힌 rubric이 아니라 선택지 이름만 보고 답을 골랐습니다. 520편에서 532편으로 늘었습니다.

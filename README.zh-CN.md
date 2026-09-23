@@ -1,6 +1,6 @@
 <h1 align="center">🤖 Awesome LLM Agent Papers</h1>
 
-<p align="center"><a href="README.md">English</a> · <a href="README.ko.md">한국어</a> · <b>简体中文</b> · <a href="README.ja.md">日本語</a></p>
+<p align="center"><a href="README.md">English</a> · <a href="README.ko.md">한국어</a> · <b>简体中文</b> · <a href="README.ja.md">日本語</a> · <a href="README.pt-BR.md">Português</a> · <a href="README.es.md">Español</a></p>
 
 <p align="center">
 <b>200+ 篇必读论文，持续增加中</b>：一份带注解的阅读清单，帮你构建会规划、会记忆、<br>
@@ -851,6 +851,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-09-24**: 新增巴西葡萄牙语版和西班牙语版，GitBook 上的在线电子书也有这两种语言的版本。
 - **2026-09-24**: 综述的在线电子书已发布在 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/zh/) 上，面向刚接触这一领域的读者，从基本概念讲起。
 - **2026-09-24**: 新增韩文、简体中文和日文版本，可以在页面顶部选择语言。说明和正文都已翻译，论文标题和专业术语保留英文。翻译时还发现了一些在句子中途断掉的说明和缺少第一作者的条目，已经改正。
 - **2026-09-23**: 新增十二篇论文，研究的是这样一类模型：在智能体循环中不生成文本，只从预先定义的选项中做选择，没有把握时再转交给 LLM。Jev 发布后，这种做法受到广泛关注，其中四篇直接研究 Jev。在其中一篇里，Jev 没有报过一次 type error，却是只看选项的名称做出选择，而没有按选项里写明的 rubric 判断。从 520 篇增至 532 篇。
