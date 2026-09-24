@@ -817,6 +817,8 @@ Se publican artículos sobre agentes más rápido de lo que una sola persona pue
 
 Las correcciones, las anotaciones más precisas y las secciones nuevas completas son igual de bienvenidas. Consulta **[CONTRIBUTING.md](CONTRIBUTING.md)** para ver el formato de las entradas.
 
+La mayoría de los idiomas a los que está traducida esta lista no son mi lengua materna. Si alguna frase de esta versión en español suena rara o algún término está mal traducido, abre un issue o corrígelo directamente con un PR sobre este archivo.
+
 ## 👥 Colaboradores
 
 Esta lista la mantiene la comunidad. Gracias a todas las personas que han sugerido, verificado o anotado un artículo:

@@ -817,6 +817,8 @@ The agent literature is arriving faster than any one person can track, on the or
 
 Corrections, sharper annotations, and whole new sections are just as welcome. See **[CONTRIBUTING.md](CONTRIBUTING.md)** for the entry format.
 
+Most of the languages this list is translated into aren't my first language. If a sentence in one of the translations reads oddly or a term is translated wrong, please open an issue, or fix it directly with a PR against that file.
+
 ## 👥 Contributors
 
 This list is community-maintained. Thanks to everyone who has suggested, verified, or annotated a paper:

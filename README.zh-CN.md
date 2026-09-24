@@ -817,6 +817,8 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 勘误、更精准的注释，乃至整个新章节，都同样欢迎。条目格式见 **[CONTRIBUTING.md](CONTRIBUTING.md)**。
 
+这份清单翻译成的几种语言大多不是我的母语。如果中文版里有读着别扭的句子或译错的术语，请提交 issue 告诉我，也可以直接对这个文件提交 PR 修改。
+
 ## 👥 贡献者
 
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
