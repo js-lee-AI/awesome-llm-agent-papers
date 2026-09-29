@@ -95,7 +95,7 @@
 - [⭐ 入门必读](#starter-kit)
 - [🔥 值得关注的 10 篇 (2026)](#to-watch)
 - **🧭 背景**
-  - [📚 综述与立场论文 (57)](#surveys)
+  - [📚 综述与立场论文 (58)](#surveys)
   - [🏗️ 智能体架构与框架 (51)](#architectures)
 - **🧱 第一部分：核心组成**
   - [🧠 规划与推理 (51)](#planning)
@@ -112,11 +112,11 @@
 ## 🧭 背景
 
 <a id="surveys"></a>
-### 📚 综述与立场论文 (57)
+### 📚 综述与立场论文 (58)
 *对应综述 §1-§3（引言、背景、分类体系）。*
 
 <details>
-<summary><b>展开 57 篇论文</b></summary>
+<summary><b>展开 58 篇论文</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *最经典、引用量最高的通用 LLM 智能体综述。* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *与 Wang et al. 2023 并称两篇开创性的通用综述。* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -176,6 +176,7 @@
 - **[Information Retrieval Misses the Mark for LLM Agents](https://doi.org/10.2139/ssrn.6903579)** (Sun et al., SSRN 2026) - *立场论文，回应从实际部署中得出的“RAG 已死，智能体只需要 grep”这一解读：它承认底层条件确实变了，但认为错位是结构性的，体现在五个维度上。IR 预设的语料、输入、目标、episode 和可检索单元，放到一个会规划、会浏览、会调用工具、还要自己决定是否继续搜索的智能体身上，全都不合适。为检验这一差距，作者固定智能体，在 HotpotQA-distractor 和 2WikiMultihopQA 上轮换 BM25、向量、grep、混合和闭卷检索，最后主张把检索重新定义为一种以状态为条件的证据获取策略。*
 - **[Terminal Agents: A Survey of AI Agents in Command-Line Environments](https://arxiv.org/abs/2608.20485)** (Bin et al., arXiv 2026) - *以终端而不是任务领域作为组织视角，研究那些靠命令执行和文本反馈推动循环前进的智能体，并用七维能力画像从架构、能力习得和评估几个方面加以梳理。综述自己在固定条件下做的诊断显示，不同的基准家族暴露出不同的过程信号，配对的系统比较结果也取决于基准，这限制了任何结果能在多大程度上归因于单个组件。*
 - **[Autonomous Research Agents: A Survey of AI Scientists and the Verification Gap](https://arxiv.org/abs/2608.05179)** (Ding et al., arXiv 2026) - *从筛选出的 125 个 AI 科学家系统中选取 26 个，按七个审计维度编码，发现瓶颈已从能力转向可检验性：24 个可运行系统中 83% 公开了代码，但只有 38% 公开了随机种子或执行 trace，也只有 38% 报告了任何形式的新颖性验证；九个闭环系统里有七个只是机械地重跑，整个语料中找不到一个经过外部验证的循环内 oracle。*
+- **[Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem](https://arxiv.org/abs/2609.30216)** (Ling et al., arXiv 2026) - *收集 Jev 发布一周后 GitHub 上 2,170 个使用 Jev 的公开项目并加以分类，发现它更多用于判断输入，而不是选择动作：77% 的项目用到属性判断，31% 用到动作选择，不过在界面智能体和模拟与控制类项目中，动作选择约占标签的一半；routing 和界面智能体项目只占 19.6%，却获得了 63% 的 star。哪些仓库计入、每个项目如何标注，都由一个 LLM 智能体决定，再由第二个智能体复核，论文没有报告与人工标注的对比。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -824,10 +825,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 13 位贡献者</b></summary>
+<summary><b>展开 14 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | Jev in the Wild：分析公开 GitHub 项目如何使用 Jev，收入综述与立场论文（[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)） |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | Steer, Don't Solve：用小型 critic 模型引导更大的编码智能体，收入规划与推理（[#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)）；DRACO：为不借助 verifier 训练的智能体提供基于 rubric 的 credit assignment，收入工具使用（[#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)）。两篇均由第一作者本人提交 |
 | <a href="https://github.com/sunyuhan19981208"><img src="https://github.com/sunyuhan19981208.png?size=48" width="48" height="48" alt="@sunyuhan19981208"></a> | **[@sunyuhan19981208](https://github.com/sunyuhan19981208)** | TaoLive 技术报告：训练小模型，让它在 harness 不断变化时仍能正常工作；由作者之一提交，收入应用领域（[#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)） |
 | <a href="https://github.com/burgerseater"><img src="https://github.com/burgerseater.png?size=48" width="48" height="48" alt="@burgerseater"></a> | **[@burgerseater](https://github.com/burgerseater)** | LoopArena：评的是给编码智能体掌舵的模型，而不是写代码的模型；由作者之一推荐，收入评估与基准（[#14](https://github.com/js-lee-AI/awesome-llm-agent-papers/issues/14)） |
@@ -853,6 +855,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-09-30**: 新增 Jev in the Wild，分析 2,170 个公开 GitHub 项目如何使用 Jev，收入综述与立场论文（[@Gavin-M34](https://github.com/Gavin-M34)，[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)）。从 532 篇增至 533 篇。
 - **2026-09-24**: 新增巴西葡萄牙语版和西班牙语版，GitBook 上的在线电子书也有这两种语言的版本。
 - **2026-09-24**: 综述的在线电子书已发布在 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/zh/) 上，面向刚接触这一领域的读者，从基本概念讲起。
 - **2026-09-24**: 新增韩文、简体中文和日文版本，可以在页面顶部选择语言。说明和正文都已翻译，论文标题和专业术语保留英文。翻译时还发现了一些在句子中途断掉的说明和缺少第一作者的条目，已经改正。

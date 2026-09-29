@@ -95,7 +95,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - [⭐ 스타터 키트](#starter-kit)
 - [🔥 주목할 10편 (2026)](#to-watch)
 - **🧭 배경**
-  - [📚 서베이와 포지션 페이퍼 (57)](#surveys)
+  - [📚 서베이와 포지션 페이퍼 (58)](#surveys)
   - [🏗️ 에이전트 아키텍처와 프레임워크 (51)](#architectures)
 - **🧱 제1부: 핵심 구성 요소**
   - [🧠 계획과 추론 (51)](#planning)
@@ -112,11 +112,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## 🧭 배경
 
 <a id="surveys"></a>
-### 📚 서베이와 포지션 페이퍼 (57)
+### 📚 서베이와 포지션 페이퍼 (58)
 *서베이 §1-§3(서론, 배경, 분류 체계)에 해당합니다.*
 
 <details>
-<summary><b>논문 57편 보기</b></summary>
+<summary><b>논문 58편 보기</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *가장 많이 인용되는 범용 LLM 에이전트 서베이이자 이 분야의 표준 문헌이다.* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Wang et al. 2023과 함께 이 분야의 기틀을 놓은 두 종합 서베이 중 하나다.* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -176,6 +176,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Information Retrieval Misses the Mark for LLM Agents](https://doi.org/10.2139/ssrn.6903579)** (Sun et al., SSRN 2026) - *실제 배포 사례를 보고 "RAG는 끝났고 에이전트에게는 grep이면 된다"고 해석하는 시각에 답하는 포지션 페이퍼다. 기반이 바뀌었다는 점은 인정하지만, 불일치는 다섯 차원에 걸친 구조적 문제라고 본다. IR이 전제하는 코퍼스, 입력, 목표, 에피소드, 검색 대상이 모두 계획하고 브라우징하고 도구를 부르며 검색을 계속할지 스스로 정하는 에이전트에게는 맞지 않기 때문이다. 에이전트를 고정한 채 HotpotQA-distractor와 2WikiMultihopQA에서 BM25, 벡터, grep, 하이브리드, closed-book 검색을 바꿔 가며 이 격차를 시험하고, 검색을 상태에 따라 증거를 모으는 정책으로 다시 정의하자고 주장한다.*
 - **[Terminal Agents: A Survey of AI Agents in Command-Line Environments](https://arxiv.org/abs/2608.20485)** (Bin et al., arXiv 2026) - *과제 영역이 아니라 터미널을 기준으로 연구를 정리한다. 명령을 실행하고 텍스트 피드백을 받으며 과제를 진행하는 에이전트를 아키텍처, 역량 획득, 평가에 걸쳐 일곱 차원의 역량 프로파일로 정리한다. 조건을 고정한 자체 진단에서는 벤치마크 계열마다 관찰되는 과정 신호가 다르고, 조건을 맞춘 시스템 비교도 벤치마크에 따라 결과가 달라진다. 그래서 어떤 결과든 단일 구성 요소의 효과로 돌릴 수 있는 범위가 제한된다.*
 - **[Autonomous Research Agents: A Survey of AI Scientists and the Verification Gap](https://arxiv.org/abs/2608.05179)** (Ding et al., arXiv 2026) - *AI 과학자 시스템 후보 125개를 선별해 그중 26개를 일곱 가지 감사 차원으로 코딩하고, 병목이 능력에서 검증 가능성으로 옮겨 갔음을 밝힌다. 실행 가능한 24개 시스템 중 83%가 코드를 공개하지만 seed나 실행 trace를 공개하는 것은 38%뿐이고 참신성 검증을 조금이라도 보고하는 것도 38%뿐이다. 폐쇄 루프 시스템 아홉 개 가운데 일곱 개는 기계적 재실행이며, 외부에서 검증된 루프 내 oracle은 코퍼스 전체 어디에도 없다.*
+- **[Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem](https://arxiv.org/abs/2609.30216)** (Ling et al., arXiv 2026) - *Jev를 쓰는 공개 GitHub 프로젝트 2,170개를 출시 일주일 뒤에 모아 분류하고, Jev가 행동을 고르는 데보다 입력을 판단하는 데 훨씬 많이 쓰인다는 것을 보인다. 속성 판단은 프로젝트의 77%에, 행동 선택은 31%에 나타나지만, 인터페이스 에이전트와 시뮬레이션·제어 프로젝트에서는 행동 선택이 라벨의 절반가량을 차지한다. routing과 인터페이스 에이전트 프로젝트는 전체의 19.6%인데 스타는 63%를 받는다. 어떤 저장소를 포함할지와 각 프로젝트의 라벨은 LLM 에이전트가 정했고 두 번째 에이전트가 검토했으며, 사람이 붙인 라벨과 비교한 결과는 보고하지 않는다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -824,10 +825,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 13명 보기</b></summary>
+<summary><b>기여자 14명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | 서베이와 포지션 페이퍼 절에 공개 GitHub 프로젝트가 Jev를 어떻게 쓰는지 분석한 Jev in the Wild 추가([#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)) |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | 계획과 추론 절에 작은 critic 모델로 더 큰 코딩 에이전트를 이끄는 Steer, Don't Solve([#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)), 도구 사용 절에 검증기 없이 학습하는 에이전트를 위한 rubric 기반 credit assignment인 DRACO([#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)) 추가. 제1저자가 직접 제출 |
 | <a href="https://github.com/sunyuhan19981208"><img src="https://github.com/sunyuhan19981208.png?size=48" width="48" height="48" alt="@sunyuhan19981208"></a> | **[@sunyuhan19981208](https://github.com/sunyuhan19981208)** | 응용 분야 절에 harness가 바뀌어도 계속 작동하도록 작은 모델을 학습시키는 TaoLive 보고서 추가. 저자 중 한 명이 제출([#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)) |
 | <a href="https://github.com/burgerseater"><img src="https://github.com/burgerseater.png?size=48" width="48" height="48" alt="@burgerseater"></a> | **[@burgerseater](https://github.com/burgerseater)** | 평가와 벤치마크 절에 코드를 쓰는 모델이 아니라 코딩 에이전트의 방향을 잡는 모델을 채점하는 벤치마크 LoopArena. 저자 중 한 명이 제안([#14](https://github.com/js-lee-AI/awesome-llm-agent-papers/issues/14)) |
@@ -853,6 +855,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-09-30**: 공개 GitHub 프로젝트 2,170개가 Jev를 어떻게 쓰는지 분석한 Jev in the Wild를 서베이와 포지션 페이퍼 절에 추가했습니다([@Gavin-M34](https://github.com/Gavin-M34), [#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)). 532편에서 533편으로 늘었습니다.
 - **2026-09-24**: 브라질 포르투갈어판과 스페인어판을 추가했습니다. GitBook 온라인 책도 두 언어로 읽을 수 있습니다.
 - **2026-09-24**: 서베이를 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/ko/)에 온라인 책으로 올렸습니다. 이 분야를 처음 접하는 분을 위해 기본 개념부터 설명합니다.
 - **2026-09-24**: 한국어, 간체 중국어, 일본어판을 추가했습니다. 맨 위에서 언어를 고를 수 있습니다. 설명과 본문은 번역했고, 논문 제목과 전문 용어는 영어 그대로 두었습니다. 번역하면서 문장 중간에서 끊긴 설명과 1저자가 빠진 항목을 찾아 고쳤습니다.

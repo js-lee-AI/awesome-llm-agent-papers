@@ -95,7 +95,7 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
 - [⭐ Kit inicial](#starter-kit)
 - [🔥 10 artigos para acompanhar (2026)](#to-watch)
 - **🧭 Fundamentos**
-  - [📚 Surveys e artigos de posicionamento (57)](#surveys)
+  - [📚 Surveys e artigos de posicionamento (58)](#surveys)
   - [🏗️ Arquiteturas e frameworks de agentes (51)](#architectures)
 - **🧱 Parte I: Componentes centrais**
   - [🧠 Planejamento e raciocínio (51)](#planning)
@@ -112,11 +112,11 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
 ## 🧭 Fundamentos
 
 <a id="surveys"></a>
-### 📚 Surveys e artigos de posicionamento (57)
+### 📚 Surveys e artigos de posicionamento (58)
 *No survey: §1-§3 (Introdução, Fundamentos, Taxonomia).*
 
 <details>
-<summary><b>Mostrar 57 artigos</b></summary>
+<summary><b>Mostrar 58 artigos</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *O survey geral de referência sobre agentes LLM e o mais citado da área.* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Junto com Wang et al. 2023, é um dos dois surveys gerais que fundaram a área.* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -176,6 +176,7 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
 - **[Information Retrieval Misses the Mark for LLM Agents](https://doi.org/10.2139/ssrn.6903579)** (Sun et al., SSRN 2026) - *Artigo de posicionamento que responde à leitura da prática atual resumida em "o RAG morreu, os agentes só precisam de grep": admite que a base mudou, mas argumenta que o descompasso é estrutural em cinco dimensões, já que o corpus, a entrada, o objetivo, o episódio e a unidade recuperável que a recuperação de informação (IR) pressupõe não servem para um agente que planeja, navega, chama ferramentas e decide se continua buscando. Para testar isso, o artigo mantém o agente fixo e troca a recuperação entre BM25, vetorial, grep, híbrida e closed-book no HotpotQA-distractor e no 2WikiMultihopQA, e defende que a recuperação seja repensada como uma política de aquisição de evidências condicionada ao estado.*
 - **[Terminal Agents: A Survey of AI Agents in Command-Line Environments](https://arxiv.org/abs/2608.20485)** (Bin et al., arXiv 2026) - *Usa o terminal, e não o domínio da tarefa, como critério de organização: estuda agentes cujo loop avança por meio da execução de comandos e de feedback em texto, mapeados por arquitetura, aquisição de competências e avaliação em um perfil de competências de sete dimensões. Os diagnósticos do próprio survey, em condições fixas, mostram que cada família de benchmarks expõe sinais de processo diferentes e que as comparações pareadas entre sistemas dependem do benchmark, o que limita o quanto um resultado pode ser atribuído a um único componente.*
 - **[Autonomous Research Agents: A Survey of AI Scientists and the Verification Gap](https://arxiv.org/abs/2608.05179)** (Ding et al., arXiv 2026) - *Codifica 26 dos 125 sistemas de cientista de IA triados em sete dimensões de auditoria e constata que o gargalo deixou de ser a capacidade e passou a ser a verificabilidade: 83% dos 24 sistemas executáveis publicam o código, mas só 38% publicam seeds ou traces de execução e só 38% relatam alguma verificação de novidade. Dos nove sistemas de loop fechado, sete são reexecuções mecânicas, e nenhum sistema do corpus tem um oracle dentro do loop validado externamente.*
+- **[Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem](https://arxiv.org/abs/2609.30216)** (Ling et al., arXiv 2026) - *Classifica 2.170 projetos públicos no GitHub que usam o Jev, coletados uma semana depois do lançamento, e constata que ele é usado muito mais para julgar entradas do que para escolher ações: o julgamento de atributos aparece em 77% dos projetos e a seleção de ações em 31%, embora a seleção de ações seja cerca de metade dos rótulos nos projetos de agentes de interface e de simulação e controle, e os projetos de routing e de agentes de interface são 19,6% do total, mas recebem 63% das estrelas; um agente LLM decidiu quais repositórios entram e rotulou cada projeto, com um segundo agente revisando, e o artigo não traz comparação com rótulos humanos.*
 </details>
 
 <sub><a href="#contents">↑ Voltar ao sumário</a></sub>
@@ -824,10 +825,11 @@ A maioria dos idiomas para os quais esta lista foi traduzida não é minha líng
 Esta lista é mantida pela comunidade. Um agradecimento a todos que sugeriram, conferiram ou anotaram um artigo:
 
 <details>
-<summary><b>Mostrar 13 colaboradores</b></summary>
+<summary><b>Mostrar 14 colaboradores</b></summary>
 
 | | Colaborador | Contribuição |
 |---|---|---|
+| <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | Jev in the Wild, um estudo de como projetos públicos no GitHub usam o Jev, em Surveys e artigos de posicionamento ([#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)) |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | Steer, Don't Solve, um pequeno modelo crítico que orienta um agente de programação maior, em Planejamento e raciocínio ([#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)); DRACO, credit assignment com rubrics para agentes treinados sem verificador, em Uso de ferramentas ([#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)). Enviados pelo primeiro autor dos dois artigos |
 | <a href="https://github.com/sunyuhan19981208"><img src="https://github.com/sunyuhan19981208.png?size=48" width="48" height="48" alt="@sunyuhan19981208"></a> | **[@sunyuhan19981208](https://github.com/sunyuhan19981208)** | O relatório do TaoLive sobre como treinar um modelo compacto para que continue funcionando quando o harness muda, enviado por um dos autores, em Aplicações ([#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)) |
 | <a href="https://github.com/burgerseater"><img src="https://github.com/burgerseater.png?size=48" width="48" height="48" alt="@burgerseater"></a> | **[@burgerseater](https://github.com/burgerseater)** | LoopArena, um benchmark que avalia o modelo que orienta um agente de programação, e não o que escreve o código, sugerido por um dos autores, em Avaliação e benchmarks ([#14](https://github.com/js-lee-AI/awesome-llm-agent-papers/issues/14)) |
@@ -853,6 +855,7 @@ Distribuído sob a [licença MIT](LICENSE).
 
 ## 🗓️ Atualizações
 
+- **2026-09-30**: Jev in the Wild, um estudo de como 2.170 projetos públicos no GitHub usam o Jev, entrou em Surveys e artigos de posicionamento ([@Gavin-M34](https://github.com/Gavin-M34), [#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)). De 532 para 533.
 - **2026-09-24**: A lista e o livro online no GitBook agora também estão disponíveis em português do Brasil e em espanhol.
 - **2026-09-24**: O survey foi publicado no [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/pt/) como livro online, escrito para quem está começando na área.
 - **2026-09-24**: A lista agora está disponível em coreano, chinês simplificado e japonês; escolha o idioma no topo da página. As anotações e os textos foram traduzidos, e os títulos dos artigos e os termos técnicos ficaram em inglês. Durante a tradução, encontrei anotações que paravam no meio da frase e entradas sem o primeiro autor, e corrigi esses casos.
