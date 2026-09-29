@@ -95,7 +95,7 @@ Fresh 2026 work that is already drawing attention.
 - [⭐ Starter Kit](#starter-kit)
 - [🔥 10 to Watch (2026)](#to-watch)
 - **🧭 Background**
-  - [📚 Surveys & Position Papers (57)](#surveys)
+  - [📚 Surveys & Position Papers (58)](#surveys)
   - [🏗️ Agent Architectures & Frameworks (51)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (51)](#planning)
@@ -112,11 +112,11 @@ Fresh 2026 work that is already drawing attention.
 ## 🧭 Background
 
 <a id="surveys"></a>
-### 📚 Surveys & Position Papers (57)
+### 📚 Surveys & Position Papers (58)
 *Corresponds to §1-§3 (Introduction, Background, Taxonomy).*
 
 <details>
-<summary><b>Show 57 papers</b></summary>
+<summary><b>Show 58 papers</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *The canonical, most-cited general-purpose LLM-agent survey.* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Co-foundational with Wang et al. 2023 as one of the two seminal general surveys.* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -176,6 +176,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Information Retrieval Misses the Mark for LLM Agents](https://doi.org/10.2139/ssrn.6903579)** (Sun et al., SSRN 2026) - *Position paper answering the "RAG is dead, agents just need grep" reading of deployed practice: it grants that the substrate has shifted but argues the mismatch is structural across five dimensions, since IR's assumed corpus, input, objective, episode and retrievable all sit wrong for an agent that plans, browses, calls tools and decides whether to keep searching, and it tests the gap by holding the agent fixed while swapping BM25, vector, grep, hybrid and closed-book retrieval on HotpotQA-distractor and 2WikiMultihopQA, arguing for retrieval recast as a state-conditioned evidence-acquisition policy.*
 - **[Terminal Agents: A Survey of AI Agents in Command-Line Environments](https://arxiv.org/abs/2608.20485)** (Bin et al., arXiv 2026) - *Treats the terminal, rather than the task domain, as the organizing lens: agents whose progress-bearing loop runs through command execution and textual feedback, mapped across architecture, competence acquisition and evaluation on a seven-dimensional competence profile, with the survey's own fixed-condition diagnostics showing that benchmark families expose different process signals and that matched system comparisons come out benchmark-dependent, which limits how far any result can be attributed to a single component.*
 - **[Autonomous Research Agents: A Survey of AI Scientists and the Verification Gap](https://arxiv.org/abs/2608.05179)** (Ding et al., arXiv 2026) - *Codes 26 of 125 screened AI-scientist systems along seven audit dimensions and finds the bottleneck has moved from capability to checkability: 83 per cent of the 24 runnable systems release code, but only 38 per cent release seeds or execution traces and only 38 per cent report any novelty verification, and among nine closed-loop systems seven are mechanical reruns with no externally validated in-loop oracle anywhere in the corpus.*
+- **[Jev in the Wild: A Data-Driven Analysis of the Jev Model's Functionality, Applications and Ecosystem](https://arxiv.org/abs/2609.30216)** (Ling et al., arXiv 2026) - *Maps 2,170 public Jev projects, including decision components in agent workflows, to early ecosystem growth, application domains, and choice, judgment, and scoring uses.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
