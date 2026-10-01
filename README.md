@@ -106,7 +106,7 @@ Fresh 2026 work that is already drawing attention.
   - [🌐 Interactive Environments (57)](#environments)
   - [🚀 Applications (54)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (50)](#evaluation)
+  - [📊 Evaluation & Benchmarks (51)](#evaluation)
   - [🛡️ Safety & Alignment (59)](#safety)
 
 ## 🧭 Background
@@ -638,11 +638,11 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (50)
+### 📊 Evaluation & Benchmarks (51)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
-<summary><b>Show 50 papers</b></summary>
+<summary><b>Show 51 papers</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Reference benchmark for generalist, tool-using agent assistants; underlies popular public leaderboards tracking frontier agent progress.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *De facto standard benchmark for coding/software-engineering agents; spawned the SWE-bench Verified/Lite/Live/Multimodal family.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -695,6 +695,7 @@ Fresh 2026 work that is already drawing attention.
 - **[τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction](https://arxiv.org/abs/2609.04611)** (Shi et al., arXiv 2026) - *Makes building the agent the task: a developer agent inherits a codebase, a production API, a client holding the requirements and a cap on serving spend, then ships a customer-service agent that is scored by deploying it against held-out simulated users, and across 53 tasks the strongest configuration passes 23.9 per cent of evaluation simulations against an expert-authored ceiling of 82.2 per cent, failing in recognizably human ways by querying the records shallowly, telling the client almost nothing and shipping the first architecture that runs.*
 - **[Autonomous Evaluation and Refinement of Digital Agents](https://arxiv.org/abs/2404.06474)** (Pan et al., COLM 2024) - *Builds agent evaluators at several cost points that agree with oracle metrics 74.4 to 92.9% of the time, then uses them as rewards to improve the state of the art on WebArena by 29% without extra supervision.* [[code](https://github.com/Berkeley-NLP/Agent-Eval-Refine)]
 - **[JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550)** (Li et al., arXiv 2026) - *A judge that returns a decision rather than text comes within three points of the strongest LLM judge on ordinary preference and factuality at 0.36% of its fee, falls further behind when a derivation must be checked or a wrong answer is well written, and an accept-or-escalate cascade keeps 99% of the stronger judge's accuracy.*
+- **[TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces](https://arxiv.org/abs/2609.33295)** (Min et al., arXiv 2026) - *Builds targeted tests from deployment traces to evaluate the next agent response at a recorded decision point, covering actions, failure handling, and evidence-supported claims without environment replay.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
