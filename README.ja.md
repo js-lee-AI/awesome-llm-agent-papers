@@ -106,7 +106,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [🌐 インタラクティブ環境 (57)](#environments)
   - [🚀 応用分野 (54)](#applications)
 - **⚖️ 第3部：横断的な課題**
-  - [📊 評価とベンチマーク (50)](#evaluation)
+  - [📊 評価とベンチマーク (51)](#evaluation)
   - [🛡️ 安全性とアライメント (59)](#safety)
 
 ## 🧭 背景
@@ -638,11 +638,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## ⚖️ 第3部：横断的な課題
 
 <a id="evaluation"></a>
-### 📊 評価とベンチマーク (50)
+### 📊 評価とベンチマーク (51)
 *サーベイの§9（評価とベンチマーク）に対応します。*
 
 <details>
-<summary><b>50本の論文を表示</b></summary>
+<summary><b>51本の論文を表示</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *ツールを使う汎用エージェントアシスタントの基準となるベンチマーク。フロンティアエージェントの進歩を追う、人気の公開リーダーボードの土台になっている。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *コーディング／ソフトウェア工学エージェントの事実上の標準ベンチマーク。SWE-bench Verified/Lite/Live/Multimodalといった派生版を生んだ。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -695,6 +695,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction](https://arxiv.org/abs/2609.04611)** (Shi et al., arXiv 2026) - *エージェントを作ること自体をタスクにする。開発者エージェントは、コードベース、本番のAPI、要件を握るクライアント、運用コストの上限を引き継ぎ、カスタマーサービスエージェントを納品する。そのエージェントはheld-outの模擬ユーザーを相手にデプロイして採点される。53 タスクで最も強い構成でも評価シミュレーションの 23.9% しか通らず、専門家が書いた上限の 82.2% には遠い。失敗の仕方は人間にもよく見られるもので、記録を浅くしか調べず、クライアントにほとんど何も伝えず、最初に動いたアーキテクチャをそのまま納品する。*
 - **[Autonomous Evaluation and Refinement of Digital Agents](https://arxiv.org/abs/2404.06474)** (Pan et al., COLM 2024) - *コスト水準の異なる複数のエージェント評価器を作り、oracle指標との一致率は 74.4% から 92.9% だった。さらにそれらを報酬として使い、追加の教師データなしでWebArenaの最高性能を 29% 改善した。* [[code](https://github.com/Berkeley-NLP/Agent-Eval-Refine)]
 - **[JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550)** (Li et al., arXiv 2026) - *テキストではなく決定を返す評価者は、通常の選好と事実性の判定で最強のLLM評価者に三ポイント差まで迫り、費用はその 0.36% で済む。一方、導出を確かめる必要がある場合や、誤った答えがうまく書かれている場合には差が広がる。Acceptかescalateかを選ぶcascadeにすると、強い評価者の精度の 99% を保てる。*
+- **[TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces](https://arxiv.org/abs/2609.33295)** (Min et al., arXiv 2026) - *Claude CodeとOpenClawの実運用セッション 252,557 件から、元のエージェントが望ましくない行動をとった地点でtraceを切り、モデルの次のターンを行動ごとのrubricで採点する形で 107 個のベンチマークを作る。環境は再実行しない。九つのフロンティアLLMの平均合格率は 26.7% で、rubricが形式の正しいツール呼び出しだけを求める場合は 67.9% だが、先に進む前に必要な確認を求める場合は 8.1% にとどまる。TodoWriteによる計画の呼び出しから始まった応答は、同じ事例で他の応答が 30.8% 合格するのに対して 4.6% しか合格せず、著者はこれを相関として報告している。Traceは公開されていないため、公開データからベンチマークを作り直すことはできない。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -825,10 +826,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>14人のコントリビューターを表示</b></summary>
+<summary><b>15人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | 「評価とベンチマーク」に、実運用のエージェントのtraceからベンチマークを作るTraceDance（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。第一著者本人による投稿 |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | 「サーベイとポジションペーパー」に、公開GitHubプロジェクトでのJevの使われ方を分析したJev in the Wild（[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)） |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | 「計画と推論」に、小さなcriticモデルで大きなコーディングエージェントを導くSteer, Don't Solve（[#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)）、「ツール利用」に、検証器なしで学習するエージェントのためのrubricベースのcredit assignmentであるDRACO（[#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)）。いずれも第一著者本人による投稿 |
 | <a href="https://github.com/sunyuhan19981208"><img src="https://github.com/sunyuhan19981208.png?size=48" width="48" height="48" alt="@sunyuhan19981208"></a> | **[@sunyuhan19981208](https://github.com/sunyuhan19981208)** | 「応用分野」に、harnessが変わっても動き続けるよう小さなモデルを学習させるTaoLiveのレポート。著者の一人による投稿（[#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)） |
@@ -855,6 +857,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-10-03**: 第一著者の[@ZhishanQ](https://github.com/ZhishanQ)が送ってくれたTraceDanceを「評価とベンチマーク」に追加しました（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。実際のエージェントのセッションからテストを作る論文で、先に進む前に確認が必要な事例では、九つのフロンティアLLMの合格率は 8.1% でした。533 本から 534 本になりました。
 - **2026-09-30**: 公開GitHubプロジェクト 2,170 件でのJevの使われ方を分析したJev in the Wildを「サーベイとポジションペーパー」に追加しました（[@Gavin-M34](https://github.com/Gavin-M34)、[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)）。532 本から 533 本になりました。
 - **2026-09-24**: ブラジル・ポルトガル語版とスペイン語版を追加しました。GitBook のオンラインブックもこの 2 つの言語で読めます。
 - **2026-09-24**: サーベイを[GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/ja/)にオンラインブックとして公開しました。この分野に初めて触れる人向けに、基本的な概念から説明しています。

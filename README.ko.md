@@ -106,7 +106,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
   - [🌐 상호작용 환경 (57)](#environments)
   - [🚀 응용 분야 (54)](#applications)
 - **⚖️ 제3부: 전반에 걸친 과제**
-  - [📊 평가와 벤치마크 (50)](#evaluation)
+  - [📊 평가와 벤치마크 (51)](#evaluation)
   - [🛡️ 안전과 정렬 (59)](#safety)
 
 ## 🧭 배경
@@ -638,11 +638,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## ⚖️ 제3부: 전반에 걸친 과제
 
 <a id="evaluation"></a>
-### 📊 평가와 벤치마크 (50)
+### 📊 평가와 벤치마크 (51)
 *서베이 §9(평가와 벤치마크)에 해당합니다.*
 
 <details>
-<summary><b>논문 50편 보기</b></summary>
+<summary><b>논문 51편 보기</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *도구를 쓰는 범용 에이전트 어시스턴트의 기준 벤치마크다. 널리 쓰이는 공개 순위표들이 이를 바탕으로 frontier 에이전트의 발전을 추적한다.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *코딩·소프트웨어 공학 에이전트의 사실상 표준 벤치마크이며, 여기서 SWE-bench Verified/Lite/Live/Multimodal 계열이 파생되었다.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -695,6 +695,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction](https://arxiv.org/abs/2609.04611)** (Shi et al., arXiv 2026) - *에이전트를 만드는 일 자체를 과제로 삼는다. 개발자 에이전트는 코드베이스, 운영 중인 API, 요구 사항을 쥔 고객, 서빙 비용 상한을 넘겨받아 고객 서비스 에이전트를 출시하고, 이 에이전트는 held-out 모의 사용자에게 배포되어 채점된다. 과제 53개에서 가장 강한 구성이 평가 시뮬레이션의 23.9%를 통과한 반면 전문가가 작성한 상한은 82.2%였다. 실패도 기록을 얕게 조회하고, 고객에게 거의 아무것도 알리지 않고, 처음 돌아가는 아키텍처를 그대로 내보내는, 누가 봐도 사람 같은 방식이었다.*
 - **[Autonomous Evaluation and Refinement of Digital Agents](https://arxiv.org/abs/2404.06474)** (Pan et al., COLM 2024) - *비용 수준이 서로 다른 에이전트 평가자를 여러 개 만들었고, oracle 지표와의 일치율은 74.4에서 92.9%였다. 이를 보상으로 써서 추가 감독 없이 WebArena의 최고 성능을 29% 끌어올렸다.* [[code](https://github.com/Berkeley-NLP/Agent-Eval-Refine)]
 - **[JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550)** (Li et al., arXiv 2026) - *텍스트 대신 결정을 돌려주는 심판은 일반적인 선호와 사실성 판정에서 가장 강한 LLM 심판에 세 포인트 이내로 따라붙으면서 비용은 그 0.36%에 그친다. 유도 과정을 검산해야 하거나 틀린 답이 그럴듯하게 쓰였을 때는 더 뒤처지며, 받아들이거나 escalation하는 cascade는 더 강한 심판 정확도의 99%를 유지한다.*
+- **[TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces](https://arxiv.org/abs/2609.33295)** (Min et al., arXiv 2026) - *Claude Code와 OpenClaw의 실제 배포 세션 252,557개에서, 원래 에이전트가 바람직하지 않은 행동을 보인 지점에서 trace를 자르고 모델의 다음 턴을 행동별 rubric으로 채점하는 방식으로 벤치마크 107개를 만든다. 환경은 다시 실행하지 않는다. frontier LLM 아홉 개의 평균 통과율은 26.7%이고, rubric이 올바른 형식의 도구 호출만 요구하면 67.9%지만 다음 단계로 넘어가기 전에 필요한 확인을 요구하면 8.1%에 그친다. TodoWrite 계획 호출로 시작한 응답은 같은 사례에서 다른 응답이 30.8%를 통과할 때 4.6%만 통과했는데, 저자들은 이를 상관관계로만 보고한다. trace는 공개하지 않아 공개 데이터로 벤치마크를 다시 만들 수는 없다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -825,10 +826,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 14명 보기</b></summary>
+<summary><b>기여자 15명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | 평가와 벤치마크 절에 실제 에이전트 배포 trace로 벤치마크를 만드는 TraceDance 추가([#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)). 제1저자가 직접 제출 |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | 서베이와 포지션 페이퍼 절에 공개 GitHub 프로젝트가 Jev를 어떻게 쓰는지 분석한 Jev in the Wild 추가([#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)) |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | 계획과 추론 절에 작은 critic 모델로 더 큰 코딩 에이전트를 이끄는 Steer, Don't Solve([#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)), 도구 사용 절에 검증기 없이 학습하는 에이전트를 위한 rubric 기반 credit assignment인 DRACO([#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)) 추가. 제1저자가 직접 제출 |
 | <a href="https://github.com/sunyuhan19981208"><img src="https://github.com/sunyuhan19981208.png?size=48" width="48" height="48" alt="@sunyuhan19981208"></a> | **[@sunyuhan19981208](https://github.com/sunyuhan19981208)** | 응용 분야 절에 harness가 바뀌어도 계속 작동하도록 작은 모델을 학습시키는 TaoLive 보고서 추가. 저자 중 한 명이 제출([#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)) |
@@ -855,6 +857,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-10-03**: 제1저자 [@ZhishanQ](https://github.com/ZhishanQ)가 보내 준 TraceDance를 평가와 벤치마크 절에 추가했습니다([#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)). 실제 에이전트 세션으로 테스트를 만드는 논문인데, 다음 단계로 넘어가기 전에 확인이 필요한 사례에서 frontier LLM 아홉 개의 통과율은 8.1%였습니다. 533편에서 534편으로 늘었습니다.
 - **2026-09-30**: 공개 GitHub 프로젝트 2,170개가 Jev를 어떻게 쓰는지 분석한 Jev in the Wild를 서베이와 포지션 페이퍼 절에 추가했습니다([@Gavin-M34](https://github.com/Gavin-M34), [#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)). 532편에서 533편으로 늘었습니다.
 - **2026-09-24**: 브라질 포르투갈어판과 스페인어판을 추가했습니다. GitBook 온라인 책도 두 언어로 읽을 수 있습니다.
 - **2026-09-24**: 서베이를 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/ko/)에 온라인 책으로 올렸습니다. 이 분야를 처음 접하는 분을 위해 기본 개념부터 설명합니다.

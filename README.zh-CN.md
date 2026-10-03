@@ -106,7 +106,7 @@
   - [🌐 交互环境 (57)](#environments)
   - [🚀 应用领域 (54)](#applications)
 - **⚖️ 第三部分：贯穿全局的问题**
-  - [📊 评估与基准 (50)](#evaluation)
+  - [📊 评估与基准 (51)](#evaluation)
   - [🛡️ 安全与对齐 (59)](#safety)
 
 ## 🧭 背景
@@ -638,11 +638,11 @@
 ## ⚖️ 第三部分：贯穿全局的问题
 
 <a id="evaluation"></a>
-### 📊 评估与基准 (50)
+### 📊 评估与基准 (51)
 *对应综述 §9（评估与基准）。*
 
 <details>
-<summary><b>展开 50 篇论文</b></summary>
+<summary><b>展开 51 篇论文</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *参考基准，面向会用工具的通用智能体助手；一些热门的公开排行榜以它为基础，追踪前沿智能体的进展。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *编码与软件工程智能体事实上的标准基准；衍生出了 SWE-bench Verified/Lite/Live/Multimodal 这一系列。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -695,6 +695,7 @@
 - **[τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction](https://arxiv.org/abs/2609.04611)** (Shi et al., arXiv 2026) - *把“搭建智能体”本身当作任务：开发者智能体接手一个代码库、一个生产 API、一位掌握需求的客户和一道服务开销上限，然后交付一个客服智能体，部署出去面对 held-out 的模拟用户来打分。在 53 个任务上，最强的配置通过了 23.9% 的评估模拟，而专家编写的上限是 82.2%；失败的方式很像人：查记录只查个皮毛，几乎什么都不跟客户说，第一个能跑起来的架构就直接交付。*
 - **[Autonomous Evaluation and Refinement of Digital Agents](https://arxiv.org/abs/2404.06474)** (Pan et al., COLM 2024) - *构建了几个成本不同的智能体评估者，与 oracle 指标的一致率在 74.4% 到 92.9% 之间；再把它们当作奖励，在不增加额外监督的情况下，把 WebArena 上的最好成绩提高了 29%。* [[code](https://github.com/Berkeley-NLP/Agent-Eval-Refine)]
 - **[JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550)** (Li et al., arXiv 2026) - *只返回决定、不返回文本的评估者，在普通的偏好判断和事实性上与最强的 LLM 评估者相差不到三个百分点，费用只有后者的 0.36%；遇到需要核查推导、或错误答案写得很像样的情况，就落后得更多。“接受或转交”的 cascade 保住了更强评估者 99% 的准确率。*
+- **[TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces](https://arxiv.org/abs/2609.33295)** (Min et al., arXiv 2026) - *从 Claude Code 和 OpenClaw 的 252,557 个部署会话中构建 107 个基准：在原智能体出现不当行为的位置截断 trace，用针对该行为的 rubric 给模型的下一轮回复打分，不重放环境。九个前沿 LLM 的平均通过率为 26.7%；rubric 只要求格式正确的工具调用时为 67.9%，要求继续之前先做必要检查时只有 8.1%；以 TodoWrite 规划调用开头的回复通过率为 4.6%，同一批实例上其他回复为 30.8%，作者将其报告为相关性。trace 没有公开，因此无法用公开数据重建这些基准。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -825,10 +826,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 14 位贡献者</b></summary>
+<summary><b>展开 15 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | TraceDance：用真实智能体部署 trace 构建基准，收入评估与基准（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。由第一作者本人提交 |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | Jev in the Wild：分析公开 GitHub 项目如何使用 Jev，收入综述与立场论文（[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)） |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | Steer, Don't Solve：用小型 critic 模型引导更大的编码智能体，收入规划与推理（[#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)）；DRACO：为不借助 verifier 训练的智能体提供基于 rubric 的 credit assignment，收入工具使用（[#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)）。两篇均由第一作者本人提交 |
 | <a href="https://github.com/sunyuhan19981208"><img src="https://github.com/sunyuhan19981208.png?size=48" width="48" height="48" alt="@sunyuhan19981208"></a> | **[@sunyuhan19981208](https://github.com/sunyuhan19981208)** | TaoLive 技术报告：训练小模型，让它在 harness 不断变化时仍能正常工作；由作者之一提交，收入应用领域（[#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)） |
@@ -855,6 +857,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-10-03**: 新增 TraceDance，由第一作者 [@ZhishanQ](https://github.com/ZhishanQ) 提交，收入评估与基准（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。它用真实的智能体会话构建测试；在需要先做检查再继续的实例上，九个前沿 LLM 的通过率只有 8.1%。从 533 篇增至 534 篇。
 - **2026-09-30**: 新增 Jev in the Wild，分析 2,170 个公开 GitHub 项目如何使用 Jev，收入综述与立场论文（[@Gavin-M34](https://github.com/Gavin-M34)，[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)）。从 532 篇增至 533 篇。
 - **2026-09-24**: 新增巴西葡萄牙语版和西班牙语版，GitBook 上的在线电子书也有这两种语言的版本。
 - **2026-09-24**: 综述的在线电子书已发布在 [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/zh/) 上，面向刚接触这一领域的读者，从基本概念讲起。

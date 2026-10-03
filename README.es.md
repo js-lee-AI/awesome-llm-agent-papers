@@ -106,7 +106,7 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
   - [🌐 Entornos interactivos (57)](#environments)
   - [🚀 Aplicaciones (54)](#applications)
 - **⚖️ Parte III: Cuestiones transversales**
-  - [📊 Evaluación y benchmarks (50)](#evaluation)
+  - [📊 Evaluación y benchmarks (51)](#evaluation)
   - [🛡️ Seguridad y alineación (59)](#safety)
 
 ## 🧭 Fundamentos
@@ -638,11 +638,11 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 ## ⚖️ Parte III: Cuestiones transversales
 
 <a id="evaluation"></a>
-### 📊 Evaluación y benchmarks (50)
+### 📊 Evaluación y benchmarks (51)
 *En la revisión: §9 (Evaluación y benchmarks).*
 
 <details>
-<summary><b>Mostrar 50 artículos</b></summary>
+<summary><b>Mostrar 51 artículos</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Benchmark de referencia para asistentes generalistas basados en agentes que usan herramientas; es la base de tablas de clasificación públicas muy seguidas que registran el progreso de los agentes de frontera.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *Benchmark estándar de facto para agentes de programación e ingeniería de software; dio origen a la familia SWE-bench Verified/Lite/Live/Multimodal.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -695,6 +695,7 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 - **[τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction](https://arxiv.org/abs/2609.04611)** (Shi et al., arXiv 2026) - *Convierte la construcción del agente en la tarea: un agente desarrollador hereda una base de código, una API en producción, un cliente que tiene los requisitos y un límite de gasto de servicio, y entrega un agente de atención al cliente que se puntúa desplegándolo frente a usuarios simulados held-out; en 53 tareas, la mejor configuración aprueba el 23,9% de las simulaciones de evaluación, frente a un techo del 82,2% que marcan soluciones escritas por expertos, y falla de formas muy humanas: consulta los registros de forma superficial, casi no le cuenta nada al cliente y entrega la primera arquitectura que funciona.*
 - **[Autonomous Evaluation and Refinement of Digital Agents](https://arxiv.org/abs/2404.06474)** (Pan et al., COLM 2024) - *Construye evaluadores de agentes con distintos niveles de gasto que coinciden con las métricas oracle entre el 74,4 y el 92,9% de las veces, y luego los usa como recompensa para mejorar el estado del arte en WebArena en un 29% sin supervisión adicional.* [[code](https://github.com/Berkeley-NLP/Agent-Eval-Refine)]
 - **[JEV-as-a-Judge: Accept When Confident, Escalate When Unsure](https://arxiv.org/abs/2609.26550)** (Li et al., arXiv 2026) - *Un juez que devuelve una decisión en lugar de texto queda a menos de tres puntos del juez LLM más fuerte en preferencias y factualidad corrientes por el 0,36% de lo que este cobra, se queda más atrás cuando hay que comprobar una derivación o cuando una respuesta incorrecta está bien escrita, y una cascade que acepta o escala conserva el 99% de la exactitud del juez más fuerte.*
+- **[TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces](https://arxiv.org/abs/2609.33295)** (Min et al., arXiv 2026) - *Construye 107 benchmarks a partir de 252.557 sesiones reales de Claude Code y OpenClaw: corta cada traza en el punto en que el agente original mostró un comportamiento no deseado y califica el siguiente turno de un modelo con una rubric propia de ese comportamiento, sin volver a ejecutar el entorno. Nueve LLM de frontera aprueban en promedio el 26,7%, el 67,9% cuando la rubric solo pide una llamada a herramienta bien formada, pero el 8,1% cuando pide una comprobación necesaria antes de continuar, y las respuestas que empiezan con una llamada de planificación a TodoWrite aprueban el 4,6%, frente al 30,8% del resto de respuestas en las mismas instancias, algo que los autores presentan como una asociación; las trazas no se publican, así que los benchmarks no pueden reconstruirse con datos públicos.*
 </details>
 
 <sub><a href="#contents">↑ Volver al índice</a></sub>
@@ -825,10 +826,11 @@ La mayoría de los idiomas a los que está traducida esta lista no son mi lengua
 Esta lista la mantiene la comunidad. Gracias a todas las personas que han sugerido, verificado o anotado un artículo:
 
 <details>
-<summary><b>Mostrar 14 colaboradores</b></summary>
+<summary><b>Mostrar 15 colaboradores</b></summary>
 
 | | Colaborador | Contribución |
 |---|---|---|
+| <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | TraceDance, benchmarks construidos a partir de trazas reales de agentes en producción, enviado por su primer autor, en Evaluación y benchmarks ([#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)) |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | Jev in the Wild, un estudio de cómo usan Jev los proyectos públicos de GitHub, en Revisiones y artículos de posición ([#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)) |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | Steer, Don't Solve, un modelo crítico pequeño que guía a un agente de programación más grande, en Planificación y razonamiento ([#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)); DRACO, asignación de crédito basada en rubrics para agentes entrenados sin verificador, en Uso de herramientas ([#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)). Enviados por su primer autor |
 | <a href="https://github.com/sunyuhan19981208"><img src="https://github.com/sunyuhan19981208.png?size=48" width="48" height="48" alt="@sunyuhan19981208"></a> | **[@sunyuhan19981208](https://github.com/sunyuhan19981208)** | El informe de TaoLive sobre cómo entrenar un modelo compacto para que siga funcionando cuando cambia su harness, enviado por uno de sus autores, en Aplicaciones ([#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)) |
@@ -855,6 +857,7 @@ Publicado bajo la [licencia MIT](LICENSE).
 
 ## 🗓️ Actualizaciones
 
+- **2026-10-03**: TraceDance se añadió a Evaluación y benchmarks, enviado por su primer autor ([@ZhishanQ](https://github.com/ZhishanQ), [#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)). Construye pruebas a partir de sesiones reales de agentes, y en ellas nueve LLM de frontera aprueban el 8,1% de los casos que piden una comprobación antes de continuar. De 533 a 534.
 - **2026-09-30**: Jev in the Wild, un estudio de cómo usan Jev 2170 proyectos públicos de GitHub, se añadió a Revisiones y artículos de posición ([@Gavin-M34](https://github.com/Gavin-M34), [#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)). De 532 a 533.
 - **2026-09-24**: La lista y el libro en línea de GitBook ya están disponibles también en portugués de Brasil y en español.
 - **2026-09-24**: Publiqué la revisión en [GitBook](https://llm-agents-a-survey.gitbook.io/llm-agents-a-survey-docs/es/) como libro en línea, pensado para lectores que empiezan en el área.
