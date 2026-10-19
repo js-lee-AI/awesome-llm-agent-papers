@@ -821,6 +821,7 @@ Other useful reading lists in the same space:
 - [luo-junyu/Awesome-Agent-Papers](https://github.com/luo-junyu/Awesome-Agent-Papers): taxonomy-driven survey companion on agent construction, collaboration, and evolution. ![stars](https://img.shields.io/github/stars/luo-junyu/Awesome-Agent-Papers?style=social)
 - [e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents): a large, media-rich directory of open- and closed-source **agent products &amp; frameworks**: tools for building agents rather than papers. ![stars](https://img.shields.io/github/stars/e2b-dev/awesome-ai-agents?style=social)
 - [kyrolabs/awesome-agents](https://github.com/kyrolabs/awesome-agents): curated agent frameworks and libraries, each with a live star badge. ![stars](https://img.shields.io/github/stars/kyrolabs/awesome-agents?style=social)
+- [ianwieds/awesome-ai-agents](https://github.com/ianwieds/awesome-ai-agents): curated list of agent frameworks, coding agents, browser agents, tools, platforms and research, grouped by category. ![stars](https://img.shields.io/github/stars/ianwieds/awesome-ai-agents?style=social)
 
 > Maintain a related list? [Open a PR](CONTRIBUTING.md) to add it here; we're happy to cross-link.
 
