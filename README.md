@@ -104,7 +104,7 @@ Fresh 2026 work that is already drawing attention.
   - [🤝 Multi-Agent Systems (57)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (60)](#environments)
-  - [🚀 Applications (58)](#applications)
+  - [🚀 Applications (60)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
   - [📊 Evaluation & Benchmarks (58)](#evaluation)
   - [🛡️ Safety & Alignment (62)](#safety)
@@ -598,11 +598,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="applications"></a>
-### 🚀 Applications (58)
+### 🚀 Applications (60)
 *Corresponds to §10 (Applications).*
 
 <details>
-<summary><b>Show 58 papers</b></summary>
+<summary><b>Show 60 papers</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *One of the first cost-efficient autonomous program-repair agents grounded in structured code search.* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *Influential counter-narrative showing simpler non-agentic pipelines can rival complex agents.* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -663,6 +663,8 @@ Fresh 2026 work that is already drawing attention.
 - **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *Lets Claude Sonnet 4.6 run lead optimization through 24 MCP tools, writing and revising the project's objectives and either proposing molecules itself or handing generation to REINVENT 4, on nine past campaigns from GSK, Sanofi and AstraZeneca replayed with fixed temporal cutoffs: three of four GSK series and the AstraZeneca campaign met their objective, only two of four Sanofi projects did, four chemists could not tell the proposals from held-out compounds, and success followed the accuracy of the scoring models rather than the generation route; every endpoint is a prediction, not a measurement.*
 - **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *Grades legal research agents without partial credit on 413 U.S. questions written by experts, so an answer counts only if it meets every rubric criterion and the authorities it cites check out; across thirteen frontier models with web search, case-law search and retrieval tools, the best, Claude Opus 4.8, is fully correct on 42.9% while weighted pass rates run from 68% to 86%, Kimi K2.6 averages 112 tool calls for 15.5%, and removing the tools costs 22.5 points on average, with one run per question scored by an LLM judge.* [[code](https://github.com/vals-ai/legal-research-bench)]
 - **[From Benchmarks to Business Impact: Deploying IBM Generalist Agent in Enterprise Production](https://arxiv.org/abs/2510.23856)** (Shlomov et al., IAAI 2026) - *Reports IBM's pilot of its open-source CUGA agent, a planner-executor system at 61.7% on WebArena and 48.2% scenario completion on AppWorld's challenge split, in a talent-acquisition outsourcing business, where it answers recruiters' questions through 13 read-only analytics APIs with web browsing turned off: it reaches 87% accuracy on the 26 tasks of the new BPO-TA set, raises the valid first-try rate from 62% for a plain ReAct agent to 79%, and drops 11 points without reflective retries; the agent is not yet in full production, the reported savings (answers in 2 to 5 minutes instead of about 20, up to 90% less development time) are estimates from controlled tests and limited analyst feedback with no significance testing, and the paper lists BPO-TA's 26 tasks, but the APIs and data behind them are not in the code release.* [[code](https://github.com/cuga-project/cuga-agent)]
+- **[AgonAlpha: Autonomous Alpha Discovery via Prompt Economy and Scalable Agentic Search](https://arxiv.org/abs/2608.11250)** (Ye et al., arXiv 2026) - *Mines formulaic alphas with verified artifact search, a fresh-context adversarial reviewer that re-runs each candidate and can veto it, and a budget allocator that tracks pending parallel jobs. On WorldQuant BRAIN, 60 submissions from 5 users and 6 model backends produced 17 alphas rated SPECTACULAR, with best Fitness 9.50 and best Sharpe 3.48.* [[code](https://github.com/AutoResearch-Factory/AgonAlpha)]
+- **[AutoSR: Automatic Symbolic Regression by Searching Research States](https://arxiv.org/abs/2608.16876)** (Zhang et al., arXiv 2026) - *Runs a proposer and a reviewer agent over research states, where each state holds a candidate equation with its motivation, computational probes, failed attempts and an independent review, and searches them with progressive-widening MCTS. It recovers exactly the three cp3-bench equations that 12 published symbolic-regression systems missed, with MSE down to between 1e-19 and 1e-32.* [[code](https://github.com/AutoResearch-Factory/AutoSR)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
