@@ -95,7 +95,7 @@ Fresh 2026 work that is already drawing attention.
 - [⭐ Starter Kit](#starter-kit)
 - [🔥 10 to Watch (2026)](#to-watch)
 - **🧭 Background**
-  - [📚 Surveys & Position Papers (61)](#surveys)
+  - [📚 Surveys & Position Papers (62)](#surveys)
   - [🏗️ Agent Architectures & Frameworks (54)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (55)](#planning)
@@ -112,11 +112,11 @@ Fresh 2026 work that is already drawing attention.
 ## 🧭 Background
 
 <a id="surveys"></a>
-### 📚 Surveys & Position Papers (61)
+### 📚 Surveys & Position Papers (62)
 *Corresponds to §1-§3 (Introduction, Background, Taxonomy).*
 
 <details>
-<summary><b>Show 61 papers</b></summary>
+<summary><b>Show 62 papers</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *The canonical, most-cited general-purpose LLM-agent survey.* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Co-foundational with Wang et al. 2023 as one of the two seminal general surveys.* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -180,6 +180,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Why Agentic Workflows Fail: A Taxonomy Derived from Literature and Empirical Data](https://arxiv.org/abs/2610.17418)** (Li et al., arXiv 2026) - *Codes agentic-workflow failures along four dimensions, responsible source (agent, external system or both), mechanism among 65 types, workflow stage and agent capability, and applies the scheme to 397 failure records from papers and 1,196 from GitHub issues and pull requests in 229 repositories: GitHub failures concentrate in actuation during execution, 64.8% of records against 14.1% in the literature, and 61% of those are not the agent's fault, such as a failing external API; 68 of 69 records from later papers fit the existing types, and the counts are not prevalence estimates.*
 - **[Distilling Agentic Systems: A Roadmap across Models, Artifacts, and Harnesses](https://arxiv.org/abs/2609.36630)** (Luo et al., arXiv 2026) - *Widens distillation from a teacher model to a teacher agent and sorts the literature by where the student keeps what it learned: in the weights, in reusable artifacts such as memories, skills and tools, in the execution harness through workflows, routing and verification, or across these, as when a textual workflow is compiled into a controller or an artifact becomes an enforceable gate; it asks each transfer claim for intrinsic, causal and end-to-end evidence and finds no substrate preferable in general, though each method is filed under a single primary substrate.*
 - **[Agentic Societies Need a Social Harness](https://arxiv.org/abs/2609.17527)** (Chugh et al., arXiv 2026) - *Argues that agents acting for different people need a social harness that governs the messages between them, on top of each agent's own harness, and supports the case with OpenClaw agents scheduling university meetings, on GPT-5.4 alone or with one agent on Claude Opus 4.8: over ten runs per setting, isolated per-peer sessions make the mixed setup fail every group meeting with more than one teaching assistant, shared sessions lift it from 0% to 90% with seven, and relayed false cancellations succeed in 100% of GPT-5.4 runs; the proposed five-layer stack, from verifiable identity to social institutions, is not built or costed.*
+- **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://doi.org/10.20944/preprints202603.1756.v2)** (He et al., Preprints 2026) - *Treats the harness as its own engineering layer and decomposes it into control, agency, and runtime, auditing 63 harness works under that split and proposing a HarnessCard disclosure so agent results can be attributed to the harness rather than the model.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
