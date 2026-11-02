@@ -95,7 +95,7 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 - [⭐ Kit de inicio](#starter-kit)
 - [🔥 10 artículos para seguir (2026)](#to-watch)
 - **🧭 Fundamentos**
-  - [📚 Revisiones y artículos de posición (61)](#surveys)
+  - [📚 Revisiones y artículos de posición (62)](#surveys)
   - [🏗️ Arquitecturas y frameworks de agentes (54)](#architectures)
 - **🧱 Parte I: Componentes principales**
   - [🧠 Planificación y razonamiento (55)](#planning)
@@ -112,11 +112,11 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 ## 🧭 Fundamentos
 
 <a id="surveys"></a>
-### 📚 Revisiones y artículos de posición (61)
+### 📚 Revisiones y artículos de posición (62)
 *En la revisión: §1-§3 (Introducción, Fundamentos, Taxonomía).*
 
 <details>
-<summary><b>Mostrar 61 artículos</b></summary>
+<summary><b>Mostrar 62 artículos</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *La revisión general de referencia sobre agentes LLM y la más citada.* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Junto con Wang et al. 2023, es una de las dos revisiones generales que fundaron el área.* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -180,6 +180,7 @@ Trabajos de 2026, publicados hace poco, que ya están llamando la atención.
 - **[Why Agentic Workflows Fail: A Taxonomy Derived from Literature and Empirical Data](https://arxiv.org/abs/2610.17418)** (Li et al., arXiv 2026) - *Clasifica los fallos de los workflows agénticos en cuatro dimensiones, la fuente responsable (agente, sistema externo o ambos), el mecanismo entre 65 tipos, la fase del workflow y la capacidad del agente, y aplica el esquema a 397 registros de fallos tomados de artículos y a 1196 tomados de issues y pull requests de GitHub en 229 repositorios: los fallos de GitHub se concentran en la actuación durante la ejecución, el 64,8% de los registros frente al 14,1% en la literatura, y el 61% de ellos no son culpa del agente, como una API externa que falla; 68 de 69 registros de artículos posteriores encajan en los tipos existentes, y los recuentos no son estimaciones de prevalencia.*
 - **[Distilling Agentic Systems: A Roadmap across Models, Artifacts, and Harnesses](https://arxiv.org/abs/2609.36630)** (Luo et al., arXiv 2026) - *Amplía la distillation de un modelo maestro a un agente maestro y ordena la literatura según dónde guarda el alumno lo que aprendió: en los pesos, en artefactos reutilizables como memorias, skills y herramientas, en el harness de ejecución mediante workflows, enrutamiento y verificación, o entre estos, como cuando un workflow textual se compila en un controlador o un artefacto se convierte en una regla obligatoria; exige a cada afirmación de transferencia evidencia intrínseca, causal y end-to-end, y concluye que ningún lugar es preferible en general, aunque cada método se clasifica bajo un único lugar principal.*
 - **[Agentic Societies Need a Social Harness](https://arxiv.org/abs/2609.17527)** (Chugh et al., arXiv 2026) - *Sostiene que los agentes que actúan en nombre de personas distintas necesitan un harness social que gobierne los mensajes entre ellos, por encima del harness de cada agente, y respalda la tesis con agentes OpenClaw que programan reuniones en una universidad, todos con GPT-5.4 o con uno de ellos en Claude Opus 4.8: en diez ejecuciones por configuración, las sesiones aisladas por interlocutor hacen que la configuración mixta falle en todas las reuniones de grupo con más de un profesor asistente, las sesiones compartidas elevan el éxito del 0% al 90% con siete, y las cancelaciones falsas transmitidas entre agentes funcionan en el 100% de las ejecuciones con GPT-5.4; la pila de cinco capas propuesta, de la identidad verificable a las instituciones sociales, no se construyó ni se midió su coste.*
+- **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://doi.org/10.20944/preprints202603.1756.v2)** (He et al., Preprints 2026) - *Artículo de posición que divide la capa que rodea al modelo en control (instrucciones, mapas del repositorio, pruebas, permisos), agency (las herramientas, interfaces y roles a través de los que actúa el modelo) y runtime (memoria, checkpoints, reintentos, presupuestos), y propone HarnessCard, una plantilla para informar del harness de un agente junto con el modelo. En su revisión de 63 trabajos, los 38 artículos y benchmarks destacan sobre todo la observabilidad, las interfaces y el feedback, mientras que las 25 notas de ingeniería, protocolos y artículos técnicos destacan runtime, control y gobernanza. Los autores aclaran que la revisión comprueba qué aparece en un conjunto seleccionado con etiquetas interpretativas y no cuenta el campo entero, se apoyan en buena medida en notas de ingeniería de unos pocos laboratorios de frontera y no hacen ningún experimento que separe los efectos del modelo de los del harness.*
 </details>
 
 <sub><a href="#contents">↑ Volver al índice</a></sub>
@@ -870,10 +871,11 @@ La mayoría de los idiomas a los que está traducida esta lista no son mi lengua
 Esta lista la mantiene la comunidad. Gracias a todas las personas que han sugerido, verificado o anotado un artículo:
 
 <details>
-<summary><b>Mostrar 22 colaboradores</b></summary>
+<summary><b>Mostrar 23 colaboradores</b></summary>
 
 | | Colaborador | Contribución |
 |---|---|---|
+| <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | Harness Engineering for Language Agents, artículo de posición que divide el harness en control, agency y runtime y propone HarnessCard para informar de él, enviado por su primer autor, en Revisiones y artículos de posición ([#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)) |
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | AgonAlpha, búsqueda de alphas en la que el revisor repite cada candidato y puede vetarlo, y AutoSR, regresión simbólica planteada como búsqueda sobre estados de investigación, ambos enviados por uno de sus primeros autores, en Aplicaciones ([#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)); SciΠvot, un benchmark de decisiones de investigación construido a partir de las correcciones que investigadores sénior hicieron a agentes de LLM, enviado por su primer autor, en Evaluación y benchmarks ([#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)); 3 artículos sobre agentes de investigación y orquestación: AutoNumerics, OptimAI, PerspectiveGap ([#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)); el enlace al código de Agon y el aviso que llevó a reescribir nueve descripciones que estaban cortadas ([#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)) |
 | <a href="https://github.com/dolev31"><img src="https://github.com/dolev31.png?size=48" width="48" height="48" alt="@dolev31"></a> | **[@dolev31](https://github.com/dolev31)** | TabAgent, que sustituye la llamada repetida de selección de herramientas de un agente por un clasificador pequeño entrenado con sus propias ejecuciones, enviado por su primer autor, en Uso de herramientas ([#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)) |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | ToolMaster, que entrena al modelo para probar las herramientas antes de fiarse de ellas, enviado por uno de sus dos primeros autores, en Uso de herramientas ([#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)) |
@@ -908,6 +910,7 @@ Publicado bajo la [licencia MIT](LICENSE).
 
 ## 🗓️ Actualizaciones
 
+- **2026-11-02**: Harness Engineering for Language Agents se añadió a Revisiones y artículos de posición, enviado por su primer autor ([@ChaoYue0307](https://github.com/ChaoYue0307), [#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)). En su revisión de 63 trabajos, los 38 artículos y benchmarks destacan sobre todo las interfaces y la observabilidad, y las 25 notas de ingeniería destacan runtime, control y gobernanza. De 578 a 579.
 - **2026-11-02**: AgonAlpha y AutoSR se añadieron a Aplicaciones, enviados por uno de sus primeros autores ([@WhymustIhaveaname](https://github.com/WhymustIhaveaname), [#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)). AutoSR encuentra la ecuación exacta en tres problemas de cp3-bench que ninguno de 12 sistemas publicados de regresión simbólica resolvió, con una ejecución exitosa informada por problema. De 576 a 578.
 - **2026-10-28**: TabAgent se añadió a Uso de herramientas, enviado por su primer autor ([@dolev31](https://github.com/dolev31), [#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)). Un clasificador entrenado con las propias ejecuciones del agente asume la selección de herramientas de GPT-5.4 en AppWorld en unos 3 ms por llamada en lugar de 7,5 s, y el éxito de un agente en marcha pasa del 29,2% al 27,1%, una diferencia demasiado pequeña para distinguirse en 24 tareas. De 575 a 576.
 - **2026-10-28**: SciΠvot se añadió a Evaluación y benchmarks, enviado por su primer autor ([@WhymustIhaveaname](https://github.com/WhymustIhaveaname), [#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)). Al elegir entre el plan de investigación de un agente y el que corrigió un investigador sénior, el mejor modelo de frontera llega al 63,5%, frente al 73,4% de investigadores que no conocían los proyectos. De 574 a 575.

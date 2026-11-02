@@ -95,7 +95,7 @@
 - [⭐ 入门必读](#starter-kit)
 - [🔥 值得关注的 10 篇 (2026)](#to-watch)
 - **🧭 背景**
-  - [📚 综述与立场论文 (61)](#surveys)
+  - [📚 综述与立场论文 (62)](#surveys)
   - [🏗️ 智能体架构与框架 (54)](#architectures)
 - **🧱 第一部分：核心组成**
   - [🧠 规划与推理 (55)](#planning)
@@ -112,11 +112,11 @@
 ## 🧭 背景
 
 <a id="surveys"></a>
-### 📚 综述与立场论文 (61)
+### 📚 综述与立场论文 (62)
 *对应综述 §1-§3（引言、背景、分类体系）。*
 
 <details>
-<summary><b>展开 61 篇论文</b></summary>
+<summary><b>展开 62 篇论文</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *最经典、引用量最高的通用 LLM 智能体综述。* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *与 Wang et al. 2023 并称两篇开创性的通用综述。* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -180,6 +180,7 @@
 - **[Why Agentic Workflows Fail: A Taxonomy Derived from Literature and Empirical Data](https://arxiv.org/abs/2610.17418)** (Li et al., arXiv 2026) - *沿四个维度为智能体 workflow 的失败编码：责任来源（智能体、外部系统或两者）、65 种类型中的失败机制、workflow 阶段和智能体能力，并把这套方案用于来自论文的 397 条失败记录，以及来自 229 个仓库的 GitHub issue 和 pull request 的 1,196 条记录。GitHub 上的失败集中在执行中的动作环节，占记录的 64.8%，文献中只占 14.1%，其中 61% 并非智能体的过错，例如外部 API 出错；后来论文中的 69 条记录有 68 条能归入现有类型，这些计数也不是发生率的估计。*
 - **[Distilling Agentic Systems: A Roadmap across Models, Artifacts, and Harnesses](https://arxiv.org/abs/2609.36630)** (Luo et al., arXiv 2026) - *把 distillation 的对象从教师模型扩展到教师智能体，并按学生把学到的东西保存在哪里来整理文献：权重中，记忆、skill 和工具等可复用的产物中，通过 workflow、路由和验证体现在执行 harness 中，或者跨越这几处，例如把文本形式的 workflow 编译成控制器，或把某个产物变成强制执行的规则；它要求每个迁移主张给出内在、因果和 end-to-end 三类证据，结论是没有哪一处普遍更优，不过每种方法只被归入一个主要位置。*
 - **[Agentic Societies Need a Social Harness](https://arxiv.org/abs/2609.17527)** (Chugh et al., arXiv 2026) - *主张代表不同的人行事的智能体，在各自的 harness 之上还需要一个管理智能体之间消息的社会 harness，并用为大学安排会议的 OpenClaw 智能体来支持这一主张，智能体全部使用 GPT-5.4，或其中一个改用 Claude Opus 4.8。每种设置运行十次：若对每个对方各用一个隔离会话，混合配置在助教多于一人的小组会议上全部失败，共享会话则在七名助教时把成功率从 0% 提高到 90%；智能体转达的虚假取消声明在 GPT-5.4 的运行中 100% 得逞。文中提出的五层结构从可验证的身份到社会制度，既没有实现，也没有评估成本。*
+- **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://doi.org/10.20944/preprints202603.1756.v2)** (He et al., Preprints 2026) - *立场论文，把模型周围的这一层分成 control（指令、仓库地图、测试、权限）、agency（模型行动时经由的工具、接口和角色）和 runtime（记忆、检查点、重试、预算），并提出 HarnessCard，一种把智能体的 harness 与模型一起报告的模板。在对 63 篇工作的梳理中，38 篇论文和基准最常突出可观测性、接口和反馈，25 篇工程笔记、协议和文章则更常突出 runtime、control 和治理。作者说明，这项梳理是在挑选出的材料上用带有解读成分的标签查看哪些部分更显眼，而不是对整个领域的统计；论文在很大程度上依赖少数前沿机构的工程笔记，也没有做区分模型效应与 harness 效应的实验。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -870,10 +871,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 22 位贡献者</b></summary>
+<summary><b>展开 23 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | Harness Engineering for Language Agents：把 harness 分成 control、agency 和 runtime，并提出用于报告它的 HarnessCard 的立场论文，收入综述与立场论文（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。由第一作者本人提交 |
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | AgonAlpha：审查者会重跑每个候选并可否决的 alpha 因子挖掘系统；AutoSR：把符号回归做成对研究状态的搜索。均由共同第一作者之一提交，收入应用领域（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）；SciΠvot：用资深研究者纠正 LLM 智能体研究决策的记录构建的基准，由第一作者本人提交，收入评估与基准（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）；3 篇研究智能体与编排方向的论文：AutoNumerics、OptimAI、PerspectiveGap（[#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)）；Agon 的代码链接，以及那份让九条截断注释得以重写的报告（[#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)） |
 | <a href="https://github.com/dolev31"><img src="https://github.com/dolev31.png?size=48" width="48" height="48" alt="@dolev31"></a> | **[@dolev31](https://github.com/dolev31)** | TabAgent：用基于智能体自身运行记录训练的小分类器，替代它反复发出的候选工具筛选调用，收入工具使用（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。由第一作者本人提交 |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | ToolMaster：训练模型在依赖工具之前先试用工具，收入工具使用（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)）。由两位共同第一作者之一提交 |
@@ -908,6 +910,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-11-02**: 新增 Harness Engineering for Language Agents，由第一作者 [@ChaoYue0307](https://github.com/ChaoYue0307) 提交，收入综述与立场论文（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。在它梳理的 63 篇工作中，38 篇论文和基准最常突出接口和可观测性，25 篇工程笔记则更常突出 runtime、control 和治理。从 578 篇增至 579 篇。
 - **2026-11-02**: 新增 AgonAlpha 和 AutoSR，由共同第一作者之一 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname) 提交，收入应用领域（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。在 12 个已发表的符号回归系统都没能解出的三个 cp3-bench 问题上，AutoSR 找到了准确的方程，每个问题报告一次成功的运行。从 576 篇增至 578 篇。
 - **2026-10-28**: 新增 TabAgent，由第一作者 [@dolev31](https://github.com/dolev31) 提交，收入工具使用（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。用智能体自身运行记录训练的分类器，在 AppWorld 上接替 GPT-5.4 的候选工具筛选，每次约 3 ms 而不是 7.5 s；实际运行的智能体任务成功率从 29.2% 变为 27.1%，在 24 个任务上无法区分这一差距。从 575 篇增至 576 篇。
 - **2026-10-28**: 新增 SciΠvot，由第一作者 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname) 提交，收入评估与基准（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）。在智能体的研究计划和资深研究者纠正后的计划之间选择时，最好的前沿模型为 63.5%，初次接触这些项目的研究者为 73.4%。从 574 篇增至 575 篇。

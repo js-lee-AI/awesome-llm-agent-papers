@@ -95,7 +95,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - [⭐ 스타터 키트](#starter-kit)
 - [🔥 주목할 10편 (2026)](#to-watch)
 - **🧭 배경**
-  - [📚 서베이와 포지션 페이퍼 (61)](#surveys)
+  - [📚 서베이와 포지션 페이퍼 (62)](#surveys)
   - [🏗️ 에이전트 아키텍처와 프레임워크 (54)](#architectures)
 - **🧱 제1부: 핵심 구성 요소**
   - [🧠 계획과 추론 (55)](#planning)
@@ -112,11 +112,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## 🧭 배경
 
 <a id="surveys"></a>
-### 📚 서베이와 포지션 페이퍼 (61)
+### 📚 서베이와 포지션 페이퍼 (62)
 *서베이 §1-§3(서론, 배경, 분류 체계)에 해당합니다.*
 
 <details>
-<summary><b>논문 61편 보기</b></summary>
+<summary><b>논문 62편 보기</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *가장 많이 인용되는 범용 LLM 에이전트 서베이이자 이 분야의 표준 문헌이다.* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Wang et al. 2023과 함께 이 분야의 기틀을 놓은 두 종합 서베이 중 하나다.* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -180,6 +180,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Why Agentic Workflows Fail: A Taxonomy Derived from Literature and Empirical Data](https://arxiv.org/abs/2610.17418)** (Li et al., arXiv 2026) - *에이전트 workflow의 실패를 네 가지 축으로 분류한다. 책임 소재(에이전트, 외부 시스템, 또는 둘 다), 65가지 유형 가운데 어떤 메커니즘인지, workflow의 어느 단계인지, 에이전트의 어떤 능력인지다. 이 체계를 논문에서 모은 실패 기록 397건과, 저장소 229곳의 GitHub 이슈와 풀 리퀘스트에서 모은 1,196건에 적용했다. GitHub의 실패는 실행 중 동작 단계에 몰려 기록의 64.8%를 차지했고, 논문 쪽은 14.1%였다. 그중 61%는 외부 API 장애처럼 에이전트 탓이 아니었다. 이후 나온 논문의 기록 69건 중 68건이 기존 유형에 들어맞았으며, 이 건수는 실제 발생 빈도의 추정치가 아니다.*
 - **[Distilling Agentic Systems: A Roadmap across Models, Artifacts, and Harnesses](https://arxiv.org/abs/2609.36630)** (Luo et al., arXiv 2026) - *distillation의 범위를 교사 모델에서 교사 에이전트로 넓히고, 학생이 배운 것을 어디에 담아 두는지에 따라 문헌을 나눈다. 가중치, 메모리와 skill과 도구 같은 재사용 가능한 산출물, workflow와 라우팅과 검증을 통한 실행 harness, 그리고 이들 사이를 오가는 경우다. 마지막에는 텍스트로 된 workflow를 제어기로 컴파일하거나 산출물을 강제되는 규칙으로 바꾸는 경로가 들어간다. 전달됐다는 주장마다 내재적 증거, 인과적 증거, end-to-end 증거를 요구하며, 어느 한 곳이 일반적으로 더 낫지는 않다고 결론짓는다. 다만 각 방법은 주된 저장 위치 하나에만 분류되어 있다.*
 - **[Agentic Societies Need a Social Harness](https://arxiv.org/abs/2609.17527)** (Chugh et al., arXiv 2026) - *서로 다른 사람을 대신하는 에이전트에게는 각자의 harness 위에, 에이전트 사이에 오가는 메시지를 다루는 사회적 harness가 필요하다고 주장한다. 근거로는 대학의 회의 일정을 잡는 OpenClaw 에이전트를 쓰는데, 모두 GPT-5.4인 구성과 한 에이전트만 Claude Opus 4.8인 구성이다. 설정마다 열 번씩 돌렸을 때, 상대마다 세션을 따로 두면 혼합 구성은 조교가 두 명 이상인 그룹 회의를 모두 실패했고, 세션을 공유하면 조교가 일곱 명일 때 성공률이 0%에서 90%로 올랐다. 에이전트가 그대로 전달한 거짓 취소 주장은 GPT-5.4 실행의 100%에서 통했다. 검증 가능한 신원부터 사회 제도까지 다섯 층으로 된 구조를 제안하지만, 직접 만들지도 비용을 재지도 않았다.*
+- **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://doi.org/10.20944/preprints202603.1756.v2)** (He et al., Preprints 2026) - *모델을 둘러싼 층을 control(지시문, 저장소 지도, 테스트, 권한), agency(모델이 행동할 때 거치는 도구, 인터페이스, 역할), runtime(메모리, 체크포인트, 재시도, 예산)으로 나누고, 에이전트의 harness를 모델과 함께 보고하는 양식인 HarnessCard를 제안하는 포지션 페이퍼다. 63편을 살펴본 결과, 논문과 벤치마크 38편은 관측 가능성, 인터페이스, 피드백을 가장 자주 앞세웠고, 엔지니어링 노트, 프로토콜, 기사 25편은 runtime, control, 거버넌스를 앞세웠다. 저자들은 이 조사가 골라 낸 자료에 해석이 들어간 태그를 붙여 어떤 부분이 드러나 있는지 본 것이지 분야 전체를 센 것은 아니라고 밝히며, 소수 프런티어 기업의 엔지니어링 노트에 크게 기대고, 모델의 효과와 harness의 효과를 가르는 실험은 하지 않았다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -870,10 +871,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 22명 보기</b></summary>
+<summary><b>기여자 23명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | 서베이와 포지션 페이퍼 절에 harness를 control, agency, runtime으로 나누고 이를 보고하는 HarnessCard를 제안하는 포지션 페이퍼 Harness Engineering for Language Agents 추가([#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)). 제1저자가 직접 제출 |
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | 응용 분야 절에 검토자가 후보를 다시 돌려 보고 거부할 수 있는 알파 탐색 시스템 AgonAlpha와 기호 회귀를 연구 상태 탐색으로 푸는 AutoSR 추가, 공동 제1저자 중 한 명이 직접 제출([#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)). 평가와 벤치마크 절에 선임 연구자가 LLM 에이전트의 연구 결정을 바로잡은 기록으로 만든 벤치마크 SciΠvot 추가, 제1저자가 직접 제출([#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)). 연구 에이전트·orchestration 논문 3편: AutoNumerics, OptimAI, PerspectiveGap([#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)). Agon 코드 링크, 그리고 잘려 있던 설명 아홉 개를 다시 쓰게 된 제보([#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)) |
 | <a href="https://github.com/dolev31"><img src="https://github.com/dolev31.png?size=48" width="48" height="48" alt="@dolev31"></a> | **[@dolev31](https://github.com/dolev31)** | 도구 사용 절에 에이전트가 반복해서 부르는 도구 후보 선별 LLM 호출을 자기 실행 기록으로 학습한 작은 분류기로 바꾸는 TabAgent 추가([#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)). 제1저자가 직접 제출 |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | 도구 사용 절에 도구에 기대기 전에 먼저 시험해 보도록 모델을 학습시키는 ToolMaster 추가([#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)). 공동 제1저자 중 한 명이 직접 제출 |
@@ -908,6 +910,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-11-02**: 제1저자 [@ChaoYue0307](https://github.com/ChaoYue0307)가 보내 준 Harness Engineering for Language Agents를 서베이와 포지션 페이퍼 절에 추가했습니다([#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)). 63편을 살펴보니 논문과 벤치마크 38편은 인터페이스와 관측 가능성을 가장 자주 앞세웠고, 엔지니어링 노트 25편은 runtime, control, 거버넌스를 앞세웠습니다. 578편에서 579편으로 늘었습니다.
 - **2026-11-02**: 공동 제1저자 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname)가 보내 준 AgonAlpha와 AutoSR을 응용 분야 절에 추가했습니다([#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)). AutoSR은 발표된 기호 회귀 시스템 12개가 모두 풀지 못한 cp3-bench 문제 세 개에서 정확한 수식을 찾았고, 문제마다 성공한 실행 하나를 보고했습니다. 576편에서 578편으로 늘었습니다.
 - **2026-10-28**: 제1저자 [@dolev31](https://github.com/dolev31)가 보내 준 TabAgent를 도구 사용 절에 추가했습니다([#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)). 에이전트 자신의 실행 기록으로 학습한 분류기가 AppWorld에서 GPT-5.4의 도구 후보 선별을 호출당 7.5초 대신 약 3ms로 대신했고, 실제 에이전트의 과제 성공률은 29.2%에서 27.1%가 되었는데, 과제 24개로는 구별할 수 없는 차이입니다. 575편에서 576편으로 늘었습니다.
 - **2026-10-28**: 제1저자 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname)가 보내 준 SciΠvot를 평가와 벤치마크 절에 추가했습니다([#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)). 에이전트의 연구 계획과 선임 연구자가 바로잡은 계획 중 하나를 고르게 하자, 가장 좋은 프런티어 모델이 63.5%로 프로젝트를 처음 본 연구자들의 73.4%에 못 미쳤습니다. 574편에서 575편으로 늘었습니다.

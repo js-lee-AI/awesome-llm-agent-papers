@@ -95,7 +95,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - [⭐ スターターキット](#starter-kit)
 - [🔥 注目の10本 (2026)](#to-watch)
 - **🧭 背景**
-  - [📚 サーベイとポジションペーパー (61)](#surveys)
+  - [📚 サーベイとポジションペーパー (62)](#surveys)
   - [🏗️ エージェントのアーキテクチャとフレームワーク (54)](#architectures)
 - **🧱 第1部：中核となる構成要素**
   - [🧠 計画と推論 (55)](#planning)
@@ -112,11 +112,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## 🧭 背景
 
 <a id="surveys"></a>
-### 📚 サーベイとポジションペーパー (61)
+### 📚 サーベイとポジションペーパー (62)
 *サーベイの§1-§3（序論、背景、分類体系）に対応します。*
 
 <details>
-<summary><b>61本の論文を表示</b></summary>
+<summary><b>62本の論文を表示</b></summary>
 
 - **[A Survey on Large Language Model based Autonomous Agents](https://arxiv.org/abs/2308.11432)** (Wang et al., arXiv 2023) - *LLMエージェントの総合サーベイの定番で、引用数も最も多い。* ⭐ [[code](https://github.com/Paitesanshi/LLM-Agent-Survey)]
 - **[The Rise and Potential of Large Language Model Based Agents: A Survey](https://arxiv.org/abs/2309.07864)** (Xi et al., arXiv 2023) - *Wang et al. 2023と並んで分野の土台を築いた、二大総合サーベイの一つ。* [[code](https://github.com/WooooDyy/LLM-Agent-Paper-List)]
@@ -180,6 +180,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Why Agentic Workflows Fail: A Taxonomy Derived from Literature and Empirical Data](https://arxiv.org/abs/2610.17418)** (Li et al., arXiv 2026) - *エージェントのworkflowの失敗を四つの軸で分類する。責任の所在（エージェント、外部システム、その両方）、65 種類のうちどの仕組みか、workflowのどの段階か、エージェントのどの能力か、である。この体系を、論文から集めた失敗記録 397 件と、229 のリポジトリのGitHubのissueとpull requestから集めた 1,196 件に適用した。GitHubの失敗は実行中の操作の段階に集中して記録の 64.8% を占め、論文では 14.1% だった。そのうち 61% は、外部APIの障害のようにエージェントの責任ではない。その後の論文の記録 69 件のうち 68 件が既存の類型に収まった。なお、件数は発生頻度の推定値ではない。*
 - **[Distilling Agentic Systems: A Roadmap across Models, Artifacts, and Harnesses](https://arxiv.org/abs/2609.36630)** (Luo et al., arXiv 2026) - *distillationの範囲を教師モデルから教師エージェントへ広げ、学生が学んだことをどこに保持するかで文献を整理する。重み、メモリやskillやツールのような再利用できる成果物、workflowやルーティングや検証を通じた実行harness、そしてそれらをまたぐ場合であり、最後の場合には、テキストのworkflowを制御器にコンパイルする、成果物を強制されるルールに変える、といった経路が含まれる。転移したという主張それぞれに内在的、因果的、end-to-endの三種類の証拠を求め、どの保持先も一般に優れているわけではないと結論づける。ただし各手法は、主な保持先一つだけに分類されている。*
 - **[Agentic Societies Need a Social Harness](https://arxiv.org/abs/2609.17527)** (Chugh et al., arXiv 2026) - *異なる人の代理として動くエージェントには、各自のharnessの上に、エージェント同士のメッセージを扱う社会的なharnessが必要だと主張する。根拠として、大学の会議日程を調整するOpenClawエージェントを使い、全員がGPT-5.4の構成と、一体だけClaude Opus 4.8の構成を比べる。設定ごとに十回実行すると、相手ごとにセッションを分けた場合、混合構成はTAが二人以上いるグループ会議をすべて失敗し、セッションを共有するとTAが七人のときの成功率が 0% から 90% に上がった。エージェントがそのまま伝えた虚偽のキャンセルの主張は、GPT-5.4の実行の 100% で通った。検証可能な身元から社会制度まで五層の構造を提案しているが、実装もコストの測定もしていない。*
+- **[Harness Engineering for Language Agents: The Harness Layer as Control, Agency, and Runtime](https://doi.org/10.20944/preprints202603.1756.v2)** (He et al., Preprints 2026) - *モデルを取り巻く層をcontrol（指示文、リポジトリマップ、テスト、権限）、agency（モデルが行動するときに通るツール、インターフェース、役割）、runtime（メモリ、チェックポイント、リトライ、予算）に分け、エージェントのharnessをモデルと並べて報告するためのテンプレートHarnessCardを提案するポジションペーパーである。63 本の文献を調べたところ、論文とベンチマーク 38 本は可観測性、インターフェース、フィードバックを最も多く前面に出し、エンジニアリングノート、プロトコル、記事 25 本はruntime、control、ガバナンスを前面に出していた。著者らは、この調査は選んだ資料に解釈を含むタグを付けてどの部分が見えているかを確かめたもので、分野全体を数えたものではないと述べており、少数のフロンティア企業のエンジニアリングノートに大きく依拠し、モデルの効果とharnessの効果を切り分ける実験は行っていない。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -870,10 +871,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>22人のコントリビューターを表示</b></summary>
+<summary><b>23人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | 「サーベイとポジションペーパー」に、harnessをcontrol、agency、runtimeに分け、それを報告するためのHarnessCardを提案するポジションペーパーHarness Engineering for Language Agents（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。第一著者本人による投稿 |
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | 「応用分野」に、レビュー役が候補を再実行して却下できるアルファ探索システムAgonAlphaと、記号回帰を研究状態の探索として行うAutoSR。共同第一著者の一人による投稿（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。「評価とベンチマーク」に、上級研究者がLLMエージェントの研究上の判断を正した記録から作ったベンチマーク、SciΠvot。第一著者本人による投稿（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）。研究エージェントとorchestrationの論文 3 本：AutoNumerics、OptimAI、PerspectiveGap（[#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)）。Agonのコードリンクと、途中で切れていた九本の説明文を書き直すきっかけになった報告（[#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)） |
 | <a href="https://github.com/dolev31"><img src="https://github.com/dolev31.png?size=48" width="48" height="48" alt="@dolev31"></a> | **[@dolev31](https://github.com/dolev31)** | 「ツール利用」に、エージェントが繰り返すツール絞り込みの呼び出しを、自身の実行記録で学習した小さな分類器に置き換えるTabAgent（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。第一著者本人による投稿 |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | 「ツール利用」に、ツールに頼る前にまず試すようモデルを学習させるToolMaster（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)）。二人の共同第一著者の一人による投稿 |
@@ -908,6 +910,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-11-02**: 第一著者の[@ChaoYue0307](https://github.com/ChaoYue0307)が送ってくれたHarness Engineering for Language Agentsを「サーベイとポジションペーパー」に追加しました（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。調べた 63 本のうち、論文とベンチマーク 38 本はインターフェースと可観測性を最も多く前面に出し、エンジニアリングノート 25 本はruntime、control、ガバナンスを前面に出していました。578 本から 579 本になりました。
 - **2026-11-02**: 共同第一著者の[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)が送ってくれたAgonAlphaとAutoSRを「応用分野」に追加しました（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。AutoSRは、発表済みの記号回帰システム 12 個がどれも解けなかったcp3-benchの三問で正確な式を見つけました。報告されているのは各問題で成功した実行一回です。576 本から 578 本になりました。
 - **2026-10-28**: 第一著者の[@dolev31](https://github.com/dolev31)が送ってくれたTabAgentを「ツール利用」に追加しました（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。エージェント自身の実行記録で学習した分類器が、AppWorldでGPT-5.4のツール絞り込みを、呼び出し一回あたり 7.5 秒ではなく約 3 ms で代わりに行いました。稼働中のエージェントのタスク成功率は 29.2% から 27.1% になりましたが、24 タスクでは見分けられない差です。575 本から 576 本になりました。
 - **2026-10-28**: 第一著者の[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)が送ってくれたSciΠvotを「評価とベンチマーク」に追加しました（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）。エージェントの研究計画と上級研究者が正した計画のどちらかを選ばせると、最良のフロンティアモデルは 63.5% で、プロジェクトを初めて見る研究者の 73.4% に届きませんでした。574 本から 575 本になりました。
