@@ -104,7 +104,7 @@
   - [🤝 多智能体系统 (57)](#multi-agent)
 - **🌍 第二部分：环境与应用中的智能体**
   - [🌐 交互环境 (60)](#environments)
-  - [🚀 应用领域 (58)](#applications)
+  - [🚀 应用领域 (60)](#applications)
 - **⚖️ 第三部分：贯穿全局的问题**
   - [📊 评估与基准 (58)](#evaluation)
   - [🛡️ 安全与对齐 (62)](#safety)
@@ -598,11 +598,11 @@
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="applications"></a>
-### 🚀 应用领域 (58)
+### 🚀 应用领域 (60)
 *对应综述 §10（应用领域）。*
 
 <details>
-<summary><b>展开 58 篇论文</b></summary>
+<summary><b>展开 60 篇论文</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *最早一批低成本的自主程序修复智能体之一，建立在结构化的代码搜索之上。* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *很有影响力的反向论证：更简单、不走智能体路线的流水线，也能和复杂的智能体比肩。* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -663,6 +663,8 @@
 - **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *让 Claude Sonnet 4.6 通过 24 个 MCP 工具主导先导化合物优化，自己撰写和修改项目目标，并选择自己提出分子或把生成交给 REINVENT 4；在按固定时间截点重放的 GSK、Sanofi 和 AstraZeneca 九个历史项目中，GSK 的四个系列有三个以及 AstraZeneca 的项目达到了目标，Sanofi 的四个项目只有两个达到；四位化学家无法区分它提出的分子与 held-out 化合物，成败取决于打分模型的准确度，而不是生成途径。所有终点指标都是预测值，而不是实测值。*
 - **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *用专家编写的 413 道美国法律问题为法律研究智能体评分，不给部分分：答案必须满足 rubric 的每一条标准，且引用的法律依据都经得起核对，才算正确。在配备网页搜索、判例法检索和文档检索工具的十三个前沿模型中，最好的 Claude Opus 4.8 完全正确的比例为 42.9%，而加权通过率在 68% 到 86% 之间；Kimi K2.6 平均调用 112 次工具，只得到 15.5%；去掉工具平均损失 22.5 个点。每道题只运行一次，由 LLM 评判模型打分。* [[code](https://github.com/vals-ai/legal-research-bench)]
 - **[From Benchmarks to Business Impact: Deploying IBM Generalist Agent in Enterprise Production](https://arxiv.org/abs/2510.23856)** (Shlomov et al., IAAI 2026) - *报告 IBM 把开源的 CUGA 智能体试点用于招聘外包业务。CUGA 是planner-executor 结构的系统，在 WebArena 上达到 61.7%，在 AppWorld 挑战集上的场景完成率为 48.2%；试点中它关闭了网页浏览，只通过 13 个只读分析 API 回答招聘人员的问题：在新建的 BPO-TA 的 26 个任务上准确率为 87%，首次尝试即有效的比例从普通 ReAct 智能体的 62% 提高到 79%，去掉基于 reflection 的重试后下降 11 个点。不过它尚未进入正式生产，报告的节省（回答时间从约 20 分钟降到 2 到 5 分钟，开发时间最多减少 90%）是来自受控测试和有限分析师反馈的估计，也没有做显著性检验；论文列出了 BPO-TA 的 26 个任务，但背后的 API 和数据不在代码发布中。* [[code](https://github.com/cuga-project/cuga-agent)]
+- **[AgonAlpha: Autonomous Alpha Discovery via Prompt Economy and Scalable Agentic Search](https://arxiv.org/abs/2608.11250)** (Ye et al., arXiv 2026) - *在 WorldQuant BRAIN 上用两个角色挖掘公式化的交易 alpha 因子：提议者把每个候选连同假设、表达式和平台证据存成冻结的报告，在全新上下文中运行的审查者可以重新跑评估，并能把候选的分数清零；调度器把仍在运行的任务也算在内，在各条谱系之间分配预算。五位作者在各自的账户上用六种模型后端运行，60 次提交中有 17 次获得 BRAIN 的最高评级，最好的 alpha 因子 Fitness 为 9.50、Sharpe 为 3.48，审查者在审核过的 24 份报告中把 2 份清零。所有数字都是 BRAIN 在 2019 至 2023 年区间上的评分，而公式也是在同一区间上选出的；论文没有报告样本外结果，也没有 baseline 或消融实验，代码仓库只有提示词和调度器，没有运行记录。* [[code](https://github.com/AutoResearch-Factory/AgonAlpha)]
+- **[AutoSR: Automatic Symbolic Regression by Searching Research States](https://arxiv.org/abs/2608.16876)** (Zhang et al., arXiv 2026) - *把符号回归做成对研究状态的搜索：每个研究状态保存一个候选方程及其动机、数值探查、失败的尝试和独立审查，由提议者和审查者两个智能体在 Monte Carlo tree search 下扩展，另有一个运行 PySR、SISSO 和 FEX 的循环同时进行。在按难度挑选的九个问题上，它每次都找到与真实方程代数等价的方程，其中包括 12 个已发表系统都没能解出的三个 cp3-bench 问题，以及六个没有逐题 baseline 可比的 LSR-Transform 任务。每个案例只报告一次成功的运行，没有重复运行，也没有消融实验；每个案例给出的 6 到 33 分钟只计入找到答案的那次提议者会话，论文没有说明智能体用的是哪个语言模型，在这些公开基准上也无法排除模型记住的科学知识的影响；仓库里有提示词和调度器，但没有这九次运行的记录。* [[code](https://github.com/AutoResearch-Factory/AutoSR)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -872,8 +874,8 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | AgonAlpha：审查者会重跑每个候选并可否决的 alpha 因子挖掘系统；AutoSR：把符号回归做成对研究状态的搜索。均由共同第一作者之一提交，收入应用领域（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）；SciΠvot：用资深研究者纠正 LLM 智能体研究决策的记录构建的基准，由第一作者本人提交，收入评估与基准（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）；3 篇研究智能体与编排方向的论文：AutoNumerics、OptimAI、PerspectiveGap（[#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)）；Agon 的代码链接，以及那份让九条截断注释得以重写的报告（[#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)） |
 | <a href="https://github.com/dolev31"><img src="https://github.com/dolev31.png?size=48" width="48" height="48" alt="@dolev31"></a> | **[@dolev31](https://github.com/dolev31)** | TabAgent：用基于智能体自身运行记录训练的小分类器，替代它反复发出的候选工具筛选调用，收入工具使用（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。由第一作者本人提交 |
-| <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | SciΠvot：用资深研究者纠正 LLM 智能体研究决策的记录构建的基准，由第一作者本人提交，收入评估与基准（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）；3 篇研究智能体与编排方向的论文：AutoNumerics、OptimAI、PerspectiveGap（[#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)）；Agon 的代码链接，以及那份让九条截断注释得以重写的报告（[#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)） |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | ToolMaster：训练模型在依赖工具之前先试用工具，收入工具使用（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)）。由两位共同第一作者之一提交 |
 | <a href="https://github.com/segevshlomovIBM"><img src="https://github.com/segevshlomovIBM.png?size=48" width="48" height="48" alt="@segevshlomovIBM"></a> | **[@segevshlomovIBM](https://github.com/segevshlomovIBM)** | From Benchmarks to Business Impact：IBM 在招聘业务中试点 CUGA 智能体的报告，收入应用领域（[#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)）。由第一作者本人提交 |
 | <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | MerchantBench：让智能体在模拟的 365 天里经营网店的基准，收入评估与基准（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。由第一作者本人提交 |
@@ -906,6 +908,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-11-02**: 新增 AgonAlpha 和 AutoSR，由共同第一作者之一 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname) 提交，收入应用领域（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。在 12 个已发表的符号回归系统都没能解出的三个 cp3-bench 问题上，AutoSR 找到了准确的方程，每个问题报告一次成功的运行。从 576 篇增至 578 篇。
 - **2026-10-28**: 新增 TabAgent，由第一作者 [@dolev31](https://github.com/dolev31) 提交，收入工具使用（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。用智能体自身运行记录训练的分类器，在 AppWorld 上接替 GPT-5.4 的候选工具筛选，每次约 3 ms 而不是 7.5 s；实际运行的智能体任务成功率从 29.2% 变为 27.1%，在 24 个任务上无法区分这一差距。从 575 篇增至 576 篇。
 - **2026-10-28**: 新增 SciΠvot，由第一作者 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname) 提交，收入评估与基准（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）。在智能体的研究计划和资深研究者纠正后的计划之间选择时，最好的前沿模型为 63.5%，初次接触这些项目的研究者为 73.4%。从 574 篇增至 575 篇。
 - **2026-10-28**: 新增 ToolMaster，由共同第一作者之一 [@passionate11](https://github.com/passionate11) 提交，收入工具使用（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)）。经过先试用工具的训练，Qwen2.5-7B 在 StableToolBench 上达到 66.4，未经训练的 GPT-4o 为 60.2。从 573 篇增至 574 篇。

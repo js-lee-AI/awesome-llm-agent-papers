@@ -104,7 +104,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [🤝 マルチエージェントシステム (57)](#multi-agent)
 - **🌍 第2部：環境と応用のなかのエージェント**
   - [🌐 インタラクティブ環境 (60)](#environments)
-  - [🚀 応用分野 (58)](#applications)
+  - [🚀 応用分野 (60)](#applications)
 - **⚖️ 第3部：横断的な課題**
   - [📊 評価とベンチマーク (58)](#evaluation)
   - [🛡️ 安全性とアライメント (62)](#safety)
@@ -598,11 +598,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="applications"></a>
-### 🚀 応用分野 (58)
+### 🚀 応用分野 (60)
 *サーベイの§10（応用分野）に対応します。*
 
 <details>
-<summary><b>58本の論文を表示</b></summary>
+<summary><b>60本の論文を表示</b></summary>
 
 - **[AutoCodeRover: Autonomous Program Improvement](https://arxiv.org/abs/2404.05427)** (Zhang et al., arXiv 2024) - *構造化されたコード検索に基づく、低コストな自律型プログラム修復エージェントの最初期の一つ。* [[code](https://github.com/nus-apr/auto-code-rover)]
 - **[Agentless: Demystifying LLM-based Software Engineering Agents](https://arxiv.org/abs/2407.01489)** (Xia et al., arXiv 2024) - *エージェントを使わない単純なパイプラインでも複雑なエージェントに匹敵しうることを示した、主流の見方に対する影響力のある反論。* [[code](https://github.com/OpenAutoCoder/Agentless)]
@@ -663,6 +663,8 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[From Benchmark to Bench: Can Agents Survive Real-World Drug Discovery?](https://arxiv.org/abs/2610.06411)** (Llompart et al., arXiv 2026) - *Claude Sonnet 4.6に、24 のMCPツールを通じてリード最適化を進めさせる。プロジェクトの目標を書いて改め、分子を自分で提案するか、生成をREINVENT 4に任せる。GSK、Sanofi、AstraZenecaの過去のキャンペーン九件を、時点を固定して再現したところ、GSKの四系列のうち三つとAstraZenecaのキャンペーンは目標を達成したが、Sanofiのプロジェクトは四件中二件だけだった。四人の化学者は、提案された分子とheld-outの化合物を見分けられなかった。成否は生成の経路よりも、スコアリングモデルの精度に左右された。評価項目はすべて実測ではなく予測値である。*
 - **[Legal Research Bench: Measuring End-to-End Reliability in Long-Horizon Legal Research Agents](https://arxiv.org/abs/2610.00609)** (Drozdov et al., arXiv 2026) - *法律リサーチのエージェントを、専門家が書いた米国法の問題 413 問で、部分点なしで採点する。答えが正解になるのは、rubricのすべての基準を満たし、引用した判例や法令が確かめられた場合だけである。ウェブ検索、判例検索、文書検索のツールを持つ十三の最先端モデルのうち、最も良いClaude Opus 4.8でも完全に正しかったのは 42.9% で、重み付きの合格率は 68% から 86% だった。Kimi K2.6は平均 112 回ツールを呼び出して 15.5% にとどまり、ツールを外すと平均 22.5 ポイント下がった。各問題の実行は一回で、採点はLLMの判定モデルによる。* [[code](https://github.com/vals-ai/legal-research-bench)]
 - **[From Benchmarks to Business Impact: Deploying IBM Generalist Agent in Enterprise Production](https://arxiv.org/abs/2510.23856)** (Shlomov et al., IAAI 2026) - *IBMが公開したCUGAエージェントを、人材採用のアウトソーシング事業で試験導入した報告である。CUGAはWebArenaで 61.7%、AppWorldのチャレンジ分割でシナリオ完了率 48.2% を記録したplanner-executor型のシステムで、この試験ではウェブ閲覧を切り、読み取り専用の分析API 13 本を通じて採用担当者の質問に答える。新たに作ったBPO-TAの 26 タスクで正解率 87% を出し、最初の試行で有効な結果を出す割合を素のReActエージェントの 62% から 79% に上げ、reflectionによる再試行を外すと 11 ポイント下がった。ただし本番運用にはまだ至っておらず、報告された削減効果（回答時間が約 20 分から 2 から 5 分に、開発期間が最大 90% 短縮）は管理された試験と限られたアナリストの意見に基づく推定で、有意性の検定もしていない。論文にはBPO-TAの 26 タスクが載っているが、その裏にあるAPIとデータはコード公開物に含まれていない。* [[code](https://github.com/cuga-project/cuga-agent)]
+- **[AgonAlpha: Autonomous Alpha Discovery via Prompt Economy and Scalable Agentic Search](https://arxiv.org/abs/2608.11250)** (Ye et al., arXiv 2026) - *WorldQuant BRAIN上で、二つの役割を使って数式型のトレーディングアルファを探す。提案役は候補ごとに仮説、式、プラットフォーム上の根拠をまとめた報告を凍結して残し、新しいコンテキストで動くレビュー役は評価をやり直すことができ、候補のスコアをゼロにすることもできる。スケジューラは実行中のジョブも数に入れて、系統ごとに予算を配分する。著者五人がそれぞれ別のアカウントで六つのモデルバックエンドを使って動かしたところ、60 件の提出のうち 17 件がBRAINの最高評価を受け、最良のアルファはFitness 9.50、Sharpe 3.48 で、レビュー役は確認した 24 件の報告のうち 2 件のスコアをゼロにした。数値はすべて、式の選定にも使った 2019〜2023 年の区間でのBRAINのスコアであり、サンプル外の結果は報告されておらず、baselineもablationもない。コードリポジトリにはプロンプトとスケジューラだけがあり、実行記録はない。* [[code](https://github.com/AutoResearch-Factory/AgonAlpha)]
+- **[AutoSR: Automatic Symbolic Regression by Searching Research States](https://arxiv.org/abs/2608.16876)** (Zhang et al., arXiv 2026) - *記号回帰を研究状態の探索として行う。研究状態は候補となる式に、その動機、数値による検証、失敗した試み、独立したレビューをまとめたもので、提案役とレビュー役の二つのエージェントがMonte Carlo tree searchのもとでこれを広げていき、別にPySR、SISSO、FEXを走らせるループも並行して動く。難しさで選んだ九つの問題すべてで正解と代数的に等価な式を見つけ、その中には発表済みの 12 のシステムがどれも解けなかったcp3-benchの三問と、問題ごとに比べられるbaselineのないLSR-Transformの六つの課題が含まれる。各事例で報告されているのは成功した実行一回だけで、繰り返し実行もablationもない。事例ごとに示された 6〜33 分は答えを見つけた提案役のセッションだけを測った時間であり、エージェントにどの言語モデルを使ったかは論文に書かれておらず、公開ベンチマークなので記憶された科学知識の影響も排除できない。リポジトリにはプロンプトとスケジューラはあるが、九回の実行記録はない。* [[code](https://github.com/AutoResearch-Factory/AutoSR)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -872,8 +874,8 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | 「応用分野」に、レビュー役が候補を再実行して却下できるアルファ探索システムAgonAlphaと、記号回帰を研究状態の探索として行うAutoSR。共同第一著者の一人による投稿（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。「評価とベンチマーク」に、上級研究者がLLMエージェントの研究上の判断を正した記録から作ったベンチマーク、SciΠvot。第一著者本人による投稿（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）。研究エージェントとorchestrationの論文 3 本：AutoNumerics、OptimAI、PerspectiveGap（[#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)）。Agonのコードリンクと、途中で切れていた九本の説明文を書き直すきっかけになった報告（[#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)） |
 | <a href="https://github.com/dolev31"><img src="https://github.com/dolev31.png?size=48" width="48" height="48" alt="@dolev31"></a> | **[@dolev31](https://github.com/dolev31)** | 「ツール利用」に、エージェントが繰り返すツール絞り込みの呼び出しを、自身の実行記録で学習した小さな分類器に置き換えるTabAgent（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。第一著者本人による投稿 |
-| <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | 「評価とベンチマーク」に、上級研究者がLLMエージェントの研究上の判断を正した記録から作ったベンチマーク、SciΠvot。第一著者本人による投稿（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）。研究エージェントとorchestrationの論文 3 本：AutoNumerics、OptimAI、PerspectiveGap（[#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)）。Agonのコードリンクと、途中で切れていた九本の説明文を書き直すきっかけになった報告（[#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)） |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | 「ツール利用」に、ツールに頼る前にまず試すようモデルを学習させるToolMaster（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)）。二人の共同第一著者の一人による投稿 |
 | <a href="https://github.com/segevshlomovIBM"><img src="https://github.com/segevshlomovIBM.png?size=48" width="48" height="48" alt="@segevshlomovIBM"></a> | **[@segevshlomovIBM](https://github.com/segevshlomovIBM)** | 「応用分野」に、IBMのCUGAエージェントを採用業務で試験導入した報告From Benchmarks to Business Impact（[#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)）。第一著者本人による投稿 |
 | <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | 「評価とベンチマーク」に、シミュレーション上の 365 日間エージェントにオンラインストアを運営させるベンチマークMerchantBench（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。第一著者本人による投稿 |
@@ -906,6 +908,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-11-02**: 共同第一著者の[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)が送ってくれたAgonAlphaとAutoSRを「応用分野」に追加しました（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。AutoSRは、発表済みの記号回帰システム 12 個がどれも解けなかったcp3-benchの三問で正確な式を見つけました。報告されているのは各問題で成功した実行一回です。576 本から 578 本になりました。
 - **2026-10-28**: 第一著者の[@dolev31](https://github.com/dolev31)が送ってくれたTabAgentを「ツール利用」に追加しました（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。エージェント自身の実行記録で学習した分類器が、AppWorldでGPT-5.4のツール絞り込みを、呼び出し一回あたり 7.5 秒ではなく約 3 ms で代わりに行いました。稼働中のエージェントのタスク成功率は 29.2% から 27.1% になりましたが、24 タスクでは見分けられない差です。575 本から 576 本になりました。
 - **2026-10-28**: 第一著者の[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)が送ってくれたSciΠvotを「評価とベンチマーク」に追加しました（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）。エージェントの研究計画と上級研究者が正した計画のどちらかを選ばせると、最良のフロンティアモデルは 63.5% で、プロジェクトを初めて見る研究者の 73.4% に届きませんでした。574 本から 575 本になりました。
 - **2026-10-28**: 共同第一著者の[@passionate11](https://github.com/passionate11)が送ってくれたToolMasterを「ツール利用」に追加しました（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)）。ツールをまず試すよう学習したQwen2.5-7Bは、StableToolBenchで 66.4 となり、学習なしのGPT-4oの 60.2 を上回りました。573 本から 574 本になりました。
