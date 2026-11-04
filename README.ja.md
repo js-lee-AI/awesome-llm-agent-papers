@@ -106,7 +106,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [🌐 インタラクティブ環境 (60)](#environments)
   - [🚀 応用分野 (60)](#applications)
 - **⚖️ 第3部：横断的な課題**
-  - [📊 評価とベンチマーク (58)](#evaluation)
+  - [📊 評価とベンチマーク (59)](#evaluation)
   - [🛡️ 安全性とアライメント (62)](#safety)
 
 ## 🧭 背景
@@ -673,11 +673,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## ⚖️ 第3部：横断的な課題
 
 <a id="evaluation"></a>
-### 📊 評価とベンチマーク (58)
+### 📊 評価とベンチマーク (59)
 *サーベイの§9（評価とベンチマーク）に対応します。*
 
 <details>
-<summary><b>58本の論文を表示</b></summary>
+<summary><b>59本の論文を表示</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *ツールを使う汎用エージェントアシスタントの基準となるベンチマーク。フロンティアエージェントの進歩を追う、人気の公開リーダーボードの土台になっている。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *コーディング／ソフトウェア工学エージェントの事実上の標準ベンチマーク。SWE-bench Verified/Lite/Live/Multimodalといった派生版を生んだ。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -738,6 +738,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *相互に絡む七種類のルールマスを持つ2Dグリッドの経路探索をGymnasiumのタスクにし、エージェントは提示された合法な手から一手ずつ経路を描く（手を戻す操作は任意）。open-weightモデル八つを 500 問のパズルで試すと、最良のGPT-OSS 120Bでも解けたのは 16.0% で、人間は 98.0%、ルールを無視して最短経路だけを探すエージェントは 6.4% だった。一手ずつの形式は書式の誤りをなくすため、弱いモデルでは一度に答える場合より最大 5.4 ポイント上がったが、強いモデルでは最大 5.6 ポイント下がった。手を戻せるようにするとGPT-OSSの完走率は 85% から 94% に上がったが、正解率は 5.8 ポイント下がった。パズルを画像で受け取ったQwen3-VL-32Bの正解率は 2.8% で、テキストで受け取った場合の 10.2% を下回った。プロプライエタリなモデルは試していない。* [[code](https://github.com/lkaesberg/Spatial-Gym)]
 - **[Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research](https://arxiv.org/abs/2603.00582)** (Dong et al., arXiv 2026) - *十の分野にわたる 300 の開かれた研究課題を、GPT-4oとGemini Deep Researchで下書きしたうえで分野の専門家が精査して用意し、各レポートを、エージェントが作り専門家が手直しした事実と洞察の参照グラフに照らして、カバー率、論理的一貫性、LLMがレポートだけを見て答える設問、客観性、引用の分散で採点する。12 のシステムのうち総合で最も高いのはGemini Deep Researchの 28.62 で、内蔵の検索で答えたKimi-k2（26.16）がo3 Deep Research（22.04）を上回った。レポートから事実を 1 から 3 個削ったり加えたりすると、グラフに基づくスコアは 57.4% から 79.6% のケースで正しい方向に動いたが、LLMの評価者では 14.8% から 22.2% にとどまった。公開物には課題と 3,600 本のレポートがあるが、参照グラフと採点器はないため、新しいエージェントを論文と同じ方法で採点することはまだできない。* [[code](https://github.com/cnsdqd-dyb/Super-Research-Benchmark)]
 - **[SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082)** (Sun et al., arXiv 2026) - *上級研究者が六か月にわたって六つの分野の 26 件のプロジェクトでLLMエージェントを動かし、その研究上の判断を正した記録から、二択の問題 248 問を作る。モデルは修正の直前までのプロジェクト記録だけを見て、エージェントの元の計画と修正後の計画のどちらかを選ぶ。中程度のreasoning effortでは、フロンティアモデル五つのうち四つが元の計画のほうを多く選び（Claude Opus 5は 38.9%、例外のGPT-6 Astraは 59.5%）、どの設定でも最高は 63.5% で、エージェントの補助を使える、プロジェクトを初めて見る博士課程の学生とポスドク 13 人の 73.4% に届かない。同じeffortでは、どのモデルも二つの計画だけを見るよりプロジェクト記録も見たほうが点が低かった。問題は評価した五つのモデルの答えが割れるものを選んでいるため、点数はモデルがどれだけ頻繁に誤るかではなく、どこで誤るかを示す。問題、プロンプト、プロジェクト記録は公開されているが、モデルごとの応答ログは公開されていない。* [[code](https://github.com/AutoResearch-Factory/SciPIvot)]
+- **[Empowering Edge Agents: A Systematic Analysis of Edge-Cloud Collaboration in LLM Agent Execution](https://arxiv.org/abs/2610.17816)** (Huang et al., arXiv 2026) - *六つのエージェントベンチマークから実行可能なデジタルワークスペースのタスク 128 件を集め、そのうち 100 件に機密情報 3,385 件（ワークスペースに元からあったものとLLMが挿入したもの）の注釈を付け、すべての実行を完了度、クラウドの費用、それらの情報のうちクラウドモデルに見えた割合で同時に採点して、QwenのエッジモデルとクラウドのGLM-5.3が仕事を分担する四つのやり方を比べる。Qwen3.5-2Bでは、エッジモデルのトークンエントロピーでステップごとに振り分けると完了度が 12.75 から 39.97 に上がり、費用はクラウド単独の 22.7% だが、エッジモデル自身にクラウドを呼ばせても完了度は 2 点から 3 点しか上がらない。Qwen3.5-9Bでは、エッジモデルが求めたクラウドの助言でクラウド単独の 82.70 に対して 60.46 に達し、費用はその約 15% だが、機密情報の 45.46% がクラウドに見える。Qwen3.7-Plusでは四つのやり方の完了度の差が 3.67 点なのに対し、露出の差は 66.23 点である。タスクは同じ 2B と 9B のエッジモデルおよびGLM-5.3の実行結果で選別され、両端とも解けたものとどちらもほとんど進まなかったものが除かれている。クラウドを呼ぶ前の秘匿処理はなく、公開コードは四つのやり方のうち委任方式を除く三つだけで、実行ログは含まれていない。* [[code](https://github.com/OpenBMB/EC2-Bench)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -875,10 +876,10 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | 「評価とベンチマーク」に、エッジとクラウドの協働を完了度、クラウドの費用、プライバシーの露出で採点するワークスペースタスク 128 件、EC2-Bench。第一著者本人による投稿（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）。「ツール利用」に、ツールに頼る前にまず試すようモデルを学習させるToolMaster。二人の共同第一著者の一人による投稿（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)） |
 | <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | 「サーベイとポジションペーパー」に、harnessをcontrol、agency、runtimeに分け、それを報告するためのHarnessCardを提案するポジションペーパーHarness Engineering for Language Agents（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。第一著者本人による投稿 |
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | 「応用分野」に、レビュー役が候補を再実行して却下できるアルファ探索システムAgonAlphaと、記号回帰を研究状態の探索として行うAutoSR。共同第一著者の一人による投稿（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。「評価とベンチマーク」に、上級研究者がLLMエージェントの研究上の判断を正した記録から作ったベンチマーク、SciΠvot。第一著者本人による投稿（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）。研究エージェントとorchestrationの論文 3 本：AutoNumerics、OptimAI、PerspectiveGap（[#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)）。Agonのコードリンクと、途中で切れていた九本の説明文を書き直すきっかけになった報告（[#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)） |
 | <a href="https://github.com/dolev31"><img src="https://github.com/dolev31.png?size=48" width="48" height="48" alt="@dolev31"></a> | **[@dolev31](https://github.com/dolev31)** | 「ツール利用」に、エージェントが繰り返すツール絞り込みの呼び出しを、自身の実行記録で学習した小さな分類器に置き換えるTabAgent（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。第一著者本人による投稿 |
-| <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | 「ツール利用」に、ツールに頼る前にまず試すようモデルを学習させるToolMaster（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)）。二人の共同第一著者の一人による投稿 |
 | <a href="https://github.com/segevshlomovIBM"><img src="https://github.com/segevshlomovIBM.png?size=48" width="48" height="48" alt="@segevshlomovIBM"></a> | **[@segevshlomovIBM](https://github.com/segevshlomovIBM)** | 「応用分野」に、IBMのCUGAエージェントを採用業務で試験導入した報告From Benchmarks to Business Impact（[#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)）。第一著者本人による投稿 |
 | <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | 「評価とベンチマーク」に、シミュレーション上の 365 日間エージェントにオンラインストアを運営させるベンチマークMerchantBench（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。第一著者本人による投稿 |
 | <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | 「評価とベンチマーク」に、300 の開かれた研究課題と 12 のシステムのレポートからなるベンチマークSuper Research（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。第一著者本人による投稿 |
@@ -910,6 +911,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-11-05**: 第一著者の[@passionate11](https://github.com/passionate11)が送ってくれたEC2-Benchを「評価とベンチマーク」に追加しました（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）。エッジにQwen3.7-Plusを置くと、クラウドモデルを使う四つのやり方の完了度の差は 3.67 点ですが、クラウドに見える機密情報の割合の差は 66.23 点です。579 本から 580 本になりました。
 - **2026-11-02**: 第一著者の[@ChaoYue0307](https://github.com/ChaoYue0307)が送ってくれたHarness Engineering for Language Agentsを「サーベイとポジションペーパー」に追加しました（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。調べた 63 本のうち、論文とベンチマーク 38 本はインターフェースと可観測性を最も多く前面に出し、エンジニアリングノート 25 本はruntime、control、ガバナンスを前面に出していました。578 本から 579 本になりました。
 - **2026-11-02**: 共同第一著者の[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)が送ってくれたAgonAlphaとAutoSRを「応用分野」に追加しました（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。AutoSRは、発表済みの記号回帰システム 12 個がどれも解けなかったcp3-benchの三問で正確な式を見つけました。報告されているのは各問題で成功した実行一回です。576 本から 578 本になりました。
 - **2026-10-28**: 第一著者の[@dolev31](https://github.com/dolev31)が送ってくれたTabAgentを「ツール利用」に追加しました（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。エージェント自身の実行記録で学習した分類器が、AppWorldでGPT-5.4のツール絞り込みを、呼び出し一回あたり 7.5 秒ではなく約 3 ms で代わりに行いました。稼働中のエージェントのタスク成功率は 29.2% から 27.1% になりましたが、24 タスクでは見分けられない差です。575 本から 576 本になりました。

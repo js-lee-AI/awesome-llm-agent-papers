@@ -106,7 +106,7 @@
   - [🌐 交互环境 (60)](#environments)
   - [🚀 应用领域 (60)](#applications)
 - **⚖️ 第三部分：贯穿全局的问题**
-  - [📊 评估与基准 (58)](#evaluation)
+  - [📊 评估与基准 (59)](#evaluation)
   - [🛡️ 安全与对齐 (62)](#safety)
 
 ## 🧭 背景
@@ -673,11 +673,11 @@
 ## ⚖️ 第三部分：贯穿全局的问题
 
 <a id="evaluation"></a>
-### 📊 评估与基准 (58)
+### 📊 评估与基准 (59)
 *对应综述 §9（评估与基准）。*
 
 <details>
-<summary><b>展开 58 篇论文</b></summary>
+<summary><b>展开 59 篇论文</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *参考基准，面向会用工具的通用智能体助手；一些热门的公开排行榜以它为基础，追踪前沿智能体的进展。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *编码与软件工程智能体事实上的标准基准；衍生出了 SWE-bench Verified/Lite/Live/Multimodal 这一系列。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -738,6 +738,7 @@
 - **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *把带有七类相互作用的规则格的 2D 网格寻路变成一个 Gymnasium 任务，智能体从给出的合法走法中一步一步画出路径，可选择回退，并用 500 个谜题测试八个开放权重模型：最好的 GPT-OSS 120B 只解出 16.0%，人类为 98.0%，不顾规则、只找最短路径的智能体为 6.4%；逐步作答的形式消除了格式错误，让较弱的模型比一次性作答最多高 5.4 个点，却让较强的模型最多低 5.6 个点；允许回退后，GPT-OSS 的完成率从 85% 升到 94%，解题率却下降 5.8 个点；以图像形式拿到谜题的 Qwen3-VL-32B 只解出 2.8%，用文本时为 10.2%。没有测试任何专有模型。* [[code](https://github.com/lkaesberg/Spatial-Gym)]
 - **[Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research](https://arxiv.org/abs/2603.00582)** (Dong et al., arXiv 2026) - *在十个领域提出 300 个开放式研究问题，先由 GPT-4o 和 Gemini Deep Research 起草，再由领域专家审核；每份报告都与一张由智能体构建、专家修订的事实与洞见参考图对照，从覆盖度、逻辑一致性、由 LLM 只凭报告作答的测验、客观性和引用分散度几方面打分：12 个系统中 Gemini Deep Research 以综合 28.62 分居首，用自带搜索作答的 Kimi-k2（26.16）高于 o3 Deep Research（22.04）；从报告中删去或加入 1 到 3 条事实时，基于图的分数在 57.4% 到 79.6% 的情况下朝正确方向变化，LLM 评估者只有 14.8% 到 22.2%。公开发布的内容包括问题和 3,600 份报告，但没有参考图和评分器，因此新的智能体还无法按论文的方式打分。* [[code](https://github.com/cnsdqd-dyb/Super-Research-Benchmark)]
 - **[SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082)** (Sun et al., arXiv 2026) - *用资深研究者在六个月里于六个领域的 26 个项目中运行 LLM 智能体、并纠正其研究决策的记录，构建 248 道二选一题：模型只看纠正之前的项目记录，在智能体原来的计划和纠正后的计划之间选择。在中等 reasoning effort 下，五个前沿模型中有四个更常选原计划，Claude Opus 5 为 38.9%，唯一例外的 GPT-6 Astra 为 59.5%；所有设置中的最高分是 63.5%，而初次接触这些项目、可使用智能体助手的 13 名博士生和博士后为 73.4%；在同一 effort 下，每个模型看到项目记录时的得分都低于只看两个计划时。题目是按这五个模型答案出现分歧的标准挑选的，因此分数说明模型在哪里出错，而不是出错的频率；题目、提示词和项目记录已公开，模型的回答日志未公开。* [[code](https://github.com/AutoResearch-Factory/SciPIvot)]
+- **[Empowering Edge Agents: A Systematic Analysis of Edge-Cloud Collaboration in LLM Agent Execution](https://arxiv.org/abs/2610.17816)** (Huang et al., arXiv 2026) - *从六个智能体基准中取出 128 个可执行的数字工作区任务，在其中 100 个里标注 3,385 条敏感信息（一部分原本就在工作区里，一部分由 LLM 插入），并对每次运行同时按完成度、云端成本以及这些信息中被云端模型看到的比例打分，用来比较 Qwen 端侧模型与云端 GLM-5.3 分担工作的四种方式。在 Qwen3.5-2B 上，按端侧模型的词元熵逐步路由，可把完成度从 12.75 提到 39.97，成本是纯云端的 22.7%，而让端侧模型自己决定何时调用云端只多出 2 到 3 分；在 Qwen3.5-9B 上，由端侧模型主动请求的云端建议达到 60.46，纯云端为 82.70，成本约为其 15%，但有 45.46% 的敏感信息被云端看到；在 Qwen3.7-Plus 上，四种方式的完成度只差 3.67 分，暴露比例却差 66.23 分。任务是用同样的 2B、9B 端侧模型和 GLM-5.3 的运行结果筛选的，去掉了两端都能完成的任务和两端都几乎没有进展的任务；调用云端前不做任何遮蔽，公开代码只包含四种方式中的三种，没有委托方式，也没有运行日志。* [[code](https://github.com/OpenBMB/EC2-Bench)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -875,10 +876,10 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | EC2-Bench：用 128 个工作区任务从完成度、云端成本和隐私暴露三方面评估端云协作，由第一作者本人提交，收入评估与基准（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）；ToolMaster：训练模型在依赖工具之前先试用工具，由两位共同第一作者之一提交，收入工具使用（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)） |
 | <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | Harness Engineering for Language Agents：把 harness 分成 control、agency 和 runtime，并提出用于报告它的 HarnessCard 的立场论文，收入综述与立场论文（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。由第一作者本人提交 |
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | AgonAlpha：审查者会重跑每个候选并可否决的 alpha 因子挖掘系统；AutoSR：把符号回归做成对研究状态的搜索。均由共同第一作者之一提交，收入应用领域（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）；SciΠvot：用资深研究者纠正 LLM 智能体研究决策的记录构建的基准，由第一作者本人提交，收入评估与基准（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）；3 篇研究智能体与编排方向的论文：AutoNumerics、OptimAI、PerspectiveGap（[#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)）；Agon 的代码链接，以及那份让九条截断注释得以重写的报告（[#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)） |
 | <a href="https://github.com/dolev31"><img src="https://github.com/dolev31.png?size=48" width="48" height="48" alt="@dolev31"></a> | **[@dolev31](https://github.com/dolev31)** | TabAgent：用基于智能体自身运行记录训练的小分类器，替代它反复发出的候选工具筛选调用，收入工具使用（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。由第一作者本人提交 |
-| <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | ToolMaster：训练模型在依赖工具之前先试用工具，收入工具使用（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)）。由两位共同第一作者之一提交 |
 | <a href="https://github.com/segevshlomovIBM"><img src="https://github.com/segevshlomovIBM.png?size=48" width="48" height="48" alt="@segevshlomovIBM"></a> | **[@segevshlomovIBM](https://github.com/segevshlomovIBM)** | From Benchmarks to Business Impact：IBM 在招聘业务中试点 CUGA 智能体的报告，收入应用领域（[#25](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/25)）。由第一作者本人提交 |
 | <a href="https://github.com/KhanCold"><img src="https://github.com/KhanCold.png?size=48" width="48" height="48" alt="@KhanCold"></a> | **[@KhanCold](https://github.com/KhanCold)** | MerchantBench：让智能体在模拟的 365 天里经营网店的基准，收入评估与基准（[#24](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/24)）。由第一作者本人提交 |
 | <a href="https://github.com/cnsdqd-dyb"><img src="https://github.com/cnsdqd-dyb.png?size=48" width="48" height="48" alt="@cnsdqd-dyb"></a> | **[@cnsdqd-dyb](https://github.com/cnsdqd-dyb)** | Super Research：由 300 个开放式研究问题和 12 个系统的报告组成的基准，收入评估与基准（[#23](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/23)）。由第一作者本人提交 |
@@ -910,6 +911,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-11-05**: 新增 EC2-Bench，由第一作者 [@passionate11](https://github.com/passionate11) 提交，收入评估与基准（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）。端侧用 Qwen3.7-Plus 时，引入云端模型的四种方式在完成度上只差 3.67 分，在云端看到的敏感信息比例上却差 66.23 分。从 579 篇增至 580 篇。
 - **2026-11-02**: 新增 Harness Engineering for Language Agents，由第一作者 [@ChaoYue0307](https://github.com/ChaoYue0307) 提交，收入综述与立场论文（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。在它梳理的 63 篇工作中，38 篇论文和基准最常突出接口和可观测性，25 篇工程笔记则更常突出 runtime、control 和治理。从 578 篇增至 579 篇。
 - **2026-11-02**: 新增 AgonAlpha 和 AutoSR，由共同第一作者之一 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname) 提交，收入应用领域（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。在 12 个已发表的符号回归系统都没能解出的三个 cp3-bench 问题上，AutoSR 找到了准确的方程，每个问题报告一次成功的运行。从 576 篇增至 578 篇。
 - **2026-10-28**: 新增 TabAgent，由第一作者 [@dolev31](https://github.com/dolev31) 提交，收入工具使用（[#30](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/30)）。用智能体自身运行记录训练的分类器，在 AppWorld 上接替 GPT-5.4 的候选工具筛选，每次约 3 ms 而不是 7.5 s；实际运行的智能体任务成功率从 29.2% 变为 27.1%，在 24 个任务上无法区分这一差距。从 575 篇增至 576 篇。
