@@ -106,7 +106,7 @@ Fresh 2026 work that is already drawing attention.
   - [🌐 Interactive Environments (60)](#environments)
   - [🚀 Applications (60)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (58)](#evaluation)
+  - [📊 Evaluation & Benchmarks (59)](#evaluation)
   - [🛡️ Safety & Alignment (62)](#safety)
 
 ## 🧭 Background
@@ -673,11 +673,11 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (58)
+### 📊 Evaluation & Benchmarks (59)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
-<summary><b>Show 58 papers</b></summary>
+<summary><b>Show 59 papers</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Reference benchmark for generalist, tool-using agent assistants; underlies popular public leaderboards tracking frontier agent progress.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *De facto standard benchmark for coding/software-engineering agents; spawned the SWE-bench Verified/Lite/Live/Multimodal family.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -738,6 +738,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Mind the Gap Between Spatial Reasoning and Acting! Step-by-Step Evaluation of Agents With Spatial-Gym](https://arxiv.org/abs/2604.09338)** (Kaesberg et al., arXiv 2026) - *Turns 2D grid pathfinding with seven kinds of interacting rule cells into a Gymnasium task in which the agent draws the path one move at a time from the legal moves it is offered, optionally with backtracking, and tests eight open-weight models on 500 puzzles: the best, GPT-OSS 120B, solves 16.0% against 98.0% for people and 6.4% for a shortest-path agent that ignores the rules, the step-by-step format adds up to 5.4 points over one-shot answers for weaker models by removing formatting errors but costs stronger ones up to 5.6, backtracking raises GPT-OSS's completion rate from 85% to 94% while its solve rate falls 5.8 points, and Qwen3-VL-32B given the puzzle as an image solves 2.8% against 10.2% from text; no proprietary model is tested.* [[code](https://github.com/lkaesberg/Spatial-Gym)]
 - **[Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research](https://arxiv.org/abs/2603.00582)** (Dong et al., arXiv 2026) - *Asks 300 open research questions in ten domains, drafted with GPT-4o and Gemini Deep Research and then vetted by domain experts, and scores each report against a reference graph of facts and insights that agents built and experts refined, on coverage, logical consistency, a quiz an LLM answers from the report alone, objectivity and citation spread: Gemini Deep Research leads 12 systems at 28.62 overall, Kimi-k2 answering with its built-in search (26.16) beats o3 Deep Research (22.04), and when 1 to 3 facts are removed from or added to a report the graph-based scores move the right way in 57.4% to 79.6% of cases against 14.8% to 22.2% for an LLM judge; the release has the questions and 3,600 reports but neither the reference graphs nor a scorer, so a new agent cannot yet be scored the way the paper does.* [[code](https://github.com/cnsdqd-dyb/Super-Research-Benchmark)]
 - **[SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082)** (Sun et al., arXiv 2026) - *Builds 248 two-way choices from six months in which senior researchers ran LLM agents on 26 projects in six fields and corrected their research decisions: given the project record from just before a correction, a model picks between the agent's original plan and the corrected one. At medium reasoning effort four of five frontier models pick the original plan more often than not, Claude Opus 5 at 38.9% and GPT-6 Astra, the exception, at 59.5%; the best score in any setting is 63.5%, against 73.4% for 13 PhD students and postdocs new to the projects who had an agent assistant, and at that effort every model scores lower with the project record than with the two plans alone. The cases were kept because those same five models split on them, so the scores show where models go wrong rather than how often, and the questions, prompts and project records are released, without the models' response logs.* [[code](https://github.com/AutoResearch-Factory/SciPIvot)]
+- **[Empowering Edge Agents: A Systematic Analysis of Edge-Cloud Collaboration in LLM Agent Execution](https://arxiv.org/abs/2610.17816)** (Huang et al., arXiv 2026) - *Builds 128 executable digital-workspace tasks, 100 of them with privacy annotations, and scores every run jointly on task performance, cloud cost and privacy exposure to compare query routing, per-step routing, edge-controlled delegation and edge-controlled advisory: with a 9B edge model, collaboration reaches about 73% of cloud-only performance at about 15% of its cloud cost, and as the edge model gets stronger the strategies converge in performance but still differ greatly in privacy exposure, while the best mode shifts from external routing toward edge-led cloud advisory.* [[code](https://github.com/OpenBMB/EC2-Bench)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
