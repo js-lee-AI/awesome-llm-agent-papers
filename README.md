@@ -101,7 +101,7 @@ Fresh 2026 work that is already drawing attention.
   - [🧠 Planning & Reasoning (55)](#planning)
   - [💾 Memory (60)](#memory)
   - [🔧 Tool Use (51)](#tools)
-  - [🤝 Multi-Agent Systems (57)](#multi-agent)
+  - [🤝 Multi-Agent Systems (58)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (60)](#environments)
   - [🚀 Applications (60)](#applications)
@@ -456,11 +456,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 Multi-Agent Systems (57)
+### 🤝 Multi-Agent Systems (58)
 *Corresponds to §7 (Multi-Agent Systems).*
 
 <details>
-<summary><b>Show 57 papers</b></summary>
+<summary><b>Show 58 papers</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *One of the earliest and most cited frameworks establishing autonomous agent-to-agent cooperation via role-play.* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *Seminal multi-agent debate paper popularizing 'society of minds'-style debate as a test-time technique.* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -520,6 +520,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Voting or Consensus? Decision-Making in Multi-Agent Debate](https://arxiv.org/abs/2502.19130)** (Kaesberg et al., ACL Findings 2025) - *Changes only the decision protocol in debates among three Llama 3 8B agents, comparing four voting and three consensus rules on three knowledge and three reasoning tasks: voting beats consensus by 13.2 points on average on the reasoning tasks, mostly on MuSR and SQuAD 2.0 while StrategyQA moves 0.2, consensus wins by 2.8 on the knowledge tasks and needs 1.42 rounds on average against 3.38 for voting, approval voting reaches no decision in 59% of cases, and on StrategyQA more agents help while more rounds before the vote hurt; the proposed Collective Improvement, in which agents see only each other's last solutions, adds 7.4 points there, though every result comes from dataset subsets and debates cost five to ten times the compute of one chain-of-thought answer.* [[code](https://github.com/lkaesberg/decision-protocols)]
 - **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *Scores the answer after each of seven debate turns among three Llama-3.1-70B agents on ten tasks and counts a debate as drifting when its answer gets worse than at an earlier turn: 74.6% to 88.6% of debates drift on the three generative tasks against 6.6% to 15.5% on knowledge and reasoning tasks, 8.5% to 45.4% of drifting debates recover, and eight experts reading 170 drifting excerpts most often mark lack of progress (60); the DRIFTJudge detector, which needs no gold label, reaches 0.92 specificity but 0.15 precision on MMLU-Pro, and DRIFTPolicy, a feedback agent called in when DRIFTJudge flags a turn, cuts the seven-turn accuracy loss there from 3.66 to 0.08 points for Qwen2-7B agents that vote, but not under consensus, where Llama-3.1-70B loses 4.08 points with it against 2.23 without.* [[code](https://github.com/jonas-becker/problem-drift)]
 - **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *Open-source framework for multi-agent debate on text tasks that sets agent personas (none, expert, Big Five), response style (simple, critical, reasoning), discussion paradigm (memory, relay, report, debate) and decision protocol (voting, consensus or a judge) independently in one config file, 144 combinations in its public demo, runs on any OpenAI-compatible endpoint, loads any text dataset from Hugging Face and repeats runs to report standard deviations; Voting or Consensus? and Stay Focused were run on it, and the results in the paper are restated from the authors' earlier studies, such as the fully visible memory paradigm agreeing in 1.75 turns on StrategyQA against 2.61 for relay.* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
+- **[NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning](https://arxiv.org/abs/2605.16757)** (Lu et al., STAI-X 2026) - *Trains every node of a layered, text-passing multi-agent system jointly with REINFORCE from the final answer's reward, with agents that have no assigned roles, and grows larger systems progressively from smaller trained ones; Paper Award Honorable Mention at The First Conference on Statistics and Trustworthy AI for Cross (X)-Domain Acceleration (STAI-X 2026).* [[code](https://github.com/haoranlustat/NeuroMAS)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
