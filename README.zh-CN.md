@@ -106,7 +106,7 @@
   - [🌐 交互环境 (60)](#environments)
   - [🚀 应用领域 (60)](#applications)
 - **⚖️ 第三部分：贯穿全局的问题**
-  - [📊 评估与基准 (59)](#evaluation)
+  - [📊 评估与基准 (62)](#evaluation)
   - [🛡️ 安全与对齐 (62)](#safety)
 
 ## 🧭 背景
@@ -673,11 +673,11 @@
 ## ⚖️ 第三部分：贯穿全局的问题
 
 <a id="evaluation"></a>
-### 📊 评估与基准 (59)
+### 📊 评估与基准 (62)
 *对应综述 §9（评估与基准）。*
 
 <details>
-<summary><b>展开 59 篇论文</b></summary>
+<summary><b>展开 62 篇论文</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *参考基准，面向会用工具的通用智能体助手；一些热门的公开排行榜以它为基础，追踪前沿智能体的进展。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *编码与软件工程智能体事实上的标准基准；衍生出了 SWE-bench Verified/Lite/Live/Multimodal 这一系列。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -739,6 +739,9 @@
 - **[Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research](https://arxiv.org/abs/2603.00582)** (Dong et al., arXiv 2026) - *在十个领域提出 300 个开放式研究问题，先由 GPT-4o 和 Gemini Deep Research 起草，再由领域专家审核；每份报告都与一张由智能体构建、专家修订的事实与洞见参考图对照，从覆盖度、逻辑一致性、由 LLM 只凭报告作答的测验、客观性和引用分散度几方面打分：12 个系统中 Gemini Deep Research 以综合 28.62 分居首，用自带搜索作答的 Kimi-k2（26.16）高于 o3 Deep Research（22.04）；从报告中删去或加入 1 到 3 条事实时，基于图的分数在 57.4% 到 79.6% 的情况下朝正确方向变化，LLM 评估者只有 14.8% 到 22.2%。公开发布的内容包括问题和 3,600 份报告，但没有参考图和评分器，因此新的智能体还无法按论文的方式打分。* [[code](https://github.com/cnsdqd-dyb/Super-Research-Benchmark)]
 - **[SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082)** (Sun et al., arXiv 2026) - *用资深研究者在六个月里于六个领域的 26 个项目中运行 LLM 智能体、并纠正其研究决策的记录，构建 248 道二选一题：模型只看纠正之前的项目记录，在智能体原来的计划和纠正后的计划之间选择。在中等 reasoning effort 下，五个前沿模型中有四个更常选原计划，Claude Opus 5 为 38.9%，唯一例外的 GPT-6 Astra 为 59.5%；所有设置中的最高分是 63.5%，而初次接触这些项目、可使用智能体助手的 13 名博士生和博士后为 73.4%；在同一 effort 下，每个模型看到项目记录时的得分都低于只看两个计划时。题目是按这五个模型答案出现分歧的标准挑选的，因此分数说明模型在哪里出错，而不是出错的频率；题目、提示词和项目记录已公开，模型的回答日志未公开。* [[code](https://github.com/AutoResearch-Factory/SciPIvot)]
 - **[Empowering Edge Agents: A Systematic Analysis of Edge-Cloud Collaboration in LLM Agent Execution](https://arxiv.org/abs/2610.17816)** (Huang et al., arXiv 2026) - *从六个智能体基准中取出 128 个可执行的数字工作区任务，在其中 100 个里标注 3,385 条敏感信息（一部分原本就在工作区里，一部分由 LLM 插入），并对每次运行同时按完成度、云端成本以及这些信息中被云端模型看到的比例打分，用来比较 Qwen 端侧模型与云端 GLM-5.3 分担工作的四种方式。在 Qwen3.5-2B 上，按端侧模型的词元熵逐步路由，可把完成度从 12.75 提到 39.97，成本是纯云端的 22.7%，而让端侧模型自己决定何时调用云端只多出 2 到 3 分；在 Qwen3.5-9B 上，由端侧模型主动请求的云端建议达到 60.46，纯云端为 82.70，成本约为其 15%，但有 45.46% 的敏感信息被云端看到；在 Qwen3.7-Plus 上，四种方式的完成度只差 3.67 分，暴露比例却差 66.23 分。任务是用同样的 2B、9B 端侧模型和 GLM-5.3 的运行结果筛选的，去掉了两端都能完成的任务和两端都几乎没有进展的任务；调用云端前不做任何遮蔽，公开代码只包含四种方式中的三种，没有委托方式，也没有运行日志。* [[code](https://github.com/OpenBMB/EC2-Bench)]
+- **[Measuring AI Agents as Teammates with Collaborative Intelligence](https://arxiv.org/abs/2611.02633)** (Wu et al., arXiv 2026) - *把被测模型放进 2 到 5 人的团队对话，队友是实时作答的 LLM，外加一个按剧本制造问题的队友，在由事故报告、临床病例、谈判数据集和编程基准构建的 240 个任务上覆盖团队协作的八个维度，并且每个模型只在它能独自解决的任务上计分。18 个模型在测试中的得分都比一切正常的团队低 20.2 到 46.6 分，最高分是高 reasoning effort 下 Gemini 4 Argon 的 82.2；前沿模型在拒绝不安全的捷径和举报不当行为两类测试中的通过率都在 93% 以上，但在冲突任务中，它们在 99% 的运行里会询问强硬的队友需要什么，随后却在 81% 的运行里接受对方较差的分配方案；接手一个较弱模型已经作弊过的任务时只通过 81%，而自己从头开始同样的任务时是 97%。剧本队友只说固定台词，并根据 LLM 评估者给每条回复打的标签走不同分支，实时队友也是 LLM 而不是人，独自完成和 baseline 两个版本各只运行一次，240 个任务中有 80 个作为 held-out 不公开，需向作者申请评分。* [[code](https://github.com/zou-group/collaborative-intelligence)]
+- **[TeamGym: A Gym for Team Decision-Making by AI Agents with Distributed Information](https://arxiv.org/abs/2610.37571)** (Park et al., arXiv 2026) - *用法律、金融、医疗和软件工程领域的 12 个语料库构建团队决策问题，为每个问题找出最小的事实集合：这些事实合在一起足以支持参考决策，而且每一条都不可缺少；再控制每位参与者一开始掌握哪些事实。八个模型平均来看，把这些事实分给不同参与者，成功率从单个模型掌握全部事实时的 63.4% 降到 40.5%，要求参与者从各自的原始文档中自己找出这些事实，则进一步降到 20.6%；以只给最终决策打分的 GPT-5.5 评估者作为奖励，用 GRPO 训练 Qwen2.5-7B，FinDVer 验证集上的得分从 21.85% 提高到 41.08%，所有参与者都发言的回合比例也从 61.7% 升到 86.7%，而奖励并不计算这一项。这些事实是用模型挑选和检查的，有些决策由 LLM 评估者评分，每项训练结果都只来自一次运行，在 CUAD 上的提升几乎没有迁移到 MAUD，代码也尚未公开。*
+- **[TeamBench: Evaluating Agent Coordination under Enforced Role Separation](https://arxiv.org/abs/2605.07073)** (Kim et al., arXiv 2026) - *让 Planner、Executor 和 Verifier 在各自的容器中运行，使任何一个角色都不能同时读取完整需求、修改工作区并认证结果；在 851 个任务模板上评估，其中 650 个改编自 GitHub 缺陷报告，每个都配有确定性评分器。在 90 个任务的排行榜上，13 个模型中最好的 Claude Opus 4.7 作为团队通过 37.8%，单独通过 35.6%；在 155 个任务上让 Gemini-3 Flash 担任所有角色时，团队在单个智能体最难的五分之一任务上领先 15.7 分，在它觉得最容易的五分之三上却落后 6.8 到 10.1 分，去掉 Verifier 会让平均部分得分提高 5.5 分。在混合角色的运行中，给出判定的 Verifier 会批准 49.4% 被评分器判为失败的提交，若把没有判定的运行也算进去则为 22.3%；只靠提示词分配角色时，通过率与强制分离在统计上无法区分，但 Verifier 试图修改 Executor 代码的次数是后者的 3.6 倍。每个角色都在回合数有上限、基于文件的单次流程中工作，角色之间没有多轮对话；30B 及以下的开放权重模型主要失败在工具调用上，因此对它们来说，这个基准测的更多是工具调用的可靠性而不是协作。* [[code](https://github.com/ybkim95/TeamBench)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -872,10 +875,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 23 位贡献者</b></summary>
+<summary><b>展开 24 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | Collaborative Intelligence Benchmark：只在模型能独自解决的任务上评估它作为队友的表现；TeamGym：把决策所需的事实分给不同参与者的团队决策环境；TeamBench：用容器权限把 Planner、Executor 和 Verifier 分开，三篇都收入评估与基准（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。由作者之一提交，也是 TeamBench 的第一作者 |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | EC2-Bench：用 128 个工作区任务从完成度、云端成本和隐私暴露三方面评估端云协作，由第一作者本人提交，收入评估与基准（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）；ToolMaster：训练模型在依赖工具之前先试用工具，由两位共同第一作者之一提交，收入工具使用（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)） |
 | <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | Harness Engineering for Language Agents：把 harness 分成 control、agency 和 runtime，并提出用于报告它的 HarnessCard 的立场论文，收入综述与立场论文（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。由第一作者本人提交 |
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | AgonAlpha：审查者会重跑每个候选并可否决的 alpha 因子挖掘系统；AutoSR：把符号回归做成对研究状态的搜索。均由共同第一作者之一提交，收入应用领域（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）；SciΠvot：用资深研究者纠正 LLM 智能体研究决策的记录构建的基准，由第一作者本人提交，收入评估与基准（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）；3 篇研究智能体与编排方向的论文：AutoNumerics、OptimAI、PerspectiveGap（[#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)）；Agon 的代码链接，以及那份让九条截断注释得以重写的报告（[#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)） |
@@ -911,6 +915,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-11-06**: 新增 Collaborative Intelligence Benchmark、TeamGym 和 TeamBench，由作者之一 [@ybkim95](https://github.com/ybkim95) 提交，收入评估与基准（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。在 TeamGym 中，把决策所需的事实分给团队成员而不是全部交给一个模型，成功率从 63.4% 降到 40.5%。从 580 篇增至 583 篇。
 - **2026-11-05**: 新增 EC2-Bench，由第一作者 [@passionate11](https://github.com/passionate11) 提交，收入评估与基准（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）。端侧用 Qwen3.7-Plus 时，引入云端模型的四种方式在完成度上只差 3.67 分，在云端看到的敏感信息比例上却差 66.23 分。从 579 篇增至 580 篇。
 - **2026-11-02**: 新增 Harness Engineering for Language Agents，由第一作者 [@ChaoYue0307](https://github.com/ChaoYue0307) 提交，收入综述与立场论文（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。在它梳理的 63 篇工作中，38 篇论文和基准最常突出接口和可观测性，25 篇工程笔记则更常突出 runtime、control 和治理。从 578 篇增至 579 篇。
 - **2026-11-02**: 新增 AgonAlpha 和 AutoSR，由共同第一作者之一 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname) 提交，收入应用领域（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。在 12 个已发表的符号回归系统都没能解出的三个 cp3-bench 问题上，AutoSR 找到了准确的方程，每个问题报告一次成功的运行。从 576 篇增至 578 篇。

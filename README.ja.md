@@ -106,7 +106,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [🌐 インタラクティブ環境 (60)](#environments)
   - [🚀 応用分野 (60)](#applications)
 - **⚖️ 第3部：横断的な課題**
-  - [📊 評価とベンチマーク (59)](#evaluation)
+  - [📊 評価とベンチマーク (62)](#evaluation)
   - [🛡️ 安全性とアライメント (62)](#safety)
 
 ## 🧭 背景
@@ -673,11 +673,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## ⚖️ 第3部：横断的な課題
 
 <a id="evaluation"></a>
-### 📊 評価とベンチマーク (59)
+### 📊 評価とベンチマーク (62)
 *サーベイの§9（評価とベンチマーク）に対応します。*
 
 <details>
-<summary><b>59本の論文を表示</b></summary>
+<summary><b>62本の論文を表示</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *ツールを使う汎用エージェントアシスタントの基準となるベンチマーク。フロンティアエージェントの進歩を追う、人気の公開リーダーボードの土台になっている。*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *コーディング／ソフトウェア工学エージェントの事実上の標準ベンチマーク。SWE-bench Verified/Lite/Live/Multimodalといった派生版を生んだ。* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -739,6 +739,9 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research](https://arxiv.org/abs/2603.00582)** (Dong et al., arXiv 2026) - *十の分野にわたる 300 の開かれた研究課題を、GPT-4oとGemini Deep Researchで下書きしたうえで分野の専門家が精査して用意し、各レポートを、エージェントが作り専門家が手直しした事実と洞察の参照グラフに照らして、カバー率、論理的一貫性、LLMがレポートだけを見て答える設問、客観性、引用の分散で採点する。12 のシステムのうち総合で最も高いのはGemini Deep Researchの 28.62 で、内蔵の検索で答えたKimi-k2（26.16）がo3 Deep Research（22.04）を上回った。レポートから事実を 1 から 3 個削ったり加えたりすると、グラフに基づくスコアは 57.4% から 79.6% のケースで正しい方向に動いたが、LLMの評価者では 14.8% から 22.2% にとどまった。公開物には課題と 3,600 本のレポートがあるが、参照グラフと採点器はないため、新しいエージェントを論文と同じ方法で採点することはまだできない。* [[code](https://github.com/cnsdqd-dyb/Super-Research-Benchmark)]
 - **[SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082)** (Sun et al., arXiv 2026) - *上級研究者が六か月にわたって六つの分野の 26 件のプロジェクトでLLMエージェントを動かし、その研究上の判断を正した記録から、二択の問題 248 問を作る。モデルは修正の直前までのプロジェクト記録だけを見て、エージェントの元の計画と修正後の計画のどちらかを選ぶ。中程度のreasoning effortでは、フロンティアモデル五つのうち四つが元の計画のほうを多く選び（Claude Opus 5は 38.9%、例外のGPT-6 Astraは 59.5%）、どの設定でも最高は 63.5% で、エージェントの補助を使える、プロジェクトを初めて見る博士課程の学生とポスドク 13 人の 73.4% に届かない。同じeffortでは、どのモデルも二つの計画だけを見るよりプロジェクト記録も見たほうが点が低かった。問題は評価した五つのモデルの答えが割れるものを選んでいるため、点数はモデルがどれだけ頻繁に誤るかではなく、どこで誤るかを示す。問題、プロンプト、プロジェクト記録は公開されているが、モデルごとの応答ログは公開されていない。* [[code](https://github.com/AutoResearch-Factory/SciPIvot)]
 - **[Empowering Edge Agents: A Systematic Analysis of Edge-Cloud Collaboration in LLM Agent Execution](https://arxiv.org/abs/2610.17816)** (Huang et al., arXiv 2026) - *六つのエージェントベンチマークから実行可能なデジタルワークスペースのタスク 128 件を集め、そのうち 100 件に機密情報 3,385 件（ワークスペースに元からあったものとLLMが挿入したもの）の注釈を付け、すべての実行を完了度、クラウドの費用、それらの情報のうちクラウドモデルに見えた割合で同時に採点して、QwenのエッジモデルとクラウドのGLM-5.3が仕事を分担する四つのやり方を比べる。Qwen3.5-2Bでは、エッジモデルのトークンエントロピーでステップごとに振り分けると完了度が 12.75 から 39.97 に上がり、費用はクラウド単独の 22.7% だが、エッジモデル自身にクラウドを呼ばせても完了度は 2 点から 3 点しか上がらない。Qwen3.5-9Bでは、エッジモデルが求めたクラウドの助言でクラウド単独の 82.70 に対して 60.46 に達し、費用はその約 15% だが、機密情報の 45.46% がクラウドに見える。Qwen3.7-Plusでは四つのやり方の完了度の差が 3.67 点なのに対し、露出の差は 66.23 点である。タスクは同じ 2B と 9B のエッジモデルおよびGLM-5.3の実行結果で選別され、両端とも解けたものとどちらもほとんど進まなかったものが除かれている。クラウドを呼ぶ前の秘匿処理はなく、公開コードは四つのやり方のうち委任方式を除く三つだけで、実行ログは含まれていない。* [[code](https://github.com/OpenBMB/EC2-Bench)]
+- **[Measuring AI Agents as Teammates with Collaborative Intelligence](https://arxiv.org/abs/2611.02633)** (Wu et al., arXiv 2026) - *評価対象のモデルを、実際に応答するLLMの仲間と、問題を起こすよう台本が組まれた仲間一人がいる 2 人から 5 人のチームの会話に入れ、事故報告、臨床症例、交渉データセット、コーディングベンチマークから作ったチームワークの八つの次元にわたるタスク 240 件を解かせ、各モデルを一人で解けるタスクだけで採点する。18 個のモデルはいずれも、何も問題が起きないチームより本番のテストで 20.2 点から 46.6 点低く、最高は高いreasoning effortのGemini 4 Argonの 82.2 である。フロンティアモデルは危険な近道を断るテストと不正を報告するテストの 93% 以上に合格するが、対立の場面では強く押してくる仲間に何が必要かを 99% の実行で尋ねながら、81% でその仲間の不利な配分案を受け入れ、弱いモデルが不正をしたタスクを引き継ぐと合格は 81% で、同じタスクを自分で始めたときの 97% を下回る。台本の仲間は決まった台詞を話し、LLMの評価者が各返答に付けたラベルで分岐する。実際に応答する仲間も人ではなくLLMで、一人で解く版とbaselineの版は一回ずつしか実行しない。240 件のうち 80 件はheld-outとして公開されず、依頼すれば著者が採点する。* [[code](https://github.com/zou-group/collaborative-intelligence)]
+- **[TeamGym: A Gym for Team Decision-Making by AI Agents with Distributed Information](https://arxiv.org/abs/2610.37571)** (Park et al., arXiv 2026) - *法律、金融、医療、ソフトウェア工学のコーパス 12 個からチームの意思決定問題を作り、問題ごとに、合わせれば参照の決定を裏付け、しかも一つ一つが欠かせない最小の事実の集合を見つけ、どの参加者がどの事実を持って始めるかを制御する。八つのモデルの平均で、それらの事実を参加者に分けると成功率は一つのモデルがすべて持つときの 63.4% から 40.5% に下がり、参加者が自分の原文書から探し出さなければならないと 20.6% まで下がる。最終的な決定だけを採点するGPT-5.5の評価者を報酬にしてQwen2.5-7BをGRPOで学習させると、FinDVerの検証セットで 21.85% から 41.08% に上がり、報酬には入っていない、参加者全員が発言するエピソードの割合も 61.7% から 86.7% に上がる。事実の集合はモデルで選んで確かめたもので、決定の一部はLLMの評価者が採点し、学習の結果はそれぞれ一回の実行によるもので、CUADでの向上はMAUDにほとんど持ち越されず、コードはまだ公開されていない。*
+- **[TeamBench: Evaluating Agent Coordination under Enforced Role Separation](https://arxiv.org/abs/2605.07073)** (Kim et al., arXiv 2026) - *Planner、Executor、Verifierを別々のコンテナで動かし、どの役割も完全な要件を読むこと、ワークスペースを編集すること、結果を認証することを一度にはできないようにして、決定的な採点器付きのタスクテンプレート 851 件（うち 650 件はGitHubのバグ報告を基にしたもの）で評価する。90 タスクのリーダーボードでは 13 個のモデルのうち最良のClaude Opus 4.7がチームで 37.8%、単独で 35.6% に合格する。155 タスクですべての役割をGemini-3 Flashにすると、単一エージェントが最も苦手とする五分の一のタスクではチームが 15.7 点上回るが、最も得意とする五分の三では 6.8 点から 10.1 点下回り、Verifierを外すと平均の部分点が 5.5 点上がる。役割を混ぜた実行では、判定を出したVerifierは採点器が不合格とした提出物の 49.4% を承認し（判定のない実行も数えると 22.3%）、プロンプトだけで役割を決めると強制した場合と統計的に区別できない合格率になる一方、VerifierがExecutorのコードを書き換えようとする回数は 3.6 倍になる。各役割はターン数に上限のあるファイルベースの一回の流れで作業し、役割間で何度もやり取りする対話はない。30B 以下のopen-weightモデルは主にツール呼び出しで失敗するため、それらについてはこのベンチマークは協調よりツール呼び出しの信頼性を測ることになる。* [[code](https://github.com/ybkim95/TeamBench)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -872,10 +875,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>23人のコントリビューターを表示</b></summary>
+<summary><b>24人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | 「評価とベンチマーク」に、一人で解けるタスクだけでモデルをチームの仲間として採点するCollaborative Intelligence Benchmark、決定に必要な事実を参加者に分けたチーム意思決定の環境TeamGym、Planner、Executor、Verifierをコンテナの権限で分けたTeamBench（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。著者の一人で、TeamBenchの第一著者による投稿 |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | 「評価とベンチマーク」に、エッジとクラウドの協働を完了度、クラウドの費用、プライバシーの露出で採点するワークスペースタスク 128 件、EC2-Bench。第一著者本人による投稿（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）。「ツール利用」に、ツールに頼る前にまず試すようモデルを学習させるToolMaster。二人の共同第一著者の一人による投稿（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)） |
 | <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | 「サーベイとポジションペーパー」に、harnessをcontrol、agency、runtimeに分け、それを報告するためのHarnessCardを提案するポジションペーパーHarness Engineering for Language Agents（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。第一著者本人による投稿 |
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | 「応用分野」に、レビュー役が候補を再実行して却下できるアルファ探索システムAgonAlphaと、記号回帰を研究状態の探索として行うAutoSR。共同第一著者の一人による投稿（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。「評価とベンチマーク」に、上級研究者がLLMエージェントの研究上の判断を正した記録から作ったベンチマーク、SciΠvot。第一著者本人による投稿（[#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)）。研究エージェントとorchestrationの論文 3 本：AutoNumerics、OptimAI、PerspectiveGap（[#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)）。Agonのコードリンクと、途中で切れていた九本の説明文を書き直すきっかけになった報告（[#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)） |
@@ -911,6 +915,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-11-06**: 著者の一人の[@ybkim95](https://github.com/ybkim95)が送ってくれたCollaborative Intelligence Benchmark、TeamGym、TeamBenchを「評価とベンチマーク」に追加しました（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。TeamGymでは、決定に必要な事実を一つのモデルにすべて渡す代わりにチームに分けると、成功率が 63.4% から 40.5% に下がります。580 本から 583 本になりました。
 - **2026-11-05**: 第一著者の[@passionate11](https://github.com/passionate11)が送ってくれたEC2-Benchを「評価とベンチマーク」に追加しました（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）。エッジにQwen3.7-Plusを置くと、クラウドモデルを使う四つのやり方の完了度の差は 3.67 点ですが、クラウドに見える機密情報の割合の差は 66.23 点です。579 本から 580 本になりました。
 - **2026-11-02**: 第一著者の[@ChaoYue0307](https://github.com/ChaoYue0307)が送ってくれたHarness Engineering for Language Agentsを「サーベイとポジションペーパー」に追加しました（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。調べた 63 本のうち、論文とベンチマーク 38 本はインターフェースと可観測性を最も多く前面に出し、エンジニアリングノート 25 本はruntime、control、ガバナンスを前面に出していました。578 本から 579 本になりました。
 - **2026-11-02**: 共同第一著者の[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)が送ってくれたAgonAlphaとAutoSRを「応用分野」に追加しました（[#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)）。AutoSRは、発表済みの記号回帰システム 12 個がどれも解けなかったcp3-benchの三問で正確な式を見つけました。報告されているのは各問題で成功した実行一回です。576 本から 578 本になりました。

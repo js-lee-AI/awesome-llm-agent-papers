@@ -106,7 +106,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
   - [🌐 상호작용 환경 (60)](#environments)
   - [🚀 응용 분야 (60)](#applications)
 - **⚖️ 제3부: 전반에 걸친 과제**
-  - [📊 평가와 벤치마크 (59)](#evaluation)
+  - [📊 평가와 벤치마크 (62)](#evaluation)
   - [🛡️ 안전과 정렬 (62)](#safety)
 
 ## 🧭 배경
@@ -673,11 +673,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## ⚖️ 제3부: 전반에 걸친 과제
 
 <a id="evaluation"></a>
-### 📊 평가와 벤치마크 (59)
+### 📊 평가와 벤치마크 (62)
 *서베이 §9(평가와 벤치마크)에 해당합니다.*
 
 <details>
-<summary><b>논문 59편 보기</b></summary>
+<summary><b>논문 62편 보기</b></summary>
 
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *도구를 쓰는 범용 에이전트 어시스턴트의 기준 벤치마크다. 널리 쓰이는 공개 순위표들이 이를 바탕으로 frontier 에이전트의 발전을 추적한다.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *코딩·소프트웨어 공학 에이전트의 사실상 표준 벤치마크이며, 여기서 SWE-bench Verified/Lite/Live/Multimodal 계열이 파생되었다.* [[code](https://github.com/SWE-bench/SWE-bench)]
@@ -739,6 +739,9 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research](https://arxiv.org/abs/2603.00582)** (Dong et al., arXiv 2026) - *열 개 분야의 열린 연구 질문 300개를 GPT-4o와 Gemini Deep Research로 초안을 잡은 뒤 분야 전문가가 검토해 마련하고, 각 보고서를 에이전트가 만들고 전문가가 다듬은 사실·통찰 기준 그래프에 대어 커버리지, 논리적 일관성, LLM이 보고서만 보고 푸는 문항, 객관성, 인용 분산을 채점한다. 12개 시스템 중 Gemini Deep Research가 종합 28.62로 가장 높았고, 자체 검색으로 답한 Kimi-k2(26.16)가 o3 Deep Research(22.04)를 앞섰다. 보고서에서 사실을 1~3개 빼거나 더했을 때 그래프 기반 점수는 57.4~79.6%의 경우 올바른 방향으로 움직였지만, LLM 심판은 14.8~22.2%에 그쳤다. 공개본에는 질문과 보고서 3,600개가 있지만 기준 그래프와 채점기는 없어서, 새 에이전트를 논문과 같은 방식으로 채점할 수는 아직 없다.* [[code](https://github.com/cnsdqd-dyb/Super-Research-Benchmark)]
 - **[SciΠvot: Benchmarking Principal-Investigator Judgment at Pivotal Moments of Scientific AutoResearch Agents](https://arxiv.org/abs/2610.21082)** (Sun et al., arXiv 2026) - *선임 연구자들이 여섯 달 동안 여섯 분야 26개 프로젝트에서 LLM 에이전트를 돌리며 연구 결정을 바로잡은 기록으로 양자택일 문항 248개를 만든다. 모델은 바로잡기 직전까지의 프로젝트 기록만 보고 에이전트의 원래 계획과 수정된 계획 중 하나를 고른다. 중간 reasoning effort에서는 프런티어 모델 다섯 중 넷이 원래 계획을 더 자주 골랐고(Claude Opus 5는 38.9%, 예외인 GPT-6 Astra는 59.5%), 어떤 설정에서든 가장 높은 점수는 63.5%로, 에이전트 도우미를 쓰면서 프로젝트를 처음 본 박사과정생과 박사후연구원 13명의 73.4%에 못 미쳤다. 같은 effort에서 모든 모델이 두 계획만 볼 때보다 프로젝트 기록을 함께 볼 때 점수가 낮았다. 문항은 평가한 다섯 모델의 답이 갈리는 것으로 골랐기 때문에, 점수는 모델이 얼마나 자주 틀리는지가 아니라 어디서 틀리는지를 보여 준다. 문항, 프롬프트, 프로젝트 기록은 공개되어 있고, 모델별 응답 로그는 공개되지 않았다.* [[code](https://github.com/AutoResearch-Factory/SciPIvot)]
 - **[Empowering Edge Agents: A Systematic Analysis of Edge-Cloud Collaboration in LLM Agent Execution](https://arxiv.org/abs/2610.17816)** (Huang et al., arXiv 2026) - *여섯 에이전트 벤치마크에서 가져온 실행 가능한 디지털 작업 공간 과제 128개를 만들고, 그중 100개에 민감 정보 3,385건(작업 공간에 원래 있던 것과 LLM이 넣은 것)을 표시한 뒤, 모든 실행을 완료도, 클라우드 비용, 그 정보 중 클라우드 모델에 보이게 된 비율로 함께 채점해 Qwen 엣지 모델과 클라우드의 GLM-5.3이 일을 나누는 네 가지 방식을 비교한다. Qwen3.5-2B에서는 엣지 모델의 토큰 엔트로피로 단계마다 라우팅하면 완료도가 12.75에서 39.97로 오르고 비용은 클라우드 단독의 22.7%지만, 엣지 모델이 직접 클라우드를 부르게 하면 완료도가 2점에서 3점만 오른다. Qwen3.5-9B에서는 엣지 모델이 요청한 클라우드 조언으로 클라우드 단독의 82.70에 대해 60.46에 이르고 비용은 약 15%지만, 민감 정보의 45.46%가 클라우드에 보인다. Qwen3.7-Plus에서는 네 방식의 완료도 차이가 3.67점인 반면 노출 차이는 66.23점이다. 과제는 같은 2B, 9B 엣지 모델과 GLM-5.3의 실행 결과로 걸러, 양쪽 모두 푼 과제와 어느 쪽도 진척이 없던 과제를 뺐다. 클라우드를 부르기 전에 정보를 가리는 처리는 없으며, 공개된 코드는 네 방식 중 위임 방식을 뺀 세 가지만 담고 실행 로그는 없다.* [[code](https://github.com/OpenBMB/EC2-Bench)]
+- **[Measuring AI Agents as Teammates with Collaborative Intelligence](https://arxiv.org/abs/2611.02633)** (Wu et al., arXiv 2026) - *평가 대상 모델을 실시간으로 답하는 LLM 동료들과, 문제를 일으키도록 대본이 짜인 동료 한 명이 있는 2명에서 5명 규모의 팀 대화에 넣고, 사고 보고서, 임상 사례, 협상 데이터셋, 코딩 벤치마크로 만든 팀워크 여덟 차원의 과제 240개를 풀게 하며, 모델마다 혼자서 풀 수 있는 과제만 채점한다. 18개 모델 모두 아무 문제가 없는 팀에서보다 시험에서 20.2점에서 46.6점 낮고, 최고점은 높은 reasoning effort의 Gemini 4 Argon이 받은 82.2점이다. 프런티어 모델은 위험한 편법을 거절하는 시험과 부정행위를 보고하는 시험을 93% 이상 통과하지만, 갈등 상황에서는 99%의 실행에서 강하게 밀어붙이는 동료에게 무엇이 필요한지 묻고도 81%에서 그 동료의 더 나쁜 분배안을 받아들이고, 더 약한 모델이 부정행위를 해 둔 과제를 넘겨받으면 81%만 통과해 같은 과제를 직접 시작할 때의 97%보다 낮다. 대본 속 동료는 정해진 대사만 말하고 LLM 심판이 각 답변에 붙인 라벨에 따라 다음 대사가 갈리며, 실시간 동료도 사람이 아닌 LLM이고, 혼자 푸는 버전과 baseline 버전은 한 번씩만 실행한다. 240개 중 80개는 held-out으로 공개하지 않고, 요청하면 저자들이 채점해 준다.* [[code](https://github.com/zou-group/collaborative-intelligence)]
+- **[TeamGym: A Gym for Team Decision-Making by AI Agents with Distributed Information](https://arxiv.org/abs/2610.37571)** (Park et al., arXiv 2026) - *법률, 금융, 의료, 소프트웨어 공학 코퍼스 12개로 팀 의사결정 문제를 만들고, 문제마다 함께 있으면 정답 결정을 뒷받침하면서 하나하나가 모두 필요한 가장 작은 사실 집합을 찾아, 어느 참가자가 어느 사실을 갖고 시작할지 조절한다. 여덟 모델의 평균으로, 그 사실들을 참가자에게 나눠 주면 성공률이 한 모델이 모두 가질 때의 63.4%에서 40.5%로 떨어지고, 참가자가 자기 원문 문서에서 직접 찾아야 하면 20.6%까지 떨어진다. 최종 결정만 채점하는 GPT-5.5 심판을 보상으로 Qwen2.5-7B를 GRPO로 학습시키면 FinDVer 검증 세트 점수가 21.85%에서 41.08%로 오르고, 보상에 들어가지 않는 지표인 모든 참가자가 발언하는 에피소드의 비율도 61.7%에서 86.7%로 오른다. 사실 집합은 모델로 고르고 확인했으며, 여러 결정은 LLM 심판이 채점하고, 학습 결과는 각각 한 번의 실행에서 나왔고, CUAD에서 얻은 향상은 MAUD로 거의 이어지지 않았으며, 코드는 아직 공개되지 않았다.*
+- **[TeamBench: Evaluating Agent Coordination under Enforced Role Separation](https://arxiv.org/abs/2605.07073)** (Kim et al., arXiv 2026) - *Planner, Executor, Verifier를 서로 다른 컨테이너에서 실행해 어느 역할도 전체 요구 사항을 읽고, 작업 공간을 고치고, 결과를 인증하는 일을 한꺼번에 할 수 없게 하고, 결정적 채점기가 딸린 과제 템플릿 851개(그중 650개는 GitHub 버그 보고를 옮긴 것)로 평가한다. 90개 과제의 순위표에서 13개 모델 중 최고인 Claude Opus 4.7은 팀으로 37.8%, 혼자서 35.6%를 통과한다. 155개 과제에서 모든 역할을 Gemini-3 Flash로 채우면, 단일 에이전트가 가장 어려워하는 5분의 1 과제에서는 팀이 15.7점 앞서지만 가장 쉬워하는 5분의 3에서는 6.8점에서 10.1점 뒤지고, Verifier를 빼면 평균 부분 점수가 5.5점 오른다. 역할을 섞은 실행에서 판정을 낸 Verifier는 채점기가 떨어뜨린 제출물의 49.4%를 승인하고(판정이 없는 실행까지 세면 22.3%), 프롬프트로만 역할을 정하면 강제했을 때와 통계적으로 구별되지 않는 통과율을 내면서도 Verifier가 Executor의 코드를 고치려는 시도가 3.6배 많다. 각 역할은 턴 수가 제한된 파일 기반의 단일 흐름으로 일하고 역할 사이에 여러 차례 오가는 대화는 없으며, 30B 이하의 open-weight 모델은 주로 도구 호출에서 실패하므로 이들에게는 이 벤치마크가 협업보다 도구 호출의 안정성을 잰다.* [[code](https://github.com/ybkim95/TeamBench)]
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -872,10 +875,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 23명 보기</b></summary>
+<summary><b>기여자 24명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | 평가와 벤치마크 절에 혼자 풀 수 있는 과제만으로 모델을 팀 동료로서 채점하는 Collaborative Intelligence Benchmark, 결정에 필요한 사실을 참가자들에게 나눠 준 팀 의사결정 환경 TeamGym, Planner, Executor, Verifier를 컨테이너 권한으로 분리한 TeamBench 추가([#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)). 저자 중 한 명이자 TeamBench의 제1저자가 직접 제출 |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | 평가와 벤치마크 절에 엣지와 클라우드의 협업을 완료도, 클라우드 비용, 개인정보 노출로 채점하는 작업 공간 과제 128개 EC2-Bench 추가, 제1저자가 직접 제출([#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)). 도구 사용 절에 도구에 기대기 전에 먼저 시험해 보도록 모델을 학습시키는 ToolMaster 추가, 공동 제1저자 중 한 명이 직접 제출([#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)) |
 | <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | 서베이와 포지션 페이퍼 절에 harness를 control, agency, runtime으로 나누고 이를 보고하는 HarnessCard를 제안하는 포지션 페이퍼 Harness Engineering for Language Agents 추가([#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)). 제1저자가 직접 제출 |
 | <a href="https://github.com/WhymustIhaveaname"><img src="https://github.com/WhymustIhaveaname.png?size=48" width="48" height="48" alt="@WhymustIhaveaname"></a> | **[@WhymustIhaveaname](https://github.com/WhymustIhaveaname)** | 응용 분야 절에 검토자가 후보를 다시 돌려 보고 거부할 수 있는 알파 탐색 시스템 AgonAlpha와 기호 회귀를 연구 상태 탐색으로 푸는 AutoSR 추가, 공동 제1저자 중 한 명이 직접 제출([#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)). 평가와 벤치마크 절에 선임 연구자가 LLM 에이전트의 연구 결정을 바로잡은 기록으로 만든 벤치마크 SciΠvot 추가, 제1저자가 직접 제출([#29](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/29)). 연구 에이전트·orchestration 논문 3편: AutoNumerics, OptimAI, PerspectiveGap([#1](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/1)). Agon 코드 링크, 그리고 잘려 있던 설명 아홉 개를 다시 쓰게 된 제보([#5](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/5)) |
@@ -911,6 +915,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-11-06**: 저자 중 한 명인 [@ybkim95](https://github.com/ybkim95)가 보내 준 Collaborative Intelligence Benchmark, TeamGym, TeamBench를 평가와 벤치마크 절에 추가했습니다([#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)). TeamGym에서는 결정에 필요한 사실을 한 모델에 모두 주는 대신 팀에 나눠 주면 성공률이 63.4%에서 40.5%로 떨어집니다. 580편에서 583편으로 늘었습니다.
 - **2026-11-05**: 제1저자 [@passionate11](https://github.com/passionate11)가 보내 준 EC2-Bench를 평가와 벤치마크 절에 추가했습니다([#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)). 엣지에 Qwen3.7-Plus를 두면 클라우드 모델을 끌어들이는 네 방식의 완료도 차이는 3.67점이고, 클라우드가 보게 되는 민감 정보 비율의 차이는 66.23점입니다. 579편에서 580편으로 늘었습니다.
 - **2026-11-02**: 제1저자 [@ChaoYue0307](https://github.com/ChaoYue0307)가 보내 준 Harness Engineering for Language Agents를 서베이와 포지션 페이퍼 절에 추가했습니다([#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)). 63편을 살펴보니 논문과 벤치마크 38편은 인터페이스와 관측 가능성을 가장 자주 앞세웠고, 엔지니어링 노트 25편은 runtime, control, 거버넌스를 앞세웠습니다. 578편에서 579편으로 늘었습니다.
 - **2026-11-02**: 공동 제1저자 [@WhymustIhaveaname](https://github.com/WhymustIhaveaname)가 보내 준 AgonAlpha와 AutoSR을 응용 분야 절에 추가했습니다([#32](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/32)). AutoSR은 발표된 기호 회귀 시스템 12개가 모두 풀지 못한 cp3-bench 문제 세 개에서 정확한 수식을 찾았고, 문제마다 성공한 실행 하나를 보고했습니다. 576편에서 578편으로 늘었습니다.
