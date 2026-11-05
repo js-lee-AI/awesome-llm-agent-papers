@@ -106,7 +106,7 @@ Fresh 2026 work that is already drawing attention.
   - [🌐 Interactive Environments (60)](#environments)
   - [🚀 Applications (60)](#applications)
 - **⚖️ Part III: Cross-Cutting Concerns**
-  - [📊 Evaluation & Benchmarks (59)](#evaluation)
+  - [📊 Evaluation & Benchmarks (62)](#evaluation)
   - [🛡️ Safety & Alignment (62)](#safety)
 
 ## 🧭 Background
@@ -673,12 +673,15 @@ Fresh 2026 work that is already drawing attention.
 ## ⚖️ Part III: Cross-Cutting Concerns
 
 <a id="evaluation"></a>
-### 📊 Evaluation & Benchmarks (59)
+### 📊 Evaluation & Benchmarks (62)
 *Corresponds to §9 (Evaluation and Benchmarks).*
 
 <details>
-<summary><b>Show 59 papers</b></summary>
+<summary><b>Show 62 papers</b></summary>
 
+- **[Measuring AI Agents as Teammates with Collaborative Intelligence](https://arxiv.org/abs/2611.02633)** (Wu et al., arXiv 2026) - *Measures eight dimensions of teamwork on tasks a model can solve alone, separating collaboration from individual capability.* [[code](https://github.com/zou-group/collaborative-intelligence)]
+- **[TeamGym: A Gym for Team Decision-Making by AI Agents with Distributed Information](https://arxiv.org/abs/2610.37571)** (Park et al., arXiv 2026) - *Evaluates and trains agents that must share and combine information distributed across team members.*
+- **[TeamBench: Evaluating Agent Coordination under Enforced Role Separation](https://arxiv.org/abs/2605.07073)** (Kim et al., arXiv 2026) - *Enforces separate Planner, Executor, and Verifier permissions to measure coordination that prompt-only roles can obscure.* [[code](https://github.com/ybkim95/TeamBench)]
 - **[GAIA: a benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)** (Mialon et al., ICLR 2024) - *Reference benchmark for generalist, tool-using agent assistants; underlies popular public leaderboards tracking frontier agent progress.*
 - **[SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)** (Jimenez et al., ICLR 2024) - *De facto standard benchmark for coding/software-engineering agents; spawned the SWE-bench Verified/Lite/Live/Multimodal family.* [[code](https://github.com/SWE-bench/SWE-bench)]
 - **[MLAgentBench: Evaluating Language Agents on Machine Learning Experimentation](https://arxiv.org/abs/2310.03302)** (Huang et al., arXiv 2023) - *Seminal benchmark for the 'AI research agent'/'ML engineering agent' evaluation subfield, precursor to MLE-bench, RE-Bench, etc.* [[code](https://github.com/snap-stanford/MLAgentBench)]
@@ -949,3 +952,4 @@ Released under the [MIT License](LICENSE).
 - **2026-07-12**: +42 papers from 2026 across all ten sections, a new **10 to Watch (2026)** section with live star counts, and live star badges on the related lists. 211 to 253.
 - **2026-07-09**: +27 papers on agentic RL, protocols, deep research, and frontier evaluation and safety. 184 to 211.
 - **2026-07-08**: Initial release. 184 annotated papers, organized by the survey's taxonomy.
+
