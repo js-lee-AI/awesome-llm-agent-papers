@@ -99,7 +99,7 @@ Fresh 2026 work that is already drawing attention.
   - [🏗️ Agent Architectures & Frameworks (54)](#architectures)
 - **🧱 Part I: Core Components**
   - [🧠 Planning & Reasoning (55)](#planning)
-  - [💾 Memory (60)](#memory)
+  - [💾 Memory (61)](#memory)
   - [🔧 Tool Use (51)](#tools)
   - [🤝 Multi-Agent Systems (57)](#multi-agent)
 - **🌍 Part II: Agents in Context**
@@ -321,11 +321,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="memory"></a>
-### 💾 Memory (60)
+### 💾 Memory (61)
 *Corresponds to §5 (Memory).*
 
 <details>
-<summary><b>Show 60 papers</b></summary>
+<summary><b>Show 61 papers</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Early and influential structured/triplet-based read-write memory design, a precursor to graph- and KG-based agent memory systems.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *One of the first systems to bring a psychologically grounded (human-memory-inspired) forgetting/consolidation mechanism into LLM agent memory.* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -388,6 +388,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Reliable Memory from Unstable Growth: Curating Self-Written Agent Playbooks with Randomized Experiments](https://arxiv.org/abs/2610.18427)** (Pham et al., arXiv 2026) - *Decides which lessons in an agent's self-written playbook to keep by experiment rather than by the agent's own judgment: related lessons are grouped into blocks, each block is switched on or off at random during practice tasks, a regression of success estimates each block's effect, and the curated playbook is served only if it beats the whole and the empty one on fresh practice; over 19 settings with ACE and Dynamic Cheatsheet on AppWorld, WebShop and ALFWorld it averages 66.9 against 55.5 for the whole playbook and 53.8 for the agent's own picks, though simply choosing between the whole and the empty playbook already reaches 66.4.*
 - **[Can Agents Forget When Asked? A Benchmark for Memory Unlearning in LLM Agents](https://arxiv.org/abs/2610.18052)** (Xie et al., arXiv 2026) - *Tests whether agent memory systems can delete what a user asks them to forget: 50 synthetic multi-session dialogues carry 135 forget requests of six types and 1,742 questions, and each has a control version without the requests, so a system earns credit for forgetting only what it had stored; across Mem0, A-MEM, LangMem, LightMem, SimpleMem, naive RAG and a full-context LLM, no system passes more than 1.5% of requests end to end, because each either leaves the information extractable under simple attacks or deletes far more than was asked.* [[code](https://github.com/Nboxff/bemula-benchmark)]
 - **[Not All Experience Belongs in the Weights: Component Routing for Self-Improving GUI Agents](https://arxiv.org/abs/2610.01787)** (Wu et al., arXiv 2026) - *Splits a GUI agent's own experience into locators, procedures, state facts and lessons, and tests each one both in the weights, by fine-tuning, and in the context, as retrieved notes: locators gain 4.9 points more in the weights and lessons 1.5, a margin whose interval includes zero in half the cells, while procedures and state facts gain 4.2 and 4.1 more in the context; routing each component by a rule based on how often it recurs and whether it depends on the current state beats the better single destination by 3.5 points on average, over three 7 to 8B backbones on MobileGym and AndroidWorld.*
+- **[Who Remembers What? Multi-Granularity Memory Extraction for Multi-User, Multi-Agent Interaction](https://arxiv.org/abs/2611.10439)** (Wang et al., arXiv 2026) - *Scopes each lesson distilled from many users and heterogeneous agents to a user-agent pair, a user, an agent, or global memory, so experience transfers across users and agents without leaking private user facts; evaluated on the new CrossLearnBench.*
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
