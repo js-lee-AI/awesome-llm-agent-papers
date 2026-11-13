@@ -101,7 +101,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
   - [🧠 계획과 추론 (55)](#planning)
   - [💾 메모리 (60)](#memory)
   - [🔧 도구 사용 (51)](#tools)
-  - [🤝 다중 에이전트 시스템 (57)](#multi-agent)
+  - [🤝 다중 에이전트 시스템 (58)](#multi-agent)
 - **🌍 제2부: 환경과 응용 속의 에이전트**
   - [🌐 상호작용 환경 (60)](#environments)
   - [🚀 응용 분야 (60)](#applications)
@@ -456,11 +456,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 다중 에이전트 시스템 (57)
+### 🤝 다중 에이전트 시스템 (58)
 *서베이 §7(다중 에이전트 시스템)에 해당합니다.*
 
 <details>
-<summary><b>논문 57편 보기</b></summary>
+<summary><b>논문 58편 보기</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *역할극으로 에이전트끼리 자율적으로 협력하는 방식을 확립한, 가장 이르고 많이 인용된 프레임워크 가운데 하나이다.* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *'society of minds' 방식의 토론을 테스트 시점 기법으로 널리 알린, 다중 에이전트 토론의 효시 격 논문이다.* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -520,6 +520,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Voting or Consensus? Decision-Making in Multi-Agent Debate](https://arxiv.org/abs/2502.19130)** (Kaesberg et al., ACL Findings 2025) - *Llama 3 8B 에이전트 셋의 토론에서 결정 프로토콜만 바꿔, 투표 규칙 네 가지와 합의 규칙 세 가지를 지식 과제 셋과 추론 과제 셋에서 비교한다. 추론 과제에서는 투표가 합의보다 평균 13.2포인트 높았는데, 차이는 대부분 MuSR과 SQuAD 2.0에서 났고 StrategyQA에서는 0.2포인트였다. 합의는 지식 과제에서 2.8포인트 앞섰고, 결정까지 걸린 라운드도 평균 1.42로 투표의 3.38보다 적었다. 승인 투표는 59%의 경우 결정을 내리지 못했고, StrategyQA에서는 에이전트를 늘리면 도움이 됐지만 투표 전 라운드를 늘리면 오히려 손해였다. 에이전트가 서로의 직전 해답만 보게 하는 Collective Improvement를 제안해 StrategyQA에서 7.4포인트를 더 얻었다. 다만 모든 결과는 데이터셋 일부로 얻었고, 토론에는 chain-of-thought 답 하나의 다섯 배에서 열 배에 이르는 계산이 든다.* [[code](https://github.com/lkaesberg/decision-protocols)]
 - **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *Llama-3.1-70B 에이전트 셋이 과제 열 개를 두고 일곱 턴 동안 토론할 때 턴마다 답을 채점해, 답이 앞선 턴보다 나빠지면 problem drift가 일어났다고 본다. 생성 과제 셋에서는 토론의 74.6~88.6%에서 drift가 일어났고, 지식·추론 과제에서는 6.6~15.5%였다. drift가 일어난 토론 중 회복한 비율은 8.5~45.4%였다. drift가 일어난 토론 발췌 170개를 읽은 전문가 여덟 명은 진전 없음을 가장 많이(60건) 꼽았다. 정답 레이블 없이 쓰는 탐지기 DRIFTJudge는 MMLU-Pro에서 특이도 0.92를 얻었지만 정밀도는 0.15에 그쳤다. DRIFTJudge가 표시한 턴에서 피드백 에이전트 DRIFTPolicy를 부르면, 투표하는 Qwen2-7B 에이전트는 일곱 턴 뒤의 정확도 손실이 3.66포인트에서 0.08포인트로 줄었다. 합의 방식에서는 효과가 없어서, Llama-3.1-70B는 이를 쓰면 4.08포인트, 쓰지 않으면 2.23포인트를 잃었다.* [[code](https://github.com/jonas-becker/problem-drift)]
 - **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *텍스트 과제용 오픈소스 다중 에이전트 토론 프레임워크로, 에이전트 persona(없음, 전문가, Big Five), 응답 방식(단순, 비판적, 추론), 토론 패러다임(memory, relay, report, debate), 결정 프로토콜(투표, 합의, 심판)을 설정 파일 하나에서 따로따로 정한다. 공개 데모에서는 144가지 조합을 고를 수 있다. OpenAI 호환 엔드포인트라면 어떤 모델로든 돌릴 수 있고, Hugging Face의 텍스트 데이터셋을 무엇이든 불러오며, 실행을 반복해 표준편차를 낸다. Voting or Consensus?와 Stay Focused가 이 프레임워크로 실험했고, 논문에 실린 결과는 저자들의 이전 연구에서 옮겨 온 것이다. 예를 들어 StrategyQA에서 모든 메시지가 보이는 memory 패러다임은 평균 1.75턴 만에 합의했고, relay는 2.61턴이 걸렸다.* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
+- **[NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning](https://arxiv.org/abs/2605.16757)** (Lu et al., STAI-X 2026) - *다중 에이전트 시스템을 텍스트가 오가는 층 구조의 네트워크로 다룬다. 노드에는 역할을 주지 않고 토폴로지 안의 위치만 알려 주며, 노드마다 하나의 고정된 백본 위에 자기 LoRA 어댑터를 두고, 모든 노드를 최종 답의 보상으로 REINFORCE를 써서 함께 학습시키며, 더 큰 시스템은 학습을 마친 작은 시스템을 키워서 만든다. Qwen3-0.6B에서 노드 세 개짜리 버전은 학습 파라미터가 6.9M으로 같은 단일 모델 REINFORCE를 여섯 과제 모두에서 앞서며, 예를 들어 ARC-Challenge에서 56.5% 대 46.0%, HumanEval에서 30.5% 대 17.7%이다. MMLU abstract algebra에서는 호출 세 번, 다섯 번, 일곱 번의 NeuroMAS가 39%에서 42%를 받는 반면, 단일 모델에서 같은 횟수만큼 뽑아 투표, 신뢰도, 심판으로 고른 답은 27%에서 37%에 그친다. BBH Navigate에서 노드 다섯 개와 일곱 개짜리 시스템을 처음부터 학습시키면 정확도가 45.5%에서 41.0%와 40.5%로 떨어지지만, 학습된 작은 시스템에서 키우면 48.0%와 51.0%로 오른다. 결과 대부분은 0.6B와 1B 백본에서 나왔고 테스트 문항 100개에서 200개에 대해 방법마다 숫자 하나만 보고하는데, 시드를 바꿔 다시 돌리면 ARC에서 노드 일곱 개짜리 시스템이 최대 5점 움직인다. HMMT Feb 2026에서 7B 모델이 9.1%에서 15.2%로 오른 것은 33문제 중 두 문제 차이이고, Gemma-3-1B에서는 노드 일곱 개짜리 시스템이 세 개짜리보다 낮으며, 저장소에는 Qwen3-0.6B용 최소 구현만 있고 전체 실험 코드와 학습된 어댑터는 아직 공개되지 않았다.* [[code](https://github.com/haoranlustat/NeuroMAS)]
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -875,10 +876,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 24명 보기</b></summary>
+<summary><b>기여자 25명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | 다중 에이전트 시스템 절에 역할 없이 텍스트를 주고받는 다중 에이전트 시스템의 모든 노드를 최종 답의 보상으로 함께 학습시키는 NeuroMAS 추가([#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)). 제1저자가 직접 제출 |
 | <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | 평가와 벤치마크 절에 혼자 풀 수 있는 과제만으로 모델을 팀 동료로서 채점하는 Collaborative Intelligence Benchmark, 결정에 필요한 사실을 참가자들에게 나눠 준 팀 의사결정 환경 TeamGym, Planner, Executor, Verifier를 컨테이너 권한으로 분리한 TeamBench 추가([#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)). 저자 중 한 명이자 TeamBench의 제1저자가 직접 제출 |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | 평가와 벤치마크 절에 엣지와 클라우드의 협업을 완료도, 클라우드 비용, 개인정보 노출로 채점하는 작업 공간 과제 128개 EC2-Bench 추가, 제1저자가 직접 제출([#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)). 도구 사용 절에 도구에 기대기 전에 먼저 시험해 보도록 모델을 학습시키는 ToolMaster 추가, 공동 제1저자 중 한 명이 직접 제출([#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)) |
 | <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | 서베이와 포지션 페이퍼 절에 harness를 control, agency, runtime으로 나누고 이를 보고하는 HarnessCard를 제안하는 포지션 페이퍼 Harness Engineering for Language Agents 추가([#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)). 제1저자가 직접 제출 |
@@ -915,6 +917,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-11-14**: 제1저자 [@haoranlustat](https://github.com/haoranlustat)가 보내 준 NeuroMAS를 다중 에이전트 시스템 절에 추가했습니다([#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)). BBH Navigate에서 노드 일곱 개짜리 시스템을 학습된 작은 시스템에서 키우면 51.0%에 이르고, 처음부터 학습시키면 40.5%에 그칩니다. 583편에서 584편으로 늘었습니다.
 - **2026-11-06**: 저자 중 한 명인 [@ybkim95](https://github.com/ybkim95)가 보내 준 Collaborative Intelligence Benchmark, TeamGym, TeamBench를 평가와 벤치마크 절에 추가했습니다([#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)). TeamGym에서는 결정에 필요한 사실을 한 모델에 모두 주는 대신 팀에 나눠 주면 성공률이 63.4%에서 40.5%로 떨어집니다. 580편에서 583편으로 늘었습니다.
 - **2026-11-05**: 제1저자 [@passionate11](https://github.com/passionate11)가 보내 준 EC2-Bench를 평가와 벤치마크 절에 추가했습니다([#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)). 엣지에 Qwen3.7-Plus를 두면 클라우드 모델을 끌어들이는 네 방식의 완료도 차이는 3.67점이고, 클라우드가 보게 되는 민감 정보 비율의 차이는 66.23점입니다. 579편에서 580편으로 늘었습니다.
 - **2026-11-02**: 제1저자 [@ChaoYue0307](https://github.com/ChaoYue0307)가 보내 준 Harness Engineering for Language Agents를 서베이와 포지션 페이퍼 절에 추가했습니다([#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)). 63편을 살펴보니 논문과 벤치마크 38편은 인터페이스와 관측 가능성을 가장 자주 앞세웠고, 엔지니어링 노트 25편은 runtime, control, 거버넌스를 앞세웠습니다. 578편에서 579편으로 늘었습니다.

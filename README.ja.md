@@ -101,7 +101,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [🧠 計画と推論 (55)](#planning)
   - [💾 メモリ (60)](#memory)
   - [🔧 ツール利用 (51)](#tools)
-  - [🤝 マルチエージェントシステム (57)](#multi-agent)
+  - [🤝 マルチエージェントシステム (58)](#multi-agent)
 - **🌍 第2部：環境と応用のなかのエージェント**
   - [🌐 インタラクティブ環境 (60)](#environments)
   - [🚀 応用分野 (60)](#applications)
@@ -456,11 +456,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 マルチエージェントシステム (57)
+### 🤝 マルチエージェントシステム (58)
 *サーベイの§7（マルチエージェントシステム）に対応します。*
 
 <details>
-<summary><b>57本の論文を表示</b></summary>
+<summary><b>58本の論文を表示</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *ロールプレイを通じたエージェント同士の自律的な協力を確立した、最も早く、最も引用されているフレームワークの一つである。* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *「society of minds」風の討論をテスト時の手法として広めた、マルチエージェント討論の先駆的な論文。* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -520,6 +520,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Voting or Consensus? Decision-Making in Multi-Agent Debate](https://arxiv.org/abs/2502.19130)** (Kaesberg et al., ACL Findings 2025) - *Llama 3 8Bのエージェント三体による討論で意思決定プロトコルだけを変え、投票の規則四つと合意の規則三つを、知識タスク三つと推論タスク三つで比べる。推論タスクでは投票が合意を平均 13.2 ポイント上回ったが、差の大半はMuSRとSQuAD 2.0によるもので、StrategyQAでは 0.2 だった。知識タスクでは合意が 2.8 ポイント上回り、決定までのラウンド数も平均 1.42 で、投票の 3.38 より少なかった。承認投票は 59% のケースで決定に至らず、StrategyQAではエージェントを増やすと効果があったが、投票前のラウンドを増やすと逆効果だった。エージェントに互いの直前の解だけを見せる手法Collective Improvementを提案し、StrategyQAで 7.4 ポイント上積みした。ただし結果はすべてデータセットの一部で得たもので、討論にはchain-of-thoughtの回答一つの五倍から十倍の計算量がかかる。* [[code](https://github.com/lkaesberg/decision-protocols)]
 - **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *Llama-3.1-70Bのエージェント三体に十のタスクで七ターン討論させ、ターンごとに答えを採点して、答えが前のターンより悪くなった討論をproblem driftとして数える。生成タスク三つでは討論の 74.6% から 88.6% でdriftが起き、知識・推論タスクでは 6.6% から 15.5% だった。driftした討論のうち回復したのは 8.5% から 45.4% である。driftした討論の抜粋 170 件を読んだ専門家八人が最も多く挙げたのは、進展のなさ（60 件）だった。正解ラベルを使わない検出器DRIFTJudgeは、MMLU-Proで特異度 0.92 を得たが、適合率は 0.15 にとどまった。DRIFTJudgeが示したターンでフィードバック用のエージェントDRIFTPolicyを呼ぶと、投票で決めるQwen2-7Bのエージェントでは、七ターン後の精度の低下が 3.66 ポイントから 0.08 ポイントに縮んだ。一方、合意方式では効果がなく、Llama-3.1-70Bはこれを使うと 4.08 ポイント、使わないと 2.23 ポイント下がった。* [[code](https://github.com/jonas-becker/problem-drift)]
 - **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *テキストのタスク向けのオープンソースのマルチエージェント討論フレームワークで、エージェントのpersona（なし、専門家、Big Five）、応答の仕方（シンプル、批判的、推論）、討論のパラダイム（memory、relay、report、debate）、意思決定プロトコル（投票、合意、評価者）を、一つの設定ファイルでそれぞれ独立に決める。公開デモでは 144 通りの組み合わせを選べる。OpenAI互換のエンドポイントならどのモデルでも動かせ、Hugging Faceのテキストデータセットを何でも読み込み、実行を繰り返して標準偏差を出す。Voting or Consensus?とStay Focusedはこのフレームワークで実験しており、論文中の結果は著者らの以前の研究からの再掲である。たとえばStrategyQAでは、すべてのメッセージが見えるmemoryパラダイムは平均 1.75 ターンで合意し、relayは 2.61 ターンかかった。* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
+- **[NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning](https://arxiv.org/abs/2605.16757)** (Lu et al., STAI-X 2026) - *マルチエージェントシステムを、辺をテキストが流れる層状のネットワークとして扱う。ノードには役割を与えずトポロジー内の位置だけを知らせ、ノードごとに一つの凍結したバックボーンの上に専用のLoRAアダプターを置き、すべてのノードを最終回答の報酬からREINFORCEで同時に学習させ、大きなシステムは学習済みの小さなシステムを広げて作る。Qwen3-0.6Bでは、ノード三つの版が、学習するパラメータが同じ 6.9M の単一モデルのREINFORCEを六つのタスクすべてで上回り、たとえばARC-Challengeで 56.5% 対 46.0%、HumanEvalで 30.5% 対 17.7% である。MMLUのabstract algebraでは、呼び出し三回、五回、七回のNeuroMASが 39% から 42% を取るのに対し、単一モデルから同じ回数だけ回答を出して投票、confidence、評価者で選ぶと 27% から 37% にとどまる。BBH Navigateでは、ノード五つと七つのシステムを最初から学習させると正解率が 45.5% から 41.0% と 40.5% に下がるが、学習済みの小さなシステムから広げると 48.0% と 51.0% に上がる。結果の大半は 0.6B と 1B のバックボーンによるもので、テスト問題 100 問から 200 問について手法ごとに数字を一つだけ報告しているが、シードを変えて再実行するとARCでノード七つのシステムが最大 5 点動く。HMMT Feb 2026での 7B モデルの 9.1% から 15.2% への向上は 33 問中の二問分にすぎず、Gemma-3-1Bではノード七つのシステムが三つの版より低く、リポジトリにあるのはQwen3-0.6B用の最小限の実装だけで、実験コードの全体と学習済みのアダプターはまだ公開されていない。* [[code](https://github.com/haoranlustat/NeuroMAS)]
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -875,10 +876,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>24人のコントリビューターを表示</b></summary>
+<summary><b>25人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | 「マルチエージェントシステム」に、役割を持たずテキストをやり取りするマルチエージェントシステムのすべてのノードを最終回答の報酬で同時に学習させるNeuroMAS（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。第一著者本人による投稿 |
 | <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | 「評価とベンチマーク」に、一人で解けるタスクだけでモデルをチームの仲間として採点するCollaborative Intelligence Benchmark、決定に必要な事実を参加者に分けたチーム意思決定の環境TeamGym、Planner、Executor、Verifierをコンテナの権限で分けたTeamBench（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。著者の一人で、TeamBenchの第一著者による投稿 |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | 「評価とベンチマーク」に、エッジとクラウドの協働を完了度、クラウドの費用、プライバシーの露出で採点するワークスペースタスク 128 件、EC2-Bench。第一著者本人による投稿（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）。「ツール利用」に、ツールに頼る前にまず試すようモデルを学習させるToolMaster。二人の共同第一著者の一人による投稿（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)） |
 | <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | 「サーベイとポジションペーパー」に、harnessをcontrol、agency、runtimeに分け、それを報告するためのHarnessCardを提案するポジションペーパーHarness Engineering for Language Agents（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。第一著者本人による投稿 |
@@ -915,6 +917,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-11-14**: 第一著者の[@haoranlustat](https://github.com/haoranlustat)が送ってくれたNeuroMASを「マルチエージェントシステム」に追加しました（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。BBH Navigateでは、ノード七つのシステムを学習済みの小さなシステムから広げると 51.0% に達し、最初から学習させると 40.5% にとどまります。583 本から 584 本になりました。
 - **2026-11-06**: 著者の一人の[@ybkim95](https://github.com/ybkim95)が送ってくれたCollaborative Intelligence Benchmark、TeamGym、TeamBenchを「評価とベンチマーク」に追加しました（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。TeamGymでは、決定に必要な事実を一つのモデルにすべて渡す代わりにチームに分けると、成功率が 63.4% から 40.5% に下がります。580 本から 583 本になりました。
 - **2026-11-05**: 第一著者の[@passionate11](https://github.com/passionate11)が送ってくれたEC2-Benchを「評価とベンチマーク」に追加しました（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）。エッジにQwen3.7-Plusを置くと、クラウドモデルを使う四つのやり方の完了度の差は 3.67 点ですが、クラウドに見える機密情報の割合の差は 66.23 点です。579 本から 580 本になりました。
 - **2026-11-02**: 第一著者の[@ChaoYue0307](https://github.com/ChaoYue0307)が送ってくれたHarness Engineering for Language Agentsを「サーベイとポジションペーパー」に追加しました（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。調べた 63 本のうち、論文とベンチマーク 38 本はインターフェースと可観測性を最も多く前面に出し、エンジニアリングノート 25 本はruntime、control、ガバナンスを前面に出していました。578 本から 579 本になりました。

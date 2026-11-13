@@ -101,7 +101,7 @@
   - [🧠 规划与推理 (55)](#planning)
   - [💾 记忆 (60)](#memory)
   - [🔧 工具使用 (51)](#tools)
-  - [🤝 多智能体系统 (57)](#multi-agent)
+  - [🤝 多智能体系统 (58)](#multi-agent)
 - **🌍 第二部分：环境与应用中的智能体**
   - [🌐 交互环境 (60)](#environments)
   - [🚀 应用领域 (60)](#applications)
@@ -456,11 +456,11 @@
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 多智能体系统 (57)
+### 🤝 多智能体系统 (58)
 *对应综述 §7（多智能体系统）。*
 
 <details>
-<summary><b>展开 57 篇论文</b></summary>
+<summary><b>展开 58 篇论文</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *最早也是引用最多的框架之一，通过角色扮演实现智能体之间的自主协作。* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *多智能体辩论的开创性论文，让“society of minds”式的辩论作为一种测试时技术流行起来。* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -520,6 +520,7 @@
 - **[Voting or Consensus? Decision-Making in Multi-Agent Debate](https://arxiv.org/abs/2502.19130)** (Kaesberg et al., ACL Findings 2025) - *只改变三个 Llama 3 8B 智能体辩论中的决策协议，在三个知识任务和三个推理任务上比较四种投票规则和三种共识规则：在推理任务上，投票平均比共识高 13.2 个点，差距主要来自 MuSR 和 SQuAD 2.0，StrategyQA 上只差 0.2；在知识任务上，共识领先 2.8 个点，平均 1.42 轮就能做出决定，投票则需要 3.38 轮；赞同投票有 59% 的情况无法做出决定；在 StrategyQA 上，增加智能体有帮助，而在投票前增加轮数反而有害。作者提出的 Collective Improvement 让智能体只看到彼此上一轮的解答，在 StrategyQA 上提高了 7.4 个点。不过所有结果都基于数据集的子集，而且辩论的计算量是一次 chain-of-thought 回答的五到十倍。* [[code](https://github.com/lkaesberg/decision-protocols)]
 - **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *在十个任务上让三个 Llama-3.1-70B 智能体辩论七轮，每轮之后给答案打分，答案比之前某一轮差时就算出现了 problem drift：三个生成任务中有 74.6% 到 88.6% 的辩论发生 drift，知识和推理任务为 6.6% 到 15.5%；发生 drift 的辩论中只有 8.5% 到 45.4% 能恢复；八位专家阅读了 170 段发生 drift 的辩论摘录，标注最多的是缺乏进展（60 段）。不需要标准答案的检测器 DRIFTJudge 在 MMLU-Pro 上特异度为 0.92，精确率却只有 0.15。在 DRIFTJudge 标出的轮次调用反馈智能体 DRIFTPolicy，能让采用投票的 Qwen2-7B 智能体七轮后的准确率损失从 3.66 个点降到 0.08 个点，但在共识方式下无效，Llama-3.1-70B 用了它损失 4.08 个点，不用则损失 2.23 个点。* [[code](https://github.com/jonas-becker/problem-drift)]
 - **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *面向文本任务的开源多智能体辩论框架，在一个配置文件中分别设定智能体的 persona（无、专家、Big Five）、回应方式（简单、批判、推理）、讨论范式（memory、relay、report、debate）和决策协议（投票、共识或评估者），公开演示中共有 144 种组合；它可接入任何兼容 OpenAI 的端点，能加载 Hugging Face 上的任意文本数据集，并通过重复运行给出标准差。Voting or Consensus? 和 Stay Focused 都是在它上面做的实验，论文中的结果则转述自作者此前的研究，例如在 StrategyQA 上，消息全部可见的 memory 范式平均 1.75 轮达成一致，relay 需要 2.61 轮。* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
+- **[NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning](https://arxiv.org/abs/2605.16757)** (Lu et al., STAI-X 2026) - *把多智能体系统看作一个层状网络，边上传递的是文本：节点不分配角色，只知道自己在拓扑中的位置；每个节点在同一个冻结的骨干模型上有自己的 LoRA 适配器；所有节点用最终答案的奖励通过 REINFORCE 联合训练；更大的系统由训练好的小系统扩展而来。在 Qwen3-0.6B 上，三节点版本在全部六个任务上都超过可训练参数同为 6.9M 的单模型 REINFORCE，例如 ARC-Challenge 上为 56.5% 对 46.0%，HumanEval 上为 30.5% 对 17.7%；在 MMLU abstract algebra 上，三次、五次和七次调用的 NeuroMAS 得分为 39% 到 42%，而从单模型采样同样次数、再按投票、confidence 或评估者挑选答案只有 27% 到 37%；在 BBH Navigate 上，从头训练五节点和七节点系统会让准确率从 45.5% 降到 41.0% 和 40.5%，而从训练好的小系统扩展则升到 48.0% 和 51.0%。大部分结果来自 0.6B 和 1B 的骨干模型，每种方法在 100 到 200 道测试题上只报告一个数字，而换一个随机种子重跑，七节点系统在 ARC 上最多变动 5 分；7B 模型在 HMMT Feb 2026 上从 9.1% 到 15.2% 的提升只相当于 33 道题中的两道，用 Gemma-3-1B 时七节点系统低于三节点系统，代码仓库只有面向 Qwen3-0.6B 的最小实现，完整的实验代码和训练好的适配器尚未发布。* [[code](https://github.com/haoranlustat/NeuroMAS)]
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -875,10 +876,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 24 位贡献者</b></summary>
+<summary><b>展开 25 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | NeuroMAS：用最终答案的奖励联合训练一个不分角色、以文本通信的多智能体系统中的每个节点，收入多智能体系统（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。由第一作者本人提交 |
 | <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | Collaborative Intelligence Benchmark：只在模型能独自解决的任务上评估它作为队友的表现；TeamGym：把决策所需的事实分给不同参与者的团队决策环境；TeamBench：用容器权限把 Planner、Executor 和 Verifier 分开，三篇都收入评估与基准（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。由作者之一提交，也是 TeamBench 的第一作者 |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | EC2-Bench：用 128 个工作区任务从完成度、云端成本和隐私暴露三方面评估端云协作，由第一作者本人提交，收入评估与基准（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）；ToolMaster：训练模型在依赖工具之前先试用工具，由两位共同第一作者之一提交，收入工具使用（[#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)） |
 | <a href="https://github.com/ChaoYue0307"><img src="https://github.com/ChaoYue0307.png?size=48" width="48" height="48" alt="@ChaoYue0307"></a> | **[@ChaoYue0307](https://github.com/ChaoYue0307)** | Harness Engineering for Language Agents：把 harness 分成 control、agency 和 runtime，并提出用于报告它的 HarnessCard 的立场论文，收入综述与立场论文（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。由第一作者本人提交 |
@@ -915,6 +917,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-11-14**: 新增 NeuroMAS，由第一作者 [@haoranlustat](https://github.com/haoranlustat) 提交，收入多智能体系统（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。在 BBH Navigate 上，由训练好的小系统扩展而成的七节点系统达到 51.0%，从头训练则只有 40.5%。从 583 篇增至 584 篇。
 - **2026-11-06**: 新增 Collaborative Intelligence Benchmark、TeamGym 和 TeamBench，由作者之一 [@ybkim95](https://github.com/ybkim95) 提交，收入评估与基准（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。在 TeamGym 中，把决策所需的事实分给团队成员而不是全部交给一个模型，成功率从 63.4% 降到 40.5%。从 580 篇增至 583 篇。
 - **2026-11-05**: 新增 EC2-Bench，由第一作者 [@passionate11](https://github.com/passionate11) 提交，收入评估与基准（[#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)）。端侧用 Qwen3.7-Plus 时，引入云端模型的四种方式在完成度上只差 3.67 分，在云端看到的敏感信息比例上却差 66.23 分。从 579 篇增至 580 篇。
 - **2026-11-02**: 新增 Harness Engineering for Language Agents，由第一作者 [@ChaoYue0307](https://github.com/ChaoYue0307) 提交，收入综述与立场论文（[#27](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/27)）。在它梳理的 63 篇工作中，38 篇论文和基准最常突出接口和可观测性，25 篇工程笔记则更常突出 runtime、control 和治理。从 578 篇增至 579 篇。
