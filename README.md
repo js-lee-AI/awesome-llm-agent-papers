@@ -101,7 +101,7 @@ Fresh 2026 work that is already drawing attention.
   - [🧠 Planning & Reasoning (55)](#planning)
   - [💾 Memory (60)](#memory)
   - [🔧 Tool Use (51)](#tools)
-  - [🤝 Multi-Agent Systems (58)](#multi-agent)
+  - [🤝 Multi-Agent Systems (59)](#multi-agent)
 - **🌍 Part II: Agents in Context**
   - [🌐 Interactive Environments (60)](#environments)
   - [🚀 Applications (60)](#applications)
@@ -456,11 +456,11 @@ Fresh 2026 work that is already drawing attention.
 <sub><a href="#contents">↑ Back to Contents</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 Multi-Agent Systems (58)
+### 🤝 Multi-Agent Systems (59)
 *Corresponds to §7 (Multi-Agent Systems).*
 
 <details>
-<summary><b>Show 58 papers</b></summary>
+<summary><b>Show 59 papers</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *One of the earliest and most cited frameworks establishing autonomous agent-to-agent cooperation via role-play.* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *Seminal multi-agent debate paper popularizing 'society of minds'-style debate as a test-time technique.* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -521,6 +521,7 @@ Fresh 2026 work that is already drawing attention.
 - **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *Scores the answer after each of seven debate turns among three Llama-3.1-70B agents on ten tasks and counts a debate as drifting when its answer gets worse than at an earlier turn: 74.6% to 88.6% of debates drift on the three generative tasks against 6.6% to 15.5% on knowledge and reasoning tasks, 8.5% to 45.4% of drifting debates recover, and eight experts reading 170 drifting excerpts most often mark lack of progress (60); the DRIFTJudge detector, which needs no gold label, reaches 0.92 specificity but 0.15 precision on MMLU-Pro, and DRIFTPolicy, a feedback agent called in when DRIFTJudge flags a turn, cuts the seven-turn accuracy loss there from 3.66 to 0.08 points for Qwen2-7B agents that vote, but not under consensus, where Llama-3.1-70B loses 4.08 points with it against 2.23 without.* [[code](https://github.com/jonas-becker/problem-drift)]
 - **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *Open-source framework for multi-agent debate on text tasks that sets agent personas (none, expert, Big Five), response style (simple, critical, reasoning), discussion paradigm (memory, relay, report, debate) and decision protocol (voting, consensus or a judge) independently in one config file, 144 combinations in its public demo, runs on any OpenAI-compatible endpoint, loads any text dataset from Hugging Face and repeats runs to report standard deviations; Voting or Consensus? and Stay Focused were run on it, and the results in the paper are restated from the authors' earlier studies, such as the fully visible memory paradigm agreeing in 1.75 turns on StrategyQA against 2.61 for relay.* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
 - **[NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning](https://arxiv.org/abs/2605.16757)** (Lu et al., STAI-X 2026) - *Treats a multi-agent system as a layered network whose edges carry text: nodes get no roles, only their position in the topology, each has its own LoRA adapter over one frozen backbone, all are trained jointly with REINFORCE from the reward on the final answer, and larger systems are grown from smaller trained ones. With Qwen3-0.6B, the three-node version beats single-model REINFORCE with the same 6.9M trainable parameters on all six tasks, for example 56.5% against 46.0% on ARC-Challenge and 30.5% against 17.7% on HumanEval, and on MMLU abstract algebra NeuroMAS with three, five and seven calls scores 39% to 42%, where the same number of samples from the single model, picked by vote, confidence or a judge, scores 27% to 37%; on BBH Navigate, training the five- and seven-node systems from scratch lowers accuracy from 45.5% to 41.0% and 40.5%, while growing them from the trained smaller system raises it to 48.0% and 51.0%. Most results use 0.6B and 1B backbones and give one number per method on 100 to 200 test questions, while rerunning with another seed moves the seven-node system on ARC by up to 5 points; the 7B gain on HMMT Feb 2026, from 9.1% to 15.2%, is two of 33 problems, the seven-node system falls below the three-node one with Gemma-3-1B, and the repository holds a minimal Qwen3-0.6B version, with the full experiment code and trained adapters still to come.* [[code](https://github.com/haoranlustat/NeuroMAS)]
+- **[SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization](https://arxiv.org/abs/2611.08483)** (Jiang et al., arXiv 2026) - *Scales latent multi-agent collaboration to hundreds of agents per round for evolutionary program search on one GPU.* [[code](https://github.com/Qile-J/SwarmEvolve)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
