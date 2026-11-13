@@ -98,7 +98,7 @@ Fresh 2026 work that is already drawing attention.
   - [📚 Surveys & Position Papers (62)](#surveys)
   - [🏗️ Agent Architectures & Frameworks (54)](#architectures)
 - **🧱 Part I: Core Components**
-  - [🧠 Planning & Reasoning (55)](#planning)
+  - [🧠 Planning & Reasoning (56)](#planning)
   - [💾 Memory (61)](#memory)
   - [🔧 Tool Use (51)](#tools)
   - [🤝 Multi-Agent Systems (59)](#multi-agent)
@@ -254,11 +254,11 @@ Fresh 2026 work that is already drawing attention.
 ## 🧱 Part I: Core Components
 
 <a id="planning"></a>
-### 🧠 Planning & Reasoning (55)
+### 🧠 Planning & Reasoning (56)
 *Corresponds to §4 (Planning and Reasoning).*
 
 <details>
-<summary><b>Show 55 papers</b></summary>
+<summary><b>Show 56 papers</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *The foundational technique underlying virtually all LLM-agent reasoning/planning modules; the starting point for the whole CoT/ToT/ReAct lineage.*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *Standard inference-time ensembling/verification strategy widely reused inside agent reasoning and planning pipelines.*
@@ -316,6 +316,7 @@ Fresh 2026 work that is already drawing attention.
 - **[LLM Value Functions for Credit Assignment in Agentic RL](https://arxiv.org/abs/2610.15840)** (Zhu et al., arXiv 2026) - *Uses a frozen LLM as the critic in agent RL: shown summaries of other rollouts on the same task, and anchored to the group success rate at the start and the observed reward at the end, it scores every intermediate state in one query, and the value differences become per-step advantages that sum to the group-relative return; with Claude Opus 4.6 as critic, Qwen3-8B reaches 26.3% on AppWorld and 20.2% on SWE-bench Verified against 19.8% and 12.0% for GRPO, but the gain depends on the critic, and with Qwen3-235B in that role Qwen3-4B reaches only 9.8% on AppWorld against 24.3% with Opus.*
 - **[Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions](https://arxiv.org/abs/2610.06191)** (Zhang et al., arXiv 2026) - *Separates what a tool-using agent concludes about its evidence from what it does next, on HotpotQA with a search source made to fail: the seven agents call the failing source's results useless 97 to 100% of the time, yet after five such judgments in a row unaided Qwen3-8B answers on 1 of 292 questions, and a stopping rule written into the prompt is followed at most partly; a rule enforced by the harness that forces an answer after five useless results raises success over six failure regimes by 0.026 to 0.097 for four open models and Claude Haiku 4.5, with the failures simulated.* [[code](https://github.com/bennidict23/judged-useless-queried-anyway)]
 - **[Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning](https://arxiv.org/abs/2609.38147)** (Dahal et al., arXiv 2026) - *Separates an agent's control from its work: workers do the task while a controller, in each cycle, updates a compact record of progress, proposes next steps, weighs them against the remaining call budget and dispatches workers, with full outputs kept in memory for reuse; against a direct-control agent with the same workers and budget it scores higher in all 12 model and benchmark pairings, by 3.6 to 4.2 points on average per benchmark, and reaches 71.5% on ProgramBench with GPT-5.5 against 58.0% for Codex and 63.7% for direct control, but with Opus 4.8 at 400 calls it trails direct control, 56.6% to 62.7%.*
+- **[Think Twice, Act Once: Verifier-Guided Action Selection For Embodied Agents (VegAS)](https://arxiv.org/abs/2605.12620)** (Singhi et al., CVPR Findings 2026) - *Samples several candidate actions from an MLLM agent and lets a generative verifier pick one, leaving the policy unchanged; the same MLLM used off-the-shelf as a verifier gives no gain, so the verifier is trained on failure cases synthesized by an LLM, and this lifts the hardest multi-object, long-horizon tasks in Habitat and ALFRED by up to 36% relative over chain-of-thought baselines, tested only in simulation and at the cost of several policy and verifier calls per step.* [[code](https://github.com/nishadsinghi/vegas)]
 </details>
 
 <sub><a href="#contents">↑ Back to Contents</a></sub>
