@@ -101,7 +101,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
   - [🧠 계획과 추론 (55)](#planning)
   - [💾 메모리 (60)](#memory)
   - [🔧 도구 사용 (51)](#tools)
-  - [🤝 다중 에이전트 시스템 (58)](#multi-agent)
+  - [🤝 다중 에이전트 시스템 (59)](#multi-agent)
 - **🌍 제2부: 환경과 응용 속의 에이전트**
   - [🌐 상호작용 환경 (60)](#environments)
   - [🚀 응용 분야 (60)](#applications)
@@ -456,11 +456,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 다중 에이전트 시스템 (58)
+### 🤝 다중 에이전트 시스템 (59)
 *서베이 §7(다중 에이전트 시스템)에 해당합니다.*
 
 <details>
-<summary><b>논문 58편 보기</b></summary>
+<summary><b>논문 59편 보기</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *역할극으로 에이전트끼리 자율적으로 협력하는 방식을 확립한, 가장 이르고 많이 인용된 프레임워크 가운데 하나이다.* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *'society of minds' 방식의 토론을 테스트 시점 기법으로 널리 알린, 다중 에이전트 토론의 효시 격 논문이다.* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -521,6 +521,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *Llama-3.1-70B 에이전트 셋이 과제 열 개를 두고 일곱 턴 동안 토론할 때 턴마다 답을 채점해, 답이 앞선 턴보다 나빠지면 problem drift가 일어났다고 본다. 생성 과제 셋에서는 토론의 74.6~88.6%에서 drift가 일어났고, 지식·추론 과제에서는 6.6~15.5%였다. drift가 일어난 토론 중 회복한 비율은 8.5~45.4%였다. drift가 일어난 토론 발췌 170개를 읽은 전문가 여덟 명은 진전 없음을 가장 많이(60건) 꼽았다. 정답 레이블 없이 쓰는 탐지기 DRIFTJudge는 MMLU-Pro에서 특이도 0.92를 얻었지만 정밀도는 0.15에 그쳤다. DRIFTJudge가 표시한 턴에서 피드백 에이전트 DRIFTPolicy를 부르면, 투표하는 Qwen2-7B 에이전트는 일곱 턴 뒤의 정확도 손실이 3.66포인트에서 0.08포인트로 줄었다. 합의 방식에서는 효과가 없어서, Llama-3.1-70B는 이를 쓰면 4.08포인트, 쓰지 않으면 2.23포인트를 잃었다.* [[code](https://github.com/jonas-becker/problem-drift)]
 - **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *텍스트 과제용 오픈소스 다중 에이전트 토론 프레임워크로, 에이전트 persona(없음, 전문가, Big Five), 응답 방식(단순, 비판적, 추론), 토론 패러다임(memory, relay, report, debate), 결정 프로토콜(투표, 합의, 심판)을 설정 파일 하나에서 따로따로 정한다. 공개 데모에서는 144가지 조합을 고를 수 있다. OpenAI 호환 엔드포인트라면 어떤 모델로든 돌릴 수 있고, Hugging Face의 텍스트 데이터셋을 무엇이든 불러오며, 실행을 반복해 표준편차를 낸다. Voting or Consensus?와 Stay Focused가 이 프레임워크로 실험했고, 논문에 실린 결과는 저자들의 이전 연구에서 옮겨 온 것이다. 예를 들어 StrategyQA에서 모든 메시지가 보이는 memory 패러다임은 평균 1.75턴 만에 합의했고, relay는 2.61턴이 걸렸다.* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
 - **[NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning](https://arxiv.org/abs/2605.16757)** (Lu et al., STAI-X 2026) - *다중 에이전트 시스템을 텍스트가 오가는 층 구조의 네트워크로 다룬다. 노드에는 역할을 주지 않고 토폴로지 안의 위치만 알려 주며, 노드마다 하나의 고정된 백본 위에 자기 LoRA 어댑터를 두고, 모든 노드를 최종 답의 보상으로 REINFORCE를 써서 함께 학습시키며, 더 큰 시스템은 학습을 마친 작은 시스템을 키워서 만든다. Qwen3-0.6B에서 노드 세 개짜리 버전은 학습 파라미터가 6.9M으로 같은 단일 모델 REINFORCE를 여섯 과제 모두에서 앞서며, 예를 들어 ARC-Challenge에서 56.5% 대 46.0%, HumanEval에서 30.5% 대 17.7%이다. MMLU abstract algebra에서는 호출 세 번, 다섯 번, 일곱 번의 NeuroMAS가 39%에서 42%를 받는 반면, 단일 모델에서 같은 횟수만큼 뽑아 투표, 신뢰도, 심판으로 고른 답은 27%에서 37%에 그친다. BBH Navigate에서 노드 다섯 개와 일곱 개짜리 시스템을 처음부터 학습시키면 정확도가 45.5%에서 41.0%와 40.5%로 떨어지지만, 학습된 작은 시스템에서 키우면 48.0%와 51.0%로 오른다. 결과 대부분은 0.6B와 1B 백본에서 나왔고 테스트 문항 100개에서 200개에 대해 방법마다 숫자 하나만 보고하는데, 시드를 바꿔 다시 돌리면 ARC에서 노드 일곱 개짜리 시스템이 최대 5점 움직인다. HMMT Feb 2026에서 7B 모델이 9.1%에서 15.2%로 오른 것은 33문제 중 두 문제 차이이고, Gemma-3-1B에서는 노드 일곱 개짜리 시스템이 세 개짜리보다 낮으며, 저장소에는 Qwen3-0.6B용 최소 구현만 있고 전체 실험 코드와 학습된 어댑터는 아직 공개되지 않았다.* [[code](https://github.com/haoranlustat/NeuroMAS)]
+- **[SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization](https://arxiv.org/abs/2611.08483)** (Jiang et al., arXiv 2026) - *GPU 한 장에서 라운드마다 에이전트 45개로 이루어진 스웜 10개를 돌려 진화적 프로그램 탐색을 한다. 각 에이전트는 부모 프로그램 하나와 초점 프롬프트를 읽고 텍스트를 쓰는 대신 잠재 공간에서 40단계 추론하며, 필터가 스웜마다 은닉 상태가 가장 다른 30개를 남기고, 요약 에이전트가 이들의 KV cache를 합쳐 읽고 새 프로그램 하나를 쓴다. AlphaEvolve 부록에서 가져온 16개와 저자들이 설계한 과학 계산 문제 다섯 개를 합친 21개 문제에서 실행마다 한 시간, 시드 세 개로 평가하면, Qwen3 8B로 평균 0.804를 받아 OpenEvolve, ShinkaEvolve, CodeEvolve의 0.642에서 0.700보다 높고, Qwen3 32B-FP8로는 0.869로 이들의 최고치 0.774보다 높다. 한 시간에 프로그램 734개를 평가해 다른 프레임워크의 81개에서 158개보다 많고, 8B에서는 baseline들이 60분에 낸 점수에 중앙값 4분에서 8분 만에 이르며, Qwen3 8B로 세 문제에서 AlphaEvolve가 발표한 구성을 넘어선다(baseline은 각각 한 문제). 저자들의 절제 실험에서 스웜의 잠재 에이전트를 0개, 15개, 45개, 75개로 바꿔도 한 시간 뒤 점수는 비슷하고, 잠재 에이전트 없이 요약 에이전트만 있어도 세 baseline보다 높게 끝나며, 40단계의 잠재 추론을 최대 40토큰의 텍스트로 바꿔도 평균은 0.804에서 0.796으로만 내려간다. baseline은 기본 설정 그대로 돌렸고, 11차원 kissing number 문제에서는 모든 모델에서 OpenEvolve보다 낮으며, SwarmEvolve 코드 자체는 아직 공개되지 않았고 문제, 평가기, baseline 실행 스크립트만 공개되어 있다.* [[code](https://github.com/Qile-J/SwarmEvolve)]
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -876,10 +877,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 25명 보기</b></summary>
+<summary><b>기여자 26명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/Qile-J"><img src="https://github.com/Qile-J.png?size=48" width="48" height="48" alt="@Qile-J"></a> | **[@Qile-J](https://github.com/Qile-J)** | 다중 에이전트 시스템 절에 잠재 공간에서 추론하고 KV cache를 주고받는 에이전트 스웜으로 진화적 프로그램 탐색을 하는 SwarmEvolve 추가([#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)). 제1저자가 직접 제출 |
 | <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | 다중 에이전트 시스템 절에 역할 없이 텍스트를 주고받는 다중 에이전트 시스템의 모든 노드를 최종 답의 보상으로 함께 학습시키는 NeuroMAS 추가([#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)). 제1저자가 직접 제출 |
 | <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | 평가와 벤치마크 절에 혼자 풀 수 있는 과제만으로 모델을 팀 동료로서 채점하는 Collaborative Intelligence Benchmark, 결정에 필요한 사실을 참가자들에게 나눠 준 팀 의사결정 환경 TeamGym, Planner, Executor, Verifier를 컨테이너 권한으로 분리한 TeamBench 추가([#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)). 저자 중 한 명이자 TeamBench의 제1저자가 직접 제출 |
 | <a href="https://github.com/passionate11"><img src="https://github.com/passionate11.png?size=48" width="48" height="48" alt="@passionate11"></a> | **[@passionate11](https://github.com/passionate11)** | 평가와 벤치마크 절에 엣지와 클라우드의 협업을 완료도, 클라우드 비용, 개인정보 노출로 채점하는 작업 공간 과제 128개 EC2-Bench 추가, 제1저자가 직접 제출([#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)). 도구 사용 절에 도구에 기대기 전에 먼저 시험해 보도록 모델을 학습시키는 ToolMaster 추가, 공동 제1저자 중 한 명이 직접 제출([#28](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/28)) |
@@ -917,6 +919,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-11-14**: 제1저자 [@Qile-J](https://github.com/Qile-J)가 보내 준 SwarmEvolve를 다중 에이전트 시스템 절에 추가했습니다([#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)). Qwen3 8B와 GPU 한 장으로 한 시간 동안 돌리면 수학과 과학 계산 문제 21개에서 평균 0.804를 받아, 공개된 세 프레임워크의 0.642에서 0.700보다 높습니다. 584편에서 585편으로 늘었습니다.
 - **2026-11-14**: 제1저자 [@haoranlustat](https://github.com/haoranlustat)가 보내 준 NeuroMAS를 다중 에이전트 시스템 절에 추가했습니다([#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)). BBH Navigate에서 노드 일곱 개짜리 시스템을 학습된 작은 시스템에서 키우면 51.0%에 이르고, 처음부터 학습시키면 40.5%에 그칩니다. 583편에서 584편으로 늘었습니다.
 - **2026-11-06**: 저자 중 한 명인 [@ybkim95](https://github.com/ybkim95)가 보내 준 Collaborative Intelligence Benchmark, TeamGym, TeamBench를 평가와 벤치마크 절에 추가했습니다([#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)). TeamGym에서는 결정에 필요한 사실을 한 모델에 모두 주는 대신 팀에 나눠 주면 성공률이 63.4%에서 40.5%로 떨어집니다. 580편에서 583편으로 늘었습니다.
 - **2026-11-05**: 제1저자 [@passionate11](https://github.com/passionate11)가 보내 준 EC2-Bench를 평가와 벤치마크 절에 추가했습니다([#33](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/33)). 엣지에 Qwen3.7-Plus를 두면 클라우드 모델을 끌어들이는 네 방식의 완료도 차이는 3.67점이고, 클라우드가 보게 되는 민감 정보 비율의 차이는 66.23점입니다. 579편에서 580편으로 늘었습니다.
