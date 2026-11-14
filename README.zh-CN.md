@@ -98,7 +98,7 @@
   - [📚 综述与立场论文 (62)](#surveys)
   - [🏗️ 智能体架构与框架 (54)](#architectures)
 - **🧱 第一部分：核心组成**
-  - [🧠 规划与推理 (55)](#planning)
+  - [🧠 规划与推理 (56)](#planning)
   - [💾 记忆 (61)](#memory)
   - [🔧 工具使用 (51)](#tools)
   - [🤝 多智能体系统 (59)](#multi-agent)
@@ -254,11 +254,11 @@
 ## 🧱 第一部分：核心组成
 
 <a id="planning"></a>
-### 🧠 规划与推理 (55)
+### 🧠 规划与推理 (56)
 *对应综述 §4（规划与推理）。*
 
 <details>
-<summary><b>展开 55 篇论文</b></summary>
+<summary><b>展开 56 篇论文</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *几乎所有 LLM 智能体推理与规划模块背后的基础技术，也是整个 CoT/ToT/ReAct 谱系的起点。*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *标准的推理阶段 ensemble 与验证策略，在智能体的推理和规划流水线中广泛复用。*
@@ -316,6 +316,7 @@
 - **[LLM Value Functions for Credit Assignment in Agentic RL](https://arxiv.org/abs/2610.15840)** (Zhu et al., arXiv 2026) - *在智能体 RL 中用一个冻结的 LLM 作 critic：它看到同一任务上其他 rollout 的摘要，起点锚定在组内成功率、终点锚定在实际获得的奖励，用一次查询为所有中间状态打分，价值之差即成为每一步的 advantage，其总和等于组内相对回报。以 Claude Opus 4.6 作 critic 时，Qwen3-8B 在 AppWorld 上达到 26.3%，在 SWE-bench Verified 上达到 20.2%，GRPO 分别为 19.8% 和 12.0%；但收益取决于 critic，换成 Qwen3-235B 作 critic 时，Qwen3-4B 在 AppWorld 上只有 9.8%，用 Opus 时为 24.3%。*
 - **[Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions](https://arxiv.org/abs/2610.06191)** (Zhang et al., arXiv 2026) - *把使用工具的智能体对证据得出的判断与它接下来的行动分开来看，实验在一个故意让搜索源失效的 HotpotQA 上进行：七个智能体判定失效源的结果无用的比例为 97% 到 100%，但在连续五次这样的判断之后，不加辅助的 Qwen3-8B 在 292 个问题中只对 1 个给出了答案，写进提示的停止规则最多只被部分遵守；由 harness 强制执行、在五次无用结果后强制作答的规则，让四个开放模型和 Claude Haiku 4.5 在六种失效情形下的成功率提高 0.026 到 0.097。失效是模拟的。* [[code](https://github.com/bennidict23/judged-useless-queried-anyway)]
 - **[Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning](https://arxiv.org/abs/2609.38147)** (Dahal et al., arXiv 2026) - *把智能体的控制与具体工作分开：由执行者完成任务，控制器在每个周期更新一份精简的进度记录，提出下一步，按剩余的调用预算权衡后分派执行者，完整输出存进记忆以便复用。与使用相同执行者和预算的直接控制智能体相比，它在全部 12 个模型与基准组合中得分都更高，按基准平均高出 3.6 到 4.2 个点；在 ProgramBench 上用 GPT-5.5 达到 71.5%，Codex 为 58.0%，直接控制为 63.7%。但用 Opus 4.8、调用 400 次时，它落后于直接控制，为 56.6% 对 62.7%。*
+- **[Think Twice, Act Once: Verifier-Guided Action Selection For Embodied Agents (VegAS)](https://arxiv.org/abs/2605.12620)** (Singhi et al., CVPR Findings 2026) - *在模拟家居环境中行动的 MLLM 智能体每一步采样 16 个候选动作，由生成式验证器对每个动作各给出五次判定，执行得分最高的动作，策略本身不变；验证器与策略同为 Qwen2.5-VL-3B，用 OpenAI o3 从成功 trajectory 合成的失败 trajectory 微调而成，合成的失败包括拿错物体、放错位置和漏掉前置条件。在 Habitat 2.0 的 LangR 上，平均成功率从 chain-of-thought 策略的 65% 升到 71%，多物体任务从 25% 升到 34%，而把同一模型当作 zero-shot 验证器只有 64%；在 EB-ALFRED 上从 44% 升到 49%，换成 Gemma-3-4B 则从 48% 升到 51%，这个 3B 验证器还把 zero-shot 的 Qwen2.5-VL-72B 策略从 30% 提高到 38%，在调用次数相同时，随着调用增加它比 self-consistency 提升得更多。所有测试都在使用高层动作的模拟器中进行，每一步要调用模型 96 次、耗时 8 秒，只出一个动作时为 3 秒；EB-ALFRED 上的视觉外观任务从 48% 降到 41%；看不到图像的验证器在 LangR 上同样好（都是 71%），在 EB-ALFRED 上也接近（47.5% 对 49%）；代码尚未发布。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -878,10 +879,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 27 位贡献者</b></summary>
+<summary><b>展开 28 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/nishadsinghi"><img src="https://github.com/nishadsinghi.png?size=48" width="48" height="48" alt="@nishadsinghi"></a> | **[@nishadsinghi](https://github.com/nishadsinghi)** | Think Twice, Act Once (VegAS)：用在合成失败上训练的验证器，从 MLLM 智能体的 16 个样本中挑选每一步动作，收入规划与推理（[#38](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/38)）。由第一作者本人提交 |
 | <a href="https://github.com/wangyz1999"><img src="https://github.com/wangyz1999.png?size=48" width="48" height="48" alt="@wangyz1999"></a> | **[@wangyz1999](https://github.com/wangyz1999)** | Who Remembers What? (MixUA)：把来自众多用户和智能体的每条经验分别归入对、用户、智能体或全局范围的记忆，收入记忆（[#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)）。由第一作者本人提交 |
 | <a href="https://github.com/Qile-J"><img src="https://github.com/Qile-J.png?size=48" width="48" height="48" alt="@Qile-J"></a> | **[@Qile-J](https://github.com/Qile-J)** | SwarmEvolve：由在潜在空间中推理、彼此传递 KV cache 的智能体群体进行进化式程序搜索，收入多智能体系统（[#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)）。由第一作者本人提交 |
 | <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | NeuroMAS：用最终答案的奖励联合训练一个不分角色、以文本通信的多智能体系统中的每个节点，收入多智能体系统（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。由第一作者本人提交 |
@@ -921,6 +923,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-11-14**: 新增 Think Twice, Act Once (VegAS)，由第一作者 [@nishadsinghi](https://github.com/nishadsinghi) 提交，收入规划与推理（[#38](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/38)）。在 LangR 上，用微调过的验证器从 16 个样本中挑选每一步动作，成功率从 65% 升到 71%，把同一模型当作 zero-shot 验证器则是 64%。从 586 篇增至 587 篇。
 - **2026-11-14**: 新增 Who Remembers What? (MixUA)，由第一作者 [@wangyz1999](https://github.com/wangyz1999) 提交，收入记忆（[#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)）。在五个合成用户和七种智能体配置下，把经验分到四种共享范围后，第 3 轮通过率从无记忆的 72.0% 升到 89.8%。从 585 篇增至 586 篇。
 - **2026-11-14**: 新增 SwarmEvolve，由第一作者 [@Qile-J](https://github.com/Qile-J) 提交，收入多智能体系统（[#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)）。用 Qwen3 8B 在一块 GPU 上运行一小时，它在 21 个数学和科学计算问题上平均得分 0.804，三个开源框架为 0.642 到 0.700。从 584 篇增至 585 篇。
 - **2026-11-14**: 新增 NeuroMAS，由第一作者 [@haoranlustat](https://github.com/haoranlustat) 提交，收入多智能体系统（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。在 BBH Navigate 上，由训练好的小系统扩展而成的七节点系统达到 51.0%，从头训练则只有 40.5%。从 583 篇增至 584 篇。

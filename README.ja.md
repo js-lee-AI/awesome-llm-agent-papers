@@ -98,7 +98,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [📚 サーベイとポジションペーパー (62)](#surveys)
   - [🏗️ エージェントのアーキテクチャとフレームワーク (54)](#architectures)
 - **🧱 第1部：中核となる構成要素**
-  - [🧠 計画と推論 (55)](#planning)
+  - [🧠 計画と推論 (56)](#planning)
   - [💾 メモリ (61)](#memory)
   - [🔧 ツール利用 (51)](#tools)
   - [🤝 マルチエージェントシステム (59)](#multi-agent)
@@ -254,11 +254,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 ## 🧱 第1部：中核となる構成要素
 
 <a id="planning"></a>
-### 🧠 計画と推論 (55)
+### 🧠 計画と推論 (56)
 *サーベイの§4（計画と推論）に対応します。*
 
 <details>
-<summary><b>55本の論文を表示</b></summary>
+<summary><b>56本の論文を表示</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *ほぼすべてのLLMエージェントの推論・計画モジュールの土台にある基礎技術で、CoT、ToT、ReActと続く系譜全体の出発点である。*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *推論時のensembleと検証の標準的な戦略で、エージェントの推論・計画のパイプラインのなかで広く再利用されている。*
@@ -316,6 +316,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[LLM Value Functions for Credit Assignment in Agentic RL](https://arxiv.org/abs/2610.15840)** (Zhu et al., arXiv 2026) - *エージェントのRLで、凍結したLLMをcriticとして使う。criticは同じタスクのほかのrolloutの要約を見て、始点をグループの成功率に、終点を実際に得た報酬に合わせたうえで、途中のすべての状態の価値を一回の問い合わせで採点する。価値の差がステップごとのadvantageとなり、その合計はグループ内の相対的なリターンに一致する。Claude Opus 4.6をcriticにすると、Qwen3-8BはAppWorldで 26.3%、SWE-bench Verifiedで 20.2% に達し、GRPOの 19.8% と 12.0% を上回った。ただし改善はcriticしだいで、Qwen3-235Bをcriticにすると、Qwen3-4BのAppWorldでの成績は 9.8% にとどまり、Opusのときは 24.3% だった。*
 - **[Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions](https://arxiv.org/abs/2610.06191)** (Zhang et al., arXiv 2026) - *ツールを使うエージェントが証拠について下した判断と、その次の行動を切り分けて調べる。実験は、検索ソースがわざと失敗するようにしたHotpotQAで行った。七つのエージェントは、失敗するソースの結果を 97% から 100% の割合で役に立たないと判断したが、そうした判断が五回続いた後でも、補助のないQwen3-8Bが回答したのは 292 問中 1 問だけで、プロンプトに書いた停止ルールは良くても部分的にしか守られなかった。役に立たない結果が五回出たら回答させるルールをharnessが強制すると、六つの失敗条件で、四つのオープンモデルとClaude Haiku 4.5の成功率が 0.026 から 0.097 上がった。失敗は模擬である。* [[code](https://github.com/bennidict23/judged-useless-queried-anyway)]
 - **[Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning](https://arxiv.org/abs/2609.38147)** (Dahal et al., arXiv 2026) - *エージェントの制御と作業を分ける。作業者がタスクをこなす一方で、制御器は毎サイクル、進み具合を簡潔にまとめた記録を更新し、次の手を提案し、残りの呼び出し予算と照らして比べたうえで作業者を送り出す。完全な出力はメモリに残して再利用する。同じ作業者と予算を使う直接制御のエージェントと比べると、モデルとベンチマークの 12 の組み合わせすべてで得点が高く、ベンチマークごとの平均で 3.6 から 4.2 ポイント上回った。ProgramBenchではGPT-5.5で 71.5% に達し、Codexの 58.0%、直接制御の 63.7% を上回った。ただし、Opus 4.8で呼び出しが 400 回のときは、56.6% 対 62.7% で直接制御を下回った。*
+- **[Think Twice, Act Once: Verifier-Guided Action Selection For Embodied Agents (VegAS)](https://arxiv.org/abs/2605.12620)** (Singhi et al., CVPR Findings 2026) - *模擬された家の中で動くMLLMエージェントが各ステップで候補の行動を 16 個サンプリングし、生成型の検証器がそれぞれに判定を五回ずつ出して最も点の高い行動を実行する。ポリシー自体は変えない。検証器はポリシーと同じQwen2.5-VL-3Bを、OpenAI o3が成功したtrajectoryから合成した失敗のtrajectoryで微調整したもので、合成された失敗には物体の取り違え、置き場所の取り違え、前提条件の見落としが含まれる。Habitat 2.0のLangRでは平均成功率がchain-of-thoughtのポリシーの 65% から 71% に、複数の物体を扱うタスクでは 25% から 34% に上がり、同じモデルをzero-shotの検証器として使うと 64% にとどまる。EB-ALFREDでは 44% から 49% に、Gemma-3-4Bでは 48% から 51% に上がり、3B の検証器はzero-shotのQwen2.5-VL-72Bのポリシーを 30% から 38% に引き上げ、呼び出し回数をそろえると、回数を増やしたときの伸びがself-consistencyより大きい。すべての実験は高レベルの行動を使うシミュレーターの中で行われ、一ステップにモデル呼び出し 96 回と 8 秒かかって行動を一つだけ出すときの 3 秒より長く、EB-ALFREDの見た目に関するタスクは 48% から 41% に下がる。画像を見ない検証器でもLangRでは同じ（どちらも 71%）、EB-ALFREDでもほぼ同じ（47.5% 対 49%）結果になり、コードはまだ公開されていない。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -878,10 +879,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>27人のコントリビューターを表示</b></summary>
+<summary><b>28人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/nishadsinghi"><img src="https://github.com/nishadsinghi.png?size=48" width="48" height="48" alt="@nishadsinghi"></a> | **[@nishadsinghi](https://github.com/nishadsinghi)** | 「計画と推論」に、合成した失敗で学習させた検証器がMLLMエージェントの 16 個の候補から行動を選ぶThink Twice, Act Once (VegAS)（[#38](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/38)）。第一著者本人による投稿 |
 | <a href="https://github.com/wangyz1999"><img src="https://github.com/wangyz1999.png?size=48" width="48" height="48" alt="@wangyz1999"></a> | **[@wangyz1999](https://github.com/wangyz1999)** | 「メモリ」に、多くのユーザーとエージェントから得た教訓を組、ユーザー、エージェント、全体の範囲に分けて保存するメモリWho Remembers What? (MixUA)（[#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)）。第一著者本人による投稿 |
 | <a href="https://github.com/Qile-J"><img src="https://github.com/Qile-J.png?size=48" width="48" height="48" alt="@Qile-J"></a> | **[@Qile-J](https://github.com/Qile-J)** | 「マルチエージェントシステム」に、潜在空間で推論しKV cacheを受け渡すエージェントのスウォームで進化的なプログラム探索を行うSwarmEvolve（[#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)）。第一著者本人による投稿 |
 | <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | 「マルチエージェントシステム」に、役割を持たずテキストをやり取りするマルチエージェントシステムのすべてのノードを最終回答の報酬で同時に学習させるNeuroMAS（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。第一著者本人による投稿 |
@@ -921,6 +923,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-11-14**: 第一著者の[@nishadsinghi](https://github.com/nishadsinghi)が送ってくれたThink Twice, Act Once (VegAS)を「計画と推論」に追加しました（[#38](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/38)）。LangRでは、微調整した検証器で 16 個の候補から行動を選ぶと成功率が 65% から 71% に上がり、同じモデルをzero-shotの検証器にすると 64% です。586 本から 587 本になりました。
 - **2026-11-14**: 第一著者の[@wangyz1999](https://github.com/wangyz1999)が送ってくれたWho Remembers What? (MixUA)を「メモリ」に追加しました（[#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)）。合成ユーザー五人と七つのエージェント構成で、教訓を四つの共有範囲に分けると、第 3 ラウンドの合格率がメモリなしの 72.0% から 89.8% に上がります。585 本から 586 本になりました。
 - **2026-11-14**: 第一著者の[@Qile-J](https://github.com/Qile-J)が送ってくれたSwarmEvolveを「マルチエージェントシステム」に追加しました（[#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)）。Qwen3 8BとGPU 一枚で一時間動かすと、数学と科学計算の 21 問で平均 0.804 となり、公開されている三つの枠組みの 0.642 から 0.700 を上回ります。584 本から 585 本になりました。
 - **2026-11-14**: 第一著者の[@haoranlustat](https://github.com/haoranlustat)が送ってくれたNeuroMASを「マルチエージェントシステム」に追加しました（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。BBH Navigateでは、ノード七つのシステムを学習済みの小さなシステムから広げると 51.0% に達し、最初から学習させると 40.5% にとどまります。583 本から 584 本になりました。

@@ -98,7 +98,7 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
   - [📚 Surveys e artigos de posicionamento (62)](#surveys)
   - [🏗️ Arquiteturas e frameworks de agentes (54)](#architectures)
 - **🧱 Parte I: Componentes centrais**
-  - [🧠 Planejamento e raciocínio (55)](#planning)
+  - [🧠 Planejamento e raciocínio (56)](#planning)
   - [💾 Memória (61)](#memory)
   - [🔧 Uso de ferramentas (51)](#tools)
   - [🤝 Sistemas multiagente (59)](#multi-agent)
@@ -254,11 +254,11 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
 ## 🧱 Parte I: Componentes centrais
 
 <a id="planning"></a>
-### 🧠 Planejamento e raciocínio (55)
+### 🧠 Planejamento e raciocínio (56)
 *No survey: §4 (Planejamento e raciocínio).*
 
 <details>
-<summary><b>Mostrar 55 artigos</b></summary>
+<summary><b>Mostrar 56 artigos</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *A técnica fundamental por trás de praticamente todos os módulos de raciocínio e planejamento de agentes LLM; o ponto de partida de toda a linhagem CoT/ToT/ReAct.*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *Estratégia padrão de ensemble e verificação em tempo de inferência, muito reutilizada em pipelines de raciocínio e planejamento de agentes.*
@@ -316,6 +316,7 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
 - **[LLM Value Functions for Credit Assignment in Agentic RL](https://arxiv.org/abs/2610.15840)** (Zhu et al., arXiv 2026) - *Usa um LLM congelado como crítico no RL de agentes: ao ver resumos de outros rollouts da mesma tarefa, ancorado na taxa de sucesso do grupo no início e na recompensa observada no fim, ele pontua todos os estados intermediários numa única consulta, e as diferenças de valor viram vantagens por passo que somam o retorno relativo ao grupo; com o Claude Opus 4.6 como crítico, o Qwen3-8B chega a 26,3% no AppWorld e a 20,2% no SWE-bench Verified, contra 19,8% e 12,0% com GRPO, mas o ganho depende do crítico, e com o Qwen3-235B nesse papel o Qwen3-4B chega a só 9,8% no AppWorld, contra 24,3% com o Opus.*
 - **[Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions](https://arxiv.org/abs/2610.06191)** (Zhang et al., arXiv 2026) - *Separa o que um agente que usa ferramentas conclui sobre as suas evidências do que ele faz em seguida, no HotpotQA com uma fonte de busca feita para falhar: os sete agentes chamam de inúteis os resultados da fonte com falha em 97 a 100% das vezes, mas, depois de cinco julgamentos desses seguidos, o Qwen3-8B sem ajuda responde a 1 de 292 perguntas, e uma regra de parada escrita no prompt é seguida no máximo em parte; uma regra imposta pelo harness, que força uma resposta depois de cinco resultados inúteis, aumenta o sucesso em seis regimes de falha de 0,026 a 0,097 para quatro modelos abertos e o Claude Haiku 4.5, com as falhas simuladas.* [[code](https://github.com/bennidict23/judged-useless-queried-anyway)]
 - **[Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning](https://arxiv.org/abs/2609.38147)** (Dahal et al., arXiv 2026) - *Separa o controle de um agente do seu trabalho: trabalhadores fazem a tarefa enquanto um controlador, a cada ciclo, atualiza um registro compacto do progresso, propõe os próximos passos, pesa-os contra o orçamento de chamadas restante e despacha trabalhadores, com as saídas completas guardadas na memória para reúso; contra um agente de controle direto com os mesmos trabalhadores e orçamento, pontua mais em todos os 12 pares de modelo e benchmark, de 3,6 a 4,2 pontos em média por benchmark, e chega a 71,5% no ProgramBench com o GPT-5.5, contra 58,0% do Codex e 63,7% do controle direto, mas com o Opus 4.8 e 400 chamadas fica atrás do controle direto, 56,6% contra 62,7%.*
+- **[Think Twice, Act Once: Verifier-Guided Action Selection For Embodied Agents (VegAS)](https://arxiv.org/abs/2605.12620)** (Singhi et al., CVPR Findings 2026) - *A cada passo de um agente MLLM que age em casas simuladas, amostra 16 ações candidatas e executa a que um verificador generativo pontua mais alto em cinco vereditos cada, sem mudar a política; o verificador, o mesmo Qwen2.5-VL-3B da política, é ajustado em trajectories de falha que o OpenAI o3 sintetiza a partir das bem-sucedidas, com objetos errados, receptáculos errados e pré-condições puladas. No LangR, no Habitat 2.0, eleva o sucesso médio de 65% da política com chain-of-thought para 71%, e nas tarefas com vários objetos de 25% para 34%, enquanto o mesmo modelo usado como verificador zero-shot faz 64%; no EB-ALFRED vai de 44% para 49%, e de 48% para 51% com o Gemma-3-4B, o verificador de 3B eleva a política zero-shot Qwen2.5-VL-72B de 30% para 38%, e ele escala melhor que a self-consistency com o mesmo número de chamadas. Todos os testes são em simuladores com ações de alto nível, cada passo exige 96 chamadas ao modelo e 8 segundos, contra 3 para uma única ação, no EB-ALFRED as tarefas de aparência visual caem de 48% para 41%, um verificador que nunca vê a imagem vai igualmente bem no LangR (71% nos dois) e quase tão bem no EB-ALFRED (47,5% contra 49%), e o código ainda não foi liberado.*
 </details>
 
 <sub><a href="#contents">↑ Voltar ao sumário</a></sub>
@@ -878,10 +879,11 @@ A maioria dos idiomas para os quais esta lista foi traduzida não é minha líng
 Esta lista é mantida pela comunidade. Um agradecimento a todos que sugeriram, conferiram ou anotaram um artigo:
 
 <details>
-<summary><b>Mostrar 27 colaboradores</b></summary>
+<summary><b>Mostrar 28 colaboradores</b></summary>
 
 | | Colaborador | Contribuição |
 |---|---|---|
+| <a href="https://github.com/nishadsinghi"><img src="https://github.com/nishadsinghi.png?size=48" width="48" height="48" alt="@nishadsinghi"></a> | **[@nishadsinghi](https://github.com/nishadsinghi)** | Think Twice, Act Once (VegAS), que escolhe cada ação de um agente MLLM entre 16 amostras com um verificador treinado em falhas sintetizadas, enviado pelo primeiro autor, em Planejamento e raciocínio ([#38](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/38)) |
 | <a href="https://github.com/wangyz1999"><img src="https://github.com/wangyz1999.png?size=48" width="48" height="48" alt="@wangyz1999"></a> | **[@wangyz1999](https://github.com/wangyz1999)** | Who Remembers What? (MixUA), uma memória que arquiva cada lição de muitos usuários e agentes sob um escopo de par, usuário, agente ou global, enviado pelo primeiro autor, em Memória ([#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)) |
 | <a href="https://github.com/Qile-J"><img src="https://github.com/Qile-J.png?size=48" width="48" height="48" alt="@Qile-J"></a> | **[@Qile-J](https://github.com/Qile-J)** | SwarmEvolve, busca evolutiva de programas por enxames de agentes que raciocinam no espaço latente e trocam KV caches, enviado pelo primeiro autor, em Sistemas multiagente ([#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)) |
 | <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | NeuroMAS, que treina juntos todos os nós de um sistema multiagente sem papéis, que se comunica por texto, a partir da recompensa da resposta final, enviado pelo primeiro autor, em Sistemas multiagente ([#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)) |
@@ -921,6 +923,7 @@ Distribuído sob a [licença MIT](LICENSE).
 
 ## 🗓️ Atualizações
 
+- **2026-11-14**: Think Twice, Act Once (VegAS) entrou em Planejamento e raciocínio, enviado pelo primeiro autor ([@nishadsinghi](https://github.com/nishadsinghi), [#38](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/38)). No LangR, escolher cada ação entre 16 amostras com um verificador ajustado eleva o sucesso de 65% para 71%, enquanto o mesmo modelo como verificador zero-shot faz 64%. De 586 para 587.
 - **2026-11-14**: Who Remembers What? (MixUA) entrou em Memória, enviado pelo primeiro autor ([@wangyz1999](https://github.com/wangyz1999), [#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)). Com cinco usuários sintéticos e sete configurações de agente, separar as lições em quatro escopos de compartilhamento eleva a taxa de aprovação da rodada 3 de 72,0% sem memória para 89,8%. De 585 para 586.
 - **2026-11-14**: SwarmEvolve entrou em Sistemas multiagente, enviado pelo primeiro autor ([@Qile-J](https://github.com/Qile-J), [#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)). Com o Qwen3 8B e uma hora numa GPU, faz média de 0,804 em 21 problemas de matemática e computação científica, contra 0,642 a 0,700 de três frameworks de código aberto. De 584 para 585.
 - **2026-11-14**: NeuroMAS entrou em Sistemas multiagente, enviado pelo primeiro autor ([@haoranlustat](https://github.com/haoranlustat), [#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)). No BBH Navigate, um sistema de sete nós obtido fazendo crescer um sistema menor já treinado chega a 51,0%, contra 40,5% quando é treinado do zero. De 583 para 584.

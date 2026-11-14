@@ -98,7 +98,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
   - [📚 서베이와 포지션 페이퍼 (62)](#surveys)
   - [🏗️ 에이전트 아키텍처와 프레임워크 (54)](#architectures)
 - **🧱 제1부: 핵심 구성 요소**
-  - [🧠 계획과 추론 (55)](#planning)
+  - [🧠 계획과 추론 (56)](#planning)
   - [💾 메모리 (61)](#memory)
   - [🔧 도구 사용 (51)](#tools)
   - [🤝 다중 에이전트 시스템 (59)](#multi-agent)
@@ -254,11 +254,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 ## 🧱 제1부: 핵심 구성 요소
 
 <a id="planning"></a>
-### 🧠 계획과 추론 (55)
+### 🧠 계획과 추론 (56)
 *서베이 §4(계획과 추론)에 해당합니다.*
 
 <details>
-<summary><b>논문 55편 보기</b></summary>
+<summary><b>논문 56편 보기</b></summary>
 
 - **[Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/abs/2201.11903)** (Wei et al., NeurIPS 2022) - *사실상 모든 LLM 에이전트 추론·계획 모듈의 바탕에 있는 기초 기법이자, CoT/ToT/ReAct 계보 전체의 출발점이다.*
 - **[Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/abs/2203.11171)** (Wang et al., ICLR 2023) - *에이전트의 추론·계획 파이프라인 안에서 널리 재사용되는 표준 추론 시점 ensemble·검증 전략이다.*
@@ -316,6 +316,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[LLM Value Functions for Credit Assignment in Agentic RL](https://arxiv.org/abs/2610.15840)** (Zhu et al., arXiv 2026) - *에이전트 RL에서 고정된 LLM을 critic으로 쓴다. critic은 같은 과제의 다른 rollout 요약을 보고, 시작 지점은 그룹의 성공률에, 끝 지점은 실제로 받은 보상에 맞춘 상태에서 중간 상태 전부의 가치를 한 번의 질의로 매긴다. 가치의 차이는 단계별 advantage가 되며, 그 합은 그룹 기준 상대 보상과 같다. Claude Opus 4.6을 critic으로 쓰면 Qwen3-8B는 AppWorld에서 26.3%, SWE-bench Verified에서 20.2%에 이르러 GRPO의 19.8%와 12.0%를 앞섰다. 다만 이득은 critic에 달려 있어서, Qwen3-235B를 critic으로 쓰면 Qwen3-4B는 AppWorld에서 9.8%에 그쳤고, Opus를 쓸 때는 24.3%였다.*
 - **[Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions](https://arxiv.org/abs/2610.06191)** (Zhang et al., arXiv 2026) - *도구를 쓰는 에이전트가 증거를 두고 내린 판단과 그다음 행동을 떼어서 본다. 실험은 검색 소스가 일부러 실패하도록 만든 HotpotQA에서 했다. 일곱 에이전트가 실패하는 소스의 결과를 쓸모없다고 판단한 비율은 97%에서 100%였지만, 그런 판단이 다섯 번 이어진 뒤에도 도움을 받지 않은 Qwen3-8B는 292문항 중 1문항에서만 답을 냈고, 프롬프트에 적은 중단 규칙은 기껏해야 일부만 지켜졌다. 쓸모없는 결과가 다섯 번 나오면 답하게 만드는 규칙을 harness가 강제하자, 여섯 가지 실패 조건에서 공개 모델 넷과 Claude Haiku 4.5의 성공률이 0.026에서 0.097만큼 올랐다. 실패는 시뮬레이션한 것이다.* [[code](https://github.com/bennidict23/judged-useless-queried-anyway)]
 - **[Thinking Before Thinking: Scaling Agentic Inference Through Meta-Reasoning](https://arxiv.org/abs/2609.38147)** (Dahal et al., arXiv 2026) - *에이전트의 제어와 실제 작업을 나눈다. 작업자가 과제를 하는 동안 제어기는 매 주기마다 진행 상황을 간추린 기록을 갱신하고, 다음 단계를 제안하고, 남은 호출 예산에 비춰 따져 본 뒤 작업자를 보낸다. 전체 출력은 메모리에 두고 다시 쓴다. 같은 작업자와 예산을 쓰는 직접 제어 에이전트와 비교하면 모델과 벤치마크 조합 12개 모두에서 점수가 높았고, 벤치마크별 평균으로 3.6에서 4.2포인트 앞섰다. ProgramBench에서는 GPT-5.5로 71.5%에 이르러 Codex의 58.0%, 직접 제어의 63.7%보다 높았다. 그러나 Opus 4.8로 호출을 400번 쓸 때는 56.6%로, 직접 제어의 62.7%에 뒤졌다.*
+- **[Think Twice, Act Once: Verifier-Guided Action Selection For Embodied Agents (VegAS)](https://arxiv.org/abs/2605.12620)** (Singhi et al., CVPR Findings 2026) - *가정 시뮬레이터 안에서 움직이는 MLLM 에이전트가 매 단계 후보 행동 16개를 뽑으면, 생성형 검증기가 각 행동에 판정을 다섯 번씩 내리고 점수가 가장 높은 행동을 실행하며, 정책 자체는 바꾸지 않는다. 검증기는 정책과 같은 Qwen2.5-VL-3B를, OpenAI o3가 성공한 trajectory에서 합성한 실패 trajectory로 미세 조정한 것이고, 합성된 실패에는 잘못 고른 물체, 잘못 고른 놓을 곳, 빠뜨린 선행 조건이 들어 있다. Habitat 2.0의 LangR에서 평균 성공률은 chain-of-thought 정책의 65%에서 71%로, 여러 물체를 다루는 과제에서는 25%에서 34%로 오르며, 같은 모델을 zero-shot 검증기로 쓰면 64%에 그친다. EB-ALFRED에서는 44%에서 49%로, Gemma-3-4B로는 48%에서 51%로 오르고, 3B 검증기는 zero-shot Qwen2.5-VL-72B 정책을 30%에서 38%로 끌어올리며, 호출 수를 같게 맞추면 호출을 늘릴수록 self-consistency보다 더 많이 오른다. 모든 실험은 고수준 행동을 쓰는 시뮬레이터 안에서 이루어졌고, 한 단계에 모델 호출 96번과 8초가 들어 행동 하나만 뽑을 때의 3초보다 길며, EB-ALFRED의 시각적 외형 과제는 48%에서 41%로 떨어진다. 이미지를 보지 않는 검증기도 LangR에서는 똑같고(둘 다 71%) EB-ALFRED에서는 거의 비슷하며(47.5% 대 49%), 코드는 아직 공개되지 않았다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -878,10 +879,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 27명 보기</b></summary>
+<summary><b>기여자 28명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/nishadsinghi"><img src="https://github.com/nishadsinghi.png?size=48" width="48" height="48" alt="@nishadsinghi"></a> | **[@nishadsinghi](https://github.com/nishadsinghi)** | 계획과 추론 절에 합성한 실패로 학습시킨 검증기가 MLLM 에이전트의 후보 16개 중 행동을 고르는 Think Twice, Act Once (VegAS) 추가([#38](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/38)). 제1저자가 직접 제출 |
 | <a href="https://github.com/wangyz1999"><img src="https://github.com/wangyz1999.png?size=48" width="48" height="48" alt="@wangyz1999"></a> | **[@wangyz1999](https://github.com/wangyz1999)** | 메모리 절에 여러 사용자와 에이전트에게서 얻은 교훈을 쌍, 사용자, 에이전트, 전역 범위로 나눠 저장하는 메모리 Who Remembers What? (MixUA) 추가([#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)). 제1저자가 직접 제출 |
 | <a href="https://github.com/Qile-J"><img src="https://github.com/Qile-J.png?size=48" width="48" height="48" alt="@Qile-J"></a> | **[@Qile-J](https://github.com/Qile-J)** | 다중 에이전트 시스템 절에 잠재 공간에서 추론하고 KV cache를 주고받는 에이전트 스웜으로 진화적 프로그램 탐색을 하는 SwarmEvolve 추가([#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)). 제1저자가 직접 제출 |
 | <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | 다중 에이전트 시스템 절에 역할 없이 텍스트를 주고받는 다중 에이전트 시스템의 모든 노드를 최종 답의 보상으로 함께 학습시키는 NeuroMAS 추가([#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)). 제1저자가 직접 제출 |
@@ -921,6 +923,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-11-14**: 제1저자 [@nishadsinghi](https://github.com/nishadsinghi)가 보내 준 Think Twice, Act Once (VegAS)를 계획과 추론 절에 추가했습니다([#38](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/38)). LangR에서 미세 조정한 검증기로 후보 16개 중 행동을 고르면 성공률이 65%에서 71%로 오르고, 같은 모델을 zero-shot 검증기로 쓰면 64%입니다. 586편에서 587편으로 늘었습니다.
 - **2026-11-14**: 제1저자 [@wangyz1999](https://github.com/wangyz1999)가 보내 준 Who Remembers What? (MixUA)를 메모리 절에 추가했습니다([#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)). 합성 사용자 다섯 명과 에이전트 구성 일곱 개에서 교훈을 네 공유 범위로 나누면 3라운드 통과율이 메모리 없이 72.0%에서 89.8%로 오릅니다. 585편에서 586편으로 늘었습니다.
 - **2026-11-14**: 제1저자 [@Qile-J](https://github.com/Qile-J)가 보내 준 SwarmEvolve를 다중 에이전트 시스템 절에 추가했습니다([#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)). Qwen3 8B와 GPU 한 장으로 한 시간 동안 돌리면 수학과 과학 계산 문제 21개에서 평균 0.804를 받아, 공개된 세 프레임워크의 0.642에서 0.700보다 높습니다. 584편에서 585편으로 늘었습니다.
 - **2026-11-14**: 제1저자 [@haoranlustat](https://github.com/haoranlustat)가 보내 준 NeuroMAS를 다중 에이전트 시스템 절에 추가했습니다([#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)). BBH Navigate에서 노드 일곱 개짜리 시스템을 학습된 작은 시스템에서 키우면 51.0%에 이르고, 처음부터 학습시키면 40.5%에 그칩니다. 583편에서 584편으로 늘었습니다.
