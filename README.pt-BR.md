@@ -99,7 +99,7 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
   - [🏗️ Arquiteturas e frameworks de agentes (54)](#architectures)
 - **🧱 Parte I: Componentes centrais**
   - [🧠 Planejamento e raciocínio (55)](#planning)
-  - [💾 Memória (60)](#memory)
+  - [💾 Memória (61)](#memory)
   - [🔧 Uso de ferramentas (51)](#tools)
   - [🤝 Sistemas multiagente (59)](#multi-agent)
 - **🌍 Parte II: Agentes em ambientes e aplicações**
@@ -321,11 +321,11 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
 <sub><a href="#contents">↑ Voltar ao sumário</a></sub>
 
 <a id="memory"></a>
-### 💾 Memória (60)
+### 💾 Memória (61)
 *No survey: §5 (Memória).*
 
 <details>
-<summary><b>Mostrar 60 artigos</b></summary>
+<summary><b>Mostrar 61 artigos</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Um dos primeiros designs influentes de memória de leitura e escrita estruturada em triplas, precursor dos sistemas de memória de agentes baseados em grafos e em grafos de conhecimento.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *Um dos primeiros sistemas a levar para a memória de agentes LLM um mecanismo de esquecimento e consolidação com base psicológica (inspirado na memória humana).* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -388,6 +388,7 @@ Trabalhos recentes de 2026 que já estão chamando atenção.
 - **[Reliable Memory from Unstable Growth: Curating Self-Written Agent Playbooks with Randomized Experiments](https://arxiv.org/abs/2610.18427)** (Pham et al., arXiv 2026) - *Decide quais lições do playbook que o agente escreveu para si manter por experimento, e não pelo julgamento do próprio agente: lições relacionadas são agrupadas em blocos, cada bloco é ligado ou desligado ao acaso durante tarefas de prática, uma regressão do sucesso estima o efeito de cada bloco, e o playbook curado só é usado se vencer o completo e o vazio em prática nova; em 19 configurações com ACE e Dynamic Cheatsheet no AppWorld, no WebShop e no ALFWorld, tem média de 66,9, contra 55,5 do playbook completo e 53,8 das escolhas do próprio agente, embora apenas escolher entre o playbook completo e o vazio já chegue a 66,4.*
 - **[Can Agents Forget When Asked? A Benchmark for Memory Unlearning in LLM Agents](https://arxiv.org/abs/2610.18052)** (Xie et al., arXiv 2026) - *Testa se sistemas de memória de agentes conseguem apagar o que o usuário pede para esquecer: 50 diálogos sintéticos de várias sessões trazem 135 pedidos de esquecimento de seis tipos e 1.742 perguntas, e cada um tem uma versão de controle sem os pedidos, de modo que um sistema só ganha crédito por esquecer o que tinha guardado; entre Mem0, A-MEM, LangMem, LightMem, SimpleMem, RAG simples e um LLM com o contexto completo, nenhum sistema passa em mais de 1,5% dos pedidos end-to-end, porque cada um ou deixa a informação extraível com ataques simples ou apaga muito mais do que foi pedido.* [[code](https://github.com/Nboxff/bemula-benchmark)]
 - **[Not All Experience Belongs in the Weights: Component Routing for Self-Improving GUI Agents](https://arxiv.org/abs/2610.01787)** (Wu et al., arXiv 2026) - *Divide a experiência de um agente de GUI em localizadores, procedimentos, fatos de estado e lições, e testa cada um tanto nos pesos, por ajuste fino, quanto no contexto, como notas recuperadas: localizadores ganham 4,9 pontos a mais nos pesos e lições, 1,5, uma margem cujo intervalo inclui zero em metade das células, enquanto procedimentos e fatos de estado ganham 4,2 e 4,1 a mais no contexto; encaminhar cada componente por uma regra baseada na frequência com que ele se repete e em se ele depende do estado atual supera o melhor destino único em 3,5 pontos em média, com três backbones de 7 a 8B no MobileGym e no AndroidWorld.*
+- **[Who Remembers What? Multi-Granularity Memory Extraction for Multi-User, Multi-Agent Interaction](https://arxiv.org/abs/2611.10439)** (Wang et al., arXiv 2026) - *Divide cada trajectory de usuário e agente num fluxo reutilizável e num fluxo protegido, que vão para escritores separados, e arquiva cada lição sob um par usuário-agente, um usuário, um agente ou um escopo global, para que as lições cheguem a outros usuários e agentes enquanto o conteúdo privado fica com o seu dono; o CrossLearnBench dos autores planta fatos privados baseados numa pesquisa de opinião e preferências de documento de usuários sintéticos em tarefas de sete benchmarks de agentes. Com cinco usuários e sete configurações de agente entre Claude Code, Codex, Hermes e OpenClaw, em três rodadas programadas e três execuções, o escritor LLM com revisão do armazenamento eleva a taxa de aprovação da rodada 3 de 72,0% sem memória para 89,8%, um ganho de 16,3 pontos nas rodadas 2 e 3, e mantém 89% das preferências declaradas na rodada 1, enquanto um único armazenamento global ganha 11,5 pontos mas mantém 11%; em tarefas tentadas antes só por outro usuário e outro agente, ganha de 11 a 14 pontos, contra 8,9, e três de suas quatro variantes não põem nenhum fato privado plantado num escopo proibido em cerca de 18.000 sondagens cada. Os usuários e seus fatos privados são sintéticos e independentes, sem equipes, uma tentativa custa cerca de $3,40 com o escritor de memória Claude Opus 5, contra $0,30 sem memória e $1,77 com o armazenamento global, as execuções que aumentam o número de usuários usam uma semente por tamanho, e com 100 usuários o ganho cai para 5,8 pontos, abaixo dos 7,3 do armazenamento global, enquanto a retenção de preferências entre todos os usuários cai para 45%; o artigo não aponta nenhum código.*
 </details>
 
 <sub><a href="#contents">↑ Voltar ao sumário</a></sub>
@@ -877,10 +878,11 @@ A maioria dos idiomas para os quais esta lista foi traduzida não é minha líng
 Esta lista é mantida pela comunidade. Um agradecimento a todos que sugeriram, conferiram ou anotaram um artigo:
 
 <details>
-<summary><b>Mostrar 26 colaboradores</b></summary>
+<summary><b>Mostrar 27 colaboradores</b></summary>
 
 | | Colaborador | Contribuição |
 |---|---|---|
+| <a href="https://github.com/wangyz1999"><img src="https://github.com/wangyz1999.png?size=48" width="48" height="48" alt="@wangyz1999"></a> | **[@wangyz1999](https://github.com/wangyz1999)** | Who Remembers What? (MixUA), uma memória que arquiva cada lição de muitos usuários e agentes sob um escopo de par, usuário, agente ou global, enviado pelo primeiro autor, em Memória ([#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)) |
 | <a href="https://github.com/Qile-J"><img src="https://github.com/Qile-J.png?size=48" width="48" height="48" alt="@Qile-J"></a> | **[@Qile-J](https://github.com/Qile-J)** | SwarmEvolve, busca evolutiva de programas por enxames de agentes que raciocinam no espaço latente e trocam KV caches, enviado pelo primeiro autor, em Sistemas multiagente ([#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)) |
 | <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | NeuroMAS, que treina juntos todos os nós de um sistema multiagente sem papéis, que se comunica por texto, a partir da recompensa da resposta final, enviado pelo primeiro autor, em Sistemas multiagente ([#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)) |
 | <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | Collaborative Intelligence Benchmark (o modelo como colega de equipe, avaliado só nas tarefas que resolve sozinho), TeamGym (decisões em equipe com os fatos decisivos divididos entre os participantes) e TeamBench (Planner, Executor e Verifier separados por permissões de contêiner), em Avaliação e benchmarks ([#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)). Enviados por um de seus autores, o primeiro autor do TeamBench |
@@ -919,6 +921,7 @@ Distribuído sob a [licença MIT](LICENSE).
 
 ## 🗓️ Atualizações
 
+- **2026-11-14**: Who Remembers What? (MixUA) entrou em Memória, enviado pelo primeiro autor ([@wangyz1999](https://github.com/wangyz1999), [#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)). Com cinco usuários sintéticos e sete configurações de agente, separar as lições em quatro escopos de compartilhamento eleva a taxa de aprovação da rodada 3 de 72,0% sem memória para 89,8%. De 585 para 586.
 - **2026-11-14**: SwarmEvolve entrou em Sistemas multiagente, enviado pelo primeiro autor ([@Qile-J](https://github.com/Qile-J), [#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)). Com o Qwen3 8B e uma hora numa GPU, faz média de 0,804 em 21 problemas de matemática e computação científica, contra 0,642 a 0,700 de três frameworks de código aberto. De 584 para 585.
 - **2026-11-14**: NeuroMAS entrou em Sistemas multiagente, enviado pelo primeiro autor ([@haoranlustat](https://github.com/haoranlustat), [#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)). No BBH Navigate, um sistema de sete nós obtido fazendo crescer um sistema menor já treinado chega a 51,0%, contra 40,5% quando é treinado do zero. De 583 para 584.
 - **2026-11-06**: Collaborative Intelligence Benchmark, TeamGym e TeamBench entraram em Avaliação e benchmarks, enviados por um de seus autores ([@ybkim95](https://github.com/ybkim95), [#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)). No TeamGym, dividir os fatos decisivos entre a equipe em vez de dá-los todos a um só modelo baixa o sucesso de 63,4% para 40,5%. De 580 para 583.

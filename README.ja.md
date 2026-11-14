@@ -99,7 +99,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
   - [🏗️ エージェントのアーキテクチャとフレームワーク (54)](#architectures)
 - **🧱 第1部：中核となる構成要素**
   - [🧠 計画と推論 (55)](#planning)
-  - [💾 メモリ (60)](#memory)
+  - [💾 メモリ (61)](#memory)
   - [🔧 ツール利用 (51)](#tools)
   - [🤝 マルチエージェントシステム (59)](#multi-agent)
 - **🌍 第2部：環境と応用のなかのエージェント**
@@ -321,11 +321,11 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
 
 <a id="memory"></a>
-### 💾 メモリ (60)
+### 💾 メモリ (61)
 *サーベイの§5（メモリ）に対応します。*
 
 <details>
-<summary><b>60本の論文を表示</b></summary>
+<summary><b>61本の論文を表示</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *トリプレット形式で構造化した読み書き型メモリの初期の設計で、影響も大きい。のちのグラフやKGにもとづくエージェントメモリの先駆けとなった。*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *心理学に裏づけられた（人間の記憶に着想を得た）忘却と定着の仕組みを、LLMエージェントのメモリに持ち込んだ最初期のシステムの一つである。* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -388,6 +388,7 @@ LLMエージェントを作るときに読むべき論文を、一行の説明�
 - **[Reliable Memory from Unstable Growth: Curating Self-Written Agent Playbooks with Randomized Experiments](https://arxiv.org/abs/2610.18427)** (Pham et al., arXiv 2026) - *エージェントが自分で書いたplaybookのどの教訓を残すかを、エージェント自身の判断ではなく実験で決める。関連する教訓をブロックにまとめ、練習タスクの間、各ブロックを無作為にオンとオフに切り替え、成功を回帰分析して各ブロックの効果を推定する。選び直したplaybookは、新しい練習で全体のplaybookと空のplaybookの両方に勝ったときだけ使う。AppWorld、WebShop、ALFWorldでACEとDynamic Cheatsheetを使った 19 の設定の平均は 66.9 で、全体のplaybookの 55.5、エージェント自身が選んだ場合の 53.8 を上回った。ただし、全体と空のどちらかを選ぶだけでも 66.4 に達する。*
 - **[Can Agents Forget When Asked? A Benchmark for Memory Unlearning in LLM Agents](https://arxiv.org/abs/2610.18052)** (Xie et al., arXiv 2026) - *エージェントのメモリシステムが、ユーザーに忘れるよう求められた内容を消せるかを試す。合成した複数セッションの対話 50 件に、六種類の忘却要求 135 件と質問 1,742 件が含まれる。各対話には要求を除いた対照版があるので、システムはもともと保存していたものを忘れた場合にだけ得点できる。Mem0、A-MEM、LangMem、LightMem、SimpleMem、素朴なRAG、全文脈を入れたLLMのいずれも、end-to-endで通過した要求は 1.5% を超えなかった。簡単な攻撃で情報を引き出せる状態のまま残すか、求められたよりはるかに多くを消してしまうからである。* [[code](https://github.com/Nboxff/bemula-benchmark)]
 - **[Not All Experience Belongs in the Weights: Component Routing for Self-Improving GUI Agents](https://arxiv.org/abs/2610.01787)** (Wu et al., arXiv 2026) - *GUIエージェント自身の経験を、画面要素の位置情報、手順、状態に関する事実、教訓に分け、それぞれをファインチューニングで重みに入れる場合と、検索したメモとしてコンテキストに入れる場合の両方で試す。位置情報は重みに入れると 4.9 ポイント、教訓は 1.5 ポイント多く伸びたが、教訓のこの差は半数のセルで区間が 0 を含む。手順と状態に関する事実は、コンテキストに入れると 4.2 ポイントと 4.1 ポイント多く伸びた。繰り返し現れる頻度と、現在の状態に依存するかどうかに基づくルールで要素ごとに行き先を決めると、よいほうの単一の行き先より平均 3.5 ポイント高かった。MobileGymとAndroidWorldで、7B から 8B の三つのバックボーンを使った結果である。*
+- **[Who Remembers What? Multi-Granularity Memory Extraction for Multi-User, Multi-Agent Interaction](https://arxiv.org/abs/2611.10439)** (Wang et al., arXiv 2026) - *ユーザーとエージェントの組ごとのtrajectoryを、再利用できる流れと保護すべき流れに分けて別々の書き手に渡し、すべての教訓をユーザーとエージェントの組、ユーザー、エージェント、全体のいずれかの範囲に入れることで、教訓は他のユーザーやエージェントに届き、個人的な内容は持ち主のもとにだけ残るようにする。著者のCrossLearnBenchは、七つのエージェントベンチマークのタスクに、合成ユーザーのアンケートに基づく個人情報と文書の好みを仕込む。ユーザー五人と、Claude Code、Codex、Hermes、OpenClawにまたがる七つのエージェント構成で、予定を組んだ三ラウンドを三回実行すると、LLMの書き手とストアの見直しを使った場合、第 3 ラウンドの合格率はメモリなしの 72.0% から 89.8% に上がり、第 2、3 ラウンドで 16.3 ポイント上回り、第 1 ラウンドで伝えた好みの 89% を保つ。全体のストア一つだけでは 11.5 ポイント上回るが、好みは 11% しか残らない。以前に別のユーザーと別のエージェントだけが試したタスクでは 11 から 14 ポイント上回って全体のストアの 8.9 より高く、四つの変種のうち三つは、それぞれ約 18,000 回のプローブで、仕込んだ個人情報を禁じられた範囲に一つも入れない。ユーザーとその個人情報は合成で互いに独立しており、チームのような単位はなく、Claude Opus 5のメモリの書き手を含めると一回の試行に約 $3.40 かかり、メモリなしの $0.30、全体のストアの $1.77 より高い。ユーザー数を増やす実験は規模ごとにシード一つで、ユーザー 100 人では向上が 5.8 ポイントに下がって全体のストアの 7.3 を下回り、全ユーザーでの好みの保持率も 45% に落ちる。論文にコードへのリンクはない。*
 </details>
 
 <sub><a href="#contents">↑ 目次に戻る</a></sub>
@@ -877,10 +878,11 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 このリストはコミュニティの手で保守されています。論文の提案、確認、説明文の執筆に協力してくださったすべての方に感謝します。
 
 <details>
-<summary><b>26人のコントリビューターを表示</b></summary>
+<summary><b>27人のコントリビューターを表示</b></summary>
 
 | | コントリビューター | 貢献内容 |
 |---|---|---|
+| <a href="https://github.com/wangyz1999"><img src="https://github.com/wangyz1999.png?size=48" width="48" height="48" alt="@wangyz1999"></a> | **[@wangyz1999](https://github.com/wangyz1999)** | 「メモリ」に、多くのユーザーとエージェントから得た教訓を組、ユーザー、エージェント、全体の範囲に分けて保存するメモリWho Remembers What? (MixUA)（[#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)）。第一著者本人による投稿 |
 | <a href="https://github.com/Qile-J"><img src="https://github.com/Qile-J.png?size=48" width="48" height="48" alt="@Qile-J"></a> | **[@Qile-J](https://github.com/Qile-J)** | 「マルチエージェントシステム」に、潜在空間で推論しKV cacheを受け渡すエージェントのスウォームで進化的なプログラム探索を行うSwarmEvolve（[#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)）。第一著者本人による投稿 |
 | <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | 「マルチエージェントシステム」に、役割を持たずテキストをやり取りするマルチエージェントシステムのすべてのノードを最終回答の報酬で同時に学習させるNeuroMAS（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。第一著者本人による投稿 |
 | <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | 「評価とベンチマーク」に、一人で解けるタスクだけでモデルをチームの仲間として採点するCollaborative Intelligence Benchmark、決定に必要な事実を参加者に分けたチーム意思決定の環境TeamGym、Planner、Executor、Verifierをコンテナの権限で分けたTeamBench（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。著者の一人で、TeamBenchの第一著者による投稿 |
@@ -919,6 +921,7 @@ GitHubの**Cite this repository**ボタンは[`CITATION.cff`](CITATION.cff)を�
 
 ## 🗓️ 更新履歴
 
+- **2026-11-14**: 第一著者の[@wangyz1999](https://github.com/wangyz1999)が送ってくれたWho Remembers What? (MixUA)を「メモリ」に追加しました（[#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)）。合成ユーザー五人と七つのエージェント構成で、教訓を四つの共有範囲に分けると、第 3 ラウンドの合格率がメモリなしの 72.0% から 89.8% に上がります。585 本から 586 本になりました。
 - **2026-11-14**: 第一著者の[@Qile-J](https://github.com/Qile-J)が送ってくれたSwarmEvolveを「マルチエージェントシステム」に追加しました（[#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)）。Qwen3 8BとGPU 一枚で一時間動かすと、数学と科学計算の 21 問で平均 0.804 となり、公開されている三つの枠組みの 0.642 から 0.700 を上回ります。584 本から 585 本になりました。
 - **2026-11-14**: 第一著者の[@haoranlustat](https://github.com/haoranlustat)が送ってくれたNeuroMASを「マルチエージェントシステム」に追加しました（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。BBH Navigateでは、ノード七つのシステムを学習済みの小さなシステムから広げると 51.0% に達し、最初から学習させると 40.5% にとどまります。583 本から 584 本になりました。
 - **2026-11-06**: 著者の一人の[@ybkim95](https://github.com/ybkim95)が送ってくれたCollaborative Intelligence Benchmark、TeamGym、TeamBenchを「評価とベンチマーク」に追加しました（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。TeamGymでは、決定に必要な事実を一つのモデルにすべて渡す代わりにチームに分けると、成功率が 63.4% から 40.5% に下がります。580 本から 583 本になりました。

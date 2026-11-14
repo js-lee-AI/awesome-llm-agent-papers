@@ -99,7 +99,7 @@
   - [🏗️ 智能体架构与框架 (54)](#architectures)
 - **🧱 第一部分：核心组成**
   - [🧠 规划与推理 (55)](#planning)
-  - [💾 记忆 (60)](#memory)
+  - [💾 记忆 (61)](#memory)
   - [🔧 工具使用 (51)](#tools)
   - [🤝 多智能体系统 (59)](#multi-agent)
 - **🌍 第二部分：环境与应用中的智能体**
@@ -321,11 +321,11 @@
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="memory"></a>
-### 💾 记忆 (60)
+### 💾 记忆 (61)
 *对应综述 §5（记忆）。*
 
 <details>
-<summary><b>展开 60 篇论文</b></summary>
+<summary><b>展开 61 篇论文</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *早期且影响很大的读写记忆设计，以三元组形式做结构化存储，是后来基于图和知识图谱的智能体记忆系统的前身。*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *最早把有心理学依据的遗忘与巩固机制（受人类记忆启发）引入 LLM 智能体记忆的系统之一。* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -388,6 +388,7 @@
 - **[Reliable Memory from Unstable Growth: Curating Self-Written Agent Playbooks with Randomized Experiments](https://arxiv.org/abs/2610.18427)** (Pham et al., arXiv 2026) - *用实验而不是智能体自己的判断，来决定保留智能体自写 playbook 中的哪些经验：把相关的经验归成块，在练习任务中随机开关每个块，用对成功率的回归估计每个块的效果，只有当筛选后的 playbook 在新的练习中胜过完整版和空白版时才投入使用。在 AppWorld、WebShop 和 ALFWorld 上搭配 ACE 与 Dynamic Cheatsheet 的 19 个设置中，它平均得到 66.9，完整 playbook 为 55.5，智能体自己挑选的为 53.8；不过只在完整版和空白版之间二选一，就已经能达到 66.4。*
 - **[Can Agents Forget When Asked? A Benchmark for Memory Unlearning in LLM Agents](https://arxiv.org/abs/2610.18052)** (Xie et al., arXiv 2026) - *测试智能体记忆系统能否删除用户要求遗忘的内容：50 段合成的多会话对话包含六类共 135 个遗忘请求和 1,742 个问题，每段对话都有不含这些请求的对照版本，所以系统只有在遗忘了自己确实存过的内容时才得分。在 Mem0、A-MEM、LangMem、LightMem、SimpleMem、朴素 RAG 和全上下文 LLM 中，没有一个系统 end-to-end 通过的请求超过 1.5%，原因是要么信息在简单攻击下仍能被提取出来，要么删掉的远多于要求的。* [[code](https://github.com/Nboxff/bemula-benchmark)]
 - **[Not All Experience Belongs in the Weights: Component Routing for Self-Improving GUI Agents](https://arxiv.org/abs/2610.01787)** (Wu et al., arXiv 2026) - *把 GUI 智能体自身的经验拆成界面元素的定位信息、操作流程、状态事实和经验教训，分别测试通过微调写进权重和作为检索到的笔记放进上下文这两种做法：定位信息写进权重多得 4.9 个点，经验教训多得 1.5 个点，后者的区间在一半的单元格中包含零；操作流程和状态事实放进上下文分别多得 4.2 和 4.1 个点。按出现频率和是否依赖当前状态的规则为每类经验选择去处，平均比两种单一去处中较好的一种高 3.5 个点，实验覆盖 MobileGym 和 AndroidWorld 上三个 7B 到 8B 的骨干模型。*
+- **[Who Remembers What? Multi-Granularity Memory Extraction for Multi-User, Multi-Agent Interaction](https://arxiv.org/abs/2611.10439)** (Wang et al., arXiv 2026) - *把每对用户与智能体的 trajectory 拆成可复用流和受保护流，分别交给不同的写入器，并把每条经验归入用户-智能体对、用户、智能体或全局四种范围之一，让经验能传给其他用户和智能体，而私人内容只留在它的主人那里；作者构建的 CrossLearnBench 在来自七个智能体基准的任务中植入合成用户基于问卷的私人信息和文档偏好。在五个用户、横跨 Claude Code、Codex、Hermes 和 OpenClaw 的七种智能体配置下，按预定日程进行三轮、重复三次，采用 LLM 写入器加存储审查时，第 3 轮通过率从无记忆的 72.0% 升到 89.8%，第 2、3 轮比无记忆高 16.3 个百分点，并保留第 1 轮说明的偏好中的 89%；只用一个全局存储时高 11.5 个百分点，但偏好只保留 11%；在之前只被其他用户和其他智能体尝试过的任务上高 11 到 14 个百分点，全局存储为 8.9，四个变体中有三个在各约 18,000 次探测中没有把任何植入的私人信息放进禁止的范围。用户及其私人信息都是合成的、彼此独立，没有团队之类的单位；算上 Claude Opus 5 记忆写入器，每次尝试约花 $3.40，无记忆为 $0.30，全局存储为 $1.77；扩大用户数的实验每种规模只用一个随机种子，100 个用户时提升降到 5.8 个百分点，低于全局存储的 7.3，所有用户的偏好保留率也降到 45%；论文没有给出代码链接。*
 </details>
 
 <sub><a href="#contents">↑ 返回目录</a></sub>
@@ -877,10 +878,11 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 这份清单由社区共同维护。感谢每一位推荐、核实或注释过论文的朋友：
 
 <details>
-<summary><b>展开 26 位贡献者</b></summary>
+<summary><b>展开 27 位贡献者</b></summary>
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/wangyz1999"><img src="https://github.com/wangyz1999.png?size=48" width="48" height="48" alt="@wangyz1999"></a> | **[@wangyz1999](https://github.com/wangyz1999)** | Who Remembers What? (MixUA)：把来自众多用户和智能体的每条经验分别归入对、用户、智能体或全局范围的记忆，收入记忆（[#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)）。由第一作者本人提交 |
 | <a href="https://github.com/Qile-J"><img src="https://github.com/Qile-J.png?size=48" width="48" height="48" alt="@Qile-J"></a> | **[@Qile-J](https://github.com/Qile-J)** | SwarmEvolve：由在潜在空间中推理、彼此传递 KV cache 的智能体群体进行进化式程序搜索，收入多智能体系统（[#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)）。由第一作者本人提交 |
 | <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | NeuroMAS：用最终答案的奖励联合训练一个不分角色、以文本通信的多智能体系统中的每个节点，收入多智能体系统（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。由第一作者本人提交 |
 | <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | Collaborative Intelligence Benchmark：只在模型能独自解决的任务上评估它作为队友的表现；TeamGym：把决策所需的事实分给不同参与者的团队决策环境；TeamBench：用容器权限把 Planner、Executor 和 Verifier 分开，三篇都收入评估与基准（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。由作者之一提交，也是 TeamBench 的第一作者 |
@@ -919,6 +921,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-11-14**: 新增 Who Remembers What? (MixUA)，由第一作者 [@wangyz1999](https://github.com/wangyz1999) 提交，收入记忆（[#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)）。在五个合成用户和七种智能体配置下，把经验分到四种共享范围后，第 3 轮通过率从无记忆的 72.0% 升到 89.8%。从 585 篇增至 586 篇。
 - **2026-11-14**: 新增 SwarmEvolve，由第一作者 [@Qile-J](https://github.com/Qile-J) 提交，收入多智能体系统（[#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)）。用 Qwen3 8B 在一块 GPU 上运行一小时，它在 21 个数学和科学计算问题上平均得分 0.804，三个开源框架为 0.642 到 0.700。从 584 篇增至 585 篇。
 - **2026-11-14**: 新增 NeuroMAS，由第一作者 [@haoranlustat](https://github.com/haoranlustat) 提交，收入多智能体系统（[#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)）。在 BBH Navigate 上，由训练好的小系统扩展而成的七节点系统达到 51.0%，从头训练则只有 40.5%。从 583 篇增至 584 篇。
 - **2026-11-06**: 新增 Collaborative Intelligence Benchmark、TeamGym 和 TeamBench，由作者之一 [@ybkim95](https://github.com/ybkim95) 提交，收入评估与基准（[#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)）。在 TeamGym 中，把决策所需的事实分给团队成员而不是全部交给一个模型，成功率从 63.4% 降到 40.5%。从 580 篇增至 583 篇。

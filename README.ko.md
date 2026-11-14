@@ -99,7 +99,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
   - [🏗️ 에이전트 아키텍처와 프레임워크 (54)](#architectures)
 - **🧱 제1부: 핵심 구성 요소**
   - [🧠 계획과 추론 (55)](#planning)
-  - [💾 메모리 (60)](#memory)
+  - [💾 메모리 (61)](#memory)
   - [🔧 도구 사용 (51)](#tools)
   - [🤝 다중 에이전트 시스템 (59)](#multi-agent)
 - **🌍 제2부: 환경과 응용 속의 에이전트**
@@ -321,11 +321,11 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
 
 <a id="memory"></a>
-### 💾 메모리 (60)
+### 💾 메모리 (61)
 *서베이 §5(메모리)에 해당합니다.*
 
 <details>
-<summary><b>논문 60편 보기</b></summary>
+<summary><b>논문 61편 보기</b></summary>
 
 - **[RET-LLM: Towards a General Read-Write Memory for Large Language Models](https://arxiv.org/abs/2305.14322)** (Modarressi et al., arXiv 2023) - *Triplet 기반의 구조화된 읽기·쓰기 메모리를 일찍 내놓아 영향력이 컸던 설계로, 이후 그래프·KG 기반 에이전트 메모리 시스템의 전신이 되었다.*
 - **[MemoryBank: Enhancing Large Language Models with Long-Term Memory](https://arxiv.org/abs/2305.10250)** (Zhong et al., AAAI 2024) - *심리학에 근거한(사람의 기억에서 착안한) 망각·공고화 메커니즘을 LLM 에이전트 메모리에 처음 들여온 시스템 가운데 하나이다.* [[code](https://github.com/zhongwanjun/MemoryBank-SiliconFriend)]
@@ -388,6 +388,7 @@ LLM 에이전트를 만들 때 읽을 논문을 한 줄 설명과 함께 정리�
 - **[Reliable Memory from Unstable Growth: Curating Self-Written Agent Playbooks with Randomized Experiments](https://arxiv.org/abs/2610.18427)** (Pham et al., arXiv 2026) - *에이전트가 스스로 쓴 playbook에서 어떤 교훈을 남길지를 에이전트 자신의 판단이 아니라 실험으로 정한다. 관련된 교훈을 블록으로 묶고, 연습 과제를 하는 동안 블록마다 무작위로 켜고 끈 뒤, 성공 여부를 회귀 분석해 블록별 효과를 추정한다. 이렇게 고른 playbook은 새 연습 과제에서 전체 playbook과 빈 playbook을 모두 이길 때만 쓴다. AppWorld, WebShop, ALFWorld에서 ACE와 Dynamic Cheatsheet로 실험한 19개 설정의 평균은 66.9로, 전체 playbook의 55.5와 에이전트가 직접 고른 경우의 53.8보다 높았다. 다만 전체 playbook과 빈 playbook 중 하나를 고르기만 해도 66.4가 나왔다.*
 - **[Can Agents Forget When Asked? A Benchmark for Memory Unlearning in LLM Agents](https://arxiv.org/abs/2610.18052)** (Xie et al., arXiv 2026) - *에이전트 메모리 시스템이 사용자가 잊으라고 요청한 내용을 지울 수 있는지 시험한다. 합성한 다중 세션 대화 50개에 여섯 유형의 삭제 요청 135건과 질문 1,742개가 들어 있다. 대화마다 요청을 뺀 대조 버전이 있어서, 시스템은 원래 저장했던 것을 잊었을 때만 점수를 받는다. Mem0, A-MEM, LangMem, LightMem, SimpleMem, 단순 RAG, 전체 컨텍스트를 넣은 LLM 가운데 어느 시스템도 end-to-end로 요청의 1.5%를 넘게 통과하지 못했다. 간단한 공격으로 정보를 다시 끌어낼 수 있게 남겨 두거나, 요청보다 훨씬 많이 지웠기 때문이다.* [[code](https://github.com/Nboxff/bemula-benchmark)]
 - **[Not All Experience Belongs in the Weights: Component Routing for Self-Improving GUI Agents](https://arxiv.org/abs/2610.01787)** (Wu et al., arXiv 2026) - *GUI 에이전트가 쌓은 경험을 화면 요소의 위치 정보, 절차, 상태에 관한 사실, 교훈으로 나누고, 각각을 미세 조정으로 가중치에 넣었을 때와 검색한 노트로 컨텍스트에 넣었을 때를 모두 시험한다. 위치 정보는 가중치에 넣을 때 4.9포인트, 교훈은 1.5포인트 더 얻었는데, 교훈의 이 차이는 셀의 절반에서 구간이 0을 포함했다. 절차와 상태에 관한 사실은 컨텍스트에 넣을 때 각각 4.2포인트와 4.1포인트 더 얻었다. 얼마나 자주 반복되는지와 현재 상태에 달려 있는지를 기준으로 한 규칙으로 구성 요소마다 갈 곳을 정하면, 둘 중 나은 한 곳에 모두 넣을 때보다 평균 3.5포인트 높았다. 실험은 MobileGym과 AndroidWorld에서 7B에서 8B 크기의 백본 세 개로 했다.*
+- **[Who Remembers What? Multi-Granularity Memory Extraction for Multi-User, Multi-Agent Interaction](https://arxiv.org/abs/2611.10439)** (Wang et al., arXiv 2026) - *사용자와 에이전트 한 쌍의 trajectory를 재사용할 흐름과 보호할 흐름으로 나눠 서로 다른 작성기에 보내고, 모든 교훈을 사용자-에이전트 쌍, 사용자, 에이전트, 전역 중 한 범위에 넣어, 교훈은 다른 사용자와 에이전트에게 전해지고 개인적인 내용은 주인에게만 남게 한다. 저자들의 CrossLearnBench는 일곱 개 에이전트 벤치마크의 과제에 합성 사용자의 설문 기반 개인 정보와 문서 선호를 심어 둔다. 사용자 다섯 명과 Claude Code, Codex, Hermes, OpenClaw에 걸친 에이전트 구성 일곱 개로 일정이 정해진 세 라운드를 세 번 돌리면, LLM 작성기와 저장소 검토를 쓸 때 3라운드 통과율이 메모리 없이 72.0%에서 89.8%로 올라 2, 3라운드에서 16.3점 앞서고, 1라운드에 말한 선호의 89%를 유지한다. 전역 저장소 하나만 쓰면 11.5점 앞서지만 선호는 11%만 남는다. 이전에 다른 사용자와 다른 에이전트만 시도했던 과제에서는 11점에서 14점 앞서 전역 저장소의 8.9점보다 높고, 네 변형 중 세 개는 각각 약 18,000번의 탐침에서 심어 둔 개인 정보를 금지된 범위에 하나도 넣지 않는다. 사용자와 개인 정보는 합성이고 서로 독립적이어서 팀 같은 단위가 없으며, Claude Opus 5 메모리 작성기를 포함하면 시도 한 번에 약 $3.40가 들어 메모리 없이 $0.30, 전역 저장소로 $1.77보다 비싸다. 사용자 수를 늘린 실험은 규모마다 시드 하나로 돌렸고, 사용자 100명에서는 향상이 5.8점으로 줄어 전역 저장소의 7.3점보다 낮으며 전체 사용자의 선호 유지율도 45%로 떨어진다. 논문에는 코드 링크가 없다.*
 </details>
 
 <sub><a href="#contents">↑ 목차로 돌아가기</a></sub>
@@ -877,10 +878,11 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 이 목록은 커뮤니티가 함께 관리합니다. 논문을 제안하고, 검증하고, 설명을 달아 주신 모든 분께 감사드립니다:
 
 <details>
-<summary><b>기여자 26명 보기</b></summary>
+<summary><b>기여자 27명 보기</b></summary>
 
 | | 기여자 | 기여 내용 |
 |---|---|---|
+| <a href="https://github.com/wangyz1999"><img src="https://github.com/wangyz1999.png?size=48" width="48" height="48" alt="@wangyz1999"></a> | **[@wangyz1999](https://github.com/wangyz1999)** | 메모리 절에 여러 사용자와 에이전트에게서 얻은 교훈을 쌍, 사용자, 에이전트, 전역 범위로 나눠 저장하는 메모리 Who Remembers What? (MixUA) 추가([#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)). 제1저자가 직접 제출 |
 | <a href="https://github.com/Qile-J"><img src="https://github.com/Qile-J.png?size=48" width="48" height="48" alt="@Qile-J"></a> | **[@Qile-J](https://github.com/Qile-J)** | 다중 에이전트 시스템 절에 잠재 공간에서 추론하고 KV cache를 주고받는 에이전트 스웜으로 진화적 프로그램 탐색을 하는 SwarmEvolve 추가([#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)). 제1저자가 직접 제출 |
 | <a href="https://github.com/haoranlustat"><img src="https://github.com/haoranlustat.png?size=48" width="48" height="48" alt="@haoranlustat"></a> | **[@haoranlustat](https://github.com/haoranlustat)** | 다중 에이전트 시스템 절에 역할 없이 텍스트를 주고받는 다중 에이전트 시스템의 모든 노드를 최종 답의 보상으로 함께 학습시키는 NeuroMAS 추가([#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)). 제1저자가 직접 제출 |
 | <a href="https://github.com/ybkim95"><img src="https://github.com/ybkim95.png?size=48" width="48" height="48" alt="@ybkim95"></a> | **[@ybkim95](https://github.com/ybkim95)** | 평가와 벤치마크 절에 혼자 풀 수 있는 과제만으로 모델을 팀 동료로서 채점하는 Collaborative Intelligence Benchmark, 결정에 필요한 사실을 참가자들에게 나눠 준 팀 의사결정 환경 TeamGym, Planner, Executor, Verifier를 컨테이너 권한으로 분리한 TeamBench 추가([#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)). 저자 중 한 명이자 TeamBench의 제1저자가 직접 제출 |
@@ -919,6 +921,7 @@ GitHub의 **Cite this repository** 버튼은 [`CITATION.cff`](CITATION.cff)를 �
 
 ## 🗓️ 업데이트 기록
 
+- **2026-11-14**: 제1저자 [@wangyz1999](https://github.com/wangyz1999)가 보내 준 Who Remembers What? (MixUA)를 메모리 절에 추가했습니다([#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)). 합성 사용자 다섯 명과 에이전트 구성 일곱 개에서 교훈을 네 공유 범위로 나누면 3라운드 통과율이 메모리 없이 72.0%에서 89.8%로 오릅니다. 585편에서 586편으로 늘었습니다.
 - **2026-11-14**: 제1저자 [@Qile-J](https://github.com/Qile-J)가 보내 준 SwarmEvolve를 다중 에이전트 시스템 절에 추가했습니다([#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)). Qwen3 8B와 GPU 한 장으로 한 시간 동안 돌리면 수학과 과학 계산 문제 21개에서 평균 0.804를 받아, 공개된 세 프레임워크의 0.642에서 0.700보다 높습니다. 584편에서 585편으로 늘었습니다.
 - **2026-11-14**: 제1저자 [@haoranlustat](https://github.com/haoranlustat)가 보내 준 NeuroMAS를 다중 에이전트 시스템 절에 추가했습니다([#35](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/35)). BBH Navigate에서 노드 일곱 개짜리 시스템을 학습된 작은 시스템에서 키우면 51.0%에 이르고, 처음부터 학습시키면 40.5%에 그칩니다. 583편에서 584편으로 늘었습니다.
 - **2026-11-06**: 저자 중 한 명인 [@ybkim95](https://github.com/ybkim95)가 보내 준 Collaborative Intelligence Benchmark, TeamGym, TeamBench를 평가와 벤치마크 절에 추가했습니다([#34](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/34)). TeamGym에서는 결정에 필요한 사실을 한 모델에 모두 주는 대신 팀에 나눠 주면 성공률이 63.4%에서 40.5%로 떨어집니다. 580편에서 583편으로 늘었습니다.
