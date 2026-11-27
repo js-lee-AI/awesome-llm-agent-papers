@@ -101,7 +101,7 @@
   - [🧠 规划与推理 (56)](#planning)
   - [💾 记忆 (61)](#memory)
   - [🔧 工具使用 (51)](#tools)
-  - [🤝 多智能体系统 (59)](#multi-agent)
+  - [🤝 多智能体系统 (60)](#multi-agent)
 - **🌍 第二部分：环境与应用中的智能体**
   - [🌐 交互环境 (60)](#environments)
   - [🚀 应用领域 (60)](#applications)
@@ -458,11 +458,11 @@
 <sub><a href="#contents">↑ 返回目录</a></sub>
 
 <a id="multi-agent"></a>
-### 🤝 多智能体系统 (59)
+### 🤝 多智能体系统 (60)
 *对应综述 §7（多智能体系统）。*
 
 <details>
-<summary><b>展开 59 篇论文</b></summary>
+<summary><b>展开 60 篇论文</b></summary>
 
 - **[CAMEL: Communicative Agents for "Mind" Exploration of Large Language Model Society](https://arxiv.org/abs/2303.17760)** (Li et al., NeurIPS 2023) - *最早也是引用最多的框架之一，通过角色扮演实现智能体之间的自主协作。* [[code](https://github.com/camel-ai/camel)]
 - **[Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325)** (Du et al., ICML 2024) - *多智能体辩论的开创性论文，让“society of minds”式的辩论作为一种测试时技术流行起来。* [[code](https://github.com/composable-models/llm_multiagent_debate)]
@@ -523,6 +523,7 @@
 - **[Stay Focused: Problem Drift in Multi-Agent Debate](https://arxiv.org/abs/2502.19559)** (Becker et al., EACL Findings 2026) - *在十个任务上让三个 Llama-3.1-70B 智能体辩论七轮，每轮之后给答案打分，答案比之前某一轮差时就算出现了 problem drift：三个生成任务中有 74.6% 到 88.6% 的辩论发生 drift，知识和推理任务为 6.6% 到 15.5%；发生 drift 的辩论中只有 8.5% 到 45.4% 能恢复；八位专家阅读了 170 段发生 drift 的辩论摘录，标注最多的是缺乏进展（60 段）。不需要标准答案的检测器 DRIFTJudge 在 MMLU-Pro 上特异度为 0.92，精确率却只有 0.15。在 DRIFTJudge 标出的轮次调用反馈智能体 DRIFTPolicy，能让采用投票的 Qwen2-7B 智能体七轮后的准确率损失从 3.66 个点降到 0.08 个点，但在共识方式下无效，Llama-3.1-70B 用了它损失 4.08 个点，不用则损失 2.23 个点。* [[code](https://github.com/jonas-becker/problem-drift)]
 - **[MALLM: Multi-Agent Large Language Models Framework](https://arxiv.org/abs/2509.11656)** (Becker et al., EMNLP Demo 2025) - *面向文本任务的开源多智能体辩论框架，在一个配置文件中分别设定智能体的 persona（无、专家、Big Five）、回应方式（简单、批判、推理）、讨论范式（memory、relay、report、debate）和决策协议（投票、共识或评估者），公开演示中共有 144 种组合；它可接入任何兼容 OpenAI 的端点，能加载 Hugging Face 上的任意文本数据集，并通过重复运行给出标准差。Voting or Consensus? 和 Stay Focused 都是在它上面做的实验，论文中的结果则转述自作者此前的研究，例如在 StrategyQA 上，消息全部可见的 memory 范式平均 1.75 轮达成一致，relay 需要 2.61 轮。* [[code](https://github.com/Multi-Agent-LLMs/mallm)]
 - **[NeuroMAS: Multi-Agent Systems as Neural Networks with Joint Reinforcement Learning](https://arxiv.org/abs/2605.16757)** (Lu et al., STAI-X 2026) - *把多智能体系统看作一个层状网络，边上传递的是文本：节点不分配角色，只知道自己在拓扑中的位置；每个节点在同一个冻结的骨干模型上有自己的 LoRA 适配器；所有节点用最终答案的奖励通过 REINFORCE 联合训练；更大的系统由训练好的小系统扩展而来。在 Qwen3-0.6B 上，三节点版本在全部六个任务上都超过可训练参数同为 6.9M 的单模型 REINFORCE，例如 ARC-Challenge 上为 56.5% 对 46.0%，HumanEval 上为 30.5% 对 17.7%；在 MMLU abstract algebra 上，三次、五次和七次调用的 NeuroMAS 得分为 39% 到 42%，而从单模型采样同样次数、再按投票、confidence 或评估者挑选答案只有 27% 到 37%；在 BBH Navigate 上，从头训练五节点和七节点系统会让准确率从 45.5% 降到 41.0% 和 40.5%，而从训练好的小系统扩展则升到 48.0% 和 51.0%。大部分结果来自 0.6B 和 1B 的骨干模型，每种方法在 100 到 200 道测试题上只报告一个数字，而换一个随机种子重跑，七节点系统在 ARC 上最多变动 5 分；7B 模型在 HMMT Feb 2026 上从 9.1% 到 15.2% 的提升只相当于 33 道题中的两道，用 Gemma-3-1B 时七节点系统低于三节点系统，代码仓库只有面向 Qwen3-0.6B 的最小实现，完整的实验代码和训练好的适配器尚未发布。* [[code](https://github.com/haoranlustat/NeuroMAS)]
+- **[MultiAgent-OPD: End-to-End Training of Hierarchical Multi-Agent Systems with On-Policy Distillation](https://arxiv.org/abs/2610.23234)** (Sun et al., arXiv 2026) - *训练同一个 Qwen3-4B-Instruct 模型在开放域问答中扮演三个角色：Leader 拆分每个问题，分几轮把子问题派给 Searcher，Searcher 向检索器发出查询并撰写报告，最后由 Answerer 作答。Searcher 逐个 token 地向一个冻结的教师模型学习，这个教师是同一模型事先在简单的 Searcher-Answerer 流水线中按答案对错训练得到的；Leader 和 Answerer 则根据最终答案是否正确来学习。在七个问答数据集的 5,000 道题上，每题尝试四次，平均精确匹配率为 38.68%，而用给 Searcher 报告打分的提示词评估者训练同一层级结构为 34.62%，教师在自己的流水线中为 36.07%，同一骨干模型上五个 RL 搜索智能体中最好的 Tree-GRPO 为 37.37%；改用最终答案奖励训练 Searcher 会让它们完全停止搜索，得分降到 17.78%，用未经训练的基础模型当教师则为 29.50%。区间只反映每个固定检查点的四次尝试，不反映重复训练，所有实验只用一个骨干模型，各系统按各自的步数上限运行，MultiAgent-OPD 每次尝试用 5.39 次搜索和 9,172 个输入 token，教师的流水线则是 2.86 次和 3,886 个；与五个搜索智能体只比较了汇总分数，若把用评估者训练的层级结构中格式错误的答案全部算作正确，对它的领先会缩小到 0.33 分，且区间包含零，代码也尚未发布。*
 - **[SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization](https://arxiv.org/abs/2611.08483)** (Jiang et al., arXiv 2026) - *在一块 GPU 上做进化式程序搜索，每轮运行 10 个由 45 个智能体组成的群体：每个智能体读一个父程序和一条侧重点提示，在潜在空间中推理 40 步而不写出文本，过滤器在每个群体中保留隐藏状态差异最大的 30 个智能体，再由汇总智能体读取它们合并后的 KV cache，写出一个新程序。在 21 个问题上（16 个来自 AlphaEvolve 的附录，五个是作者设计的科学计算问题），每次运行一小时、三个随机种子，Qwen3 8B 下平均得分为 0.804，OpenEvolve、ShinkaEvolve 和 CodeEvolve 为 0.642 到 0.700；Qwen3 32B-FP8 下为 0.869，三者最高为 0.774；它一小时评估 734 个程序，其他框架为 81 到 158 个，用 8B 时达到各 baseline 60 分钟得分的中位时间为 4 到 8 分钟，并且用 Qwen3 8B 在三个问题上超过 AlphaEvolve 发表的构造，每个 baseline 只有一个。在作者自己的消融实验中，每个群体用 0、15、45 和 75 个潜在智能体，一小时后的得分相近，没有潜在智能体、只有汇总智能体时也已高于三个 baseline，把 40 步潜在推理换成最多 40 个 token 的文本，平均分只从 0.804 降到 0.796；各 baseline 使用默认设置，在 11 维 kissing number 问题上每种模型都低于 OpenEvolve，SwarmEvolve 本身的代码尚未发布，公开的只有问题、评估器和 baseline 运行脚本。* [[code](https://github.com/Qile-J/SwarmEvolve)]
 </details>
 
@@ -883,6 +884,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 | | 贡献者 | 贡献内容 |
 |---|---|---|
+| <a href="https://github.com/sunyuhan19981208"><img src="https://github.com/sunyuhan19981208.png?size=48" width="48" height="48" alt="@sunyuhan19981208"></a> | **[@sunyuhan19981208](https://github.com/sunyuhan19981208)** | MultiAgent-OPD：Leader-Searcher-Answerer 团队中的 Searcher 向冻结的教师学习，另外两个角色根据最终答案学习，由第一作者本人提交，收入多智能体系统（[#39](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/39)）；TaoLive 技术报告：训练小模型，让它在 harness 不断变化时仍能正常工作，由作者之一提交，收入应用领域（[#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)） |
 | <a href="https://github.com/nishadsinghi"><img src="https://github.com/nishadsinghi.png?size=48" width="48" height="48" alt="@nishadsinghi"></a> | **[@nishadsinghi](https://github.com/nishadsinghi)** | Think Twice, Act Once (VegAS)：用在合成失败上训练的验证器，从 MLLM 智能体的 16 个样本中挑选每一步动作，收入规划与推理（[#38](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/38)）。由第一作者本人提交 |
 | <a href="https://github.com/wangyz1999"><img src="https://github.com/wangyz1999.png?size=48" width="48" height="48" alt="@wangyz1999"></a> | **[@wangyz1999](https://github.com/wangyz1999)** | Who Remembers What? (MixUA)：把来自众多用户和智能体的每条经验分别归入对、用户、智能体或全局范围的记忆，收入记忆（[#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)）。由第一作者本人提交 |
 | <a href="https://github.com/Qile-J"><img src="https://github.com/Qile-J.png?size=48" width="48" height="48" alt="@Qile-J"></a> | **[@Qile-J](https://github.com/Qile-J)** | SwarmEvolve：由在潜在空间中推理、彼此传递 KV cache 的智能体群体进行进化式程序搜索，收入多智能体系统（[#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)）。由第一作者本人提交 |
@@ -900,7 +902,6 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 | <a href="https://github.com/ZhishanQ"><img src="https://github.com/ZhishanQ.png?size=48" width="48" height="48" alt="@ZhishanQ"></a> | **[@ZhishanQ](https://github.com/ZhishanQ)** | TraceDance：用真实智能体部署 trace 构建基准，收入评估与基准（[#20](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/20)）。由第一作者本人提交 |
 | <a href="https://github.com/Gavin-M34"><img src="https://github.com/Gavin-M34.png?size=48" width="48" height="48" alt="@Gavin-M34"></a> | **[@Gavin-M34](https://github.com/Gavin-M34)** | Jev in the Wild：分析公开 GitHub 项目如何使用 Jev，收入综述与立场论文（[#19](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/19)） |
 | <a href="https://github.com/shubhamrgandhi"><img src="https://github.com/shubhamrgandhi.png?size=48" width="48" height="48" alt="@shubhamrgandhi"></a> | **[@shubhamrgandhi](https://github.com/shubhamrgandhi)** | Steer, Don't Solve：用小型 critic 模型引导更大的编码智能体，收入规划与推理（[#16](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/16)）；DRACO：为不借助 verifier 训练的智能体提供基于 rubric 的 credit assignment，收入工具使用（[#17](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/17)）。两篇均由第一作者本人提交 |
-| <a href="https://github.com/sunyuhan19981208"><img src="https://github.com/sunyuhan19981208.png?size=48" width="48" height="48" alt="@sunyuhan19981208"></a> | **[@sunyuhan19981208](https://github.com/sunyuhan19981208)** | TaoLive 技术报告：训练小模型，让它在 harness 不断变化时仍能正常工作；由作者之一提交，收入应用领域（[#15](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/15)） |
 | <a href="https://github.com/burgerseater"><img src="https://github.com/burgerseater.png?size=48" width="48" height="48" alt="@burgerseater"></a> | **[@burgerseater](https://github.com/burgerseater)** | LoopArena：评的是给编码智能体掌舵的模型，而不是写代码的模型；由作者之一推荐，收入评估与基准（[#14](https://github.com/js-lee-AI/awesome-llm-agent-papers/issues/14)） |
 | <a href="https://github.com/dukesun99"><img src="https://github.com/dukesun99.png?size=48" width="48" height="48" alt="@dukesun99"></a> | **[@dukesun99](https://github.com/dukesun99)** | Corpus2Skill（记忆）、OrchMAS（多智能体系统），以及一篇讨论智能体信息检索的立场论文（综述与立场论文）；提交者在三篇中都署了名（[#13](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/13)） |
 | <a href="https://github.com/zhongzero"><img src="https://github.com/zhongzero.png?size=48" width="48" height="48" alt="@zhongzero"></a> | **[@zhongzero](https://github.com/zhongzero)** | ForeDreamer：用于预测的双智能体记忆架构；由作者之一提交，收入记忆（[#12](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/12)） |
@@ -923,6 +924,7 @@ GitHub 的 **Cite this repository** 按钮会读取 [`CITATION.cff`](CITATION.cf
 
 ## 🗓️ 更新记录
 
+- **2026-11-28**: 新增 MultiAgent-OPD，由第一作者 [@sunyuhan19981208](https://github.com/sunyuhan19981208) 提交，收入多智能体系统（[#39](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/39)）。在七个问答数据集上，让 Searcher 向冻结的教师学习，精确匹配率为 38.68%，改用最终答案奖励训练则会停止搜索，只有 17.78%。从 587 篇增至 588 篇。
 - **2026-11-14**: 新增 Think Twice, Act Once (VegAS)，由第一作者 [@nishadsinghi](https://github.com/nishadsinghi) 提交，收入规划与推理（[#38](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/38)）。在 LangR 上，用微调过的验证器从 16 个样本中挑选每一步动作，成功率从 65% 升到 71%，把同一模型当作 zero-shot 验证器则是 64%。从 586 篇增至 587 篇。
 - **2026-11-14**: 新增 Who Remembers What? (MixUA)，由第一作者 [@wangyz1999](https://github.com/wangyz1999) 提交，收入记忆（[#37](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/37)）。在五个合成用户和七种智能体配置下，把经验分到四种共享范围后，第 3 轮通过率从无记忆的 72.0% 升到 89.8%。从 585 篇增至 586 篇。
 - **2026-11-14**: 新增 SwarmEvolve，由第一作者 [@Qile-J](https://github.com/Qile-J) 提交，收入多智能体系统（[#36](https://github.com/js-lee-AI/awesome-llm-agent-papers/pull/36)）。用 Qwen3 8B 在一块 GPU 上运行一小时，它在 21 个数学和科学计算问题上平均得分 0.804，三个开源框架为 0.642 到 0.700。从 584 篇增至 585 篇。
